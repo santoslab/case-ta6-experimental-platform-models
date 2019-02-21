@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="ASCII"?>
+<instance:SystemInstance xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aadl2="http://aadl.info/AADL/2.0" xmlns:instance="http://aadl.info/AADL/2.0/instance" name="Waterways_Zeroize_Instance" category="process">
+  <featureInstance name="KeepInZone">
+    <feature xsi:type="aadl2:DataPort" href="../Zeroize_UxAS.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.0"/>
+  </featureInstance>
+  <featureInstance name="KeepOutZone">
+    <feature xsi:type="aadl2:DataPort" href="../Zeroize_UxAS.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.1"/>
+  </featureInstance>
+  <featureInstance name="OperatingRegion">
+    <feature xsi:type="aadl2:DataPort" href="../Zeroize_UxAS.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.2"/>
+  </featureInstance>
+  <featureInstance name="ZeroizeCondition">
+    <feature xsi:type="aadl2:DataPort" href="../Zeroize_UxAS.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.3"/>
+  </featureInstance>
+  <featureInstance name="AirVehicleState">
+    <feature xsi:type="aadl2:DataPort" href="../Zeroize_UxAS.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.4"/>
+  </featureInstance>
+  <componentInstance name="TaskManagerService" category="thread">
+    <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+      <property href="../../../../../plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/Thread_Properties.aadl#Thread_Properties.Dispatch_Protocol"/>
+      <ownedValue>
+        <ownedValue xsi:type="aadl2:NamedValue">
+          <namedValue xsi:type="aadl2:EnumerationLiteral" href="../../../../../plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.3/@ownedLiteral.1"/>
+        </ownedValue>
+      </ownedValue>
+      <propertyAssociation href="../../Tasks/TaskManagerService.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.0"/>
+    </ownedPropertyAssociation>
+    <featureInstance name="RemoveTasks">
+      <feature xsi:type="aadl2:DataPort" href="../../Tasks/TaskManagerService.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.0"/>
+    </featureInstance>
+    <featureInstance name="EntityState">
+      <feature xsi:type="aadl2:DataPort" href="../../Tasks/TaskManagerService.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.1"/>
+    </featureInstance>
+    <featureInstance name="EntityConfiguration">
+      <feature xsi:type="aadl2:DataPort" href="../../Tasks/TaskManagerService.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.2"/>
+    </featureInstance>
+    <featureInstance name="AirVehicleConfiguration">
+      <feature xsi:type="aadl2:DataPort" href="../../Tasks/TaskManagerService.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.3"/>
+    </featureInstance>
+    <featureInstance name="GroundVehicleConfiguration">
+      <feature xsi:type="aadl2:DataPort" href="../../Tasks/TaskManagerService.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.4"/>
+    </featureInstance>
+    <featureInstance name="SurfaceVehicleConfiguration">
+      <feature xsi:type="aadl2:DataPort" href="../../Tasks/TaskManagerService.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.5"/>
+    </featureInstance>
+    <featureInstance name="AirVehicleState">
+      <feature xsi:type="aadl2:DataPort" href="../../Tasks/TaskManagerService.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.6"/>
+    </featureInstance>
+    <featureInstance name="GroundVehicleState">
+      <feature xsi:type="aadl2:DataPort" href="../../Tasks/TaskManagerService.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.7"/>
+    </featureInstance>
+    <featureInstance name="SurfaceVehicleState">
+      <feature xsi:type="aadl2:DataPort" href="../../Tasks/TaskManagerService.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.8"/>
+    </featureInstance>
+    <featureInstance name="MissionCommand">
+      <feature xsi:type="aadl2:DataPort" href="../../Tasks/TaskManagerService.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.9"/>
+    </featureInstance>
+    <featureInstance name="AutomationResponse">
+      <feature xsi:type="aadl2:DataPort" href="../../Tasks/TaskManagerService.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.10"/>
+    </featureInstance>
+    <featureInstance name="FollowPathCommand">
+      <feature xsi:type="aadl2:DataPort" href="../../Tasks/TaskManagerService.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.11"/>
+    </featureInstance>
+    <featureInstance name="ZeroizeCommand">
+      <feature xsi:type="aadl2:DataPort" href="../../Tasks/TaskManagerService.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.12"/>
+    </featureInstance>
+    <featureInstance name="KillService" direction="out">
+      <feature xsi:type="aadl2:DataPort" href="../../Tasks/TaskManagerService.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.13"/>
+    </featureInstance>
+    <featureInstance name="CreateNewService" direction="out">
+      <feature xsi:type="aadl2:DataPort" href="../../Tasks/TaskManagerService.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.14"/>
+    </featureInstance>
+    <featureInstance name="AutomationRequest" direction="out">
+      <feature xsi:type="aadl2:DataPort" href="../../Tasks/TaskManagerService.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.15"/>
+    </featureInstance>
+    <featureInstance name="UniqueAutomationRequest" direction="out">
+      <feature xsi:type="aadl2:DataPort" href="../../Tasks/TaskManagerService.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.16"/>
+    </featureInstance>
+    <subcomponent xsi:type="aadl2:ThreadSubcomponent" href="../Zeroize_UxAS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedThreadSubcomponent.0"/>
+    <index>0</index>
+    <classifier xsi:type="aadl2:ThreadType" href="../../Tasks/TaskManagerService.aadl#TaskManagerService_Pkg.TaskManagerService"/>
+  </componentInstance>
+  <componentInstance name="ZeroizeConditionRecognizerService" category="thread">
+    <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+      <property href="../../../../../plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/Thread_Properties.aadl#Thread_Properties.Dispatch_Protocol"/>
+      <ownedValue>
+        <ownedValue xsi:type="aadl2:NamedValue">
+          <namedValue xsi:type="aadl2:EnumerationLiteral" href="../../../../../plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.3/@ownedLiteral.1"/>
+        </ownedValue>
+      </ownedValue>
+      <propertyAssociation href="../../Services/ZeroizeConditionRecognizerService.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.0"/>
+    </ownedPropertyAssociation>
+    <featureInstance name="ZeroizeCondition">
+      <feature xsi:type="aadl2:DataPort" href="../../Services/ZeroizeConditionRecognizerService.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.0"/>
+    </featureInstance>
+    <featureInstance name="KeepInZone">
+      <feature xsi:type="aadl2:DataPort" href="../../Services/ZeroizeConditionRecognizerService.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.1"/>
+    </featureInstance>
+    <featureInstance name="KeepOutZone">
+      <feature xsi:type="aadl2:DataPort" href="../../Services/ZeroizeConditionRecognizerService.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.2"/>
+    </featureInstance>
+    <featureInstance name="OperatingRegion">
+      <feature xsi:type="aadl2:DataPort" href="../../Services/ZeroizeConditionRecognizerService.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.3"/>
+    </featureInstance>
+    <featureInstance name="AirVehicleState">
+      <feature xsi:type="aadl2:DataPort" href="../../Services/ZeroizeConditionRecognizerService.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.4"/>
+    </featureInstance>
+    <featureInstance name="ZeroizeCommand" direction="out">
+      <feature xsi:type="aadl2:DataPort" href="../../Services/ZeroizeConditionRecognizerService.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedDataPort.5"/>
+    </featureInstance>
+    <subcomponent xsi:type="aadl2:ThreadSubcomponent" href="../Zeroize_UxAS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedThreadSubcomponent.1"/>
+    <index>0</index>
+    <classifier xsi:type="aadl2:ThreadType" href="../../Services/ZeroizeConditionRecognizerService.aadl#ZeroizeConditionRecognizer_Pkg.ZeroizeConditionRecognizerService"/>
+  </componentInstance>
+  <connectionInstance name="KeepInZone -> ZeroizeConditionRecognizerService.KeepInZone" kind="portConnection" destination="//@componentInstance.1/@featureInstance.1" source="//@featureInstance.0">
+    <connectionReference context="/" source="//@featureInstance.0" destination="//@componentInstance.1/@featureInstance.1">
+      <connection xsi:type="aadl2:PortConnection" href="../Zeroize_UxAS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.0"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="KeepOutZone -> ZeroizeConditionRecognizerService.KeepOutZone" kind="portConnection" destination="//@componentInstance.1/@featureInstance.2" source="//@featureInstance.1">
+    <connectionReference context="/" source="//@featureInstance.1" destination="//@componentInstance.1/@featureInstance.2">
+      <connection xsi:type="aadl2:PortConnection" href="../Zeroize_UxAS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.1"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="OperatingRegion -> ZeroizeConditionRecognizerService.OperatingRegion" kind="portConnection" destination="//@componentInstance.1/@featureInstance.3" source="//@featureInstance.2">
+    <connectionReference context="/" source="//@featureInstance.2" destination="//@componentInstance.1/@featureInstance.3">
+      <connection xsi:type="aadl2:PortConnection" href="../Zeroize_UxAS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.2"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="ZeroizeCondition -> ZeroizeConditionRecognizerService.ZeroizeCondition" kind="portConnection" destination="//@componentInstance.1/@featureInstance.0" source="//@featureInstance.3">
+    <connectionReference context="/" source="//@featureInstance.3" destination="//@componentInstance.1/@featureInstance.0">
+      <connection xsi:type="aadl2:PortConnection" href="../Zeroize_UxAS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.3"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="AirVehicleState -> ZeroizeConditionRecognizerService.AirVehicleState" kind="portConnection" destination="//@componentInstance.1/@featureInstance.4" source="//@featureInstance.4">
+    <connectionReference context="/" source="//@featureInstance.4" destination="//@componentInstance.1/@featureInstance.4">
+      <connection xsi:type="aadl2:PortConnection" href="../Zeroize_UxAS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.4"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="AirVehicleState -> TaskManagerService.AirVehicleState" kind="portConnection" destination="//@componentInstance.0/@featureInstance.6" source="//@featureInstance.4">
+    <connectionReference context="/" source="//@featureInstance.4" destination="//@componentInstance.0/@featureInstance.6">
+      <connection xsi:type="aadl2:PortConnection" href="../Zeroize_UxAS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.5"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="ZeroizeConditionRecognizerService.ZeroizeCommand -> TaskManagerService.ZeroizeCommand" complete="true" kind="portConnection" destination="//@componentInstance.0/@featureInstance.12" source="//@componentInstance.1/@featureInstance.5">
+    <connectionReference context="/" source="//@componentInstance.1/@featureInstance.5" destination="//@componentInstance.0/@featureInstance.12">
+      <connection xsi:type="aadl2:PortConnection" href="../Zeroize_UxAS.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.6"/>
+    </connectionReference>
+  </connectionInstance>
+  <systemOperationMode name="No Modes"/>
+  <componentImplementation xsi:type="aadl2:ProcessImplementation" href="../Zeroize_UxAS.aadl#Zeroize_UxAS.Waterways.Zeroize"/>
+</instance:SystemInstance>

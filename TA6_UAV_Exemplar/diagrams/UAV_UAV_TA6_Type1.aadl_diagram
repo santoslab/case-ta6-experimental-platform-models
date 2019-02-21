@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="ASCII"?>
+<diagram:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:diagram="http://osate.org/diagram" formatVersion="5">
+  <element id="0" manual="true">
+    <element id="51">
+      <bo>
+        <seg>connection</seg>
+        <seg>c1</seg>
+      </bo>
+      <contentFilters/>
+    </element>
+    <element id="50">
+      <bo>
+        <seg>connection</seg>
+        <seg>c2</seg>
+      </bo>
+      <contentFilters/>
+    </element>
+    <element id="49">
+      <bo>
+        <seg>connection</seg>
+        <seg>c3</seg>
+      </bo>
+      <contentFilters/>
+    </element>
+    <element id="48">
+      <bo>
+        <seg>connection</seg>
+        <seg>c4</seg>
+      </bo>
+      <contentFilters/>
+    </element>
+    <element id="53">
+      <bo>
+        <seg>connection</seg>
+        <seg>c5</seg>
+      </bo>
+      <bendpoints>
+        <point x="436.0" y="93.0"/>
+        <point x="436.0" y="94.0"/>
+      </bendpoints>
+      <contentFilters/>
+    </element>
+    <element id="39">
+      <bo>
+        <seg>connection</seg>
+        <seg>phys1</seg>
+      </bo>
+      <contentFilters/>
+    </element>
+    <element id="37">
+      <bo>
+        <seg>connection</seg>
+        <seg>phys2</seg>
+      </bo>
+      <bendpoints>
+        <point x="793.0" y="198.66666666666666"/>
+        <point x="793.0" y="172.33333333333331"/>
+      </bendpoints>
+      <contentFilters/>
+    </element>
+    <element id="38">
+      <bo>
+        <seg>connection</seg>
+        <seg>phys3</seg>
+      </bo>
+      <bendpoints>
+        <point x="793.0" y="351.3333333333333"/>
+        <point x="793.0" y="377.66666666666663"/>
+      </bendpoints>
+      <contentFilters/>
+    </element>
+    <element id="30">
+      <bo>
+        <seg>connection</seg>
+        <seg>phys4</seg>
+      </bo>
+      <contentFilters/>
+    </element>
+    <element id="31">
+      <bo>
+        <seg>connection</seg>
+        <seg>phys5</seg>
+      </bo>
+      <contentFilters/>
+    </element>
+    <element id="47" dockArea="left">
+      <bo>
+        <seg>feature</seg>
+        <seg>configuration_if</seg>
+      </bo>
+      <position y="47.0"/>
+      <size width="124.0" height="44.0"/>
+      <contentFilters/>
+    </element>
+    <element id="45" dockArea="right">
+      <bo>
+        <seg>feature</seg>
+        <seg>control_interface</seg>
+      </bo>
+      <position x="1209.0" y="334.0"/>
+      <size width="129.0" height="44.0"/>
+      <contentFilters/>
+    </element>
+    <element id="52" dockArea="left">
+      <bo>
+        <seg>feature</seg>
+        <seg>sensor_rf</seg>
+      </bo>
+      <position y="476.0"/>
+      <contentFilters/>
+    </element>
+    <element id="46" dockArea="right">
+      <bo>
+        <seg>feature</seg>
+        <seg>usb_link</seg>
+      </bo>
+      <position x="1259.0" y="231.0"/>
+      <contentFilters/>
+    </element>
+    <element id="40" dockArea="right">
+      <bo>
+        <seg>feature</seg>
+        <seg>wireless_link</seg>
+      </bo>
+      <position x="1232.0" y="388.0"/>
+      <contentFilters/>
+    </element>
+    <element id="41">
+      <element id="42" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>ap_io</seg>
+        </bo>
+        <position y="10.0"/>
+        <size width="57.0" height="44.0"/>
+        <contentFilters/>
+      </element>
+      <element id="43" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>serial_conn</seg>
+        </bo>
+        <position y="64.0"/>
+        <contentFilters/>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>autopilot</seg>
+      </bo>
+      <position x="791.0" y="64.0"/>
+      <size width="309.0" height="114.0"/>
+      <contentFilters>
+        <filter>features</filter>
+        <filter>internalFeatures</filter>
+        <filter>processorFeatures</filter>
+        <filter>connections</filter>
+        <filter>flowSpecifications</filter>
+      </contentFilters>
+    </element>
+    <element id="1">
+      <element id="2" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>engine_io</seg>
+        </bo>
+        <position x="213.0" y="10.0"/>
+        <size width="83.0" height="44.0"/>
+        <contentFilters/>
+      </element>
+      <element id="3" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>serial_conn</seg>
+        </bo>
+        <position x="200.0" y="64.0"/>
+        <contentFilters/>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>engine</seg>
+      </bo>
+      <position x="118.0" y="92.0"/>
+      <size width="296.0" height="114.0"/>
+      <contentFilters>
+        <filter>features</filter>
+        <filter>internalFeatures</filter>
+        <filter>processorFeatures</filter>
+        <filter>connections</filter>
+        <filter>flowSpecifications</filter>
+      </contentFilters>
+    </element>
+    <element id="44">
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>mc_radio_protocol</seg>
+      </bo>
+      <position x="118.0" y="476.0"/>
+      <size width="187.0" height="35.0"/>
+      <contentFilters>
+        <filter>features</filter>
+        <filter>internalFeatures</filter>
+        <filter>processorFeatures</filter>
+        <filter>connections</filter>
+        <filter>flowSpecifications</filter>
+      </contentFilters>
+    </element>
+    <element id="4">
+      <element id="16" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>ap_io</seg>
+        </bo>
+        <position x="280.0" y="36.0"/>
+        <size width="57.0" height="44.0"/>
+        <contentFilters/>
+      </element>
+      <element id="22" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>configuration_if</seg>
+        </bo>
+        <position y="10.0"/>
+        <size width="124.0" height="44.0"/>
+        <contentFilters/>
+      </element>
+      <element id="20" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>controller_io</seg>
+        </bo>
+        <position x="235.0" y="346.0"/>
+        <size width="102.0" height="44.0"/>
+        <contentFilters/>
+      </element>
+      <element id="15" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>engine_io</seg>
+        </bo>
+        <position y="64.0"/>
+        <size width="83.0" height="44.0"/>
+        <contentFilters/>
+      </element>
+      <element id="18" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>eo_ir_io</seg>
+        </bo>
+        <position y="218.0"/>
+        <size width="77.0" height="44.0"/>
+        <contentFilters/>
+      </element>
+      <element id="14" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>eo_ir_video</seg>
+        </bo>
+        <position y="272.0"/>
+        <size width="100.0" height="44.0"/>
+        <contentFilters/>
+      </element>
+      <element id="13" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>ethernet_conn</seg>
+        </bo>
+        <position x="226.0" y="269.0"/>
+        <contentFilters/>
+      </element>
+      <element id="19" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>m1553b_conn</seg>
+        </bo>
+        <position y="326.0"/>
+        <contentFilters/>
+      </element>
+      <element id="23" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>serial_1_conn</seg>
+        </bo>
+        <position y="118.0"/>
+        <contentFilters/>
+      </element>
+      <element id="5" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>serial_2_conn</seg>
+        </bo>
+        <position x="227.0" y="117.0"/>
+        <contentFilters/>
+      </element>
+      <element id="17" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>usb_1_conn</seg>
+        </bo>
+        <position y="376.0"/>
+        <contentFilters/>
+      </element>
+      <element id="9" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>usb_2_conn</seg>
+        </bo>
+        <position x="238.0" y="193.0"/>
+        <contentFilters/>
+      </element>
+      <element id="21" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>video_conn</seg>
+        </bo>
+        <position y="168.0"/>
+        <contentFilters/>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>vmc</seg>
+      </bo>
+      <position x="434.0" y="38.0"/>
+      <size width="337.0" height="426.0"/>
+      <contentFilters>
+        <filter>features</filter>
+        <filter>internalFeatures</filter>
+        <filter>processorFeatures</filter>
+        <filter>connections</filter>
+        <filter>flowSpecifications</filter>
+      </contentFilters>
+    </element>
+    <element id="32">
+      <element id="36" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>gs_io</seg>
+        </bo>
+        <position x="398.0" y="10.0"/>
+        <size width="58.0" height="44.0"/>
+        <contentFilters/>
+      </element>
+      <element id="33" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>mc_io</seg>
+        </bo>
+        <position y="60.0"/>
+        <size width="59.0" height="44.0"/>
+        <contentFilters/>
+      </element>
+      <element id="35" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>wired_link_conn</seg>
+        </bo>
+        <position y="10.0"/>
+        <contentFilters/>
+      </element>
+      <element id="34" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>wireless_link_conn</seg>
+        </bo>
+        <position x="307.0" y="64.0"/>
+        <contentFilters/>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>wireless_radio</seg>
+      </bo>
+      <position x="791.0" y="324.0"/>
+      <size width="456.0" height="114.0"/>
+      <contentFilters>
+        <filter>features</filter>
+        <filter>internalFeatures</filter>
+        <filter>processorFeatures</filter>
+        <filter>connections</filter>
+        <filter>flowSpecifications</filter>
+      </contentFilters>
+    </element>
+    <bo>
+      <seg>classifier</seg>
+      <seg>uav.ta6_type1</seg>
+    </bo>
+    <position x="12.0" y="12.0"/>
+    <size width="1338.0" height="528.0"/>
+    <contentFilters>
+      <filter>features</filter>
+      <filter>internalFeatures</filter>
+      <filter>processorFeatures</filter>
+      <filter>connections</filter>
+      <filter>flowSpecifications</filter>
+      <filter>subcomponents</filter>
+    </contentFilters>
+  </element>
+  <config type="structure" connectionPrimaryLabelsVisible="false">
+    <enabledAadlProperties/>
+    <context>
+      <seg>classifier</seg>
+      <seg>uav::uav.ta6_type1</seg>
+    </context>
+  </config>
+</diagram:Diagram>

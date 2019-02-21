@@ -1,0 +1,546 @@
+<?xml version="1.0" encoding="ASCII"?>
+<diagram:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:diagram="http://osate.org/diagram" formatVersion="5">
+  <element id="0" manual="true">
+    <element id="1">
+      <element id="4">
+        <bo>
+          <seg>subcomponent</seg>
+          <seg>datalink_with_uav</seg>
+        </bo>
+        <position x="12.0" y="132.0"/>
+        <size width="183.0" height="35.0"/>
+        <contentFilters>
+          <filter>systemSubcomponents</filter>
+          <filter>processorSubcomponents</filter>
+          <filter>virtualProcessorSubcomponents</filter>
+          <filter>deviceSubcomponents</filter>
+          <filter>threadSubcomponents</filter>
+          <filter>threadGroupSubcomponents</filter>
+          <filter>processSubcomponents</filter>
+        </contentFilters>
+      </element>
+      <element id="2">
+        <bo>
+          <seg>subcomponent</seg>
+          <seg>gs_computers</seg>
+        </bo>
+        <position x="12.0" y="38.0"/>
+        <size width="154.0" height="35.0"/>
+        <contentFilters>
+          <filter>systemSubcomponents</filter>
+          <filter>processorSubcomponents</filter>
+          <filter>virtualProcessorSubcomponents</filter>
+          <filter>deviceSubcomponents</filter>
+          <filter>threadSubcomponents</filter>
+          <filter>threadGroupSubcomponents</filter>
+          <filter>processSubcomponents</filter>
+        </contentFilters>
+      </element>
+      <element id="3">
+        <bo>
+          <seg>subcomponent</seg>
+          <seg>wireless_radio</seg>
+        </bo>
+        <position x="12.0" y="85.0"/>
+        <size width="158.0" height="35.0"/>
+        <contentFilters>
+          <filter>systemSubcomponents</filter>
+          <filter>processorSubcomponents</filter>
+          <filter>virtualProcessorSubcomponents</filter>
+          <filter>deviceSubcomponents</filter>
+          <filter>threadSubcomponents</filter>
+          <filter>threadGroupSubcomponents</filter>
+          <filter>processSubcomponents</filter>
+        </contentFilters>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>gnd_station</seg>
+      </bo>
+      <position x="12.0" y="38.0"/>
+      <size width="207.0" height="179.0"/>
+      <contentFilters>
+        <filter>systemSubcomponents</filter>
+        <filter>processorSubcomponents</filter>
+        <filter>virtualProcessorSubcomponents</filter>
+        <filter>deviceSubcomponents</filter>
+        <filter>threadSubcomponents</filter>
+        <filter>threadGroupSubcomponents</filter>
+        <filter>processSubcomponents</filter>
+      </contentFilters>
+    </element>
+    <element id="18">
+      <element id="28">
+        <bo>
+          <seg>subcomponent</seg>
+          <seg>autopilot</seg>
+        </bo>
+        <position x="128.0" y="38.0"/>
+        <size width="117.0" height="35.0"/>
+        <contentFilters>
+          <filter>systemSubcomponents</filter>
+          <filter>processorSubcomponents</filter>
+          <filter>virtualProcessorSubcomponents</filter>
+          <filter>deviceSubcomponents</filter>
+          <filter>threadSubcomponents</filter>
+          <filter>threadGroupSubcomponents</filter>
+          <filter>processSubcomponents</filter>
+        </contentFilters>
+      </element>
+      <element id="19">
+        <bo>
+          <seg>subcomponent</seg>
+          <seg>engine</seg>
+        </bo>
+        <position x="12.0" y="38.0"/>
+        <size width="104.0" height="35.0"/>
+        <contentFilters>
+          <filter>systemSubcomponents</filter>
+          <filter>processorSubcomponents</filter>
+          <filter>virtualProcessorSubcomponents</filter>
+          <filter>deviceSubcomponents</filter>
+          <filter>threadSubcomponents</filter>
+          <filter>threadGroupSubcomponents</filter>
+          <filter>processSubcomponents</filter>
+        </contentFilters>
+      </element>
+      <element id="20">
+        <element id="26">
+          <element id="27">
+            <bo>
+              <seg>subcomponent</seg>
+              <seg>core0</seg>
+            </bo>
+            <position x="12.0" y="38.0"/>
+            <size width="97.0" height="35.0"/>
+            <contentFilters>
+              <filter>systemSubcomponents</filter>
+              <filter>processorSubcomponents</filter>
+              <filter>virtualProcessorSubcomponents</filter>
+              <filter>deviceSubcomponents</filter>
+              <filter>threadSubcomponents</filter>
+              <filter>threadGroupSubcomponents</filter>
+              <filter>processSubcomponents</filter>
+            </contentFilters>
+          </element>
+          <bo>
+            <seg>subcomponent</seg>
+            <seg>processor_1</seg>
+          </bo>
+          <position x="363.0" y="109.0"/>
+          <size width="136.0" height="85.0"/>
+          <contentFilters>
+            <filter>systemSubcomponents</filter>
+            <filter>processorSubcomponents</filter>
+            <filter>virtualProcessorSubcomponents</filter>
+            <filter>deviceSubcomponents</filter>
+            <filter>threadSubcomponents</filter>
+            <filter>threadGroupSubcomponents</filter>
+            <filter>processSubcomponents</filter>
+          </contentFilters>
+        </element>
+        <element id="21">
+          <element id="31">
+            <bo>
+              <seg>pvg</seg>
+              <seg>deployment_properties::actual_processor_binding</seg>
+              <seg>26</seg>
+            </bo>
+            <bendpoints>
+              <point x="602.0" y="286.0"/>
+              <point x="614.0" y="286.0"/>
+            </bendpoints>
+            <contentFilters/>
+          </element>
+          <element id="25">
+            <bo>
+              <seg>subcomponent</seg>
+              <seg>autopilotadapterservice</seg>
+            </bo>
+            <position x="12.0" y="132.0"/>
+            <size width="224.0" height="35.0"/>
+            <contentFilters>
+              <filter>systemSubcomponents</filter>
+              <filter>processorSubcomponents</filter>
+              <filter>virtualProcessorSubcomponents</filter>
+              <filter>deviceSubcomponents</filter>
+              <filter>threadSubcomponents</filter>
+              <filter>threadGroupSubcomponents</filter>
+              <filter>processSubcomponents</filter>
+            </contentFilters>
+          </element>
+          <element id="24">
+            <bo>
+              <seg>subcomponent</seg>
+              <seg>commadapterservice</seg>
+            </bo>
+            <position x="12.0" y="85.0"/>
+            <size width="203.0" height="35.0"/>
+            <contentFilters>
+              <filter>systemSubcomponents</filter>
+              <filter>processorSubcomponents</filter>
+              <filter>virtualProcessorSubcomponents</filter>
+              <filter>deviceSubcomponents</filter>
+              <filter>threadSubcomponents</filter>
+              <filter>threadGroupSubcomponents</filter>
+              <filter>processSubcomponents</filter>
+            </contentFilters>
+          </element>
+          <element id="23">
+            <bo>
+              <seg>subcomponent</seg>
+              <seg>taskmanagerservice</seg>
+            </bo>
+            <position x="12.0" y="38.0"/>
+            <size width="197.0" height="35.0"/>
+            <contentFilters>
+              <filter>systemSubcomponents</filter>
+              <filter>processorSubcomponents</filter>
+              <filter>virtualProcessorSubcomponents</filter>
+              <filter>deviceSubcomponents</filter>
+              <filter>threadSubcomponents</filter>
+              <filter>threadGroupSubcomponents</filter>
+              <filter>processSubcomponents</filter>
+            </contentFilters>
+          </element>
+          <element id="22">
+            <bo>
+              <seg>subcomponent</seg>
+              <seg>zeroizeconditionrecognizerservice</seg>
+            </bo>
+            <position x="12.0" y="179.0"/>
+            <size width="307.0" height="35.0"/>
+            <contentFilters>
+              <filter>systemSubcomponents</filter>
+              <filter>processorSubcomponents</filter>
+              <filter>virtualProcessorSubcomponents</filter>
+              <filter>deviceSubcomponents</filter>
+              <filter>threadSubcomponents</filter>
+              <filter>threadGroupSubcomponents</filter>
+              <filter>processSubcomponents</filter>
+            </contentFilters>
+          </element>
+          <bo>
+            <seg>subcomponent</seg>
+            <seg>sw</seg>
+          </bo>
+          <position x="12.0" y="38.0"/>
+          <size width="331.0" height="226.0"/>
+          <contentFilters>
+            <filter>systemSubcomponents</filter>
+            <filter>processorSubcomponents</filter>
+            <filter>virtualProcessorSubcomponents</filter>
+            <filter>deviceSubcomponents</filter>
+            <filter>threadSubcomponents</filter>
+            <filter>threadGroupSubcomponents</filter>
+            <filter>processSubcomponents</filter>
+          </contentFilters>
+        </element>
+        <bo>
+          <seg>subcomponent</seg>
+          <seg>vmc</seg>
+        </bo>
+        <position x="12.0" y="85.0"/>
+        <size width="511.0" height="276.0"/>
+        <contentFilters>
+          <filter>systemSubcomponents</filter>
+          <filter>processorSubcomponents</filter>
+          <filter>virtualProcessorSubcomponents</filter>
+          <filter>deviceSubcomponents</filter>
+          <filter>threadSubcomponents</filter>
+          <filter>threadGroupSubcomponents</filter>
+          <filter>processSubcomponents</filter>
+        </contentFilters>
+      </element>
+      <element id="29">
+        <bo>
+          <seg>subcomponent</seg>
+          <seg>wireless_radio</seg>
+        </bo>
+        <position x="257.0" y="38.0"/>
+        <size width="158.0" height="35.0"/>
+        <contentFilters>
+          <filter>systemSubcomponents</filter>
+          <filter>processorSubcomponents</filter>
+          <filter>virtualProcessorSubcomponents</filter>
+          <filter>deviceSubcomponents</filter>
+          <filter>threadSubcomponents</filter>
+          <filter>threadGroupSubcomponents</filter>
+          <filter>processSubcomponents</filter>
+        </contentFilters>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>uav_400</seg>
+      </bo>
+      <position x="231.0" y="38.0"/>
+      <size width="535.0" height="373.0"/>
+      <contentFilters>
+        <filter>systemSubcomponents</filter>
+        <filter>processorSubcomponents</filter>
+        <filter>virtualProcessorSubcomponents</filter>
+        <filter>deviceSubcomponents</filter>
+        <filter>threadSubcomponents</filter>
+        <filter>threadGroupSubcomponents</filter>
+        <filter>processSubcomponents</filter>
+      </contentFilters>
+    </element>
+    <element id="5">
+      <element id="15">
+        <bo>
+          <seg>subcomponent</seg>
+          <seg>autopilot</seg>
+        </bo>
+        <position x="128.0" y="38.0"/>
+        <size width="117.0" height="35.0"/>
+        <contentFilters>
+          <filter>systemSubcomponents</filter>
+          <filter>processorSubcomponents</filter>
+          <filter>virtualProcessorSubcomponents</filter>
+          <filter>deviceSubcomponents</filter>
+          <filter>threadSubcomponents</filter>
+          <filter>threadGroupSubcomponents</filter>
+          <filter>processSubcomponents</filter>
+        </contentFilters>
+      </element>
+      <element id="6">
+        <bo>
+          <seg>subcomponent</seg>
+          <seg>engine</seg>
+        </bo>
+        <position x="12.0" y="38.0"/>
+        <size width="104.0" height="35.0"/>
+        <contentFilters>
+          <filter>systemSubcomponents</filter>
+          <filter>processorSubcomponents</filter>
+          <filter>virtualProcessorSubcomponents</filter>
+          <filter>deviceSubcomponents</filter>
+          <filter>threadSubcomponents</filter>
+          <filter>threadGroupSubcomponents</filter>
+          <filter>processSubcomponents</filter>
+        </contentFilters>
+      </element>
+      <element id="17">
+        <bo>
+          <seg>subcomponent</seg>
+          <seg>eo_ir_sensor</seg>
+        </bo>
+        <position x="257.0" y="38.0"/>
+        <size width="149.0" height="35.0"/>
+        <contentFilters>
+          <filter>systemSubcomponents</filter>
+          <filter>processorSubcomponents</filter>
+          <filter>virtualProcessorSubcomponents</filter>
+          <filter>deviceSubcomponents</filter>
+          <filter>threadSubcomponents</filter>
+          <filter>threadGroupSubcomponents</filter>
+          <filter>processSubcomponents</filter>
+        </contentFilters>
+      </element>
+      <element id="7">
+        <element id="13">
+          <element id="14">
+            <bo>
+              <seg>subcomponent</seg>
+              <seg>core0</seg>
+            </bo>
+            <position x="12.0" y="38.0"/>
+            <size width="97.0" height="35.0"/>
+            <contentFilters>
+              <filter>systemSubcomponents</filter>
+              <filter>processorSubcomponents</filter>
+              <filter>virtualProcessorSubcomponents</filter>
+              <filter>deviceSubcomponents</filter>
+              <filter>threadSubcomponents</filter>
+              <filter>threadGroupSubcomponents</filter>
+              <filter>processSubcomponents</filter>
+            </contentFilters>
+          </element>
+          <bo>
+            <seg>subcomponent</seg>
+            <seg>processor_1</seg>
+          </bo>
+          <position x="363.0" y="109.0"/>
+          <size width="136.0" height="85.0"/>
+          <contentFilters>
+            <filter>systemSubcomponents</filter>
+            <filter>processorSubcomponents</filter>
+            <filter>virtualProcessorSubcomponents</filter>
+            <filter>deviceSubcomponents</filter>
+            <filter>threadSubcomponents</filter>
+            <filter>threadGroupSubcomponents</filter>
+            <filter>processSubcomponents</filter>
+          </contentFilters>
+        </element>
+        <element id="8">
+          <element id="30">
+            <bo>
+              <seg>pvg</seg>
+              <seg>deployment_properties::actual_processor_binding</seg>
+              <seg>13</seg>
+            </bo>
+            <bendpoints>
+              <point x="383.0" y="671.0"/>
+              <point x="395.0" y="671.0"/>
+            </bendpoints>
+            <contentFilters/>
+          </element>
+          <element id="12">
+            <bo>
+              <seg>subcomponent</seg>
+              <seg>autopilotadapterservice</seg>
+            </bo>
+            <position x="12.0" y="132.0"/>
+            <size width="224.0" height="35.0"/>
+            <contentFilters>
+              <filter>systemSubcomponents</filter>
+              <filter>processorSubcomponents</filter>
+              <filter>virtualProcessorSubcomponents</filter>
+              <filter>deviceSubcomponents</filter>
+              <filter>threadSubcomponents</filter>
+              <filter>threadGroupSubcomponents</filter>
+              <filter>processSubcomponents</filter>
+            </contentFilters>
+          </element>
+          <element id="11">
+            <bo>
+              <seg>subcomponent</seg>
+              <seg>commadapterservice</seg>
+            </bo>
+            <position x="12.0" y="85.0"/>
+            <size width="203.0" height="35.0"/>
+            <contentFilters>
+              <filter>systemSubcomponents</filter>
+              <filter>processorSubcomponents</filter>
+              <filter>virtualProcessorSubcomponents</filter>
+              <filter>deviceSubcomponents</filter>
+              <filter>threadSubcomponents</filter>
+              <filter>threadGroupSubcomponents</filter>
+              <filter>processSubcomponents</filter>
+            </contentFilters>
+          </element>
+          <element id="10">
+            <bo>
+              <seg>subcomponent</seg>
+              <seg>taskmanagerservice</seg>
+            </bo>
+            <position x="12.0" y="38.0"/>
+            <size width="197.0" height="35.0"/>
+            <contentFilters>
+              <filter>systemSubcomponents</filter>
+              <filter>processorSubcomponents</filter>
+              <filter>virtualProcessorSubcomponents</filter>
+              <filter>deviceSubcomponents</filter>
+              <filter>threadSubcomponents</filter>
+              <filter>threadGroupSubcomponents</filter>
+              <filter>processSubcomponents</filter>
+            </contentFilters>
+          </element>
+          <element id="9">
+            <bo>
+              <seg>subcomponent</seg>
+              <seg>zeroizeconditionrecognizerservice</seg>
+            </bo>
+            <position x="12.0" y="179.0"/>
+            <size width="307.0" height="35.0"/>
+            <contentFilters>
+              <filter>systemSubcomponents</filter>
+              <filter>processorSubcomponents</filter>
+              <filter>virtualProcessorSubcomponents</filter>
+              <filter>deviceSubcomponents</filter>
+              <filter>threadSubcomponents</filter>
+              <filter>threadGroupSubcomponents</filter>
+              <filter>processSubcomponents</filter>
+            </contentFilters>
+          </element>
+          <bo>
+            <seg>subcomponent</seg>
+            <seg>sw</seg>
+          </bo>
+          <position x="12.0" y="38.0"/>
+          <size width="331.0" height="226.0"/>
+          <contentFilters>
+            <filter>systemSubcomponents</filter>
+            <filter>processorSubcomponents</filter>
+            <filter>virtualProcessorSubcomponents</filter>
+            <filter>deviceSubcomponents</filter>
+            <filter>threadSubcomponents</filter>
+            <filter>threadGroupSubcomponents</filter>
+            <filter>processSubcomponents</filter>
+          </contentFilters>
+        </element>
+        <bo>
+          <seg>subcomponent</seg>
+          <seg>vmc</seg>
+        </bo>
+        <position x="12.0" y="85.0"/>
+        <size width="511.0" height="276.0"/>
+        <contentFilters>
+          <filter>systemSubcomponents</filter>
+          <filter>processorSubcomponents</filter>
+          <filter>virtualProcessorSubcomponents</filter>
+          <filter>deviceSubcomponents</filter>
+          <filter>threadSubcomponents</filter>
+          <filter>threadGroupSubcomponents</filter>
+          <filter>processSubcomponents</filter>
+        </contentFilters>
+      </element>
+      <element id="16">
+        <bo>
+          <seg>subcomponent</seg>
+          <seg>wireless_radio</seg>
+        </bo>
+        <position x="418.0" y="38.0"/>
+        <size width="158.0" height="35.0"/>
+        <contentFilters>
+          <filter>systemSubcomponents</filter>
+          <filter>processorSubcomponents</filter>
+          <filter>virtualProcessorSubcomponents</filter>
+          <filter>deviceSubcomponents</filter>
+          <filter>threadSubcomponents</filter>
+          <filter>threadGroupSubcomponents</filter>
+          <filter>processSubcomponents</filter>
+        </contentFilters>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>uav_500</seg>
+      </bo>
+      <position x="12.0" y="423.0"/>
+      <size width="588.0" height="373.0"/>
+      <contentFilters>
+        <filter>systemSubcomponents</filter>
+        <filter>processorSubcomponents</filter>
+        <filter>virtualProcessorSubcomponents</filter>
+        <filter>deviceSubcomponents</filter>
+        <filter>threadSubcomponents</filter>
+        <filter>threadGroupSubcomponents</filter>
+        <filter>processSubcomponents</filter>
+      </contentFilters>
+    </element>
+    <bo>
+      <seg>classifier</seg>
+      <seg>uas.ta6</seg>
+    </bo>
+    <position x="12.0" y="12.0"/>
+    <size width="778.0" height="808.0"/>
+    <contentFilters>
+      <filter>systemSubcomponents</filter>
+      <filter>processorSubcomponents</filter>
+      <filter>virtualProcessorSubcomponents</filter>
+      <filter>deviceSubcomponents</filter>
+      <filter>threadSubcomponents</filter>
+      <filter>threadGroupSubcomponents</filter>
+      <filter>processSubcomponents</filter>
+    </contentFilters>
+  </element>
+  <config type="processorBinding" connectionPrimaryLabelsVisible="false">
+    <enabledAadlProperties>
+      <property>deployment_properties::actual_processor_binding</property>
+    </enabledAadlProperties>
+    <context>
+      <seg>classifier</seg>
+      <seg>uas::uas.ta6</seg>
+    </context>
+  </config>
+</diagram:Diagram>

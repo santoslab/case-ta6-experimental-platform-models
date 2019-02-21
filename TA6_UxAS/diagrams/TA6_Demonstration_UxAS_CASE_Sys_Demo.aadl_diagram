@@ -1,0 +1,510 @@
+<?xml version="1.0" encoding="ASCII"?>
+<diagram:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:diagram="http://osate.org/diagram" formatVersion="5">
+  <element id="0" manual="true">
+    <element id="56">
+      <element id="57">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+        <contentFilters/>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>c_exec_01</seg>
+      </bo>
+      <contentFilters/>
+    </element>
+    <element id="53">
+      <bo>
+        <seg>connection</seg>
+        <seg>c_exec_02</seg>
+      </bo>
+      <contentFilters/>
+    </element>
+    <element id="54">
+      <bo>
+        <seg>connection</seg>
+        <seg>c_exec_03</seg>
+      </bo>
+      <contentFilters/>
+    </element>
+    <element id="48">
+      <element id="49">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+        <contentFilters/>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>c_impl_01</seg>
+      </bo>
+      <contentFilters/>
+    </element>
+    <element id="46">
+      <element id="47">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+        <contentFilters/>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>c_impl_02</seg>
+      </bo>
+      <bendpoints>
+        <point x="161.0" y="320.0"/>
+        <point x="161.0" y="292.0"/>
+      </bendpoints>
+      <contentFilters/>
+    </element>
+    <element id="21">
+      <element id="22">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+        <contentFilters/>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>c_impl_03</seg>
+      </bo>
+      <bendpoints>
+        <point x="748.0" y="320.0"/>
+        <point x="748.0" y="242.0"/>
+      </bendpoints>
+      <contentFilters/>
+    </element>
+    <element id="11">
+      <element id="12">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+        <contentFilters/>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>c_init_01</seg>
+      </bo>
+      <contentFilters/>
+    </element>
+    <element id="9">
+      <element id="10">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+        <contentFilters/>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>c_init_02</seg>
+      </bo>
+      <contentFilters/>
+    </element>
+    <element id="17">
+      <element id="18">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+        <contentFilters/>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>c_init_03</seg>
+      </bo>
+      <contentFilters/>
+    </element>
+    <element id="13" dockArea="left">
+      <bo>
+        <seg>feature</seg>
+        <seg>airvehiclestate</seg>
+      </bo>
+      <position y="276.0"/>
+      <contentFilters/>
+    </element>
+    <element id="25" dockArea="right">
+      <bo>
+        <seg>feature</seg>
+        <seg>ap_io</seg>
+      </bo>
+      <position x="1861.0" y="48.0"/>
+      <size width="57.0" height="44.0"/>
+      <contentFilters/>
+    </element>
+    <element id="55" dockArea="left">
+      <bo>
+        <seg>feature</seg>
+        <seg>configuration_io</seg>
+      </bo>
+      <position y="1178.0"/>
+      <size width="126.0" height="44.0"/>
+      <contentFilters/>
+    </element>
+    <element id="15" dockArea="right">
+      <bo>
+        <seg>feature</seg>
+        <seg>controller_io</seg>
+      </bo>
+      <position x="1816.0" y="124.0"/>
+      <size width="102.0" height="44.0"/>
+      <contentFilters/>
+    </element>
+    <element id="24" dockArea="left">
+      <bo>
+        <seg>feature</seg>
+        <seg>engine_io</seg>
+      </bo>
+      <position y="1122.0"/>
+      <size width="83.0" height="44.0"/>
+      <contentFilters/>
+    </element>
+    <element id="20" dockArea="left">
+      <bo>
+        <seg>feature</seg>
+        <seg>eo_ir_data_and_control</seg>
+      </bo>
+      <position y="1010.0"/>
+      <size width="183.0" height="44.0"/>
+      <contentFilters/>
+    </element>
+    <element id="23" dockArea="left">
+      <bo>
+        <seg>feature</seg>
+        <seg>eo_ir_video</seg>
+      </bo>
+      <position y="1066.0"/>
+      <size width="100.0" height="44.0"/>
+      <contentFilters/>
+    </element>
+    <element id="1" dockArea="left">
+      <bo>
+        <seg>feature</seg>
+        <seg>keepinzone</seg>
+      </bo>
+      <position y="198.0"/>
+      <contentFilters/>
+    </element>
+    <element id="14" dockArea="left">
+      <bo>
+        <seg>feature</seg>
+        <seg>keepoutzone</seg>
+      </bo>
+      <position y="148.0"/>
+      <contentFilters/>
+    </element>
+    <element id="19" dockArea="left">
+      <bo>
+        <seg>feature</seg>
+        <seg>operatingregion</seg>
+      </bo>
+      <position y="48.0"/>
+      <contentFilters/>
+    </element>
+    <element id="16" dockArea="left">
+      <bo>
+        <seg>feature</seg>
+        <seg>zeroizecondition</seg>
+      </bo>
+      <position y="98.0"/>
+      <contentFilters/>
+    </element>
+    <element id="50">
+      <element id="51" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>autopilot_cmds</seg>
+        </bo>
+        <position x="341.0" y="10.0"/>
+        <size width="117.0" height="44.0"/>
+        <contentFilters/>
+      </element>
+      <element id="52" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>uxas_cmds</seg>
+        </bo>
+        <position y="12.0"/>
+        <contentFilters/>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>autopilotadapterservice</seg>
+      </bo>
+      <position x="1381.0" y="38.0"/>
+      <size width="458.0" height="64.0"/>
+      <contentFilters>
+        <filter>features</filter>
+        <filter>internalFeatures</filter>
+        <filter>processorFeatures</filter>
+        <filter>connections</filter>
+        <filter>flowSpecifications</filter>
+      </contentFilters>
+    </element>
+    <element id="44">
+      <element id="45" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>ground_controller_io</seg>
+        </bo>
+        <position x="364.0" y="10.0"/>
+        <size width="161.0" height="44.0"/>
+        <contentFilters/>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>commadapterservice</seg>
+      </bo>
+      <position x="1381.0" y="114.0"/>
+      <size width="525.0" height="64.0"/>
+      <contentFilters>
+        <filter>features</filter>
+        <filter>internalFeatures</filter>
+        <filter>processorFeatures</filter>
+        <filter>connections</filter>
+        <filter>flowSpecifications</filter>
+      </contentFilters>
+    </element>
+    <element id="26">
+      <element id="28" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>airvehicleconfiguration</seg>
+        </bo>
+        <position y="560.0"/>
+        <contentFilters/>
+      </element>
+      <element id="32" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>airvehiclestate</seg>
+        </bo>
+        <position y="60.0"/>
+        <contentFilters/>
+      </element>
+      <element id="29" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>automationrequest</seg>
+        </bo>
+        <position y="810.0"/>
+        <contentFilters/>
+      </element>
+      <element id="36" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>automationresponse</seg>
+        </bo>
+        <position y="410.0"/>
+        <contentFilters/>
+      </element>
+      <element id="38" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>createnewservice</seg>
+        </bo>
+        <position y="660.0"/>
+        <contentFilters/>
+      </element>
+      <element id="34" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>entityconfiguration</seg>
+        </bo>
+        <position y="460.0"/>
+        <contentFilters/>
+      </element>
+      <element id="37" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>entitystate</seg>
+        </bo>
+        <position y="360.0"/>
+        <contentFilters/>
+      </element>
+      <element id="42" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>followpathcommand</seg>
+        </bo>
+        <position y="160.0"/>
+        <contentFilters/>
+      </element>
+      <element id="31" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>groundvehicleconfiguration</seg>
+        </bo>
+        <position y="510.0"/>
+        <contentFilters/>
+      </element>
+      <element id="40" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>groundvehiclestate</seg>
+        </bo>
+        <position y="260.0"/>
+        <contentFilters/>
+      </element>
+      <element id="30" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>killservice</seg>
+        </bo>
+        <position y="760.0"/>
+        <contentFilters/>
+      </element>
+      <element id="43" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>missioncommand</seg>
+        </bo>
+        <position y="110.0"/>
+        <contentFilters/>
+      </element>
+      <element id="41" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>removetasks</seg>
+        </bo>
+        <position y="210.0"/>
+        <contentFilters/>
+      </element>
+      <element id="39" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>surfacevehicleconfiguration</seg>
+        </bo>
+        <position y="310.0"/>
+        <contentFilters/>
+      </element>
+      <element id="27" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>surfacevehiclestate</seg>
+        </bo>
+        <position y="610.0"/>
+        <contentFilters/>
+      </element>
+      <element id="35" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>uniqueautomationrequest</seg>
+        </bo>
+        <position y="710.0"/>
+        <contentFilters/>
+      </element>
+      <element id="33" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>zeroizecommand</seg>
+        </bo>
+        <position y="10.0"/>
+        <contentFilters/>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>taskmanagerservice</seg>
+      </bo>
+      <position x="746.0" y="138.0"/>
+      <size width="623.0" height="860.0"/>
+      <contentFilters>
+        <filter>features</filter>
+        <filter>internalFeatures</filter>
+        <filter>processorFeatures</filter>
+        <filter>connections</filter>
+        <filter>flowSpecifications</filter>
+      </contentFilters>
+    </element>
+    <element id="2">
+      <element id="4" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>airvehiclestate</seg>
+        </bo>
+        <position y="210.0"/>
+        <contentFilters/>
+      </element>
+      <element id="3" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>keepinzone</seg>
+        </bo>
+        <position y="160.0"/>
+        <contentFilters/>
+      </element>
+      <element id="6" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>keepoutzone</seg>
+        </bo>
+        <position y="110.0"/>
+        <contentFilters/>
+      </element>
+      <element id="8" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>operatingregion</seg>
+        </bo>
+        <position y="10.0"/>
+        <contentFilters/>
+      </element>
+      <element id="5" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>zeroizecommand</seg>
+        </bo>
+        <position x="437.0" y="110.0"/>
+        <contentFilters/>
+      </element>
+      <element id="7" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>zeroizecondition</seg>
+        </bo>
+        <position y="60.0"/>
+        <contentFilters/>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>zeroizeconditionrecognizerservice</seg>
+      </bo>
+      <position x="159.0" y="38.0"/>
+      <size width="567.0" height="260.0"/>
+      <contentFilters>
+        <filter>features</filter>
+        <filter>internalFeatures</filter>
+        <filter>processorFeatures</filter>
+        <filter>connections</filter>
+        <filter>flowSpecifications</filter>
+      </contentFilters>
+    </element>
+    <bo>
+      <seg>classifier</seg>
+      <seg>case_sys.demo</seg>
+    </bo>
+    <position x="12.0" y="12.0"/>
+    <size width="1918.0" height="1234.0"/>
+    <contentFilters>
+      <filter>features</filter>
+      <filter>internalFeatures</filter>
+      <filter>processorFeatures</filter>
+      <filter>connections</filter>
+      <filter>flowSpecifications</filter>
+      <filter>subcomponents</filter>
+    </contentFilters>
+  </element>
+  <config type="structure" connectionPrimaryLabelsVisible="false">
+    <enabledAadlProperties/>
+    <context>
+      <seg>classifier</seg>
+      <seg>ta6_demonstration_uxas::case_sys.demo</seg>
+    </context>
+  </config>
+</diagram:Diagram>

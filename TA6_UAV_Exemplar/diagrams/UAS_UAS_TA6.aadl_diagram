@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="ASCII"?>
+<diagram:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:diagram="http://osate.org/diagram" formatVersion="5">
+  <element id="0" manual="true">
+    <element id="49">
+      <bo>
+        <seg>connection</seg>
+        <seg>c1</seg>
+      </bo>
+      <contentFilters/>
+    </element>
+    <element id="48">
+      <bo>
+        <seg>connection</seg>
+        <seg>c2</seg>
+      </bo>
+      <bendpoints>
+        <point x="417.0" y="241.0"/>
+        <point x="417.0" y="429.0"/>
+      </bendpoints>
+      <contentFilters/>
+    </element>
+    <element id="47">
+      <bo>
+        <seg>connection</seg>
+        <seg>c3</seg>
+      </bo>
+      <contentFilters/>
+    </element>
+    <element id="46">
+      <bo>
+        <seg>connection</seg>
+        <seg>c4</seg>
+      </bo>
+      <bendpoints>
+        <point x="427.0" y="377.0"/>
+        <point x="427.0" y="189.0"/>
+      </bendpoints>
+      <contentFilters/>
+    </element>
+    <element id="53">
+      <bo>
+        <seg>connection</seg>
+        <seg>c5</seg>
+      </bo>
+      <bendpoints>
+        <point x="881.0" y="431.0"/>
+      </bendpoints>
+      <contentFilters/>
+    </element>
+    <element id="52">
+      <bo>
+        <seg>connection</seg>
+        <seg>c6</seg>
+      </bo>
+      <bendpoints>
+        <point x="871.0" y="139.0"/>
+        <point x="871.0" y="421.0"/>
+        <point x="877.0" y="421.0"/>
+      </bendpoints>
+      <contentFilters/>
+    </element>
+    <element id="51">
+      <bo>
+        <seg>connection</seg>
+        <seg>c7</seg>
+      </bo>
+      <bendpoints>
+        <point x="871.0" y="535.0"/>
+        <point x="871.0" y="441.0"/>
+        <point x="877.0" y="441.0"/>
+      </bendpoints>
+      <contentFilters/>
+    </element>
+    <element id="50">
+      <bo>
+        <seg>connection</seg>
+        <seg>c8</seg>
+      </bo>
+      <contentFilters/>
+    </element>
+    <element id="8">
+      <bo>
+        <seg>connection</seg>
+        <seg>c9</seg>
+      </bo>
+      <bendpoints>
+        <point x="407.0" y="295.0"/>
+        <point x="407.0" y="483.0"/>
+      </bendpoints>
+      <contentFilters/>
+    </element>
+    <element id="1">
+      <element id="5" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>configuration_data</seg>
+        </bo>
+        <position y="114.0"/>
+        <size width="143.0" height="44.0"/>
+        <contentFilters/>
+      </element>
+      <element id="2" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>sd_card_conn</seg>
+        </bo>
+        <position y="10.0"/>
+        <contentFilters/>
+      </element>
+      <element id="4" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>uav_operator_if</seg>
+        </bo>
+        <position y="60.0"/>
+        <size width="127.0" height="44.0"/>
+        <contentFilters/>
+      </element>
+      <element id="3" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>wireless_conn</seg>
+        </bo>
+        <position x="312.0" y="64.0"/>
+        <contentFilters/>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>gnd_station</seg>
+      </bo>
+      <position x="425.0" y="323.0"/>
+      <size width="424.0" height="168.0"/>
+      <contentFilters>
+        <filter>features</filter>
+        <filter>internalFeatures</filter>
+        <filter>processorFeatures</filter>
+        <filter>connections</filter>
+        <filter>flowSpecifications</filter>
+      </contentFilters>
+    </element>
+    <element id="30">
+      <element id="39" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>configuration_if</seg>
+        </bo>
+        <position x="249.0" y="114.0"/>
+        <size width="124.0" height="44.0"/>
+        <contentFilters/>
+      </element>
+      <element id="37" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>control_interface</seg>
+        </bo>
+        <position x="244.0" y="60.0"/>
+        <size width="129.0" height="44.0"/>
+        <contentFilters/>
+      </element>
+      <element id="44" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>sensor_rf</seg>
+        </bo>
+        <position y="89.0"/>
+        <contentFilters/>
+      </element>
+      <element id="38" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>usb_link</seg>
+        </bo>
+        <position x="294.0" y="10.0"/>
+        <contentFilters/>
+      </element>
+      <element id="36" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>wireless_link</seg>
+        </bo>
+        <position x="267.0" y="168.0"/>
+        <contentFilters/>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>uav_400</seg>
+      </bo>
+      <position x="12.0" y="323.0"/>
+      <size width="373.0" height="218.0"/>
+      <contentFilters>
+        <filter>features</filter>
+        <filter>internalFeatures</filter>
+        <filter>processorFeatures</filter>
+        <filter>connections</filter>
+        <filter>flowSpecifications</filter>
+      </contentFilters>
+    </element>
+    <element id="9">
+      <element id="21" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>configuration_if</seg>
+        </bo>
+        <position x="249.0" y="164.0"/>
+        <size width="124.0" height="44.0"/>
+        <contentFilters/>
+      </element>
+      <element id="19" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>control_interface</seg>
+        </bo>
+        <position x="244.0" y="110.0"/>
+        <size width="129.0" height="44.0"/>
+        <contentFilters/>
+      </element>
+      <element id="27" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>sensor_rf</seg>
+        </bo>
+        <position y="89.0"/>
+        <contentFilters/>
+      </element>
+      <element id="20" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>usb_link</seg>
+        </bo>
+        <position x="294.0" y="60.0"/>
+        <contentFilters/>
+      </element>
+      <element id="17" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>wireless_link</seg>
+        </bo>
+        <position x="267.0" y="10.0"/>
+        <contentFilters/>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>uav_500</seg>
+      </bo>
+      <position x="12.0" y="85.0"/>
+      <size width="373.0" height="218.0"/>
+      <contentFilters>
+        <filter>features</filter>
+        <filter>internalFeatures</filter>
+        <filter>processorFeatures</filter>
+        <filter>connections</filter>
+        <filter>flowSpecifications</filter>
+      </contentFilters>
+    </element>
+    <element id="7">
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>wireless_link</seg>
+      </bo>
+      <position x="869.0" y="399.0"/>
+      <size width="148.0" height="40.0"/>
+      <contentFilters>
+        <filter>features</filter>
+        <filter>internalFeatures</filter>
+        <filter>processorFeatures</filter>
+        <filter>connections</filter>
+        <filter>flowSpecifications</filter>
+      </contentFilters>
+    </element>
+    <element id="6">
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>wireless_protocol</seg>
+      </bo>
+      <position x="12.0" y="38.0"/>
+      <size width="177.0" height="35.0"/>
+      <contentFilters>
+        <filter>features</filter>
+        <filter>internalFeatures</filter>
+        <filter>processorFeatures</filter>
+        <filter>connections</filter>
+        <filter>flowSpecifications</filter>
+      </contentFilters>
+    </element>
+    <bo>
+      <seg>classifier</seg>
+      <seg>uas.ta6</seg>
+    </bo>
+    <position x="12.0" y="12.0"/>
+    <size width="1029.0" height="553.0"/>
+    <contentFilters>
+      <filter>features</filter>
+      <filter>internalFeatures</filter>
+      <filter>processorFeatures</filter>
+      <filter>connections</filter>
+      <filter>flowSpecifications</filter>
+      <filter>subcomponents</filter>
+    </contentFilters>
+  </element>
+  <config type="structure" connectionPrimaryLabelsVisible="false">
+    <enabledAadlProperties/>
+    <context>
+      <seg>classifier</seg>
+      <seg>uas::uas.ta6</seg>
+    </context>
+  </config>
+</diagram:Diagram>
