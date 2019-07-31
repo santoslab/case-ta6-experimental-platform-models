@@ -1,0 +1,148 @@
+package Waterways_UxAS
+public
+	with CMASI;
+	
+	-- Included Main Services
+	with AssignmentTreeBranchBoundService_Pkg;
+	with AutomationRequestValidatorService_Pkg;	
+	with PlanBuilderService_Pkg;
+    with RouteAggregatorService_Pkg;
+	with RoutePlannerVisibilityService_Pkg;
+	with TaskManagerService_Pkg;
+	with WaypointPlanManagerService_Pkg;
+	with CmasiLineSearchTask_Pkg;
+	with SendMessageService_Pkg;
+	
+	with UxAS;
+		
+	thread group Waterways extends UxAS::UxAS
+		features
+			AutomationRequest : in event data port CMASI::AutomationRequest.i;
+			AirVehicleState : in event data port CMASI::AirVehicleState.i;
+			MissionCommand : out event data port CMASI::MissionCommand.i;
+			VehicleActionCommand : out event data port CMASI::VehicleActionCommand.i;
+			AutomationResponse : out event data port CMASI::AutomationResponse.i;			
+	end Waterways;
+	
+	thread group implementation Waterways.i 
+		subcomponents
+		
+		  -- https://github.com/afrl-rq/OpenUxAS/blob/develop/examples/02_Example_WaterwaySearch/cfg_WaterwaySearch.xml
+		  -- Removed: Test_SimulationTime
+		  TaskManagerService: thread TaskManagerService_Pkg::TaskManagerService;
+		  AutomationRequestValidatorService: thread AutomationRequestValidatorService_Pkg::AutomationRequestValidatorService;
+		  RoutePlannerVisibilityService: thread RoutePlannerVisibilityService_Pkg::RoutePlannerVisibilityService;
+		  RouteAggregatorService: thread RouteAggregatorService_Pkg::RouteAggregatorService;
+		  AssignmentTreeBranchBoundService: thread AssignmentTreeBranchBoundService_Pkg::AssignmentTreeBranchBoundService;
+		  PlanBuilderService: thread PlanBuilderService_Pkg::PlanBuilderService;
+		  WaypointPlanManagerService: thread WaypointPlanManagerService_Pkg::WaypointPlanManagerService;       
+		  CmasiLineSearchTask: thread CmasiLineSearchTask_Pkg::CmasiLineSearchTask;
+		  SendMessageService: thread SendMessageService_Pkg::SendMessageService;
+		  
+		connections
+			
+			------------------------------------------------------------------------------------------------------------------
+			-- Connections between the ground station (or controller) and the UxAS instances, and connections between UxAS
+			-- services. The connections reflect the message sequence flow defined for this example. The message sequence flow 
+			-- has 4 states: Initialization, Assignment, Implementation, and Execution. The connections are group and labeled 
+			-- based on the state(s) in which the messages occur.
+			------------------------------------------------------------------------------------------------------------------
+			
+			------------------
+			-- Primary Inputs
+			------------------
+		
+			c_AVSt_06 : port AirVehicleState -> WaypointPlanManagerService.AirVehicleState;
+			c_AVSt_07 : port AirVehicleState -> RoutePlannerVisibilityService.AirVehicleState;
+			c_AVSt_08 : port AirVehicleState -> PlanBuilderService.AirVehicleState;
+			c_AVSt_09 : port AirVehicleState -> TaskManagerService.AirVehicleState;
+			c_AVSt_10 : port AirVehicleState -> AutomationRequestValidatorService.AirVehicleState;
+			c_AVSt_11 : port AirVehicleState -> RouteAggregatorService.AirVehicleState;
+			c_AVSt_12 : port AirVehicleState -> CmasiLineSearchTask.AirVehicleState;
+			
+			c_AReq_01 : port AutomationRequest -> AutomationRequestValidatorService.AutomationRequest;
+            	          
+            -------------------------------------
+            -- AutomationRequestValidatorService
+            -------------------------------------
+            c_UARsp_01 : port AutomationRequestValidatorService.UniqueAutomationRequest -> RouteAggregatorService.UniqueAutomationResquest;           
+            c_UARsp_02 : port AutomationRequestValidatorService.UniqueAutomationRequest -> AssignmentTreeBranchBoundService.UniqueAutomationRequest;
+            c_UARsp_03 : port AutomationRequestValidatorService.UniqueAutomationRequest -> PlanBuilderService.UniqueAutomationRequest;                       
+            c_UARsp_04 : port AutomationRequestValidatorService.UniqueAutomationRequest -> CmasiLineSearchTask.UniqueAutomationRequest;
+            -- EGM: All the sequence charts in the UxAS docks show the below connection, but it is _not_ in the code.
+            -- The TaskManagerService does _not_ subscribe to UniqueAutomationRequest though it does send that message.
+            -- c_UAR_05 : port AutomationRequestValidatorService.UniqueAutomationRequest -> TaskManagerService.UniqueAutomationRequest;
+            
+            c_ARsp_01 : port AutomationRequestValidatorService.AutomationResponse -> AutomationResponse;
+            c_ARps_02 : port AutomationRequestValidatorService.AutomationResponse -> WaypointPlanManagerService.AutomationResponse;
+                       
+            -----------------------
+            -- CmasiLineSearchTask
+            -----------------------
+            c_TPOpts_01 : port CmasiLineSearchTask.TaskPlanOptions -> RouteAggregatorService.TaskPlanOptions;
+            c_TPOpts_02 : port CmasiLineSearchTask.TaskPlanOptions -> AssignmentTreeBranchBoundService.TaskPlanOptions;
+            
+            c_VACmd_01 : port CmasiLineSearchTask.VehicleActionCommand -> VehicleActionCommand;
+            
+            c_TIRsp_01 : port CmasiLineSearchTask.TaskImplementationResponse -> PlanBuilderService.TaskImplementationResponse;
+            
+            c_CLST_RPReq_01 : port CmasiLineSearchTask.RoutePlanRequest -> RoutePlannerVisibilityService.RoutePlanRequest_task;
+            
+            -------------------------
+            -- RouteAggregatorService
+            -------------------------
+			c_RPReq_01 : port RouteAggregatorService.RoutePlanRequest -> RoutePlannerVisibilityService.RoutePlanRequest_ragg;
+        
+            c_ACMtx_01 : port RouteAggregatorService.AssignmentCostMatrix -> AssignmentTreeBranchBoundService.AssignmentCostMatrix;
+                             
+			---------------------------------------
+			-- AssignmentTreeBranchAndBoundService
+			---------------------------------------
+			c_TASum_01 : port AssignmentTreeBranchBoundService.TaskAssignmentSummary -> PlanBuilderService.TaskAssignmentSummary;
+       		     		
+        	-------------------
+       		-- PlanBuilderService
+       		-------------------
+       		c_PBS_TIReq_01: port PlanBuilderService.TaskImplementationRequest -> CmasiLineSearchTask.TaskImplementationRequest;
+  		
+  			c_PBS_UARsp_01 : port PlanBuilderService.UniqueAutomationResponse -> AutomationRequestValidatorService.UniqueAutomationResponse;
+			c_PBS_UARsp_02 : port PlanBuilderService.UniqueAutomationResponse -> CmasiLineSearchTask.UniqueAutomationResponse;
+					
+			---------------------------------
+			-- RoutePlannerVisibilityService
+			---------------------------------
+		    c_RPVS_RPR_01: port RoutePlannerVisibilityService.RoutePlanResponse -> CmasiLineSearchTask.RoutePlanResponse;
+		    c_PRVS_RPR_02: port RoutePlannerVisibilityService.RoutePlanResponse -> RouteAggregatorService.RoutePlanResponse;
+		      
+       		--------------------------
+       		-- WaypointManagerService
+       		--------------------------
+       		c_MCmd_01 : port WaypointPlanManagerService.MissionCommand -> MissionCommand;
+       		
+		    ----------------------
+		    -- TaskManagerService
+		    ----------------------
+		    c_TMSrvc_CNT_01: port TaskManagerService.CreateNewService -> CmasiLineSearchTask.createNewService;
+		    
+		    ----------------------
+		    -- SendMessageService
+		    ----------------------
+		    c_SMS_AVCfg_01 : port SendMessageService.AirVehicleConfiguration -> RouteAggregatorService.AirVehicleConfiguration;
+            c_SMS_AVCfg_02 : port SendMessageService.AirVehicleConfiguration -> RoutePlannerVisibilityService.AirVehicleConfiguration;
+            c_SMS_AVCfg_03 : port SendMessageService.AirVehicleConfiguration -> TaskManagerService.AirVehicleConfiguration;
+            c_SMS_AVCfg_04 : port SendMessageService.AirVehicleConfiguration -> AutomationRequestValidatorService.AirVehicleConfiguration;
+            c_SMS_AVCfg_05 : port SendMessageService.AirVehicleConfiguration -> CmasiLineSearchTask.AirVehicleConfiguration;
+            
+            c_SMS_LST_01 : port SendMessageService.LineSearchTask -> TaskManagerService.LineSearchTask;
+  
+            c_SMS_KIZ_01 : port SendMessageService.KeepInZone -> AutomationRequestValidatorService.KeepInZone;
+            c_SMS_KIZ_02 : port SendMessageService.KeepInZone -> RoutePlannerVisibilityService.KeepInZone;
+            
+            c_SMS_KOZ_01 : port SendMessageService.KeepOutZone -> AutomationRequestValidatorService.KeepOutZone;
+            c_SMS_KOZ_02 : port SendMessageService.KeepOutZone -> RoutePlannerVisibilityService.KeepOutZone;
+            
+            c_SMS_OR_01 : port SendMessageService.OperatingRegion -> AutomationRequestValidatorService.OperatingRegion;
+            c_SMS_OR_02 : port SendMessageService.OperatingRegion -> RoutePlannerVisibilityService.OperatingRegion;
+	end Waterways.i;
+	
+end Waterways_UxAS;
