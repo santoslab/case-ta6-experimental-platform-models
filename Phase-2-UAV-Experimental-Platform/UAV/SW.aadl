@@ -4,12 +4,23 @@ public
 	with Waterways_UxAS;
     with CASE_Model_Transformations;
     
+    with CASEAgree;
+    with CASEConsts;
+    
 	process SW
         features
 	       uart_recv: in event data port CASE_Model_Transformations::CASE_UART_Msg.Impl;
            uart_send: out event data port CASE_Model_Transformations::CASE_UART_Msg.Impl;
            radio_recv: in event data port CASE_Model_Transformations::CASE_RF_Msg.Impl;
-           radio_send: out event data port CASE_Model_Transformations::CASE_RF_Msg.Impl;           
+           radio_send: out event data port CASE_Model_Transformations::CASE_RF_Msg.Impl;
+                 
+        annex agree {**
+            guarantee Req001_SW "The radio_send outputs only well formed CASE_RF_Msg.Impl types" : 
+                CASEAgree::WellformedCASE_RF_Msg(radio_send, CASEConsts::UAV_ID, CASEConsts::GS_ID);
+            guarantee Req002_SW "The uart_send outputs only well formed CASE_RF_Msg.Impl types" : 
+                CASEAgree::WellformedCASE_UART_Msg(uart_send);
+        **};
+            
 	end SW;
 			
 	process implementation SW.Impl

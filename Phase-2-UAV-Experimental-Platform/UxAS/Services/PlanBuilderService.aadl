@@ -19,7 +19,7 @@ public
 			TaskImplementationResponse : in event data port UXTASK::TaskImplementationResponse.i;
 
 			-- Sent Messages
- 			ServiceStatus : out event data port CMASI::ServiceStatus.i;
+-- 			ServiceStatus : out event data port CMASI::ServiceStatus.i;
 			TaskImplementationRequest : out event data port UXTASK::TaskImplementationRequest.i;
 			UniqueAutomationResponse : out event data port UXTASK::UniqueAutomationResponse.i;	
 					

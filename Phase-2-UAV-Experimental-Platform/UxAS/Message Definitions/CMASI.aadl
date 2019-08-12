@@ -10,6 +10,7 @@ public
 	
 	data AltitudeType extends Base_Types::Integer
 		properties
+			Data_Model::Data_Representation => Enum;
 			Data_Model::Enumerators => (
 						--Height above WGS84 ellipsoid, mean sea level
 						"AGL",
@@ -132,12 +133,12 @@ public
 
 	data implementation AutomationResponse.i
 		subcomponents
-				--A list of MissionCommands issued by the automation service
+			--A list of MissionCommands issued by the automation service
 			MissionCommandList: data MissionCommand.i {Data_Model::Data_Representation => Array;};
-					--A list of VehicleActionCommands issued by the automation service
+			--A list of VehicleActionCommands issued by the automation service
 			VehicleCommandList: data VehicleActionCommand.i {Data_Model::Data_Representation => Array;};
-					--Status from the automation service to the simulation regarding
-					--errors or conditions.
+			--Status from the automation service to the simulation regarding
+			--errors or conditions.
 			Info: data KeyValuePair.i {Data_Model::Data_Representation => Array;};
 	end AutomationResponse.i;
 
@@ -639,6 +640,13 @@ public
     data Waypoint extends Location3D
 	end Waypoint;
 
+    data VehicleActionListType
+    	properties
+    		Data_Model::Data_Representation => Array;
+    		Data_Model::Base_Type => (classifier (VehicleAction.i));
+            Data_Model::Dimension => (CASEConsts::Waypoint_VehicleActionList_MaxArrayLength);               
+    end VehicleActionListType;
+    
 --A simple waypoint class for vehicle routing
 	data implementation Waypoint.i extends Location3D.i
 		subcomponents
@@ -659,7 +667,7 @@ public
 					--The type of turn to execute
 			TurnType: data TurnType.i;
 					--A list of actions to perform at this waypoint
-			VehicleActionList: data VehicleAction.i {Data_Model::Data_Representation => Array;};
+			VehicleActionList: data VehicleActionListType;
 					--A waypoint for contingency (e.g. lost-comm, alternate mission)
 					--operations. A value of zero denotes that no contingency point is
 					--specified.
@@ -672,7 +680,9 @@ public
 					--zero denotes no associated tasks. This field is for analysis purposes.
 					--The automation service should associate a list of tasks with each
 					--waypoint to enable analysis of the allocation of tasks to vehicles.
-			AssociatedTasks: data int64.i {Data_Model::Data_Representation => Array;};
+			AssociatedTasks: data int64.i {Data_Model::Data_Representation => Array;
+			                               Data_Model::Dimension => (CASEConsts::Waypoint_AssociatedTasks_MaxArrayLength);
+			};
 	end Waypoint.i;
 
 	-------------------------------------------------------------------------------	
@@ -692,13 +702,20 @@ public
 	data MissionCommand extends VehicleActionCommand	
 	end MissionCommand;
 	
+	data WaypointListType
+		properties
+			Data_Model::Data_Representation => Array;
+			Data_Model::Base_Type => (classifier (Waypoint.i));
+            Data_Model::Dimension => (CASEConsts::MissionCommand_WaypointList_MaxArrayLength);
+	end WaypointListType;
+	
 	data implementation MissionCommand.i extends VehicleActionCommand.i
 		subcomponents
 			--The list of waypoints associated with this mission task. Waypoints
 			--are linked, but the waypoint list may contain waypoints that are not
 			--necessarily linked. Multiple linked routes may be sent in a single
 			--waypoint list. Waypoints are not necessarily ordered in the list.
-			WaypointList: data Waypoint.i {Data_Model::Data_Representation => Array;};
+			WaypointList: data WaypointListType;
 			
 			--ID of the first waypoint to follow.
 			FirstWaypoint: data int64.i;
@@ -720,6 +737,7 @@ public
 
 	data SpeedType extends Base_Types::Integer
 		properties
+			Data_Model::Data_Representation => Enum;
 			Data_Model::Enumerators => (
 						"Airspeed",
 						"Groundspeed");
@@ -730,6 +748,7 @@ public
 
 	data TurnType extends Base_Types::Integer
 		properties
+			Data_Model::Data_Representation => Enum;
 			Data_Model::Enumerators => (
 						"TurnShort",
 						"FlyOver");

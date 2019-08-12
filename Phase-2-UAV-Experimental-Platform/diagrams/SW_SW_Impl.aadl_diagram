@@ -197,7 +197,7 @@
         <seg>feature</seg>
         <seg>uart_send</seg>
       </bo>
-      <position x="1454.0" y="120.0"/>
+      <position x="1453.0" y="120.0"/>
       <contentFilters/>
     </element>
     <element uuid="78bb9bb6-5c82-4cb4-97ea-2e9516116823">
@@ -222,7 +222,7 @@
           <seg>feature</seg>
           <seg>recv_data</seg>
         </bo>
-        <position x="215.0" y="140.0"/>
+        <position x="216.0" y="140.0"/>
         <contentFilters/>
       </element>
       <element uuid="f8dd7feb-acf0-4e44-808f-c08dc76fd45f" dockArea="right">
@@ -253,7 +253,7 @@
           <seg>feature</seg>
           <seg>airvehiclestate</seg>
         </bo>
-        <position x="175.0" y="50.0"/>
+        <position x="178.0" y="50.0"/>
         <contentFilters/>
       </element>
       <element uuid="02043687-4d1e-4aea-97bf-19dc1f8f0e5d" dockArea="left">
@@ -284,7 +284,7 @@
           <seg>feature</seg>
           <seg>airvehiclestate</seg>
         </bo>
-        <position x="298.0" y="170.0"/>
+        <position x="301.0" y="170.0"/>
         <contentFilters/>
       </element>
       <element uuid="6632ccd3-553d-4715-95d9-3e2619f5f35a" dockArea="right">
@@ -300,7 +300,7 @@
           <seg>feature</seg>
           <seg>automationresponse</seg>
         </bo>
-        <position x="259.0" y="100.0"/>
+        <position x="258.0" y="100.0"/>
         <contentFilters/>
       </element>
       <element uuid="17405c6a-4359-4528-bbd7-0d7a635c283d" dockArea="left">
@@ -339,7 +339,7 @@
           <seg>feature</seg>
           <seg>airvehiclestate</seg>
         </bo>
-        <position x="325.0" y="130.0"/>
+        <position x="328.0" y="130.0"/>
         <contentFilters/>
       </element>
       <element uuid="a2c88c80-9d44-4fc2-ab42-9ca83833a508" dockArea="left">

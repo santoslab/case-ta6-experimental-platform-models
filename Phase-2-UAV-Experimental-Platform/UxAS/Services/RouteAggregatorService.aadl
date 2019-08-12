@@ -30,7 +30,7 @@ public
             -- AircraftPathPlanner
 --			RouteResponse : out event data port ROUTE::RouteResponse.i;
 			AssignmentCostMatrix : out event data port UXTASK::AssignmentCostMatrix.i;
-			ServiceStatus : out event data port CMASI::ServiceStatus.i;
+--			ServiceStatus : out event data port CMASI::ServiceStatus.i;
 			
 		properties			
             Dispatch_Protocol => Sporadic;

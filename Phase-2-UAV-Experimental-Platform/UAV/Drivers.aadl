@@ -4,7 +4,9 @@ public
 	with CASE_Properties;
 	with CASE_Model_Transformations;
 	with CMASI;
-
+    with CASECMASI;
+    with CASEConsts;
+    with CASEAgree;
 
 	thread RadioDriver
 		-- The RadioDriver is the software that enables other SW components to communicate to other systems over RF
@@ -19,8 +21,15 @@ public
             AutomationRequest: out event data port CMASI::AutomationRequest.i;
             
 		properties
-			Dispatch_Protocol => Periodic;
+            Dispatch_Protocol => Sporadic;
+            Queue_Size => 1 applies to recv_data;
+            Queue_Processing_Protocol => FIFO applies to recv_data, AutomationResponse, AirVehicleState;
+            Overflow_Handling_Protocol => ERROR applies to recv_data, AutomationResponse, AirVehicleState;
+            Dequeue_Protocol => OneItem applies to recv_data, AutomationResponse, AirVehicleState;
+            Fan_Out_Policy => Broadcast applies to send_data, AutomationRequest;
+
 			CASE_Properties::COMP_TYPE => COMM_DRIVER;
+			-- KEEP
 --		annex agree {**
 --			guarantee Req001_RadioDriver "Only valid command messages shall be forwarded to message destination components" : VALID_MESSAGE(MissionCommand);
 --		**};
@@ -32,18 +41,21 @@ public
 	thread UARTDriver
 		-- The UARTDriver is the software that enables other SW components to communicate to other systems over the serial connection
 		features
-			AirVehicleState: out event data port CMASI::AirVehicleState.i;
-			MissionCommand: in event data port CMASI::MissionCommand.i;
-			
 			recv_data: in event data port CASE_Model_Transformations::CASE_UART_Msg.Impl;
-			send_data: out event data port CASE_Model_Transformations::CASE_UART_Msg.Impl;
-			
+            MissionCommand: in event data port CASECMASI::CASEMissionCommand.i;
+        
+            send_data: out event data port CASE_Model_Transformations::CASE_UART_Msg.Impl;    
+			AirVehicleState: out event data port CMASI::AirVehicleState.i;
 		properties
 			Dispatch_Protocol => Periodic;
-			
---		annex agree {**
---			assume Req001_UARTDriver "Well-formed mission window" : good_mission_window(mission_window);
---			guarantee Req002_UARTDriver "A CRC shall be appended to the message to determine message correctness" : send_data.crc;
+		annex agree {**
+		    assume Req001_UARTDriver "Assumes recv_data only gets well formed CASE_UART_Msg.Impl types" : 
+		        CASEAgree::WellformedCASE_UART_Msg(recv_data);        
+		    assume Req002_UARTDriver "Assumes MissionCommand only gets well formed CASEMissionCommand.i types" :
+		        CASEAgree::WellformedCASEMissionCommand(MissionCommand); 
+		        
+		    guarantee Req003_UARTDRiver "The send_data outputs only well formed CASE_UART_Msg.Impl types" : 
+                CASEAgree::WellformedCASE_UART_Msg(send_data);
 --		**};
 	end UARTDriver;
 
@@ -56,9 +68,9 @@ public
            VehicleActionCommand: in event data port CMASI::VehicleActionCommand.i;
     	properties
     		Dispatch_Protocol => Periodic;
+    		-- ASSUME: valid AirVehicleState
+    		-- Guarantee: well formed action command
 --        annex agree {**
---            assume Req001_UARTDriver "Well-formed mission window" : good_mission_window(mission_window);
---            guarantee Req002_UARTDriver "A CRC shall be appended to the message to determine message correctness" : send_data.crc;
 --        **};
     end GimbalDriver;
 

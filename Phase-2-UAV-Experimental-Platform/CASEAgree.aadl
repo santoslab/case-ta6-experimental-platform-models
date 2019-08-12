@@ -1,0 +1,68 @@
+package CASEAgree
+public
+	
+	with CASE_Model_Transformations;
+	renames CASE_Model_Transformations::all;
+	with Base_Types;
+	renames Base_Types::all;
+	with CASECMASI;
+	renames CASECMASI::all;
+	with CMASI;
+	renames CMASI::all;
+	with Common_Data; 
+	renames Common_Data::all;
+	with CASEConsts;
+	
+annex agree {**
+       
+    fun WellformedCASE_RF_Msg(msg : CASE_RF_Msg.Impl, src : Integer, dst : Integer ) : bool = 
+       WellformedCASE_MsgHeader(msg.header, src, dst);
+       
+    fun WellformedCASE_MsgHeader(hdr : CASE_MsgHeader.Impl, src : Integer, dst : Integer ) : bool =
+       (hdr.src = src) and (hdr.dst = dst) and (hdr.trusted = true) and (hdr.HMAC = true);
+     
+    fun WellformedCASE_UART_Msg(msg : CASE_UART_Msg.Impl) : bool = 
+       msg.crc = true;
+        
+    fun WellformedCASEMissionCommand(msg : CASEMissionCommand.i) : bool = 
+        WellformedCASEWaypointList(msg.WaypointList) and
+        FirstWaypointExists(msg.FirstWaypoint, msg.WaypointList);
+    
+    fun FirstWaypointExists(FirstWaypoint : int64.i, wpl : CASEWaypointListType) : bool = 
+        (exists i in wpl, i.Number = FirstWaypoint);
+        
+    fun WellformedCASEWaypointList(wpl : CASEWaypointListType) : bool =
+        WaypointIDsAreAllUnique(wpl) and
+        (forall i in wpl, WellformedWaypoint(i, CASEConsts::FCTL_MissionCommand_WaypointList_MaxArrayLength));
+        
+    fun WaypointIDsAreAllUnique(wpl: CASEWaypointListType) : bool =
+        forall i in indices(wpl), (forall j in indices(wpl), (i <> j => (wpl[i]).Number <> (wpl[j]).Number));
+    
+    fun WellformedWaypoint(wp : Waypoint.i, maxNextWaypoint : int64.i) : bool =
+         WellformedLocation3D(wp) and
+         (wp.NextWaypoint < maxNextWaypoint) and
+         (wp.Speed < CASEConsts::MAX_UAV_AIRSPEED) and
+         (wp.SpeedType = enum(SpeedType, Airspeed)) and
+         (wp.ClimbRate < CASEConsts::MAX_UAV_CLIMB_RATE) and
+         ((wp.TurnType = enum(TurnType, TurnShort)) or (wp.TurnType = enum(TurnType, FlyOver))) and
+         WellformedVehicleActionList(wp.VehicleActionList) and
+         wp.ContingencyWaypointA = 0 and
+         wp.ContingencyWaypointB = 0;
+    
+    fun WellformedLocation3D(wp : Waypoint.i) : bool = 
+       wp.Latitude >= -(CASEConsts::LATITUDE_BOUND) and 
+       wp.Latitude <= (CASEConsts::LATITUDE_BOUND) and 
+       wp.Longitude >= -(CASEConsts::LONGITUDE_BOUND) and 
+       wp.Longitude <= (CASEConsts::LONGITUDE_BOUND) and 
+       wp.Altitude >= 0.0 and 
+       wp.Altitude <= (CASEConsts::ALTITUDE_BOUND) and
+       wp.AltitudeType = enum(AltitudeType, AGL);
+             
+    -- These have no meaning right now aside from a GimbalStareAction (needs to be defined) 
+    fun WellformedVehicleActionList(val : VehicleActionListType) : bool = true;
+
+**};
+
+
+end CASEAgree;
+

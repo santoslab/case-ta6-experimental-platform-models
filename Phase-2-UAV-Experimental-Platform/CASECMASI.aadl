@@ -1,0 +1,31 @@
+package CASECMASI
+public
+	with CMASI;
+	with Data_Model;
+	with CASEConsts;
+	with Common_Data; renames Common_Data::all;
+	
+	data CASEWaypointListType
+        properties
+            Data_Model::Data_Representation => Array;
+            Data_Model::Base_Type => (classifier (CMASI::Waypoint.i));
+            Data_Model::Dimension => (CASEConsts::MissionCommand_WaypointList_MaxArrayLength);
+    end CASEWaypointListType;
+    
+	data CASEMissionCommand extends CMASI::VehicleActionCommand
+	end CASEMissionCommand;
+	
+	data implementation CASEMissionCommand.i extends CMASI::VehicleActionCommand.i
+        subcomponents
+            --The list of waypoints associated with this mission task. Waypoints
+            --are linked, but the waypoint list may contain waypoints that are not
+            --necessarily linked. Multiple linked routes may be sent in a single
+            --waypoint list. Waypoints are not necessarily ordered in the list.
+            WaypointList: data CASEWaypointListType;
+            
+            --ID of the first waypoint to follow.
+            FirstWaypoint: data int64.i;
+    end CASEMissionCommand.i;
+	
+	
+end CASECMASI;

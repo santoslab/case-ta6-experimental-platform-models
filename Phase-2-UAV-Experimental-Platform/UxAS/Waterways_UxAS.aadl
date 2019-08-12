@@ -1,6 +1,7 @@
 package Waterways_UxAS
 public
 	with CMASI;
+	with CASECMASI;
 	
 	-- Included Main Services
 	with AssignmentTreeBranchBoundService_Pkg;
@@ -19,7 +20,7 @@ public
 		features
 			AutomationRequest : in event data port CMASI::AutomationRequest.i;
 			AirVehicleState : in event data port CMASI::AirVehicleState.i;
-			MissionCommand : out event data port CMASI::MissionCommand.i;
+			MissionCommand : out event data port CASECMASI::CASEMissionCommand.i;
 			VehicleActionCommand : out event data port CMASI::VehicleActionCommand.i;
 			AutomationResponse : out event data port CMASI::AutomationResponse.i;			
 	end Waterways;

@@ -40,7 +40,7 @@ public
 			AutomationResponse: out event data port CMASI::AutomationResponse.i;
 --			ImpactAutomationResponse: out event data port IMPACT::ImpactAutomationResponse.i;
 			UniqueAutomationRequest: out event data port UXTASK::UniqueAutomationRequest.i;
-			ServiceStatus: out event data port CMASI::ServiceStatus.i;
+--			ServiceStatus: out event data port CMASI::ServiceStatus.i;
 			
 		properties
 			Dispatch_Protocol => Sporadic;
