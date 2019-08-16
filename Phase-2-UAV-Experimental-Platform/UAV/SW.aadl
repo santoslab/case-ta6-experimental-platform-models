@@ -16,7 +16,7 @@ public
                  
         annex agree {**
             guarantee Req001_SW "The radio_send outputs only well formed CASE_RF_Msg.Impl types" : 
-                CASEAgree::WellformedCASE_RF_Msg(radio_send, CASEConsts::UAV_ID, CASEConsts::GS_ID);
+                CASEAgree::WellformedCASE_RF_Msg(radio_send, CASEAgree::AVC.ID, CASEConsts::GS_ID);
             guarantee Req002_SW "The uart_send outputs only well formed CASE_RF_Msg.Impl types" : 
                 CASEAgree::WellformedCASE_UART_Msg(uart_send);
         **};

@@ -10,7 +10,7 @@ public
     with RouteAggregatorService_Pkg;
 	with RoutePlannerVisibilityService_Pkg;
 	with TaskManagerService_Pkg;
-	with WaypointPlanManagerService_Pkg;
+	with CASEServices;
 	with CmasiLineSearchTask_Pkg;
 	with SendMessageService_Pkg;
 	
@@ -36,7 +36,7 @@ public
 		  RouteAggregatorService: thread RouteAggregatorService_Pkg::RouteAggregatorService;
 		  AssignmentTreeBranchBoundService: thread AssignmentTreeBranchBoundService_Pkg::AssignmentTreeBranchBoundService;
 		  PlanBuilderService: thread PlanBuilderService_Pkg::PlanBuilderService;
-		  WaypointPlanManagerService: thread WaypointPlanManagerService_Pkg::WaypointPlanManagerService;       
+		  WaypointPlanManagerService: thread CASEServices::CASEWaypointPlanManagerService;       
 		  CmasiLineSearchTask: thread CmasiLineSearchTask_Pkg::CmasiLineSearchTask;
 		  SendMessageService: thread SendMessageService_Pkg::SendMessageService;
 		  

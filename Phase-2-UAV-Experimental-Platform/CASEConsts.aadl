@@ -1,11 +1,5 @@
 property set CASEConsts is
-	-- UAV
-    UAV_ID : constant aadlinteger => 42;
-    
-    -- UAV maximum airspeed
-    MAX_UAV_AIRSPEED : constant aadlreal => 120.0;
-    
-    -- UAV maximum climb rate
+	-- UAV maximum climb rate
     MAX_UAV_CLIMB_RATE : constant aadlreal => 42.0;
     
     -- Ground Station
@@ -13,6 +7,9 @@ property set CASEConsts is
     
     -- Flight Controller
     FCTL_ID : constant aadlinteger => 12; 
+    
+    -- SEE https://github.com/afrl-rq/OpenUxAS/blob/develop/mdms/CMASI.xml#L1320 for the
+    -- maximum allowed array sizes.
     
     -- Maximum number of waypoints that can be in a MissionCommand for the flight controller
     FCTL_MissionCommand_WaypointList_MaxArrayLength : constant aadlinteger => 10;  
@@ -25,6 +22,23 @@ property set CASEConsts is
     
     -- The maximum number of AssociatedTasks in a waypoint
     Waypoint_AssociatedTasks_MaxArrayLength : constant aadlinteger => 8;
+   
+    -- EGM TODO: should be eight but Waterways defines none but AGREE cannot do zero-length arrays.
+    -- The maximum alternative flight profiles in a VehicleConfiguration 
+    AlternativeFlightProfiles_MaxArrayLength : constant aadlinteger => 1;
+    
+    -- EGM TODO: should be eight but only two are defined by Waterways
+    -- The maximum number of TurnTypes allowed in a VehicleConfiguration
+    AvailableTurnTypes_MaxArrayLength : constant aadlinteger => 2;
+    
+    -- EGM TODO: should be eight but only one is defined by Waterways
+    -- The maximum number of loiter types allowed in a VehicleConfiguration
+    AvailableLoiterTypes_MaxArrayLength : constant aadlinteger => 1;
+    
+    -- EGM TODO: should be eight but only two are defined by Waterways, but also have different types which is not doable here
+    PayloadConfigurationList_MaxArrayLength : constant aadlinteger => 1;
+    
+    BoundaryPointsList_MaxArrayLength : constant aadlinteger => 8;
     
     -- Location3D bounds
     LATITUDE_BOUND : constant aadlreal => 90.0;

@@ -2,7 +2,6 @@ package WaypointPlanManagerService_Pkg
 public
 	with CMASI;
 	with ServiceBase_Pkg;
-	with CASECMASI;
 	
 	---------------------------------------------------------------------------------------------------------------------
 	-- A service that serves plans to a vehicle interface.
@@ -24,17 +23,11 @@ public
 --			MissionCommand_in: in event data port CMASI::MissionCommand.i;
 			
 			-- Sent Messages
-			MissionCommand : out event data port CASECMASI::CASEMissionCommand.i;
+			MissionCommand : out event data port CMASI::MissionCommand.i;
 						
 		properties
 			Dispatch_Protocol => Sporadic;
-		
-		-- ASSUME: correct automation response
-		-- GUARANTEE: MissionCommand is related to the AutomationResponse with waypoints that are in the plan (GoodMissionCommand)
---		annex agree {**
---            assume Req001_WaypointManager "The Waypoint Manager shall receive a well-formed mission" : good_mission(flight_plan);
---            guarantee Req002_WaypointManager "The Waypoint Manager shall output a well-formed mission window" : good_mission_window(mission_window);
---        **};
+			Classifier_Substitution_Rule => Type_Extension;
 	end WaypointPlanManagerService;
 	
 end WaypointPlanManagerService_Pkg;

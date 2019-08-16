@@ -5,7 +5,6 @@ public
 	with CASE_Model_Transformations;
 	with CMASI;
     with CASECMASI;
-    with CASEConsts;
     with CASEAgree;
 
 	thread RadioDriver
@@ -22,12 +21,11 @@ public
             
 		properties
             Dispatch_Protocol => Sporadic;
-            Queue_Size => 1 applies to recv_data;
+            Queue_Size => 1 applies to recv_data, AutomationResponse, AirVehicleState;
             Queue_Processing_Protocol => FIFO applies to recv_data, AutomationResponse, AirVehicleState;
             Overflow_Handling_Protocol => ERROR applies to recv_data, AutomationResponse, AirVehicleState;
             Dequeue_Protocol => OneItem applies to recv_data, AutomationResponse, AirVehicleState;
             Fan_Out_Policy => Broadcast applies to send_data, AutomationRequest;
-
 			CASE_Properties::COMP_TYPE => COMM_DRIVER;
 			-- KEEP
 --		annex agree {**
@@ -47,8 +45,14 @@ public
             send_data: out event data port CASE_Model_Transformations::CASE_UART_Msg.Impl;    
 			AirVehicleState: out event data port CMASI::AirVehicleState.i;
 		properties
-			Dispatch_Protocol => Periodic;
-		annex agree {**
+            Dispatch_Protocol => Sporadic;
+            Queue_Size => 1 applies to recv_data, MissionCommand;
+            Queue_Processing_Protocol => FIFO applies to recv_data, MissionCommand;
+            Overflow_Handling_Protocol => ERROR applies to recv_data, MissionCommand;
+            Dequeue_Protocol => OneItem applies to recv_data, MissionCommand;
+            Fan_Out_Policy => Broadcast applies to send_data, AirVehicleState;
+            CASE_Properties::COMP_TYPE => COMM_DRIVER;
+		annex agree {**     
 		    assume Req001_UARTDriver "Assumes recv_data only gets well formed CASE_UART_Msg.Impl types" : 
 		        CASEAgree::WellformedCASE_UART_Msg(recv_data);        
 		    assume Req002_UARTDriver "Assumes MissionCommand only gets well formed CASEMissionCommand.i types" :
@@ -67,7 +71,12 @@ public
     	   AirVehicleState: in event data port CMASI::AirVehicleState.i;
            VehicleActionCommand: in event data port CMASI::VehicleActionCommand.i;
     	properties
-    		Dispatch_Protocol => Periodic;
+            Dispatch_Protocol => Sporadic;
+            Queue_Size => 1 applies to AirVehicleState, VehicleActionCommand;
+            Queue_Processing_Protocol => FIFO applies to AirVehicleState, VehicleActionCommand;
+            Overflow_Handling_Protocol => ERROR applies to AirVehicleState, VehicleActionCommand;
+            Dequeue_Protocol => OneItem applies to AirVehicleState, VehicleActionCommand;
+            CASE_Properties::COMP_TYPE => COMM_DRIVER;
     		-- ASSUME: valid AirVehicleState
     		-- Guarantee: well formed action command
 --        annex agree {**

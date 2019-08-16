@@ -2,9 +2,6 @@ package TaskManagerService_Pkg
 public
 	with CMASI;
 	with UXNATIVE;
-	with UXTASK;
-	with VEHICLES;
-	with CASE_Messages;
 	
 	with ServiceBase_Pkg;
 	

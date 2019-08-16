@@ -3,7 +3,6 @@ public
 	
 	with CASE_Model_Transformations;
 	renames CASE_Model_Transformations::all;
-	with Base_Types;
 	renames Base_Types::all;
 	with CASECMASI;
 	renames CASECMASI::all;
@@ -14,20 +13,92 @@ public
 	with CASEConsts;
 	
 annex agree {**
-       
-    fun WellformedCASE_RF_Msg(msg : CASE_RF_Msg.Impl, src : Integer, dst : Integer ) : bool = 
+            
+    -- EGM: values taken from UAV 400 at 
+    -- https://github.com/afrl-rq/OpenUxAS/blob/develop/examples/02_Example_WaterwaySearch/Scenario_WaterwaySearch.xml
+    const AVC : AirVehicleConfiguration.i = AirVehicleConfiguration.i {
+        ID = 400;
+        Affiliation = 0; -- string.i
+        EntityType = 0; -- string.i
+        Label = 0; -- string.i ("UAV 400")
+        NominalSpeed = 22.0;
+        NominalAltitude = 700.0;
+        NominalAltitudeType =  enum(AltitudeType, MSL);
+        PayloadConfigurationList = [| GimbalConfiguration.i {
+            PayloadID = 1;
+            PayloadKind = 0; -- string.i
+            Parameters = KeyValuePair.i { 
+                Key = 0;
+                Value = 0
+            };
+            MinAzimuth = -180.0;
+            MaxAzimuth = 180.0;
+            IsAzimuthClamped = true; -- AGREE grumps if bool.i is declared type.
+            MinElevation = -130.0;
+            MaxElevation = 40.0;
+            IsElevationClamped = True;
+            MinRotation = 0.0;
+            MaxRotation = 0.0;
+            IsRotationClamped = True;
+            MaxAzimuthSlewRate = 114.59;
+            MaxElevationSlewRate = 114.59;
+            MaxRotationRate = 0.0
+        }|];
+        Info = KeyValuePair.i { -- should be an array
+            Key = 0;
+            Value = 0
+        }; 
+        MinimumSpeed = 20.0; 
+        MaximumSpeed = 120.0;
+        NominalFlightProfile = FlightProfile.i {
+            Name = 0; -- string.i
+            Airspeed = 22.1211109161377;
+            PitchAngle = 0.0;
+            VerticalSpeed = 0.0;
+            MaxBankAngle = 20.0;
+            EnergyRate = 0.000277999992249534
+        };
+        -- EGM TODO: make zero-length arrays a possibility
+        AlternateFlightProfiles = [|FlightProfile.i {
+            Name = 0; -- string.i
+            Airspeed = 22.1211109161377;
+            PitchAngle = 0.0;
+            VerticalSpeed = 0.0;
+            MaxBankAngle = 20.0;
+            EnergyRate = 0.000277999992249534
+        }|];
+        AvailableLoiterTypes = [|enum(LoiterType, Circular)|];
+        AvailableTurnTypes = [|enum(CMASI::TurnType, TurnShort), enum(CMASI::TurnType, FlyOver)|];
+        MinimumAltitude = 0.0;
+        MinAltitudeType = enum(AltitudeType, MSL);
+        MaximumAltitude = 1000000.0;
+        MaxAltitudeType = enum(AltitudeType, MSL)
+    };
+    
+    -- EGM: using dhttps://github.com/afrl-rq/OpenUxAS/blob/develop/examples/06_AutomationDiagram/
+    -- for the KeepInZone, KeepOutZone, and LineSearchTask. Waterways did not define an operating
+    -- region, and the line search task it waterways was really long.
+    
+    fun WellformedCASE_RF_Msg(msg : CASE_RF_Msg.Impl, src : int64.i, dst : int64.i ) : bool = 
        WellformedCASE_MsgHeader(msg.header, src, dst);
        
-    fun WellformedCASE_MsgHeader(hdr : CASE_MsgHeader.Impl, src : Integer, dst : Integer ) : bool =
+    fun WellformedCASE_MsgHeader(hdr : CASE_MsgHeader.Impl, src : int64.i, dst : int64.i ) : bool =
        (hdr.src = src) and (hdr.dst = dst) and (hdr.trusted = true) and (hdr.HMAC = true);
      
     fun WellformedCASE_UART_Msg(msg : CASE_UART_Msg.Impl) : bool = 
        msg.crc = true;
         
-    fun WellformedCASEMissionCommand(msg : CASEMissionCommand.i) : bool = 
+    fun WellformedCASEMissionCommand(msg : CASEMissionCommand.i) : bool =
+        WellformedVehicleActionCommand(msg.CommandID, msg.VehicleID, msg.VehicleActionList, msg.Status) and
+        (msg.Status = enum(CommandStatusType, InProcess)) and  
         WellformedCASEWaypointList(msg.WaypointList) and
         FirstWaypointExists(msg.FirstWaypoint, msg.WaypointList);
     
+    fun WellformedVehicleActionCommand(CommandID : int64.i, VehicleID : int64.i, VehicleActionList : VehicleActionListType, Status : CommandStatusType.i ) : bool =
+        (CommandID <> 0) and
+        (VehicleID = AVC.ID) and 
+        WellformedVehicleActionList(VehicleActionList);
+        
     fun FirstWaypointExists(FirstWaypoint : int64.i, wpl : CASEWaypointListType) : bool = 
         (exists i in wpl, i.Number = FirstWaypoint);
         
@@ -37,14 +108,15 @@ annex agree {**
         
     fun WaypointIDsAreAllUnique(wpl: CASEWaypointListType) : bool =
         forall i in indices(wpl), (forall j in indices(wpl), (i <> j => (wpl[i]).Number <> (wpl[j]).Number));
-    
+        
     fun WellformedWaypoint(wp : Waypoint.i, maxNextWaypoint : int64.i) : bool =
          WellformedLocation3D(wp) and
          (wp.NextWaypoint < maxNextWaypoint) and
-         (wp.Speed < CASEConsts::MAX_UAV_AIRSPEED) and
+         (wp.Speed >= AVC.MinimumSpeed) and 
+         (wp.Speed <= AVC.MaximumSpeed) and
          (wp.SpeedType = enum(SpeedType, Airspeed)) and
          (wp.ClimbRate < CASEConsts::MAX_UAV_CLIMB_RATE) and
-         ((wp.TurnType = enum(TurnType, TurnShort)) or (wp.TurnType = enum(TurnType, FlyOver))) and
+         (exists i in AVC.AvailableTurnTypes, i = wp.TurnType) and
          WellformedVehicleActionList(wp.VehicleActionList) and
          wp.ContingencyWaypointA = 0 and
          wp.ContingencyWaypointB = 0;
@@ -56,9 +128,17 @@ annex agree {**
        wp.Longitude <= (CASEConsts::LONGITUDE_BOUND) and 
        wp.Altitude >= 0.0 and 
        wp.Altitude <= (CASEConsts::ALTITUDE_BOUND) and
-       wp.AltitudeType = enum(AltitudeType, AGL);
-             
-    -- These have no meaning right now aside from a GimbalStareAction (needs to be defined) 
+       wp.AltitudeType = enum(AltitudeType, AGL) and 
+       InKeepInZone(wp) and 
+       NotInKeepOutZone(wp);
+       
+    -- EGM TODO: create the KeepInZone and check the waypoint
+    fun InKeepInZone(wp : Waypoint.i) : bool = true;
+    
+    -- EGM TODO: create the KeepOutZone and check the waypoint
+    fun NotInKeepOutZone(wp : Waypoint.i) : bool = true;
+               
+    -- EGM TODO: specialize to a set of VehicleActions than are checked
     fun WellformedVehicleActionList(val : VehicleActionListType) : bool = true;
 
 **};
