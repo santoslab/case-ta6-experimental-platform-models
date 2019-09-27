@@ -7,9 +7,9 @@
         <seg>bac1</seg>
       </bo>
       <bendpoints>
-        <point x="1213.0" y="346.0"/>
-        <point x="1213.0" y="276.0"/>
-        <point x="1229.0" y="276.0"/>
+        <point x="1243.0" y="424.0"/>
+        <point x="1243.0" y="444.0"/>
+        <point x="1259.0" y="444.0"/>
       </bendpoints>
       <contentFilters/>
     </element>
@@ -19,11 +19,9 @@
         <seg>bac2</seg>
       </bo>
       <bendpoints>
-        <point x="520.0" y="296.0"/>
-        <point x="520.0" y="213.0"/>
-        <point x="1213.0" y="213.0"/>
-        <point x="1213.0" y="256.0"/>
-        <point x="1229.0" y="256.0"/>
+        <point x="530.0" y="424.0"/>
+        <point x="530.0" y="454.0"/>
+        <point x="1259.0" y="454.0"/>
       </bendpoints>
       <contentFilters/>
     </element>
@@ -33,9 +31,9 @@
         <seg>bac3</seg>
       </bo>
       <bendpoints>
-        <point x="1223.0" y="185.0"/>
-        <point x="1223.0" y="246.0"/>
-        <point x="1229.0" y="246.0"/>
+        <point x="1253.0" y="587.0"/>
+        <point x="1253.0" y="474.0"/>
+        <point x="1259.0" y="474.0"/>
       </bendpoints>
       <contentFilters/>
     </element>
@@ -45,7 +43,9 @@
         <seg>bac4</seg>
       </bo>
       <bendpoints>
-        <point x="1233.0" y="266.0"/>
+        <point x="1243.0" y="507.0"/>
+        <point x="1243.0" y="464.0"/>
+        <point x="1259.0" y="464.0"/>
       </bendpoints>
       <contentFilters/>
     </element>
@@ -62,8 +62,8 @@
         <seg>bac6</seg>
       </bo>
       <bendpoints>
-        <point x="500.0" y="196.0"/>
-        <point x="500.0" y="82.0"/>
+        <point x="530.0" y="484.0"/>
+        <point x="530.0" y="615.0"/>
       </bendpoints>
       <contentFilters/>
     </element>
@@ -79,6 +79,12 @@
         <seg>connection</seg>
         <seg>c01</seg>
       </bo>
+      <bendpoints>
+        <point x="140.0" y="82.0"/>
+        <point x="140.0" y="143.0"/>
+        <point x="872.0" y="143.0"/>
+        <point x="872.0" y="244.0"/>
+      </bendpoints>
       <contentFilters/>
     </element>
     <element uuid="49402ed6-30ff-430b-a011-dc6bcccb2f05">
@@ -93,6 +99,10 @@
         <seg>connection</seg>
         <seg>c02</seg>
       </bo>
+      <bendpoints>
+        <point x="130.0" y="132.0"/>
+        <point x="130.0" y="304.0"/>
+      </bendpoints>
       <contentFilters/>
     </element>
     <element uuid="ae378826-a3d1-45ae-9b91-2486ccf2d2a7">
@@ -107,6 +117,12 @@
         <seg>connection</seg>
         <seg>c04</seg>
       </bo>
+      <bendpoints>
+        <point x="1243.0" y="244.0"/>
+        <point x="1243.0" y="164.0"/>
+        <point x="540.0" y="164.0"/>
+        <point x="540.0" y="244.0"/>
+      </bendpoints>
       <contentFilters/>
     </element>
     <element uuid="af354fc6-9394-467c-a1d6-c40860bc3b54">
@@ -121,6 +137,10 @@
         <seg>connection</seg>
         <seg>c05</seg>
       </bo>
+      <bendpoints>
+        <point x="1253.0" y="304.0"/>
+        <point x="1253.0" y="132.0"/>
+      </bendpoints>
       <contentFilters/>
     </element>
     <element uuid="277d3e31-9209-41fa-8e64-287113c85481">
@@ -150,8 +170,8 @@
         <seg>c07</seg>
       </bo>
       <bendpoints>
-        <point x="510.0" y="246.0"/>
-        <point x="510.0" y="132.0"/>
+        <point x="530.0" y="364.0"/>
+        <point x="530.0" y="82.0"/>
       </bendpoints>
       <contentFilters/>
     </element>
@@ -181,6 +201,12 @@
         <seg>connection</seg>
         <seg>c11</seg>
       </bo>
+      <bendpoints>
+        <point x="862.0" y="244.0"/>
+        <point x="862.0" y="154.0"/>
+        <point x="140.0" y="154.0"/>
+        <point x="140.0" y="364.0"/>
+      </bendpoints>
       <contentFilters/>
     </element>
     <element uuid="cebaa35f-de9f-444e-a758-57d566d246aa" dockArea="right">
@@ -188,7 +214,7 @@
         <seg>feature</seg>
         <seg>fc_uart</seg>
       </bo>
-      <position x="1370.0" y="38.0"/>
+      <position x="1400.0" y="571.0"/>
       <contentFilters/>
     </element>
     <element uuid="dcf6fb69-3c93-4cf9-9224-f10d0215101b" dockArea="left">
@@ -196,7 +222,7 @@
         <seg>feature</seg>
         <seg>fc_uart_recv</seg>
       </bo>
-      <position y="252.0"/>
+      <position y="88.0"/>
       <contentFilters/>
     </element>
     <element uuid="39bdbb5d-569b-4b16-a90a-b489401e8619" dockArea="right">
@@ -204,7 +230,7 @@
         <seg>feature</seg>
         <seg>fc_uart_send</seg>
       </bo>
-      <position x="1350.0" y="88.0"/>
+      <position x="1380.0" y="38.0"/>
       <contentFilters/>
     </element>
     <element uuid="00a86343-6bd4-46f7-a057-a4b540e783ca" dockArea="left">
@@ -212,7 +238,7 @@
         <seg>feature</seg>
         <seg>radio_recv</seg>
       </bo>
-      <position y="402.0"/>
+      <position y="38.0"/>
       <contentFilters/>
     </element>
     <element uuid="e2af2fb0-2b20-4a7f-a95d-806d2fadf4a2" dockArea="right">
@@ -220,7 +246,7 @@
         <seg>feature</seg>
         <seg>radio_send</seg>
       </bo>
-      <position x="1361.0" y="402.0"/>
+      <position x="1391.0" y="88.0"/>
       <contentFilters/>
     </element>
     <element uuid="380035be-e749-4e73-934e-3b94fc16744e" dockArea="right">
@@ -228,7 +254,21 @@
         <seg>feature</seg>
         <seg>rfa</seg>
       </bo>
-      <position x="1405.0" y="352.0"/>
+      <position x="1435.0" y="320.0"/>
+      <contentFilters/>
+    </element>
+    <element uuid="778323ec-89e9-45e6-9b4f-3a18de0bff0e">
+      <bo>
+        <seg>flow_specification</seg>
+        <seg>commands</seg>
+      </bo>
+      <contentFilters/>
+    </element>
+    <element uuid="c60e6115-d998-48e6-bd34-ec60b60d4600">
+      <bo>
+        <seg>flow_specification</seg>
+        <seg>status</seg>
+      </bo>
       <contentFilters/>
     </element>
     <element uuid="5cd70839-f8b7-43c5-8893-07b88700a158">
@@ -236,7 +276,7 @@
         <seg>subcomponent</seg>
         <seg>bus_hw</seg>
       </bo>
-      <position x="1221.0" y="224.0"/>
+      <position x="1251.0" y="422.0"/>
       <size width="117.0" height="50.0"/>
       <contentFilters>
         <filter>features</filter>
@@ -252,7 +292,7 @@
           <seg>feature</seg>
           <seg>mca</seg>
         </bo>
-        <position x="322.0" y="110.0"/>
+        <position x="322.0" y="158.0"/>
         <contentFilters/>
       </element>
       <element uuid="ead5fea6-f789-460e-a919-f098c1202626" dockArea="left">
@@ -260,7 +300,7 @@
           <seg>feature</seg>
           <seg>recv_data_in</seg>
         </bo>
-        <position y="110.0"/>
+        <position y="38.0"/>
         <contentFilters/>
       </element>
       <element uuid="be3c6818-4b07-4fcf-86d2-f2d863d229cd" dockArea="right">
@@ -268,15 +308,15 @@
           <seg>feature</seg>
           <seg>recv_data_out</seg>
         </bo>
-        <position x="263.0" y="160.0"/>
+        <position x="263.0" y="38.0"/>
         <contentFilters/>
       </element>
-      <element uuid="978f7fd3-e004-4760-8f95-89852b5ea09d" dockArea="right">
+      <element uuid="978f7fd3-e004-4760-8f95-89852b5ea09d" dockArea="left">
         <bo>
           <seg>feature</seg>
           <seg>send_data_in</seg>
         </bo>
-        <position x="268.0" y="210.0"/>
+        <position y="98.0"/>
         <contentFilters/>
       </element>
       <element uuid="8ccee178-4daf-4c1d-ba9f-ff4ca0d4cb01" dockArea="right">
@@ -284,7 +324,7 @@
           <seg>feature</seg>
           <seg>send_data_out</seg>
         </bo>
-        <position x="260.0" y="60.0"/>
+        <position x="260.0" y="98.0"/>
         <contentFilters/>
       </element>
       <element uuid="2e255e75-f1a3-438c-8377-13808ac85ecc" dockArea="right">
@@ -292,15 +332,29 @@
           <seg>feature</seg>
           <seg>uart</seg>
         </bo>
-        <position x="315.0" y="10.0"/>
+        <position x="315.0" y="218.0"/>
+        <contentFilters/>
+      </element>
+      <element uuid="f68bf9a1-b91a-401a-b9c6-b75510857add">
+        <bo>
+          <seg>flow_specification</seg>
+          <seg>receive</seg>
+        </bo>
+        <contentFilters/>
+      </element>
+      <element uuid="269d4aa5-8b3a-41cc-a427-f033052c3c88">
+        <bo>
+          <seg>flow_specification</seg>
+          <seg>send</seg>
+        </bo>
         <contentFilters/>
       </element>
       <bo>
         <seg>subcomponent</seg>
         <seg>fc_uart_hw</seg>
       </bo>
-      <position x="108.0" y="142.0"/>
-      <size width="370.0" height="260.0"/>
+      <position x="138.0" y="222.0"/>
+      <size width="370.0" height="270.0"/>
       <contentFilters>
         <filter>features</filter>
         <filter>internalFeatures</filter>
@@ -322,7 +376,7 @@
         <seg>subcomponent</seg>
         <seg>mem_hw</seg>
       </bo>
-      <position x="975.0" y="212.0"/>
+      <position x="1005.0" y="453.0"/>
       <size width="216.0" height="60.0"/>
       <contentFilters>
         <filter>features</filter>
@@ -345,7 +399,7 @@
         <seg>subcomponent</seg>
         <seg>proc_hw</seg>
       </bo>
-      <position x="968.0" y="131.0"/>
+      <position x="998.0" y="533.0"/>
       <size width="223.0" height="60.0"/>
       <contentFilters>
         <filter>features</filter>
@@ -356,12 +410,12 @@
       </contentFilters>
     </element>
     <element uuid="3446198e-a7ba-4d41-a99b-8ffc5968c807">
-      <element uuid="553571d0-64e1-46fe-9b3f-411b6d224aff" dockArea="right">
+      <element uuid="553571d0-64e1-46fe-9b3f-411b6d224aff" dockArea="left">
         <bo>
           <seg>feature</seg>
           <seg>radio_recv</seg>
         </bo>
-        <position x="218.0" y="60.0"/>
+        <position y="38.0"/>
         <contentFilters/>
       </element>
       <element uuid="7c5157dd-722c-403d-9e82-20830f9d6b28" dockArea="right">
@@ -369,7 +423,7 @@
           <seg>feature</seg>
           <seg>radio_send</seg>
         </bo>
-        <position x="214.0" y="10.0"/>
+        <position x="214.0" y="98.0"/>
         <contentFilters/>
       </element>
       <element uuid="7f727510-15f0-4e94-bfba-2f50303f74da" dockArea="left">
@@ -377,23 +431,37 @@
           <seg>feature</seg>
           <seg>uart_recv</seg>
         </bo>
-        <position y="10.0"/>
+        <position y="98.0"/>
         <contentFilters/>
       </element>
-      <element uuid="4d02f0f5-de57-429a-9a0b-a0f2cb9acc79" dockArea="left">
+      <element uuid="4d02f0f5-de57-429a-9a0b-a0f2cb9acc79" dockArea="right">
         <bo>
           <seg>feature</seg>
           <seg>uart_send</seg>
         </bo>
-        <position y="60.0"/>
+        <position x="221.0" y="38.0"/>
+        <contentFilters/>
+      </element>
+      <element uuid="5f20535d-c021-49c9-8a10-767eb32678e4">
+        <bo>
+          <seg>flow_specification</seg>
+          <seg>recv_map</seg>
+        </bo>
+        <contentFilters/>
+      </element>
+      <element uuid="ff6bff6f-bd45-4cb9-a494-3e4dadbaa9c5">
+        <bo>
+          <seg>flow_specification</seg>
+          <seg>status</seg>
+        </bo>
         <contentFilters/>
       </element>
       <bo>
         <seg>subcomponent</seg>
         <seg>proc_sw</seg>
       </bo>
-      <position x="518.0" y="292.0"/>
-      <size width="302.0" height="110.0"/>
+      <position x="538.0" y="162.0"/>
+      <size width="302.0" height="150.0"/>
       <contentFilters>
         <filter>features</filter>
         <filter>internalFeatures</filter>
@@ -408,7 +476,7 @@
           <seg>feature</seg>
           <seg>mca</seg>
         </bo>
-        <position x="303.0" y="10.0"/>
+        <position x="303.0" y="218.0"/>
         <contentFilters/>
       </element>
       <element uuid="66029e67-8f5a-46ae-84e9-b67319645d93" dockArea="left">
@@ -416,15 +484,15 @@
           <seg>feature</seg>
           <seg>recv_data_in</seg>
         </bo>
-        <position y="110.0"/>
+        <position y="38.0"/>
         <contentFilters/>
       </element>
-      <element uuid="a8afc7aa-3b79-499e-b4e5-c9648d089d71" dockArea="left">
+      <element uuid="a8afc7aa-3b79-499e-b4e5-c9648d089d71" dockArea="right">
         <bo>
           <seg>feature</seg>
           <seg>recv_data_out</seg>
         </bo>
-        <position y="60.0"/>
+        <position x="244.0" y="38.0"/>
         <contentFilters/>
       </element>
       <element uuid="dd8e4b35-7821-4b2e-94f2-b3df9245c8e3" dockArea="right">
@@ -432,7 +500,7 @@
           <seg>feature</seg>
           <seg>rfa</seg>
         </bo>
-        <position x="307.0" y="60.0"/>
+        <position x="307.0" y="158.0"/>
         <contentFilters/>
       </element>
       <element uuid="1a8fd183-2d9a-43d8-b94b-3e2c1a839e09" dockArea="left">
@@ -440,7 +508,7 @@
           <seg>feature</seg>
           <seg>send_data_in</seg>
         </bo>
-        <position y="10.0"/>
+        <position y="98.0"/>
         <contentFilters/>
       </element>
       <element uuid="581848ca-f18a-46fd-bd3f-b528936d1bfe" dockArea="right">
@@ -448,15 +516,29 @@
           <seg>feature</seg>
           <seg>send_data_out</seg>
         </bo>
-        <position x="241.0" y="110.0"/>
+        <position x="241.0" y="98.0"/>
+        <contentFilters/>
+      </element>
+      <element uuid="f0d8f0a5-1c13-4d7c-8500-3434c4bdc120">
+        <bo>
+          <seg>flow_specification</seg>
+          <seg>receive</seg>
+        </bo>
+        <contentFilters/>
+      </element>
+      <element uuid="d06292c6-3eeb-4e00-80c9-57b48bd800e4">
+        <bo>
+          <seg>flow_specification</seg>
+          <seg>send</seg>
+        </bo>
         <contentFilters/>
       </element>
       <bo>
         <seg>subcomponent</seg>
         <seg>radio_hw</seg>
       </bo>
-      <position x="840.0" y="292.0"/>
-      <size width="351.0" height="160.0"/>
+      <position x="870.0" y="162.0"/>
+      <size width="351.0" height="270.0"/>
       <contentFilters>
         <filter>features</filter>
         <filter>internalFeatures</filter>
@@ -470,7 +552,7 @@
       <seg>missioncomputer.impl</seg>
     </bo>
     <position x="12.0" y="12.0"/>
-    <size width="1449.0" height="464.0"/>
+    <size width="1479.0" height="623.0"/>
     <contentFilters>
       <filter>features</filter>
       <filter>internalFeatures</filter>

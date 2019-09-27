@@ -14,6 +14,9 @@ public
 			recv_data_out: out event data port;
 			send_data_in: in event data port;
 			send_data_out: out event data port;
+		flows
+			receive: flow path recv_data_in -> recv_data_out;
+			send: flow path send_data_in -> send_data_out;
 	end Radio;
 	
 	device implementation Radio.Impl	
@@ -53,6 +56,9 @@ public
 		features
 			recv_data: in event data port;
 			send_data: out event data port;
+		flows 
+			receive: flow sink recv_data;
+			send : flow source send_data;	
 	end GS_SW;
 	
 	process implementation GS_SW.Impl
@@ -65,6 +71,9 @@ public
 			radio_recv: in event data port;
 			radio_send: out event data port;
 			RFA: requires bus access UAS_Buses::RF_Bus.Impl;
+		flows
+			receive: flow sink radio_recv;
+			send : flow source  radio_send;
 		properties
 			CASE_Properties::BOUNDARY => (PHYSICAL);
 	end GroundStation;

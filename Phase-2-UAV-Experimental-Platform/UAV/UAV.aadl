@@ -13,6 +13,9 @@ public
 			radio_recv: in event data port;
 			radio_send: out event data port;
 			RFA: requires bus access UAS_Buses::RF_Bus.Impl;
+		flows
+			recv: flow sink radio_recv;
+			send: flow source radio_send;
 		properties
 			CASE_Properties::BOUNDARY => (PHYSICAL);
 	end UAV;

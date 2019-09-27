@@ -13,7 +13,9 @@ public
            uart_send: out event data port CASE_Model_Transformations::CASE_UART_Msg.Impl;
            radio_recv: in event data port CASE_Model_Transformations::CASE_RF_Msg.Impl;
            radio_send: out event data port CASE_Model_Transformations::CASE_RF_Msg.Impl;
-                 
+		flows
+		   recv_map : flow path radio_recv -> uart_send;
+		   status: flow path uart_recv -> radio_send;
         annex agree {**
             guarantee Req001_SW "The radio_send outputs only well formed CASE_RF_Msg.Impl types" : 
                 CASEAgree::WellformedCASE_RF_Msg(radio_send, CASEAgree::AVC.ID, CASEConsts::GS_ID);

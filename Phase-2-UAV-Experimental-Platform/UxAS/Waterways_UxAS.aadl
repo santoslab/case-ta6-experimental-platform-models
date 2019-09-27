@@ -23,6 +23,15 @@ public
 			MissionCommand : out event data port CASECMASI::CASEMissionCommand.i;
 			VehicleActionCommand : out event data port CMASI::VehicleActionCommand.i;
 			AutomationResponse : out event data port CMASI::AutomationResponse.i;			
+		flows
+			-- assuming the following flows
+			f1 : flow path AutomationRequest -> MissionCommand;
+			f2 : flow path AutomationRequest -> VehicleActionCommand;
+			f3 : flow path AutomationRequest -> AutomationResponse;
+			f4 : flow path AirVehicleState -> MissionCommand;
+			f5 : flow path AirVehicleState -> VehicleActionCommand;
+			f6 : flow path AirVehicleState -> AutomationResponse;
+				
 	end Waterways;
 	
 	thread group implementation Waterways.i 

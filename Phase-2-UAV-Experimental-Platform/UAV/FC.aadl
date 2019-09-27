@@ -9,6 +9,8 @@ public
 	device GPS_Receiver
 		features
 			position: out event data port;
+		flows
+			current_pos: flow source position;
 	end GPS_Receiver;
 	
 	device implementation GPS_Receiver.Impl
@@ -21,6 +23,9 @@ public
 			uart_recv: in event data port;
 			uart_send: out event data port;
 			UART: requires bus access UAS_Buses::Serial_Bus.Impl;
+		flows 
+			waypoint : flow sink uart_recv;
+			new_position: flow source uart_send;	
 		properties
 			CASE_Properties::CONFIDENTIALITY => MEDIUM;
 			CASE_Properties::INTEGRITY => HIGH;

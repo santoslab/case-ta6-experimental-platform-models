@@ -19,6 +19,11 @@ public
             
             AutomationRequest: out event data port CMASI::AutomationRequest.i;
             
+        flows 
+        	GS_UAV: flow path recv_data -> AutomationRequest;    
+        	FC_GS: flow path AirVehicleState -> send_data;
+        	UAV_GS : flow path AutomationResponse -> send_data;
+            
 		properties
             Dispatch_Protocol => Sporadic;
             Queue_Size => 1 applies to recv_data, AutomationResponse, AirVehicleState;
@@ -44,6 +49,9 @@ public
         
             send_data: out event data port CASE_Model_Transformations::CASE_UART_Msg.Impl;    
 			AirVehicleState: out event data port CMASI::AirVehicleState.i;
+		flows 
+			command_FC : flow path MissionCommand -> send_data;
+			current_position : flow path recv_data -> AirVehicleState;
 		properties
             Dispatch_Protocol => Sporadic;
             Queue_Size => 1 applies to recv_data, MissionCommand;
@@ -70,6 +78,9 @@ public
     	features
     	   AirVehicleState: in event data port CMASI::AirVehicleState.i;
            VehicleActionCommand: in event data port CMASI::VehicleActionCommand.i;
+        flows 
+        	camera_action: flow sink  VehicleActionCommand;
+        	camera_awareness: flow sink AirVehicleState;
     	properties
             Dispatch_Protocol => Sporadic;
             Queue_Size => 1 applies to AirVehicleState, VehicleActionCommand;
