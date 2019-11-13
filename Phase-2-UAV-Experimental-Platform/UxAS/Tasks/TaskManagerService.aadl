@@ -36,4 +36,7 @@ public
             
 	end TaskManagerService;
 	
+	thread implementation TaskManagerService.i    
+	end TaskManagerService.i;
+	
 end TaskManagerService_Pkg;

@@ -17,5 +17,7 @@ public
             
     end SendMessageService;
     
+    thread implementation SendMessageService.i
+    end SendMessageService.i;
     
 end SendMessageService_Pkg;

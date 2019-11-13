@@ -30,4 +30,7 @@ public
 			Classifier_Substitution_Rule => Type_Extension;
 	end WaypointPlanManagerService;
 	
+	thread implementation WaypointPlanManagerService.i
+	end WaypointPlanManagerService.i;
+	
 end WaypointPlanManagerService_Pkg;

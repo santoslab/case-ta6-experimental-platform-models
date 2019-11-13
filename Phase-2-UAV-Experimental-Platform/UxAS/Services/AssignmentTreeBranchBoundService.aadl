@@ -1,6 +1,5 @@
 package AssignmentTreeBranchBoundService_Pkg
 public
-	with CMASI;
 	with ServiceBase_Pkg;
 	with UXTASK;
 	
@@ -22,4 +21,7 @@ public
             
 	end AssignmentTreeBranchBoundService;
 
+    thread implementation AssignmentTreeBranchBoundService.i
+    end AssignmentTreeBranchBoundService.i;
+    
 end AssignmentTreeBranchBoundService_Pkg;   

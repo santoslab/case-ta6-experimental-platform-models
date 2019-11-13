@@ -18,7 +18,7 @@ public
 			CreateNewService : in event data port UXNATIVE::CreateNewService.i;
 			
 			-- Sent Messages
-			VehicleActionCommand : out event data port CMASI::VehicleActionCommand;
+			VehicleActionCommand : out event data port CMASI::VehicleActionCommand.i;
 --			SensorFootprintRequest : out event data port UXTASK::SensorFootprintRequests;
 --			VideoRecord : out event data port UXNATIVE::VideoRecord;
 			
@@ -26,5 +26,8 @@ public
             Dispatch_Protocol => Sporadic;
  
 	end CmasiLineSearchTask;
+	
+	thread implementation CmasiLineSearchTask.i    
+	end CmasiLineSearchTask.i;
 	
 end CmasiLineSearchTask_Pkg;

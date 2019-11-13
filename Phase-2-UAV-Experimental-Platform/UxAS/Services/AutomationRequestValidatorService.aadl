@@ -46,4 +46,7 @@ public
 			Dispatch_Protocol => Sporadic;
 	end AutomationRequestValidatorService;
 	
+	thread implementation AutomationRequestValidatorService.i    
+	end AutomationRequestValidatorService.i;
+	
 end AutomationRequestValidatorService_Pkg;

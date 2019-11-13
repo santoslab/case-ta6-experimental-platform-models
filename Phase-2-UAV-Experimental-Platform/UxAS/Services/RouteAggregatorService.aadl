@@ -36,4 +36,7 @@ public
             Dispatch_Protocol => Sporadic;
 	end RouteAggregatorService;
 	
+	thread implementation RouteAggregatorService.i	    
+	end RouteAggregatorService.i;
+
 end RouteAggregatorService_Pkg;

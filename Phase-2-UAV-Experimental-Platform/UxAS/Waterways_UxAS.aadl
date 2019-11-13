@@ -30,15 +30,15 @@ public
 		
 		  -- https://github.com/afrl-rq/OpenUxAS/blob/develop/examples/02_Example_WaterwaySearch/cfg_WaterwaySearch.xml
 		  -- Removed: Test_SimulationTime
-		  TaskManagerService: thread TaskManagerService_Pkg::TaskManagerService;
-		  AutomationRequestValidatorService: thread AutomationRequestValidatorService_Pkg::AutomationRequestValidatorService;
-		  RoutePlannerVisibilityService: thread RoutePlannerVisibilityService_Pkg::RoutePlannerVisibilityService;
-		  RouteAggregatorService: thread RouteAggregatorService_Pkg::RouteAggregatorService;
-		  AssignmentTreeBranchBoundService: thread AssignmentTreeBranchBoundService_Pkg::AssignmentTreeBranchBoundService;
-		  PlanBuilderService: thread PlanBuilderService_Pkg::PlanBuilderService;
-		  WaypointPlanManagerService: thread CASEServices::CASEWaypointPlanManagerService;       
-		  CmasiLineSearchTask: thread CmasiLineSearchTask_Pkg::CmasiLineSearchTask;
-		  SendMessageService: thread SendMessageService_Pkg::SendMessageService;
+		  TaskManagerService: thread TaskManagerService_Pkg::TaskManagerService.i;
+		  AutomationRequestValidatorService: thread AutomationRequestValidatorService_Pkg::AutomationRequestValidatorService.i;
+		  RoutePlannerVisibilityService: thread RoutePlannerVisibilityService_Pkg::RoutePlannerVisibilityService.i;
+		  RouteAggregatorService: thread RouteAggregatorService_Pkg::RouteAggregatorService.i;
+		  AssignmentTreeBranchBoundService: thread AssignmentTreeBranchBoundService_Pkg::AssignmentTreeBranchBoundService.i;
+		  PlanBuilderService: thread PlanBuilderService_Pkg::PlanBuilderService.i;
+		  WaypointPlanManagerService: thread CASEServices::CASEWaypointPlanManagerService.i;       
+		  CmasiLineSearchTask: thread CmasiLineSearchTask_Pkg::CmasiLineSearchTask.i;
+		  SendMessageService: thread SendMessageService_Pkg::SendMessageService.i;
 		  
 		connections
 			

@@ -41,4 +41,7 @@ public
             
 	end RoutePlannerVisibilityService;
 	
+	thread implementation RoutePlannerVisibilityService.i
+	end RoutePlannerVisibilityService.i;
+	
 end RoutePlannerVisibilityService_Pkg;
