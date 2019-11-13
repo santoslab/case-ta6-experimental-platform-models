@@ -28,13 +28,6 @@ public
 	data implementation AbstractGeometry.i
 	end AbstractGeometry.i;
 	
-	data BoundaryPointsListType
-		properties
-			Data_Model::Data_Representation => Array;
-            Data_Model::Base_Type => (classifier (Location3D.i));
-            Data_Model::Dimension => (CASEConsts::BoundaryPointsList_MaxArrayLength);    
-	end BoundaryPointsListType;
-	
 	data Polygon extends AbstractGeometry
 	end Polygon;
 	
@@ -42,7 +35,7 @@ public
 		subcomponents
 			-- EGM ADDED: not part of actual message
 			NumberOfPoints : data int64.i;
-			BoundaryPointsList : data BoundaryPointsListType;
+			BoundaryPointsList : data Location3D.i {Data_Model::Data_Representation => Array;};
 	end Polygon.i;
 	
     -- A container for key/value pairs. Keys and values can be any valid string.
@@ -87,13 +80,13 @@ public
 
     data GimbalConfiguration extends PayloadConfiguration
     end GimbalConfiguration;
-    
+ 
     -- EGM TODO: for AGREE does not like bool.i, so changed to Base_Types::Boolean;
     data implementation GimbalConfiguration.i extends PayloadConfiguration.i
-    	subcomponents
-    		-- SupportedPointingModes (omitted)
+       subcomponents
+            -- SupportedPointingModes (omitted)
     		MinAzimuth : data real32.i;
-    		MaxAzimuth : data real32.i;
+        	MaxAzimuth : data real32.i;
     		IsAzimuthClamped : data Base_Types::Boolean; 
     		MinElevation : data real32.i;
     		MaxElevation : data real32.i;
@@ -209,27 +202,6 @@ public
 	-- Provides information regarding a vehicle's configuration items.
 	data AirVehicleConfiguration extends EntityConfiguration
 	end AirVehicleConfiguration;
-	
-	data AlternativeFlightProfilesType
-	properties
-            Data_Model::Data_Representation => Array;
-            Data_Model::Base_Type => (classifier (FlightProfile.i));
-            Data_Model::Dimension => (CASEConsts::AlternativeFlightProfiles_MaxArrayLength);    
-	end AlternativeFlightProfilesType;
-	
-	data AvailableTurnTypesType
-    properties
-            Data_Model::Data_Representation => Array;
-            Data_Model::Base_Type => (classifier (TurnType.i));
-            Data_Model::Dimension => (CASEConsts::AvailableTurnTypes_MaxArrayLength);    
-    end AvailableTurnTypesType;
-   
-   data AvailableLoiterTypesType
-    properties
-            Data_Model::Data_Representation => Array;
-            Data_Model::Base_Type => (classifier (LoiterType.i));
-            Data_Model::Dimension => (CASEConsts::AvailableLoiterTypes_MaxArrayLength);    
-    end AvailableLoiterTypesType;
     
 	data implementation AirVehicleConfiguration.i extends EntityConfiguration.i
     subcomponents
@@ -245,11 +217,11 @@ public
         --flight configuration specifies a different mode of flight, for
         --instance: climb, cruise, dash, loiter. This list may be empty, and
         --does not necessarily contain the nominal flight configuration.
-        AlternateFlightProfiles: data AlternativeFlightProfilesType;
+        AlternateFlightProfiles: data FlightProfile.i {Data_Model::Data_Representation => Array;};
         --A list of available loiter types for this aircraft
-        AvailableLoiterTypes: data AvailableLoiterTypesType;
+        AvailableLoiterTypes: data LoiterType.i {Data_Model::Data_Representation => Array;};
         --A list of available turning modes for this aircraft
-        AvailableTurnTypes: data AvailableTurnTypesType;
+        AvailableTurnTypes: data TurnType.i {Data_Model::Data_Representation => Array;};
         --Minimum MSL altitude that this aircraft is allowed to fly. This
         --value should be treated as a regulatory or safety-of-flight parameter
         --and therefore takes precedence over other requests.
@@ -374,14 +346,7 @@ public
 	---------------------------------------------------------------------
 	data EntityConfiguration	
 	end EntityConfiguration;
-
-    data PayloadConfigurationListType
-        properties
-            Data_Model::Data_Representation => Array;
-            Data_Model::Base_Type => (classifier (GimbalConfiguration.i));
-            Data_Model::Dimension => (CASEConsts::PayloadConfigurationList_MaxArrayLength);        
-    end PayloadConfigurationListType;
-	
+		
 	data implementation EntityConfiguration.i
 	    subcomponents
 	        --A unique id for this entity
@@ -410,7 +375,7 @@ public
 	        --payloads include: gimbaled sensors, SAR radars (not yet supported),
 	        --air-launched UAVs (not yet supported), and weapons (not yet
 	        --supported).
-	        PayloadConfigurationList: data PayloadConfigurationListType;
+	        PayloadConfigurationList: data PayloadConfiguration.i {Data_Model::Data_Representation => Array;};
 	        --A list that maps keys to values for the inclusion of extra, custom
 	        --information about this entity
 	        Info: data KeyValuePair.i {Data_Model::Data_Representation => Array;};
@@ -699,7 +664,7 @@ public
 					--The id of the vehicle for this command.
 			VehicleID: data int64.i;
 					--a set of actions to be performed immediately by the vehicle.
-			VehicleActionList: data VehicleActionListType;
+			VehicleActionList: data VehicleAction.i {Data_Model::Data_Representation => Array;};
 					--Denotes the current execution status of this command.
 			Status: data CommandStatusType.i;
 	end VehicleActionCommand.i;
@@ -707,13 +672,6 @@ public
     data Waypoint extends Location3D
 	end Waypoint;
 
-    data VehicleActionListType
-    	properties
-    		Data_Model::Data_Representation => Array;
-    		Data_Model::Base_Type => (classifier (VehicleAction.i));
-            Data_Model::Dimension => (CASEConsts::Waypoint_VehicleActionList_MaxArrayLength);               
-    end VehicleActionListType;
-    
 --A simple waypoint class for vehicle routing
 	data implementation Waypoint.i extends Location3D.i
 		subcomponents
@@ -734,7 +692,7 @@ public
 					--The type of turn to execute
 			TurnType: data TurnType.i;
 					--A list of actions to perform at this waypoint
-			VehicleActionList: data VehicleActionListType;
+			VehicleActionList: data VehicleAction.i {Data_Model::Data_Representation => Array;};
 					--A waypoint for contingency (e.g. lost-comm, alternate mission)
 					--operations. A value of zero denotes that no contingency point is
 					--specified.
@@ -747,9 +705,7 @@ public
 					--zero denotes no associated tasks. This field is for analysis purposes.
 					--The automation service should associate a list of tasks with each
 					--waypoint to enable analysis of the allocation of tasks to vehicles.
-			AssociatedTasks: data int64.i {Data_Model::Data_Representation => Array;
-			                               Data_Model::Dimension => (CASEConsts::Waypoint_AssociatedTasks_MaxArrayLength);
-			};
+			AssociatedTasks: data int64.i {Data_Model::Data_Representation => Array;};
 	end Waypoint.i;
 
 	-------------------------------------------------------------------------------	
@@ -769,20 +725,13 @@ public
 	data MissionCommand extends VehicleActionCommand	
 	end MissionCommand;
 	
-	data WaypointListType
-		properties
-			Data_Model::Data_Representation => Array;
-			Data_Model::Base_Type => (classifier (Waypoint.i));
-            Data_Model::Dimension => (CASEConsts::MissionCommand_WaypointList_MaxArrayLength);
-	end WaypointListType;
-	
 	data implementation MissionCommand.i extends VehicleActionCommand.i
 		subcomponents
 			--The list of waypoints associated with this mission task. Waypoints
 			--are linked, but the waypoint list may contain waypoints that are not
 			--necessarily linked. Multiple linked routes may be sent in a single
 			--waypoint list. Waypoints are not necessarily ordered in the list.
-			WaypointList: data WaypointListType;
+			WaypointList: data Waypoint.i {Data_Model::Data_Representation => Array;};
 			
 			--ID of the first waypoint to follow.
 			FirstWaypoint: data int64.i;
