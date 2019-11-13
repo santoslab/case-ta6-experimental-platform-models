@@ -20,6 +20,8 @@ public
 		features
 			AutomationRequest : in event data port CMASI::AutomationRequest.i;
 			AirVehicleState : in event data port CMASI::AirVehicleState.i;
+			OperatingRegion : in event data port CMASI::OperatingRegion.i;
+			LineSearchTask: in event data port CMASI::LineSearchTask.i;
 			MissionCommand : out event data port CASECMASI::CASEMissionCommand.i;
 			VehicleActionCommand : out event data port CMASI::VehicleActionCommand.i;
 			AutomationResponse : out event data port CMASI::AutomationResponse.i;			
@@ -38,7 +40,7 @@ public
 		  PlanBuilderService: thread PlanBuilderService_Pkg::PlanBuilderService.i;
 		  WaypointPlanManagerService: thread CASEServices::CASEWaypointPlanManagerService.i;       
 		  CmasiLineSearchTask: thread CmasiLineSearchTask_Pkg::CmasiLineSearchTask.i;
-		  SendMessageService: thread SendMessageService_Pkg::SendMessageService.i;
+		  SendMessageService: thread SendMessageService_Pkg::SendMessageServiceInit.i;
 		  
 		connections
 			
@@ -63,6 +65,11 @@ public
 			
 			c_AReq_01 : port AutomationRequest -> AutomationRequestValidatorService.AutomationRequest;
             	          
+            c_LST_01 : port LineSearchTask -> TaskManagerService.LineSearchTask;
+            
+            c_OR_01 : port OperatingRegion -> AutomationRequestValidatorService.OperatingRegion;
+            c_OR_02 : port OperatingRegion -> RoutePlannerVisibilityService.OperatingRegion;
+             
             -------------------------------------
             -- AutomationRequestValidatorService
             -------------------------------------
@@ -133,8 +140,6 @@ public
             c_SMS_AVCfg_03 : port SendMessageService.AirVehicleConfiguration -> TaskManagerService.AirVehicleConfiguration;
             c_SMS_AVCfg_04 : port SendMessageService.AirVehicleConfiguration -> AutomationRequestValidatorService.AirVehicleConfiguration;
             c_SMS_AVCfg_05 : port SendMessageService.AirVehicleConfiguration -> CmasiLineSearchTask.AirVehicleConfiguration;
-            
-            c_SMS_LST_01 : port SendMessageService.LineSearchTask -> TaskManagerService.LineSearchTask;
   
             c_SMS_KIZ_01 : port SendMessageService.KeepInZone -> AutomationRequestValidatorService.KeepInZone;
             c_SMS_KIZ_02 : port SendMessageService.KeepInZone -> RoutePlannerVisibilityService.KeepInZone;
@@ -142,8 +147,6 @@ public
             c_SMS_KOZ_01 : port SendMessageService.KeepOutZone -> AutomationRequestValidatorService.KeepOutZone;
             c_SMS_KOZ_02 : port SendMessageService.KeepOutZone -> RoutePlannerVisibilityService.KeepOutZone;
             
-            c_SMS_OR_01 : port SendMessageService.OperatingRegion -> AutomationRequestValidatorService.OperatingRegion;
-            c_SMS_OR_02 : port SendMessageService.OperatingRegion -> RoutePlannerVisibilityService.OperatingRegion;
 	end Waterways.i;
 	
 end Waterways_UxAS;

@@ -48,7 +48,9 @@ public
            -- RADIO
            ---------
            c07: port RADIO.send_data -> radio_send;
-           c08: port RADIO.AutomationRequest -> UXAS.AutomationRequest; 	
+           c08: port RADIO.AutomationRequest -> UXAS.AutomationRequest; 
+           c_r_09: port RADIO.OperatingRegion -> UXAS.OperatingRegion;
+           c_r_10: port RADIO.LineSearchTask -> UXAS.LineSearchTask;	
             
            --------
            -- UXAS

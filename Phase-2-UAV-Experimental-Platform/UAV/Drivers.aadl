@@ -18,6 +18,8 @@ public
             AirVehicleState: in event data port CMASI::AirVehicleState.i;
             
             AutomationRequest: out event data port CMASI::AutomationRequest.i;
+            OperatingRegion: out event data port CMASI::OperatingRegion.i;
+            LineSearchTask: out event data port CMASI::LineSearchTask.i;
             
 		properties
             Dispatch_Protocol => Sporadic;
