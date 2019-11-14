@@ -20,11 +20,6 @@ public
             
 		properties
             Dispatch_Protocol => Sporadic;
-            
-			-- KEEP
---		annex agree {**
---			guarantee Req001_RadioDriver "Only valid command messages shall be forwarded to message destination components" : VALID_MESSAGE(MissionCommand);
---		**};
 	end RadioDriver;
 
 	thread implementation RadioDriver.Impl
@@ -43,12 +38,9 @@ public
 		annex agree {**     
 		    assume Req001_UARTDriver "Assumes recv_data only gets well formed CASE_UART_Msg.Impl types" : 
 		        CASEAgree::WellformedCASE_UART_Msg(recv_data);        
-		    assume Req002_UARTDriver "Assumes MissionCommand only gets well formed CASEMissionCommand.i types" :
-		        CASEAgree::WellformedCASEMissionCommand(MissionCommand); 
-		        
 		    guarantee Req003_UARTDRiver "The send_data outputs only well formed CASE_UART_Msg.Impl types" : 
                 CASEAgree::WellformedCASE_UART_Msg(send_data);
---		**};
+		**};
 	end UARTDriver;
 
 	thread implementation UARTDriver.Impl
@@ -60,10 +52,6 @@ public
            VehicleActionCommand: in event data port CMASI::VehicleActionCommand.i;
     	properties
             Dispatch_Protocol => Sporadic;
-    		-- ASSUME: valid AirVehicleState
-    		-- Guarantee: well formed action command
---        annex agree {**
---        **};
     end GimbalDriver;
 
     thread implementation GimbalDriver.Impl
