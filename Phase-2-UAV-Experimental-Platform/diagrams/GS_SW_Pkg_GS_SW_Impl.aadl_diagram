@@ -84,7 +84,7 @@
         <seg>feature</seg>
         <seg>send_data</seg>
       </bo>
-      <position x="1051.0" y="123.0"/>
+      <position x="1060.0" y="123.0"/>
       <contentFilters/>
     </element>
     <element uuid="830286a9-f78f-4457-b41b-b8c2fa8f7837">
@@ -132,7 +132,7 @@
         <seg>subcomponent</seg>
         <seg>radiodriver</seg>
       </bo>
-      <position x="617.0" y="38.0"/>
+      <position x="626.0" y="38.0"/>
       <size width="422.0" height="210.0"/>
       <contentFilters>
         <filter>features</filter>
@@ -142,37 +142,37 @@
         <filter>flowSpecifications</filter>
       </contentFilters>
     </element>
-    <element uuid="e05127fc-bd88-43d9-a876-b4af981bfe8f">
-      <element uuid="8fb3237f-3465-4e20-b732-ac0b19c3a9f6" dockArea="right">
+    <element uuid="26a5c109-2bbc-404b-b959-7f969e33a66d">
+      <element uuid="ebab5705-c686-4d59-8055-341d26d57b2e" dockArea="right">
         <bo>
           <seg>feature</seg>
           <seg>automationrequest</seg>
         </bo>
-        <position x="362.0" y="60.0"/>
+        <position x="371.0" y="60.0"/>
         <contentFilters/>
       </element>
-      <element uuid="6bb94110-da4f-43a7-8598-a41524e38db7" dockArea="right">
+      <element uuid="750285d8-bb7d-4fe0-9762-1fc9efee8957" dockArea="right">
         <bo>
           <seg>feature</seg>
           <seg>linesearchtask</seg>
         </bo>
-        <position x="389.0" y="110.0"/>
+        <position x="398.0" y="110.0"/>
         <contentFilters/>
       </element>
-      <element uuid="178467b5-70fd-44ed-9f0f-55ea8caf5efe" dockArea="right">
+      <element uuid="6e09fcbd-f6c9-4ae5-893e-747447bbae67" dockArea="right">
         <bo>
           <seg>feature</seg>
           <seg>operatingregion</seg>
         </bo>
-        <position x="382.0" y="10.0"/>
+        <position x="391.0" y="10.0"/>
         <contentFilters/>
       </element>
       <bo>
         <seg>subcomponent</seg>
-        <seg>sendmessageservicegs</seg>
+        <seg>sendmessagesservicegs</seg>
       </bo>
       <position x="91.0" y="38.0"/>
-      <size width="506.0" height="160.0"/>
+      <size width="515.0" height="160.0"/>
       <contentFilters>
         <filter>features</filter>
         <filter>internalFeatures</filter>
@@ -186,7 +186,7 @@
       <seg>gs_sw.impl</seg>
     </bo>
     <position x="12.0" y="12.0"/>
-    <size width="1134.0" height="260.0"/>
+    <size width="1143.0" height="260.0"/>
     <contentFilters>
       <filter>features</filter>
       <filter>internalFeatures</filter>

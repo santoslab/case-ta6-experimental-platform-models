@@ -4,7 +4,7 @@ public
     with CASE_Properties;
     with CASE_Model_Transformations;
     with CMASI;
-    with SendMessageService_Pkg;
+    with SendMessagesService_Pkg;
     
     thread GSRadioDriver
         features
@@ -33,7 +33,7 @@ public
     process implementation GS_SW.Impl
         subcomponents
             RadioDriver: thread GSRadioDriver.i;
-            SendMessageServiceGS: thread SendMessageService_Pkg::SendMessageServiceGS;
+            SendMessagesServiceGS: thread SendMessagesService_Pkg::SendMessagesServiceGS;
     	connections
     		------------------
             -- Primary Inputs
@@ -48,9 +48,9 @@ public
             -------------------------
             -- SendMessageServiceGS
             -------------------------
-            c_SMS_2_RD_01: port SendMessageServiceGS.OperatingRegion -> RadioDriver.OperatingRegion;
-            c_SMS_2_RD_02: port SendMessageServiceGS.LineSearchTask -> RadioDriver.LineSearchTask;
-            c_SMS_2_RD_03: port SendMessageServiceGS.AutomationRequest -> RadioDriver.AutomationRequest;
+            c_SMS_2_RD_01: port SendMessagesServiceGS.OperatingRegion -> RadioDriver.OperatingRegion;
+            c_SMS_2_RD_02: port SendMessagesServiceGS.LineSearchTask -> RadioDriver.LineSearchTask;
+            c_SMS_2_RD_03: port SendMessagesServiceGS.AutomationRequest -> RadioDriver.AutomationRequest;
             
     end GS_SW.Impl;
     

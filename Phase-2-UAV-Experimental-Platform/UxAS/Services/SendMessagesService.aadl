@@ -1,9 +1,9 @@
-package SendMessageService_Pkg
+package SendMessagesService_Pkg
 public
 	with CMASI;
     with ServiceBase_Pkg;
     
-    thread SendMessageServiceInit extends ServiceBase_Pkg::ServiceBase
+    thread SendMessagesServiceInit extends ServiceBase_Pkg::ServiceBase
         features
             -- Sent Messages
             AirVehicleState : out event data port CMASI::AirVehicleState.i;
@@ -14,12 +14,12 @@ public
             Source_Text => ("src/Services/SendMessagesService.h", "src/Services/SendMessagesService.cpp");      
             Dispatch_Protocol => Sporadic;
             
-    end SendMessageServiceInit;
+    end SendMessagesServiceInit;
     
-    thread implementation SendMessageServiceInit.i
-    end SendMessageServiceInit.i;
+    thread implementation SendMessagesServiceInit.i
+    end SendMessagesServiceInit.i;
     
-     thread SendMessageServiceMemory extends ServiceBase_Pkg::ServiceBase
+     thread SendMessagesServiceMemory extends ServiceBase_Pkg::ServiceBase
         features
             -- Sent Messages
             AirVehicleConfiguration : out event data port CMASI::AirVehicleConfiguration.i;
@@ -31,12 +31,12 @@ public
             Source_Text => ("src/Services/SendMessagesService.h", "src/Services/SendMessagesService.cpp");             
             Dispatch_Protocol => Sporadic;
             
-    end SendMessageServiceMemory;
+    end SendMessagesServiceMemory;
     
-    thread implementation SendMessageServiceMemory.i
-    end SendMessageServiceMemory.i;
+    thread implementation SendMessagesServiceMemory.i
+    end SendMessagesServiceMemory.i;
     
-    thread SendMessageServiceGS extends ServiceBase_Pkg::ServiceBase
+    thread SendMessagesServiceGS extends ServiceBase_Pkg::ServiceBase
         features
             -- Sent Messages
             OperatingRegion : out event data port CMASI::OperatingRegion.i;
@@ -48,9 +48,9 @@ public
             Source_Text => ("src/Services/SendMessagesService.h", "src/Services/SendMessagesService.cpp");     
             Dispatch_Protocol => Sporadic;
             
-    end SendMessageServiceGS;
+    end SendMessagesServiceGS;
     
-    thread implementation SendMessageServiceGS.i
-    end SendMessageServiceGS.i;
+    thread implementation SendMessagesServiceGS.i
+    end SendMessagesServiceGS.i;
     
-end SendMessageService_Pkg;
+end SendMessagesService_Pkg;

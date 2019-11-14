@@ -10,8 +10,8 @@ public
     with RouteAggregatorService_Pkg;
 	with RoutePlannerVisibilityService_Pkg;
 	with TaskManagerService_Pkg;
-	with CmasiLineSearchTask_Pkg;
-	with SendMessageService_Pkg;
+	with CmasiLineSearchTaskService_Pkg;
+	with SendMessagesService_Pkg;
 	
 	with UxAS;
 		
@@ -38,9 +38,9 @@ public
 		  AssignmentTreeBranchBoundService: thread AssignmentTreeBranchBoundService_Pkg::AssignmentTreeBranchBoundService.i;
 		  PlanBuilderService: thread PlanBuilderService_Pkg::PlanBuilderService.i;
 		  WaypointPlanManagerService: thread WaypointPlanManagerService_Pkg::WaypointPlanManagerService.i;       
-		  CmasiLineSearchTask: thread CmasiLineSearchTask_Pkg::CmasiLineSearchTask.i;
-		  SendMessageServiceMemory: thread SendMessageService_Pkg::SendMessageServiceMemory.i;
-		  SendMessageServiceInit: thread SendMessageService_Pkg::SendMessageServiceInit.i;
+		  CmasiLineSearchTaskService: thread CmasiLineSearchTaskService_Pkg::CmasiLineSearchTaskService.i;
+		  SendMessagesServiceMemory: thread SendMessagesService_Pkg::SendMessagesServiceMemory.i;
+		  SendMessagesServiceInit: thread SendMessagesService_Pkg::SendMessagesServiceInit.i;
 		  
 		connections
 			
@@ -61,7 +61,7 @@ public
 			c_AVSt_09 : port AirVehicleState -> TaskManagerService.AirVehicleState;
 			c_AVSt_10 : port AirVehicleState -> AutomationRequestValidatorService.AirVehicleState;
 			c_AVSt_11 : port AirVehicleState -> RouteAggregatorService.AirVehicleState;
-			c_AVSt_12 : port AirVehicleState -> CmasiLineSearchTask.AirVehicleState;
+			c_AVSt_12 : port AirVehicleState -> CmasiLineSearchTaskService.AirVehicleState;
 			
 			c_AReq_01 : port AutomationRequest -> AutomationRequestValidatorService.AutomationRequest;
             	          
@@ -76,7 +76,7 @@ public
             c_UARsp_01 : port AutomationRequestValidatorService.UniqueAutomationRequest -> RouteAggregatorService.UniqueAutomationResquest;           
             c_UARsp_02 : port AutomationRequestValidatorService.UniqueAutomationRequest -> AssignmentTreeBranchBoundService.UniqueAutomationRequest;
             c_UARsp_03 : port AutomationRequestValidatorService.UniqueAutomationRequest -> PlanBuilderService.UniqueAutomationRequest;                       
-            c_UARsp_04 : port AutomationRequestValidatorService.UniqueAutomationRequest -> CmasiLineSearchTask.UniqueAutomationRequest;
+            c_UARsp_04 : port AutomationRequestValidatorService.UniqueAutomationRequest -> CmasiLineSearchTaskService.UniqueAutomationRequest;
             -- EGM: All the sequence charts in the UxAS docks show the below connection, but it is _not_ in the code.
             -- The TaskManagerService does _not_ subscribe to UniqueAutomationRequest though it does send that message.
             -- c_UAR_05 : port AutomationRequestValidatorService.UniqueAutomationRequest -> TaskManagerService.UniqueAutomationRequest;
@@ -87,14 +87,14 @@ public
             -----------------------
             -- CmasiLineSearchTask
             -----------------------
-            c_TPOpts_01 : port CmasiLineSearchTask.TaskPlanOptions -> RouteAggregatorService.TaskPlanOptions;
-            c_TPOpts_02 : port CmasiLineSearchTask.TaskPlanOptions -> AssignmentTreeBranchBoundService.TaskPlanOptions;
+            c_TPOpts_01 : port CmasiLineSearchTaskService.TaskPlanOptions -> RouteAggregatorService.TaskPlanOptions;
+            c_TPOpts_02 : port CmasiLineSearchTaskService.TaskPlanOptions -> AssignmentTreeBranchBoundService.TaskPlanOptions;
             
-            c_VACmd_01 : port CmasiLineSearchTask.VehicleActionCommand -> VehicleActionCommand;
+            c_VACmd_01 : port CmasiLineSearchTaskService.VehicleActionCommand -> VehicleActionCommand;
             
-            c_TIRsp_01 : port CmasiLineSearchTask.TaskImplementationResponse -> PlanBuilderService.TaskImplementationResponse;
+            c_TIRsp_01 : port CmasiLineSearchTaskService.TaskImplementationResponse -> PlanBuilderService.TaskImplementationResponse;
             
-            c_CLST_RPReq_01 : port CmasiLineSearchTask.RoutePlanRequest -> RoutePlannerVisibilityService.RoutePlanRequest_task;
+            c_CLST_RPReq_01 : port CmasiLineSearchTaskService.RoutePlanRequest -> RoutePlannerVisibilityService.RoutePlanRequest_task;
             
             -------------------------
             -- RouteAggregatorService
@@ -111,15 +111,15 @@ public
         	-------------------
        		-- PlanBuilderService
        		-------------------
-       		c_PBS_TIReq_01: port PlanBuilderService.TaskImplementationRequest -> CmasiLineSearchTask.TaskImplementationRequest;
+       		c_PBS_TIReq_01: port PlanBuilderService.TaskImplementationRequest -> CmasiLineSearchTaskService.TaskImplementationRequest;
   		
   			c_PBS_UARsp_01 : port PlanBuilderService.UniqueAutomationResponse -> AutomationRequestValidatorService.UniqueAutomationResponse;
-			c_PBS_UARsp_02 : port PlanBuilderService.UniqueAutomationResponse -> CmasiLineSearchTask.UniqueAutomationResponse;
+			c_PBS_UARsp_02 : port PlanBuilderService.UniqueAutomationResponse -> CmasiLineSearchTaskService.UniqueAutomationResponse;
 					
 			---------------------------------
 			-- RoutePlannerVisibilityService
 			---------------------------------
-		    c_RPVS_RPR_01: port RoutePlannerVisibilityService.RoutePlanResponse -> CmasiLineSearchTask.RoutePlanResponse;
+		    c_RPVS_RPR_01: port RoutePlannerVisibilityService.RoutePlanResponse -> CmasiLineSearchTaskService.RoutePlanResponse;
 		    c_PRVS_RPR_02: port RoutePlannerVisibilityService.RoutePlanResponse -> RouteAggregatorService.RoutePlanResponse;
 		      
        		--------------------------
@@ -130,35 +130,35 @@ public
 		    ----------------------
 		    -- TaskManagerService
 		    ----------------------
-		    c_TMSrvc_CNT_01: port TaskManagerService.CreateNewService -> CmasiLineSearchTask.createNewService;
+		    c_TMSrvc_CNT_01: port TaskManagerService.CreateNewService -> CmasiLineSearchTaskService.createNewService;
 		    
 		    ----------------------------
 		    -- SendMessageServiceMemory
 		    ----------------------------
-		    c_SMS_AVCfg_01 : port SendMessageServiceMemory.AirVehicleConfiguration -> RouteAggregatorService.AirVehicleConfiguration;
-            c_SMS_AVCfg_02 : port SendMessageServiceMemory.AirVehicleConfiguration -> RoutePlannerVisibilityService.AirVehicleConfiguration;
-            c_SMS_AVCfg_03 : port SendMessageServiceMemory.AirVehicleConfiguration -> TaskManagerService.AirVehicleConfiguration;
-            c_SMS_AVCfg_04 : port SendMessageServiceMemory.AirVehicleConfiguration -> AutomationRequestValidatorService.AirVehicleConfiguration;
-            c_SMS_AVCfg_05 : port SendMessageServiceMemory.AirVehicleConfiguration -> CmasiLineSearchTask.AirVehicleConfiguration;
+		    c_SMS_AVCfg_01 : port SendMessagesServiceMemory.AirVehicleConfiguration -> RouteAggregatorService.AirVehicleConfiguration;
+            c_SMS_AVCfg_02 : port SendMessagesServiceMemory.AirVehicleConfiguration -> RoutePlannerVisibilityService.AirVehicleConfiguration;
+            c_SMS_AVCfg_03 : port SendMessagesServiceMemory.AirVehicleConfiguration -> TaskManagerService.AirVehicleConfiguration;
+            c_SMS_AVCfg_04 : port SendMessagesServiceMemory.AirVehicleConfiguration -> AutomationRequestValidatorService.AirVehicleConfiguration;
+            c_SMS_AVCfg_05 : port SendMessagesServiceMemory.AirVehicleConfiguration -> CmasiLineSearchTaskService.AirVehicleConfiguration;
   
-            c_SMS_KIZ_01 : port SendMessageServiceMemory.KeepInZone -> AutomationRequestValidatorService.KeepInZone;
-            c_SMS_KIZ_02 : port SendMessageServiceMemory.KeepInZone -> RoutePlannerVisibilityService.KeepInZone;
+            c_SMS_KIZ_01 : port SendMessagesServiceMemory.KeepInZone -> AutomationRequestValidatorService.KeepInZone;
+            c_SMS_KIZ_02 : port SendMessagesServiceMemory.KeepInZone -> RoutePlannerVisibilityService.KeepInZone;
             
-            c_SMS_KOZ_01 : port SendMessageServiceMemory.KeepOutZone -> AutomationRequestValidatorService.KeepOutZone;
-            c_SMS_KOZ_02 : port SendMessageServiceMemory.KeepOutZone -> RoutePlannerVisibilityService.KeepOutZone;
+            c_SMS_KOZ_01 : port SendMessagesServiceMemory.KeepOutZone -> AutomationRequestValidatorService.KeepOutZone;
+            c_SMS_KOZ_02 : port SendMessagesServiceMemory.KeepOutZone -> RoutePlannerVisibilityService.KeepOutZone;
             
             ----------------------------
             -- SendMessageServiceInit
             ----------------------------
-            c_SMSI_MC_01 : port SendMessageServiceInit.MissionCommand -> MissionCommand;
+            c_SMSI_MC_01 : port SendMessagesServiceInit.MissionCommand -> MissionCommand;
             
-            c_SMSI_AVSt_01 : port SendMessageServiceInit.AirVehicleState -> WaypointPlanManagerService.AirVehicleState;
-            c_SMSI_AVSt_02 : port SendMessageServiceInit.AirVehicleState -> RoutePlannerVisibilityService.AirVehicleState;
-            c_SMSI_AVSt_03 : port SendMessageServiceInit.AirVehicleState -> PlanBuilderService.AirVehicleState;
-            c_SMSI_AVSt_04 : port SendMessageServiceInit.AirVehicleState -> TaskManagerService.AirVehicleState;
-            c_SMSI_AVSt_05 : port SendMessageServiceInit.AirVehicleState -> AutomationRequestValidatorService.AirVehicleState;
-            c_SMSI_AVSt_06 : port SendMessageServiceInit.AirVehicleState -> RouteAggregatorService.AirVehicleState;
-            c_SMSI_AVSt_07 : port SendMessageServiceInit.AirVehicleState -> CmasiLineSearchTask.AirVehicleState;
+            c_SMSI_AVSt_01 : port SendMessagesServiceInit.AirVehicleState -> WaypointPlanManagerService.AirVehicleState;
+            c_SMSI_AVSt_02 : port SendMessagesServiceInit.AirVehicleState -> RoutePlannerVisibilityService.AirVehicleState;
+            c_SMSI_AVSt_03 : port SendMessagesServiceInit.AirVehicleState -> PlanBuilderService.AirVehicleState;
+            c_SMSI_AVSt_04 : port SendMessagesServiceInit.AirVehicleState -> TaskManagerService.AirVehicleState;
+            c_SMSI_AVSt_05 : port SendMessagesServiceInit.AirVehicleState -> AutomationRequestValidatorService.AirVehicleState;
+            c_SMSI_AVSt_06 : port SendMessagesServiceInit.AirVehicleState -> RouteAggregatorService.AirVehicleState;
+            c_SMSI_AVSt_07 : port SendMessagesServiceInit.AirVehicleState -> CmasiLineSearchTaskService.AirVehicleState;
             
 	end Waterways.i;
 	
