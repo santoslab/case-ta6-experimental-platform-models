@@ -31,7 +31,9 @@ public
 --			 AutomationRequest: out event data port CMASI::AutomationRequest.i;
 --			 UniqueAutomationRequest : out event data port UXTASK::UniqueAutomationRequest.i;
 			 
-        properties
+		properties
+			-- https://github.com/afrl-rq/OpenUxAS
+            Source_Text => ("src/Tasks/TaskManagerService.h", "src/Tasks/TaskManagerService.cpp");
             Dispatch_Protocol => Sporadic;
             
 	end TaskManagerService;

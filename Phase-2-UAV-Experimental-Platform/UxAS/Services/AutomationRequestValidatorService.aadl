@@ -43,6 +43,8 @@ public
 --			ServiceStatus: out event data port CMASI::ServiceStatus.i;
 			
 		properties
+			-- https://github.com/afrl-rq/OpenUxAS
+            Source_Text => ("src/Services/AutomationRequestValidatorService.h", "src/Services/AutomationRequestValidatorService.cpp");
 			Dispatch_Protocol => Sporadic;
 	end AutomationRequestValidatorService;
 	

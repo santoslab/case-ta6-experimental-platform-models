@@ -23,7 +23,9 @@ public
 			TaskImplementationRequest : out event data port UXTASK::TaskImplementationRequest.i;
 			UniqueAutomationResponse : out event data port UXTASK::UniqueAutomationResponse.i;	
 					
-		properties			
+		properties
+			-- https://github.com/afrl-rq/OpenUxAS
+            Source_Text => ("src/Services/PlanBuilderService.h","src/Services/PlanBuilderService.cpp");
             Dispatch_Protocol => Sporadic;
             
 	end PlanBuilderService;

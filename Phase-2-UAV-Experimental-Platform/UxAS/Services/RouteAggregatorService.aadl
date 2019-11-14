@@ -32,7 +32,9 @@ public
 			AssignmentCostMatrix : out event data port UXTASK::AssignmentCostMatrix.i;
 --			ServiceStatus : out event data port CMASI::ServiceStatus.i;
 			
-		properties			
+		properties	
+		    -- https://github.com/afrl-rq/OpenUxAS
+            Source_Text => ("src/Services/RouteAggregatorService.h", "src/Services/RouteAggregatorService.cpp");		
             Dispatch_Protocol => Sporadic;
 	end RouteAggregatorService;
 	

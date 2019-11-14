@@ -9,7 +9,9 @@ public
             AirVehicleState : out event data port CMASI::AirVehicleState.i;
             MissionCommand: out event data port CMASI::MissionCommand.i;
                     
-        properties          
+        properties
+            -- https://github.com/afrl-rq/OpenUxAS
+            Source_Text => ("src/Services/SendMessagesService.h", "src/Services/SendMessagesService.cpp");      
             Dispatch_Protocol => Sporadic;
             
     end SendMessageServiceInit;
@@ -24,7 +26,9 @@ public
             KeepInZone : out event data port CMASI::KeepInZone.i;
             KeepOutZone : out event data port CMASI::KeepOutZone.i;
                     
-        properties          
+        properties
+            -- https://github.com/afrl-rq/OpenUxAS
+            Source_Text => ("src/Services/SendMessagesService.h", "src/Services/SendMessagesService.cpp");             
             Dispatch_Protocol => Sporadic;
             
     end SendMessageServiceMemory;
@@ -39,7 +43,9 @@ public
             LineSearchTask: out event data port CMASI::LineSearchTask.i;
             AutomationRequest: out event data port CMASI::AutomationRequest.i;
                     
-        properties          
+        properties
+            -- https://github.com/afrl-rq/OpenUxAS
+            Source_Text => ("src/Services/SendMessagesService.h", "src/Services/SendMessagesService.cpp");     
             Dispatch_Protocol => Sporadic;
             
     end SendMessageServiceGS;

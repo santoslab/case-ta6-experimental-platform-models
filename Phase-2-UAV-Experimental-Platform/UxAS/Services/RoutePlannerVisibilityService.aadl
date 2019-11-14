@@ -36,7 +36,9 @@ public
 			-- Sent Messages
 			RoutePlanResponse : out event data port ROUTE::RoutePlanResponse.i;
 			
-        properties
+		properties
+			-- https://github.com/afrl-rq/OpenUxAS
+            Source_Text => ("src/Services/RoutePlannerVisibilityService.h", "src/Services/RoutePlannerVisibilityService.cpp");
             Dispatch_Protocol => Sporadic;
             
 	end RoutePlannerVisibilityService;

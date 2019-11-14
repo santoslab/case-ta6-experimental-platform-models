@@ -26,6 +26,8 @@ public
 			MissionCommand : out event data port CMASI::MissionCommand.i;
 						
 		properties
+			-- https://github.com/afrl-rq/OpenUxAS
+            Source_Text => ("src/Services/WaypointPlanManagerService.h", "src/Services/WaypointPlanManagerService.cpp");
 			Dispatch_Protocol => Sporadic;
 			Classifier_Substitution_Rule => Type_Extension;
 	end WaypointPlanManagerService;

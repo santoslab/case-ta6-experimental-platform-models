@@ -32,6 +32,11 @@ public
 			RoutePlanRequest : out event data port ROUTE::RoutePlanRequest.i;
 			TaskPlanOptions : out event data port UXTASK::TaskPlanOptions.i;
 			TaskImplementationResponse : out event data port UXTASK::TaskImplementationResponse.i; 
+		properties
+			-- https://github.com/afrl-rq/OpenUxAS
+            Source_Text => ("src/Tasks/TaskServiceBase.h", "src/Tasks/TaskServiceBase.cpp");
+            Dispatch_Protocol => Sporadic;
+			
 	end TaskServiceBase;
 	
 end TaskServiceBase_Pkg;

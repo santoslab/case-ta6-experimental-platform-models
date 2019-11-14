@@ -5,6 +5,9 @@ public
 	-- ServiceBase is the base abstract for all UxAS services.
 	-------------------------------------------------------------
 	thread ServiceBase
+		properties
+			-- https://github.com/afrl-rq/OpenUxAS
+            Source_Text => ("src/Services/ServiceBase.h", "src/Services/ServiceBase.cpp");
 	end ServiceBase;
 	
 end ServiceBase_Pkg;
