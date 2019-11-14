@@ -32,4 +32,19 @@ public
     thread implementation SendMessageServiceMemory.i
     end SendMessageServiceMemory.i;
     
+    thread SendMessageServiceGS extends ServiceBase_Pkg::ServiceBase
+        features
+            -- Sent Messages
+            OperatingRegion : out event data port CMASI::OperatingRegion.i;
+            LineSearchTask: out event data port CMASI::LineSearchTask.i;
+            AutomationRequest: out event data port CMASI::AutomationRequest.i;
+                    
+        properties          
+            Dispatch_Protocol => Sporadic;
+            
+    end SendMessageServiceGS;
+    
+    thread implementation SendMessageServiceGS.i
+    end SendMessageServiceGS.i;
+    
 end SendMessageService_Pkg;

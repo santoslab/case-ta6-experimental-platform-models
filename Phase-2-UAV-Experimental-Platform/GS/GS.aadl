@@ -4,6 +4,8 @@ public
 	
 	with UAS_Buses;
 	with CASE_Properties;
+	with GS_SW_Pkg;
+	with CASE_Model_Transformations;
 	
 	-- Radio hardware on the Ground Station
 	device Radio
@@ -11,8 +13,8 @@ public
 			GSA: requires bus access GS_Bus.Impl;
 			RFA: requires bus access UAS_Buses::RF_Bus.Impl;
 			recv_data_in: in event data port;
-			recv_data_out: out event data port;
-			send_data_in: in event data port;
+			recv_data_out: out event data port CASE_Model_Transformations::CASE_RF_Msg.Impl;
+			send_data_in: in event data port CASE_Model_Transformations::CASE_RF_Msg.Impl;
 			send_data_out: out event data port;
 	end Radio;
 	
@@ -47,18 +49,6 @@ public
 	bus implementation GS_Bus.Impl	
 	end GS_Bus.Impl;
 	
-	
-	-- Ground Station communication SW
-	process GS_SW
-		features
-			recv_data: in event data port;
-			send_data: out event data port;
-	end GS_SW;
-	
-	process implementation GS_SW.Impl
-	end GS_SW.Impl;
-	
-	
 	-- The Ground Station communication system
 	system GroundStation
 		features
@@ -75,7 +65,7 @@ public
 			PROC_HW: processor GS_Proc.Impl;
 			MEM_HW: memory GS_Mem.Impl;
 			BUS_HW: bus GS_Bus.Impl;
-			PROC_SW: process GS_SW.Impl;
+			PROC_SW: process GS_SW_Pkg::GS_SW.Impl;
 		connections
 			bac1: bus access RADIO_HW.GSA <-> BUS_HW;
 			bac3: bus access PROC_HW.GSA <-> BUS_HW;
