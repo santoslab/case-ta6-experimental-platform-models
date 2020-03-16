@@ -25,7 +25,6 @@ public
 			
 	process implementation SW.Impl
 	   subcomponents
-	       GIMBAL: thread Drivers::GimbalDriver.Impl;
            FC_UART: thread Drivers::UARTDriver.Impl;
            RADIO: thread Drivers::RadioDriver.Impl;
            UXAS: thread group Waterways_UxAS::Waterways.i;
@@ -40,7 +39,6 @@ public
            -- FC_UART
            -----------
            c03: port FC_UART.send_data -> uart_send;
-           c04: port FC_UART.AirVehicleState -> GIMBAL.AirVehicleState;
            c05: port FC_UART.AirVehicleState -> UXAS.AirVehicleState;
            c06: port FC_UART.AirVehicleState -> RADIO.AirVehicleState;
            
@@ -56,7 +54,6 @@ public
            -- UXAS
            --------
            c09: port UXAS.MissionCommand -> FC_UART.MissionCommand;
-           c11: port UXAS.VehicleActionCommand -> GIMBAL.VehicleActionCommand;
            c12: port UXAS.AutomationResponse -> RADIO.AutomationResponse;
                
 	end SW.Impl;

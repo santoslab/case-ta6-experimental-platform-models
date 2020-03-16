@@ -3,7 +3,6 @@ public
 	with CMASI;
 	with ROUTE;
 	with UXTASK;
-	with VEHICLES;
 	
 	--------------------------------------------------------------------------------------
 	-- This is the base class for UxAS tasks. It aggregates functionality required to

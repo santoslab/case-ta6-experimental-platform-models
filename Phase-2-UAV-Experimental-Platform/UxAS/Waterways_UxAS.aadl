@@ -22,7 +22,6 @@ public
 			OperatingRegion : in event data port CMASI::OperatingRegion.i;
 			LineSearchTask: in event data port CMASI::LineSearchTask.i;
 			MissionCommand : out event data port CMASI::MissionCommand.i;
-			VehicleActionCommand : out event data port CMASI::VehicleActionCommand.i;
 			AutomationResponse : out event data port CMASI::AutomationResponse.i;			
 	end Waterways;
 	
@@ -89,8 +88,6 @@ public
             -----------------------
             c_TPOpts_01 : port CmasiLineSearchTaskService.TaskPlanOptions -> RouteAggregatorService.TaskPlanOptions;
             c_TPOpts_02 : port CmasiLineSearchTaskService.TaskPlanOptions -> AssignmentTreeBranchBoundService.TaskPlanOptions;
-            
-            c_VACmd_01 : port CmasiLineSearchTaskService.VehicleActionCommand -> VehicleActionCommand;
             
             c_TIRsp_01 : port CmasiLineSearchTaskService.TaskImplementationResponse -> PlanBuilderService.TaskImplementationResponse;
             

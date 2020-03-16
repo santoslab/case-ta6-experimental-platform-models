@@ -3,7 +3,6 @@
 --------------------------------------------------------------------------------------------------------------
 package CmasiLineSearchTaskService_Pkg
 public
-	with CMASI;
 	with UXNATIVE;
 	
 	with TaskServiceBase_Pkg;
@@ -18,7 +17,7 @@ public
 			CreateNewService : in event data port UXNATIVE::CreateNewService.i;
 			
 			-- Sent Messages
-			VehicleActionCommand : out event data port CMASI::VehicleActionCommand.i;
+--			VehicleActionCommand : out event data port CMASI::VehicleActionCommand.i;
 --			SensorFootprintRequest : out event data port UXTASK::SensorFootprintRequests;
 --			VideoRecord : out event data port UXNATIVE::VideoRecord;
 			
@@ -32,4 +31,4 @@ public
 	thread implementation CmasiLineSearchTaskService.i    
 	end CmasiLineSearchTaskService.i;
 	
-end CmasiLineSearchTask_Pkg;
+end CmasiLineSearchTaskService_Pkg;

@@ -43,20 +43,6 @@
       </bo>
       <contentFilters/>
     </element>
-    <element uuid="ecf06ed9-8a20-4d24-97d4-b5de0a939c9f">
-      <element uuid="6bff302b-1297-4fb6-882f-dc57efb421c9">
-        <bo>
-          <seg>tag</seg>
-          <seg>unidirectional</seg>
-        </bo>
-        <contentFilters/>
-      </element>
-      <bo>
-        <seg>connection</seg>
-        <seg>c04</seg>
-      </bo>
-      <contentFilters/>
-    </element>
     <element uuid="5488513b-96f1-4b0a-81ba-a98e6a349cbe">
       <element uuid="cf012502-4850-4d4a-9654-41ec5100379b">
         <bo>
@@ -144,24 +130,6 @@
       <bendpoints>
         <point x="943.0" y="385.0"/>
         <point x="943.0" y="463.0"/>
-      </bendpoints>
-      <contentFilters/>
-    </element>
-    <element uuid="206bc3a0-2f3b-4ab5-a9ab-68a6a29c33e8">
-      <element uuid="e47a56e1-cb9f-4e9d-b236-c94e5cc0d599">
-        <bo>
-          <seg>tag</seg>
-          <seg>unidirectional</seg>
-        </bo>
-        <contentFilters/>
-      </element>
-      <bo>
-        <seg>connection</seg>
-        <seg>c11</seg>
-      </bo>
-      <bendpoints>
-        <point x="1404.0" y="260.0"/>
-        <point x="1404.0" y="363.0"/>
       </bendpoints>
       <contentFilters/>
     </element>
@@ -298,37 +266,6 @@
         <filter>flowSpecifications</filter>
       </contentFilters>
     </element>
-    <element uuid="8f043312-38d3-4573-9b76-0603d38f8794">
-      <element uuid="1163a638-8ab3-4c57-8e32-eab4ed16326c" dockArea="left">
-        <bo>
-          <seg>feature</seg>
-          <seg>airvehiclestate</seg>
-        </bo>
-        <position y="60.0"/>
-        <contentFilters/>
-      </element>
-      <element uuid="02043687-4d1e-4aea-97bf-19dc1f8f0e5d" dockArea="left">
-        <bo>
-          <seg>feature</seg>
-          <seg>vehicleactioncommand</seg>
-        </bo>
-        <position y="10.0"/>
-        <contentFilters/>
-      </element>
-      <bo>
-        <seg>subcomponent</seg>
-        <seg>gimbal</seg>
-      </bo>
-      <position x="1402.0" y="309.0"/>
-      <size width="456.0" height="110.0"/>
-      <contentFilters>
-        <filter>features</filter>
-        <filter>internalFeatures</filter>
-        <filter>processorFeatures</filter>
-        <filter>connections</filter>
-        <filter>flowSpecifications</filter>
-      </contentFilters>
-    </element>
     <element uuid="ce1a5b05-0893-429b-b9c2-955dbf8d3029">
       <element uuid="b793c548-cf2f-454d-8eab-bf0828d21c3b" dockArea="right">
         <bo>
@@ -447,14 +384,6 @@
           <seg>operatingregion</seg>
         </bo>
         <position y="110.0"/>
-        <contentFilters/>
-      </element>
-      <element uuid="bebb7569-7170-4c57-ad9e-05bfaf16112c" dockArea="right">
-        <bo>
-          <seg>feature</seg>
-          <seg>vehicleactioncommand</seg>
-        </bo>
-        <position x="269.0" y="135.0"/>
         <contentFilters/>
       </element>
       <bo>
