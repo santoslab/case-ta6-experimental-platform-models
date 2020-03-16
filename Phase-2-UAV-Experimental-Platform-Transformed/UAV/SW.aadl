@@ -1,0 +1,223 @@
+package SW
+public
+	with Drivers;
+	with Waterways_UxAS;
+	with CASE_Model_Transformations;
+	with CASEAgree;
+	with CASEConsts;
+	with WaypointPlanManagerService_Pkg;
+	with CASE_Properties;
+	with CMASI;
+	with Base_Types;
+
+	thread CASE_Monitor_Geo
+		features
+			observed: in event data port CMASI::AutomationResponse.i;
+			reference_1: in event data port CMASI::Polygon.i;
+			alert: out event data port Base_Types::Boolean;
+		properties
+			CASE_Properties::Component_Type => MONITOR;
+			CASE_Properties::Component_Spec => ("monitor_policy");
+	end CASE_Monitor_Geo;
+
+	thread implementation CASE_Monitor_Geo.Impl
+		properties
+			Dispatch_Protocol => Periodic;
+	end CASE_Monitor_Geo.Impl;
+
+	thread CASE_Filter_UxAS
+		features
+			filter_in: in event data port CMASI::AutomationResponse.i;
+			filter_out: out event data port CMASI::AutomationResponse.i;
+		properties
+			CASE_Properties::Component_Type => FILTER;
+	end CASE_Filter_UxAS;
+
+	thread implementation CASE_Filter_UxAS.Impl
+		properties
+			Dispatch_Protocol => Periodic;
+	end CASE_Filter_UxAS.Impl;
+
+	thread CASE_Monitor_Req
+		features
+			observed: in event data port CMASI::AutomationResponse.i;
+			reference_1: in event data port CMASI::AutomationRequest.i;
+--			alert: out event data port Base_Types::Boolean;
+			output: out event data port CMASI::AutomationResponse.i;
+		properties
+			CASE_Properties::Component_Type => MONITOR;
+			CASE_Properties::Component_Spec => ("monitor_policy");
+	end CASE_Monitor_Req;
+
+	thread implementation CASE_Monitor_Req.Impl
+		properties
+			Dispatch_Protocol => Periodic;
+	end CASE_Monitor_Req.Impl;
+
+	thread CASE_Filter_LST
+		features
+			filter_in: in event data port CMASI::LineSearchTask.i;
+			filter_out: out event data port CMASI::LineSearchTask.i;
+		properties
+			CASE_Properties::Component_Type => FILTER;
+	end CASE_Filter_LST;
+
+	thread implementation CASE_Filter_LST.Impl
+		properties
+			Dispatch_Protocol => Periodic;
+	end CASE_Filter_LST.Impl;
+
+	thread CASE_Filter_OR
+		features
+			filter_in: in event data port CMASI::OperatingRegion.i;
+			filter_out: out event data port CMASI::OperatingRegion.i;
+		properties
+			CASE_Properties::Component_Type => FILTER;
+	end CASE_Filter_OR;
+
+	thread implementation CASE_Filter_OR.Impl
+		properties
+			Dispatch_Protocol => Periodic;
+	end CASE_Filter_OR.Impl;
+
+	thread CASE_Filter_AR
+		features
+			filter_in: in event data port CMASI::AutomationRequest.i;
+			filter_out: out event data port CMASI::AutomationRequest.i;
+		properties
+			CASE_Properties::Component_Type => FILTER;
+	end CASE_Filter_AR;
+
+	thread implementation CASE_Filter_AR.Impl
+		properties
+			Dispatch_Protocol => Periodic;
+	end CASE_Filter_AR.Impl;
+
+	thread CASE_AttestationManager
+		features
+			am_AutomationRequest_in: in event data port CMASI::AutomationRequest.i;
+			am_AutomationRequest_out: out event data port CMASI::AutomationRequest.i;
+			am_OperatingRegion_in: in event data port CMASI::OperatingRegion.i;
+			am_OperatingRegion_out: out event data port CMASI::OperatingRegion.i;
+			am_LineSearchTask_in: in event data port CMASI::LineSearchTask.i;
+			am_LineSearchTask_out: out event data port CMASI::LineSearchTask.i;
+			am_request: out event data port CASE_Model_Transformations::CASE_AttestationRequestMsg.Impl;
+			am_response: in event data port CASE_Model_Transformations::CASE_AttestationResponseMsg.Impl;
+		properties
+			CASE_Properties::Component_Type => ATTESTATION;
+	end CASE_AttestationManager;
+
+	thread implementation CASE_AttestationManager.Impl
+		properties
+			CASE_Properties::Component_Impl => "CakeML";
+			CASE_Properties::Cache_Timeout => 30;
+			CASE_Properties::Cache_Size => 4;
+			Dispatch_Protocol => Periodic;
+	end CASE_AttestationManager.Impl;
+
+	thread RadioDriver_Attestation extends Drivers::RadioDriver
+		features
+			am_request: in event data port CASE_Model_Transformations::CASE_AttestationRequestMsg.Impl;
+			am_response: out event data port CASE_Model_Transformations::CASE_AttestationResponseMsg.Impl;
+--			comm_request: out event data port CASE_Model_Transformations::CASE_AttestationRequestMsg.Impl;
+--			comm_response: in event data port CASE_Model_Transformations::CASE_AttestationResponseMsg.Impl;
+--			alert: in event data port Base_Types::Boolean;
+	end RadioDriver_Attestation;
+
+	thread implementation RadioDriver_Attestation.Impl extends Drivers::RadioDriver.Impl
+	end RadioDriver_Attestation.Impl;
+
+	thread KeepInZoneDatabase
+		-- The KeepInZoneDatabase is a collection of polygons that represent areas on a map that the UAV can traverse.
+		-- The database is populated at build-time and stored in memory.
+		features
+			zones: out event data port CMASI::Polygon.i;
+	end KeepInZoneDatabase;
+
+	thread implementation KeepInZoneDatabase.Impl
+		properties
+			Dispatch_Protocol => Periodic;
+	end KeepInZoneDatabase.Impl;
+
+	process SW
+		features
+			uart_recv: in event data port CASE_Model_Transformations::CASE_UART_Msg.Impl;
+			uart_send: out event data port CASE_Model_Transformations::CASE_UART_Msg.Impl;
+			radio_recv: in event data port CASE_Model_Transformations::CASE_RF_Msg.Impl;
+			radio_send: out event data port CASE_Model_Transformations::CASE_RF_Msg.Impl;
+
+		annex agree {**
+			guarantee Req001_SW "The radio_send outputs only well formed CASE_RF_Msg.Impl types" : CASEAgree::WellformedCASE_RF_Msg(radio_send, CASEConsts::UAV_ID, CASEConsts::GS_ID);
+			guarantee Req002_SW "The uart_send outputs only well formed CASE_RF_Msg.Impl types" : CASEAgree::WellformedCASE_UART_Msg(uart_send);
+		**};
+
+	end SW;
+
+	process implementation SW.Impl
+		subcomponents
+			FC_UART: thread Drivers::UARTDriver.Impl;
+			RADIO: thread RadioDriver_Attestation.Impl;
+			KeepInZones: thread KeepInZoneDatabase.Impl;
+			UXAS: thread group Waterways_UxAS::Waterways.i;
+			WPM: thread WaypointPlanManagerService_Pkg::WaypointPlanManagerService.i;
+			AM: thread CASE_AttestationManager.Impl;
+			FLT_AR: thread CASE_Filter_AR.Impl;
+			FLT_OR: thread CASE_Filter_OR.Impl;
+			FLT_LST: thread CASE_Filter_LST.Impl;
+			MON_REQ: thread CASE_Monitor_Req.Impl;
+			FLT_UXAS: thread CASE_Filter_UxAS.Impl;
+			MON_GEO: thread CASE_Monitor_Geo.Impl;
+		connections
+			------------------
+			-- Primary Inputs
+			------------------
+			c01: port uart_recv -> FC_UART.recv_data;
+			c02: port radio_recv -> RADIO.recv_data;
+
+			----------- 	           
+			-- FC_UART
+			-----------
+			c03: port FC_UART.send_data -> uart_send;
+			c04: port FC_UART.AirVehicleState -> UXAS.AirVehicleState;
+--			c05: port FC_UART.AirVehicleState -> RADIO.AirVehicleState;
+			c06: port FC_UART.AirVehicleState -> WPM.AirVehicleState;
+--			c_t_08: port ??? -> FC_UART.MissionCommand;	-- HOW DOES FC_UART GET INITIALIZED?
+			---------
+			-- RADIO
+			---------
+			c07: port RADIO.send_data -> radio_send;
+			c08: port RADIO.AutomationRequest -> AM.am_AutomationRequest_in;
+			c09: port RADIO.OperatingRegion -> AM.am_OperatingRegion_in;
+			c10: port RADIO.LineSearchTask -> AM.am_LineSearchTask_in;
+			c11: port AM.am_request -> RADIO.am_request;
+			c12: port RADIO.am_response -> AM.am_response;
+			c13: port AM.am_AutomationRequest_out -> FLT_AR.filter_in;
+			c14: port FLT_AR.filter_out -> UXAS.AutomationRequest;
+			c15: port AM.am_OperatingRegion_out -> FLT_OR.filter_in;
+			c16: port FLT_OR.filter_out -> UXAS.OperatingRegion;
+			c17: port AM.am_LineSearchTask_out -> FLT_LST.filter_in;
+			c18: port FLT_LST.filter_out -> UXAS.LineSearchTask;
+--			c19: port MON_REQ.alert -> RADIO.alert;
+
+			--------
+			-- UXAS
+			--------
+--			c09: port UXAS.MissionCommand -> FC_UART.MissionCommand;
+			c20: port UXAS.AutomationResponse -> RADIO.AutomationResponse;
+			c21: port MON_REQ.output -> FLT_UXAS.filter_in;
+			c22: port FLT_UXAS.filter_out -> WPM.AutomationResponse;
+			c23: port KeepInZones.zones -> MON_GEO.reference_1;
+			c24: port FLT_UXAS.filter_out -> MON_GEO.observed;
+			c25: port MON_GEO.alert -> WPM.ReturnHome;
+			c26: port FLT_AR.filter_out -> MON_REQ.reference_1;
+			c27: port UXAS.AutomationResponse -> MON_REQ.observed;
+
+			--------
+			-- WPM
+			--------
+--			c_t_14: port ??? -> WPM.AirVehicleState;  -- HOW DOES WPM GET INITIALIZED?
+			c28: port WPM.MissionCommand -> FC_UART.MissionCommand;
+
+	end SW.Impl;
+	
+end SW;
