@@ -13,8 +13,10 @@ public
 	thread CASE_Monitor_Geo
 		features
 			observed: in event data port CMASI::AutomationResponse.i;
-			reference_1: in event data port CMASI::Polygon.i;
+			keep_in_zones: in data port CMASI::Polygon.i;
+			keep_out_zones: in data port CMASI::Polygon.i;
 			alert: out event data port Base_Types::Boolean;
+			output: out event data port CMASI::AutomationResponse.i;
 		properties
 			CASE_Properties::Component_Type => MONITOR;
 			CASE_Properties::Component_Spec => ("monitor_policy");
@@ -42,8 +44,7 @@ public
 		features
 			observed: in event data port CMASI::AutomationResponse.i;
 			reference_1: in event data port CMASI::AutomationRequest.i;
---			alert: out event data port Base_Types::Boolean;
-			output: out event data port CMASI::AutomationResponse.i;
+			alert: out event data port Base_Types::Boolean;
 		properties
 			CASE_Properties::Component_Type => MONITOR;
 			CASE_Properties::Component_Spec => ("monitor_policy");
@@ -127,17 +128,18 @@ public
 	thread implementation RadioDriver_Attestation.Impl extends Drivers::RadioDriver.Impl
 	end RadioDriver_Attestation.Impl;
 
-	thread KeepInZoneDatabase
+	thread FlyZonesDatabase
 		-- The KeepInZoneDatabase is a collection of polygons that represent areas on a map that the UAV can traverse.
 		-- The database is populated at build-time and stored in memory.
 		features
-			zones: out event data port CMASI::Polygon.i;
-	end KeepInZoneDatabase;
+			keep_in_zones: out data port CMASI::Polygon.i;
+			keep_out_zones: out data port CMASI::Polygon.i;
+	end FlyZonesDatabase;
 
-	thread implementation KeepInZoneDatabase.Impl
+	thread implementation FlyZonesDatabase.Impl
 		properties
 			Dispatch_Protocol => Periodic;
-	end KeepInZoneDatabase.Impl;
+	end FlyZonesDatabase.Impl;
 
 	process SW
 		features
@@ -157,7 +159,7 @@ public
 		subcomponents
 			FC_UART: thread Drivers::UARTDriver.Impl;
 			RADIO: thread RadioDriver_Attestation.Impl;
-			KeepInZones: thread KeepInZoneDatabase.Impl;
+			FlyZones: thread FlyZonesDatabase.Impl;
 			UXAS: thread group Waterways_UxAS::Waterways.i;
 			WPM: thread WaypointPlanManagerService_Pkg::WaypointPlanManagerService.i;
 			AM: thread CASE_AttestationManager.Impl;
@@ -204,9 +206,10 @@ public
 			--------
 --			c09: port UXAS.MissionCommand -> FC_UART.MissionCommand;
 			c20: port UXAS.AutomationResponse -> RADIO.AutomationResponse;
-			c21: port MON_REQ.output -> FLT_UXAS.filter_in;
-			c22: port FLT_UXAS.filter_out -> WPM.AutomationResponse;
-			c23: port KeepInZones.zones -> MON_GEO.reference_1;
+			c21: port UXAS.AutomationResponse -> FLT_UXAS.filter_in;
+			c22: port MON_GEO.output -> WPM.AutomationResponse;
+			c23: port FlyZones.keep_in_zones -> MON_GEO.keep_in_zones;
+			c29: port FlyZones.keep_out_zones -> MON_GEO.keep_out_zones;
 			c24: port FLT_UXAS.filter_out -> MON_GEO.observed;
 			c25: port MON_GEO.alert -> WPM.ReturnHome;
 			c26: port FLT_AR.filter_out -> MON_REQ.reference_1;
