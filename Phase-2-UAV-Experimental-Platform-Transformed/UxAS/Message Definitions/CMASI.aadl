@@ -33,8 +33,6 @@ public
 	
 	data implementation Polygon.i extends AbstractGeometry.i
 		subcomponents
-			-- EGM ADDED: not part of actual message
-			NumberOfPoints : data int64.i;
 			BoundaryPointsList : data Location3D.i {Data_Model::Data_Representation => Array;};
 	end Polygon.i;
 	
