@@ -9,17 +9,47 @@ public
 	with CASE_Properties;
 	with CMASI;
 	with Base_Types;
+    renames AGREE_PLTL::all;
 
 	thread CASE_Monitor_Geo
 		features
 			observed: in event data port CMASI::AutomationResponse.i;
 			keep_in_zones: in data port CMASI::Polygon.i;
 			keep_out_zones: in data port CMASI::Polygon.i;
-			alert: out event data port Base_Types::Boolean;
 			output: out event data port CMASI::AutomationResponse.i;
 		properties
 			CASE_Properties::Component_Type => MONITOR;
 			CASE_Properties::Component_Spec => ("monitor_policy");
+			
+		annex agree {**
+
+            property CASE_Monitor_Coord_policy = Historically(event(observed) => (WAYPOINTS_IN_KEEPIN_ZONE(GET_MISSION_COMMAND(observed), keep_in_zones) and
+                (not WAYPOINTS_IN_KEEPIN_ZONE(GET_MISSION_COMMAND(observed), keep_out_zones))));
+
+            guarantee Req001_GeofenceMonitor "The monitor output should be the same as observed" : output = observed; 
+            guarantee Req001_GeoFenceMonitorEvent "The monitor only fires when observed is fenced" : event(output) =
+              if (event(observed) and CASE_Monitor_Coord_policy) then
+                true
+              else
+                false;
+            
+            fun GET_MISSION_COMMAND(automationResponse: CMASI::AutomationResponse.i) : CMASI::MissionCommand.i  =
+              automationResponse.MissionCommandList[0];
+               
+            fun WAYPOINTS_IN_KEEPIN_ZONE(mission : CMASI::MissionCommand.i, keepInZone : CMASI::Polygon.i) : bool =
+              forall waypoint in mission.WaypointList, WAYPOINT_IN_ZONE_RECTANGLE(waypoint, keepInZone) and not WAYPOINT_IN_ZONE_RECTANGLE(waypoint, keepOutZone);
+              
+            -- Assumes rectangle that is defined by two corners so it is aligned
+            -- with the origin (not rotated in space)
+            -- Assumes that the altitude is the same in all the coordinates
+            -- Assmes zone[0] is the bottom left corner and zone[2] in the upper right corner
+            fun WAYPOINT_IN_ZONE_RECTANGLE(waypoint : CMASI::Waypoint.i, zone : CMASI::Polygon.i) : bool =
+                  (waypoint.Latitude >= (zone.BoundaryPointsList[0]).Latitude)
+              and (waypoint.Latitude <= (zone.BoundaryPointsList[1]).Latitude)
+              and (waypoint.Longitude >= (zone.BoundaryPointsList[0]).Longitude)
+              and (waypoint.Longitude <= (zone.BoundaryPointsList[1]).Longitude)
+              and (waypoint.Altitude >= (zone.BoundaryPointsList[0]).Altitude);
+        **};
 	end CASE_Monitor_Geo;
 
 	thread implementation CASE_Monitor_Geo.Impl
@@ -48,6 +78,17 @@ public
 		properties
 			CASE_Properties::Component_Type => MONITOR;
 			CASE_Properties::Component_Spec => ("monitor_policy");
+		annex agree {**
+		    const is_latched : bool = true;
+		    -- AutomationResponse (observed) occurs exactly two scheduling cycles after AutomationRequest (reference_1)
+            property CASE_Monitor_Req_policy = Historically(Yesterday(Yesterday(event(reference_1))) => event(observed));
+            
+            guarantee monitor_policy "The monitor shall only output an alert when the monitor policy is true" :
+              if (is_latched and prev(alert, not CASE_Monitor_Req_policy)) then
+                  true
+              else 
+                  not CASE_Monitor_Req_policy;                 
+		**};
 	end CASE_Monitor_Req;
 
 	thread implementation CASE_Monitor_Req.Impl
