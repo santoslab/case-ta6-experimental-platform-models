@@ -49,15 +49,4 @@ public
 	thread implementation UARTDriver.Impl
 	end UARTDriver.Impl;
 
-	thread GimbalDriver
-		features
-			AirVehicleState: in event data port CMASI::AirVehicleState.i;
-			VehicleActionCommand: in event data port CMASI::VehicleActionCommand.i;
-		properties
-			Dispatch_Protocol => Sporadic;
-	end GimbalDriver;
-
-	thread implementation GimbalDriver.Impl
-	end GimbalDriver.Impl;
-
 end Drivers;
