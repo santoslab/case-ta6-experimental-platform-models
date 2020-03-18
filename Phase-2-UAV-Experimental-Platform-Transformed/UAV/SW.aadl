@@ -17,6 +17,7 @@ public
 			keep_in_zones: in data port CMASI::Polygon.i;
 			keep_out_zones: in data port CMASI::Polygon.i;
 			output: out event data port CMASI::AutomationResponse.i;
+			alert: out event port; 
 		properties
 			CASE_Properties::Component_Type => MONITOR;
 			CASE_Properties::Component_Spec => ("monitor_policy");
@@ -25,19 +26,18 @@ public
 
             property CASE_Monitor_Coord_policy = Historically(event(observed) => (WAYPOINTS_IN_KEEPIN_ZONE(GET_MISSION_COMMAND(observed), keep_in_zones) and
                 (not WAYPOINTS_IN_KEEPIN_ZONE(GET_MISSION_COMMAND(observed), keep_out_zones))));
-
-            guarantee Req001_GeofenceMonitor "The monitor output should be the same as observed" : output = observed; 
-            guarantee Req001_GeoFenceMonitorEvent "The monitor only fires when observed is fenced" : event(output) =
+                
+            guarantee Req001_GeoFenceMonitor "The monitor only fires when the observed is valid" :
               if (event(observed) and CASE_Monitor_Coord_policy) then
-                true
+                event(output) and output = observed and event(alert)
               else
-                false;
+                not event(output) and not event(alert);
             
             fun GET_MISSION_COMMAND(automationResponse: CMASI::AutomationResponse.i) : CMASI::MissionCommand.i  =
               automationResponse.MissionCommandList[0];
                
             fun WAYPOINTS_IN_KEEPIN_ZONE(mission : CMASI::MissionCommand.i, keepInZone : CMASI::Polygon.i) : bool =
-              forall waypoint in mission.WaypointList, WAYPOINT_IN_ZONE_RECTANGLE(waypoint, keepInZone) and not WAYPOINT_IN_ZONE_RECTANGLE(waypoint, keepOutZone);
+              forall waypoint in mission.WaypointList, WAYPOINT_IN_ZONE_RECTANGLE(waypoint, keepInZones) and not WAYPOINT_IN_ZONE_RECTANGLE(waypoint, keepOutZones);
               
             -- Assumes rectangle that is defined by two corners so it is aligned
             -- with the origin (not rotated in space)
@@ -240,7 +240,6 @@ public
 			c16: port FLT_OR.filter_out -> UXAS.OperatingRegion;
 			c17: port AM.am_LineSearchTask_out -> FLT_LST.filter_in;
 			c18: port FLT_LST.filter_out -> UXAS.LineSearchTask;
---			c19: port MON_REQ.alert -> RADIO.alert;
 
 			--------
 			-- UXAS

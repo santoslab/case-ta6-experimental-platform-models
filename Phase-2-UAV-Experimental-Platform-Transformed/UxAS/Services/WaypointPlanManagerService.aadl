@@ -26,7 +26,7 @@ public
 			MissionCommand: out event data port CMASI::MissionCommand.i;
 
 			-- Return Home
-			ReturnHome: in event data port Base_Types::Boolean;
+			ReturnHome: in event port;
 
 		properties
 			-- https://github.com/afrl-rq/OpenUxAS
