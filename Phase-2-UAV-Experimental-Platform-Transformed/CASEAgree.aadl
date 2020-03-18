@@ -20,6 +20,18 @@ annex agree {**
      
     fun WellformedCASE_UART_Msg(msg : CASE_UART_Msg.Impl) : bool = 
        msg.crc = true;
+       
+	fun WELL_FORMED_AUTOMATION_REQUEST(msg : CMASI::AutomationRequest.i) : bool = 
+		false;
+		
+	fun WELL_FORMED_OPERATING_REGION(msg : CMASI::OperatingRegion.i) : bool =
+		false;
+	
+	fun WELL_FORMED_LINE_SEARCH_TASK(msg : CMASI::LineSearchTask.i) : bool = 
+		false;
+		
+	fun WELL_FORMED_AUTOMATION_RESPONSE(msg : CMASI::AutomationResponse.i) : bool = 
+		false;
          
 **};
 

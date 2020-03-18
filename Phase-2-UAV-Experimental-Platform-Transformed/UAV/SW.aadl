@@ -63,6 +63,10 @@ public
 			filter_out: out event data port CMASI::AutomationResponse.i;
 		properties
 			CASE_Properties::Component_Type => FILTER;
+			CASE_Properties::Component_Spec => ("Req_Filter_ARes");
+		annex agree {**
+			guarantee Req_Filter_ARes "Well-formed Automation Response message" : CASEAgree::WELL_FORMED_AUTOMATION_RESPONSE(filter_out);
+		**};
 	end CASE_Filter_UxAS;
 
 	thread implementation CASE_Filter_UxAS.Impl
@@ -102,6 +106,10 @@ public
 			filter_out: out event data port CMASI::LineSearchTask.i;
 		properties
 			CASE_Properties::Component_Type => FILTER;
+			CASE_Properties::Component_Spec => ("Req_Filter_LST");
+		annex agree {**
+			guarantee Req_Filter_LST "Well-formed Line Search Task message" : CASEAgree::WELL_FORMED_LINE_SEARCH_TASK(filter_out);
+		**};
 	end CASE_Filter_LST;
 
 	thread implementation CASE_Filter_LST.Impl
@@ -115,6 +123,10 @@ public
 			filter_out: out event data port CMASI::OperatingRegion.i;
 		properties
 			CASE_Properties::Component_Type => FILTER;
+			CASE_Properties::Component_Spec => ("Req_Filter_OR");
+		annex agree {**
+			guarantee Req_Filter_OR "Well-formed Operating Region message" : CASEAgree::WELL_FORMED_OPERATING_REGION(filter_out);
+		**};
 	end CASE_Filter_OR;
 
 	thread implementation CASE_Filter_OR.Impl
@@ -128,6 +140,10 @@ public
 			filter_out: out event data port CMASI::AutomationRequest.i;
 		properties
 			CASE_Properties::Component_Type => FILTER;
+			CASE_Properties::Component_Spec => ("Req_Filter_AReq");
+		annex agree {**
+			guarantee Req_Filter_AReq "Well-formed Automation Request message" : CASEAgree::WELL_FORMED_AUTOMATION_REQUEST(filter_out);
+		**};
 	end CASE_Filter_AR;
 
 	thread implementation CASE_Filter_AR.Impl
