@@ -8,6 +8,22 @@ public
 	with Common_Data; renames Common_Data::all;
 	with Data_Model;
 	
+	-- Base class for message types
+	data LMCPObject
+	end LMCPObject;
+	
+	data implementation LMCPObject.i
+	end LMCPObject.i;
+	
+	data AddressAttributedMessage
+	end AddressAttributedMessage;
+	
+	data implementation AddressAttributedMessage.i
+		subcomponents
+			id: data byte {Data_Model::Data_Representation => Array; Data_Model::Dimension => (4);};
+			payload: data LMCPObject;
+	end AddressAttributedMessage.i;
+	
 	data AltitudeType extends Base_Types::Integer
 		properties
 			Data_Model::Data_Representation => Enum;
@@ -33,7 +49,7 @@ public
 	
 	data implementation Polygon.i extends AbstractGeometry.i
 		subcomponents
-			BoundaryPointsList : data Location3D.i {Data_Model::Data_Representation => Array;};
+			BoundaryPointsList : data Location3D.i {Data_Model::Data_Representation => Array; Data_Model::Dimension => (2);};
 	end Polygon.i;
 	
     -- A container for key/value pairs. Keys and values can be any valid string.
@@ -121,17 +137,17 @@ public
 	-- the automation service, only the last message will be considered, i.e.
 	-- a new plan request supersedes all previous ones.
 	---------------------------------------------------------------------------
-	data AutomationRequest		
+	data AutomationRequest extends LMCPObject
 	end AutomationRequest;
 	
-	data implementation AutomationRequest.i
+	data implementation AutomationRequest.i extends LMCPObject.i
 		subcomponents
 			--List of entities to consider when planning.
-			EntityList: data int64.i {Data_Model::Data_Representation => Array;};
+			EntityList: data int64.i {Data_Model::Data_Representation => Array; Data_Model::Dimension => (1);};
 			
 			-- List of task IDs (defined by {@link Task} messages) to be planned
 			-- for by the automation service
-			TaskList: data int64.i {Data_Model::Data_Representation => Array;};
+			TaskList: data int64.i {Data_Model::Data_Representation => Array; Data_Model::Dimension => (1);};
 								
 			-- Size of the TaskList 	
 			TaskListSize: data int64.i;
@@ -158,13 +174,13 @@ public
 	-- This type is meant to serve as a single container for commands that are a response 
 	-- to {@link AutomationRequest}
 	---------------------------------------------------------------------------------------	
-	data AutomationResponse	
+	data AutomationResponse	extends LMCPObject
 	end AutomationResponse;
 
-	data implementation AutomationResponse.i
+	data implementation AutomationResponse.i extends LMCPObject.i
 		subcomponents
 			--A list of MissionCommands issued by the automation service
-			MissionCommandList: data MissionCommand.i {Data_Model::Data_Representation => Array;};
+			MissionCommandList: data MissionCommand.i {Data_Model::Data_Representation => Array; Data_Model::Dimension => (1);};
 			--A list of VehicleActionCommands issued by the automation service
 			VehicleCommandList: data VehicleActionCommand.i {Data_Model::Data_Representation => Array;};
 			--Status from the automation service to the simulation regarding
@@ -476,17 +492,17 @@ public
 	end KeepOutZone.i;
 
 	--Collection of extrusions/zones that define operating region
-	data OperatingRegion		
+	data OperatingRegion extends LMCPObject
 	end OperatingRegion;
 			
-	data implementation OperatingRegion.i
+	data implementation OperatingRegion.i extends LMCPObject.i
 	    subcomponents
 	        --Operating region ID
 	        ID: data int64.i;
 	        --Abstract Zone IDs in which the entity must remain during operation
-	        KeepInAreas: data int64.i {Data_Model::Data_Representation => Array;};
+	        KeepInAreas: data int64.i {Data_Model::Data_Representation => Array;  Data_Model::Dimension => (1);};
 	        --Keep Out Zone IDs that an entity must remain out of during operation
-	        KeepOutAreas: data int64.i {Data_Model::Data_Representation => Array;};
+	        KeepOutAreas: data int64.i {Data_Model::Data_Representation => Array; Data_Model::Dimension => (1);};
 	end OperatingRegion.i;
 
 	--Sent to denote that the target id numbers in the list are obsolete
@@ -525,10 +541,10 @@ public
 	--service. Task requests are not assigned to a specific vehicle, but
 	--allow the automation service to determine the best vehicle to complete
 	--the task.
-	data Task		
+	data Task extends LMCPObject
 	end Task;
 	
-	data implementation Task.i
+	data implementation Task.i extends LMCPObject.i
 	    subcomponents
 	        --A unique identifier for this task.
 	        TaskID: data int64.i;
@@ -729,7 +745,7 @@ public
 			--are linked, but the waypoint list may contain waypoints that are not
 			--necessarily linked. Multiple linked routes may be sent in a single
 			--waypoint list. Waypoints are not necessarily ordered in the list.
-			WaypointList: data Waypoint.i {Data_Model::Data_Representation => Array;};
+			WaypointList: data Waypoint.i {Data_Model::Data_Representation => Array; Data_Model::Dimension => (1024);};
 			
 			--ID of the first waypoint to follow.
 			FirstWaypoint: data int64.i;

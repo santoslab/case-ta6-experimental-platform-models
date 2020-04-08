@@ -90,7 +90,7 @@ public
 			PROC_HW: processor MC_Proc.Impl;
 			MEM_HW: memory MC_Mem.Impl;
 			BUS_HW: bus MC_Bus.Impl;
-			PROC_SW: process SW::SW.Impl;
+			PROC_SW: system SW::SW.Impl;
 
 			VM: virtual processor CASE_Virtual_Machine.Impl;
 		connections
@@ -127,7 +127,7 @@ public
 			Actual_Connection_Binding => (reference (BUS_HW)) applies to c04, c06, c10, c11;
 
 			Actual_Processor_Binding => (
-				reference (VM)) applies to PROC_SW.UXAS, PROC_SW.UXAS.TaskManagerService, PROC_SW.UXAS.AutomationRequestValidatorService, PROC_SW.UXAS.RoutePlannerVisibilityService, PROC_SW.UXAS.RouteAggregatorService, PROC_SW.UXAS.AssignmentTreeBranchBoundService, PROC_SW.UXAS.PlanBuilderService, PROC_SW.UXAS.CmasiLineSearchTaskService, PROC_SW.UXAS.SendMessagesServiceMemory, PROC_SW.UXAS.SendMessagesServiceInit;
+				reference (VM)) applies to PROC_SW.UXAS, PROC_SW.UXAS.UXAS, PROC_SW.UXAS.UXAS.TaskManagerService, PROC_SW.UXAS.UXAS.AutomationRequestValidatorService, PROC_SW.UXAS.UXAS.RoutePlannerVisibilityService, PROC_SW.UXAS.UXAS.RouteAggregatorService, PROC_SW.UXAS.UXAS.AssignmentTreeBranchBoundService, PROC_SW.UXAS.UXAS.PlanBuilderService, PROC_SW.UXAS.UXAS.CmasiLineSearchTaskService, PROC_SW.UXAS.UXAS.SendMessagesServiceMemory, PROC_SW.UXAS.UXAS.SendMessagesServiceInit;
 	end MissionComputer.Impl;
 	
 end MC;
