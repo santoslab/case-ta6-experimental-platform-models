@@ -306,7 +306,9 @@ public
 			LineSearchTask_out: out event data port CMASI::LineSearchTask.i;
 		properties
 			CASE_Properties::Component_Type => MONITOR;
-
+		annex agree {**
+			eq areq : CMASI::AutomationRequest.i = AutomationRequest_in.payload.AutomationRequest;
+		**};
 	end CASE_AttestationGate_thr;
 
 	thread implementation CASE_AttestationGate_thr.Impl

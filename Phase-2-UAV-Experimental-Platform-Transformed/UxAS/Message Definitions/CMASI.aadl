@@ -8,11 +8,18 @@ public
 	with Common_Data; renames Common_Data::all;
 	with Data_Model;
 	
-	-- Base class for message types
+	-- Container for message types
 	data LMCPObject
+		properties
+			Data_Model::Data_Representation => Union;
 	end LMCPObject;
 	
 	data implementation LMCPObject.i
+		subcomponents
+			AutomationRequest: data AutomationRequest.i;
+			OperatingRegion: data OperatingRegion.i;
+			LineSearchTask: data LineSearchTask.i;
+			AutomationResponse: data AutomationResponse.i;
 	end LMCPObject.i;
 	
 	data AddressAttributedMessage
@@ -137,10 +144,10 @@ public
 	-- the automation service, only the last message will be considered, i.e.
 	-- a new plan request supersedes all previous ones.
 	---------------------------------------------------------------------------
-	data AutomationRequest extends LMCPObject
+	data AutomationRequest
 	end AutomationRequest;
 	
-	data implementation AutomationRequest.i extends LMCPObject.i
+	data implementation AutomationRequest.i
 		subcomponents
 			--List of entities to consider when planning.
 			EntityList: data int64.i {Data_Model::Data_Representation => Array; Data_Model::Dimension => (1);};
@@ -174,10 +181,10 @@ public
 	-- This type is meant to serve as a single container for commands that are a response 
 	-- to {@link AutomationRequest}
 	---------------------------------------------------------------------------------------	
-	data AutomationResponse	extends LMCPObject
+	data AutomationResponse
 	end AutomationResponse;
 
-	data implementation AutomationResponse.i extends LMCPObject.i
+	data implementation AutomationResponse.i
 		subcomponents
 			--A list of MissionCommands issued by the automation service
 			MissionCommandList: data MissionCommand.i {Data_Model::Data_Representation => Array; Data_Model::Dimension => (1);};
@@ -492,10 +499,10 @@ public
 	end KeepOutZone.i;
 
 	--Collection of extrusions/zones that define operating region
-	data OperatingRegion extends LMCPObject
+	data OperatingRegion
 	end OperatingRegion;
 			
-	data implementation OperatingRegion.i extends LMCPObject.i
+	data implementation OperatingRegion.i
 	    subcomponents
 	        --Operating region ID
 	        ID: data int64.i;
@@ -541,10 +548,10 @@ public
 	--service. Task requests are not assigned to a specific vehicle, but
 	--allow the automation service to determine the best vehicle to complete
 	--the task.
-	data Task extends LMCPObject
+	data Task
 	end Task;
 	
-	data implementation Task.i extends LMCPObject.i
+	data implementation Task.i
 	    subcomponents
 	        --A unique identifier for this task.
 	        TaskID: data int64.i;
