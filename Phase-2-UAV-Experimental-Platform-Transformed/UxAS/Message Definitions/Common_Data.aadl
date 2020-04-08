@@ -41,7 +41,7 @@ public
 	data implementation uint32.i
 	end uint32.i;
 	
-	data byte extends Base_Types::Integer_8
+	data byte extends Base_Types::Unsigned_8
 	end byte;
 	
 	data implementation byte.i
