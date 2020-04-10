@@ -306,6 +306,7 @@ public
 			LineSearchTask_out: out event data port CMASI::LineSearchTask.i;
 		properties
 			CASE_Properties::Component_Type => MONITOR;
+			CASE_Properties::Component_Spec => ("CASE_AttestationGate_policy");
 		annex agree {**
 			fun IS_TRUSTED(src_id : CMASI::Address) : bool = exists id in trusted_ids, id = src_id;
 			guarantee CASE_AttestationGate_policy "Only messages from trusted sources shall be forwarded" :
