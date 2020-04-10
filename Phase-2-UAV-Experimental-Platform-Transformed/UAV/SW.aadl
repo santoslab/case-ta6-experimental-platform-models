@@ -261,8 +261,8 @@ public
 
 	thread CASE_AttestationManager_thr
 		features
-			trusted_ids: out data port Base_Types::Integer {Data_Model::Data_Representation => Array;
-				Data_Model::Dimension => (1);};
+			trusted_ids: out data port CMASI::Address {Data_Model::Data_Representation => Array;
+				Data_Model::Dimension => (3);};
 			attestation_request: out event data port CASE_Model_Transformations::CASE_AttestationRequestMsg.Impl;
 			attestation_response: in event data port CASE_Model_Transformations::CASE_AttestationResponseMsg.Impl;
 		properties
@@ -273,13 +273,13 @@ public
 		properties
 			CASE_Properties::Component_Impl => "CakeML";
 			CASE_Properties::Cache_Timeout => 30;
-			CASE_Properties::Cache_Size => 4;
+			CASE_Properties::Cache_Size => 3;
 			Dispatch_Protocol => Periodic;
 	end CASE_AttestationManager_thr.Impl;
 	
 	process CASE_AttestationManager
 		features
-			trusted_ids: out data port Base_Types::Integer {Data_Model::Data_Representation => Array;
+			trusted_ids: out data port CMASI::Address {Data_Model::Data_Representation => Array;
 				Data_Model::Dimension => (3);};
 			attestation_request: out event data port CASE_Model_Transformations::CASE_AttestationRequestMsg.Impl;
 			attestation_response: in event data port CASE_Model_Transformations::CASE_AttestationResponseMsg.Impl;
@@ -296,7 +296,7 @@ public
 
 	thread CASE_AttestationGate_thr
 		features
-			trusted_ids: in data port Base_Types::Integer {Data_Model::Data_Representation => Array;
+			trusted_ids: in data port CMASI::Address {Data_Model::Data_Representation => Array;
 				Data_Model::Dimension => (3);};
 			AutomationRequest_in: in event data port CMASI::AddressAttributedMessage.i;
 			AutomationRequest_out: out event data port CMASI::AutomationRequest.i;
@@ -307,7 +307,12 @@ public
 		properties
 			CASE_Properties::Component_Type => MONITOR;
 		annex agree {**
-			eq areq : CMASI::AutomationRequest.i = AutomationRequest_in.payload.AutomationRequest;
+			fun IS_TRUSTED(src_id : CMASI::Address) : bool = exists id in trusted_ids, id = src_id;
+			guarantee CASE_AttestationGate_policy "Only messages from trusted sources shall be forwarded" :
+				if event(AutomationRequest_in) and IS_TRUSTED(AutomationRequest_in.id) then event(AutomationRequest_out) and not (event(OperatingRegion_out) or event(LineSearchTask_out)) and AutomationRequest_out = AutomationRequest_in.payload.AutomationRequest
+				else if event(OperatingRegion_in) and IS_TRUSTED(OperatingRegion_in.id) then event(OperatingRegion_out) and not (event(AutomationRequest_out) or event(LineSearchTask_out)) and OperatingRegion_out = OperatingRegion_in.payload.OperatingRegion
+				else if event(LineSearchTask_in) and IS_TRUSTED(LineSearchTask_in.id) then event(LineSearchTask_out) and not (event(AutomationRequest_out) or event(OperatingRegion_out)) and LineSearchTask_out = LineSearchTask_in.payload.LineSearchTask
+				else not (event(AutomationRequest_out) or event(OperatingRegion_out) or event(LineSearchTask_out));
 		**};
 	end CASE_AttestationGate_thr;
 
@@ -316,8 +321,8 @@ public
 	
 	process CASE_AttestationGate
 		features
-			trusted_ids: in data port Base_Types::Integer {Data_Model::Data_Representation => Array;
-					Data_Model::Dimension => (10);};
+			trusted_ids: in data port CMASI::Address {Data_Model::Data_Representation => Array;
+					Data_Model::Dimension => (3);};
 			AutomationRequest_in: in event data port CMASI::AddressAttributedMessage.i;
 			AutomationRequest_out: out event data port CMASI::AutomationRequest.i;
 			OperatingRegion_in: in event data port CMASI::AddressAttributedMessage.i;

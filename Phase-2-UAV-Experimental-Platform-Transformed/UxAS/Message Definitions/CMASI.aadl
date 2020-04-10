@@ -22,13 +22,23 @@ public
 			AutomationResponse: data AutomationResponse.i;
 	end LMCPObject.i;
 	
+	data Address
+		properties
+			Data_Model::Data_Representation => Array;
+			Data_Model::Base_Type => (classifier (byte.i));
+			Data_Model::Dimension => (4);
+	end Address;
+	
+	data implementation Address.i
+	end Address.i;
+	
 	data AddressAttributedMessage
 	end AddressAttributedMessage;
 	
 	data implementation AddressAttributedMessage.i
 		subcomponents
-			id: data byte {Data_Model::Data_Representation => Array; Data_Model::Dimension => (4);};
-			payload: data LMCPObject;
+			id: data Address;
+			payload: data LMCPObject.i;
 	end AddressAttributedMessage.i;
 	
 	data AltitudeType extends Base_Types::Integer
