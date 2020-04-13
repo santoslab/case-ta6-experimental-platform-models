@@ -120,6 +120,8 @@ public
 	end CASE_AttestationGate_thr;
 
 	thread implementation CASE_AttestationGate_thr.Impl
+		properties
+			Dispatch_Protocol => Periodic;
 	end CASE_AttestationGate_thr.Impl;
 	
 	process CASE_AttestationGate
@@ -509,6 +511,7 @@ public
 			c1: port AutomationResponse -> WaypointPlanManagerService.AutomationResponse;
 			c2: port AirVehicleState -> WaypointPlanManagerService.AirVehicleState;
 			c3: port WaypointPlanManagerService.MissionCommand -> MissionCommand;
+			c4: port ReturnHome -> WaypointPlanManagerService.ReturnHome;
 	end WaypointPlanManagerService.Impl;
 	
 	

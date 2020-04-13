@@ -94,7 +94,7 @@
       </bo>
       <bendpoints>
         <point x="1152.0" y="445.0"/>
-        <point x="1152.0" y="421.5"/>
+        <point x="1152.0" y="422.0"/>
       </bendpoints>
     </element>
     <element uuid="f8001682-4c58-488e-a371-452ccbed81a5" manual="true">
@@ -110,7 +110,7 @@
       </bo>
       <bendpoints>
         <point x="731.0" y="561.0"/>
-        <point x="731.0" y="521.5"/>
+        <point x="731.0" y="522.0"/>
       </bendpoints>
     </element>
     <element uuid="136be4f6-9ace-4c69-8e64-fe4e9971d66a" manual="true">
@@ -126,7 +126,7 @@
       </bo>
       <bendpoints>
         <point x="1152.0" y="503.0"/>
-        <point x="1152.0" y="471.5"/>
+        <point x="1152.0" y="472.0"/>
       </bendpoints>
     </element>
     <element uuid="206bc3a0-2f3b-4ab5-a9ab-68a6a29c33e8" manual="true">
@@ -225,7 +225,7 @@
         <seg>c17</seg>
       </bo>
       <bendpoints>
-        <point x="1639.0" y="496.5"/>
+        <point x="1639.0" y="497.0"/>
         <point x="1639.0" y="471.0"/>
       </bendpoints>
     </element>
@@ -258,7 +258,7 @@
       </bo>
       <bendpoints>
         <point x="1152.0" y="644.0"/>
-        <point x="1152.0" y="571.5"/>
+        <point x="1152.0" y="572.0"/>
       </bendpoints>
     </element>
     <element uuid="a3f82fe1-da7b-4878-bc61-9f7c92add36e" manual="true">
@@ -285,7 +285,7 @@
         <seg>c22</seg>
       </bo>
       <bendpoints>
-        <point x="3939.0" y="276.66666666666663"/>
+        <point x="3939.0" y="277.0"/>
         <point x="3939.0" y="589.0"/>
       </bendpoints>
     </element>
@@ -329,7 +329,7 @@
         <seg>c25</seg>
       </bo>
       <bendpoints>
-        <point x="3949.0" y="199.33333333333331"/>
+        <point x="3949.0" y="199.0"/>
         <point x="3949.0" y="531.0"/>
       </bendpoints>
     </element>
@@ -510,14 +510,14 @@
           <seg>feature</seg>
           <seg>airvehiclestate</seg>
         </bo>
-        <position x="389.0" y="10.0"/>
+        <position x="289.0" y="10.0"/>
       </element>
       <element uuid="75070299-73bf-4a41-ab91-b21fff5204d4" manual="true" dockArea="right" fontSize="16.0">
         <bo>
           <seg>feature</seg>
           <seg>missioncommand</seg>
         </bo>
-        <position x="359.0" y="68.0"/>
+        <position x="259.0" y="68.0"/>
       </element>
       <element uuid="65cfe0a0-f438-4231-ac21-c722ff46a822" manual="true" dockArea="left" fontSize="16.0">
         <bo>
@@ -531,14 +531,14 @@
           <seg>feature</seg>
           <seg>send_data</seg>
         </bo>
-        <position x="434.0" y="126.0"/>
+        <position x="334.0" y="126.0"/>
       </element>
       <bo>
         <seg>subcomponent</seg>
         <seg>fc_uart</seg>
       </bo>
       <position x="1637.0" y="585.0"/>
-      <size width="558.0" height="184.0"/>
+      <size width="458.0" height="184.0"/>
     </element>
     <element uuid="3b11b39a-bc2b-4147-9c5d-e33e5e07a100" manual="true" background="#ccffcc" fontSize="16.0">
       <element uuid="4dbdd6ad-07b4-40e5-a616-59296cb51638" manual="true" dockArea="left" fontSize="16.0">

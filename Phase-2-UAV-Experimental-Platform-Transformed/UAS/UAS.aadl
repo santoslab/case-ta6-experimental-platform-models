@@ -20,6 +20,9 @@ public
 			bac2: bus access RFA <-> UAV.RFA;
 		properties
 			Actual_Connection_Binding => (reference (RFA)) applies to c1, c2;
+		annex resolute {**
+			check CASE_Tools
+		**};
 	end UAS.Impl;
 
 end UAS;
