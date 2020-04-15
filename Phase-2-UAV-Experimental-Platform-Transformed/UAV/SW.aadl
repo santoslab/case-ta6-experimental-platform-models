@@ -116,33 +116,6 @@ public
 				else if event(OperatingRegion_in) and IS_TRUSTED(OperatingRegion_in.id) then event(OperatingRegion_out) and not (event(AutomationRequest_out) or event(LineSearchTask_out)) and OperatingRegion_out = OperatingRegion_in.payload.OperatingRegion
 				else if event(LineSearchTask_in) and IS_TRUSTED(LineSearchTask_in.id) then event(LineSearchTask_out) and not (event(AutomationRequest_out) or event(OperatingRegion_out)) and LineSearchTask_out = LineSearchTask_in.payload.LineSearchTask
 				else not (event(AutomationRequest_out) or event(OperatingRegion_out) or event(LineSearchTask_out));
-
-		properties
-			CASE_Properties::Component_Type => MONITOR; -- marks this component as a monitor
-			CASE_Properties::Component_Spec => ("CASE_AttestationGate_Event"); -- monitor guarantee
-			CASE_Properties::Monitor_Latched => false; -- indicates if the monitor is latched
-		annex agree {**
-
-			-- a constant generated from the component property above, handy for expressing the monitor guarantee
-			const is_latched : bool = Get_Property(this, CASE_Properties::Monitor_Latched);
-
-			-- Monitor policy (models the expected behavior in terms of the input ports)
-			-- Incoming messages are forwarded if they are associated with trusted source IDs
-			property CASE_Monitor_Req_Resp_policy = Historically(event(reference_1) or (empty_day and Yesterday(event(reference_1) or (empty_day and Yesterday(event(reference_1))))) => event(observed));		
-
-			-- Monitor guarantee (guarantees on the output ports in terms of the input ports and monitor policy)
-			guarantee Req002_ReqRespMonitorEvent "The monitor shall only output an alert when the monitor policy is false" :
-				if is_latched and prev(event(alert), not CASE_Monitor_Req_Resp_policy) then
-					event(alert)
-					-- event(alert) = true
-				else
-					if CASE_Monitor_Req_Resp_policy then
-						not event(alert)
-						-- event(alert) = false
-					else
-						event(alert)
-						-- event(alert) = true
-
 		**};
 	end CASE_AttestationGate_thr;
 
