@@ -116,6 +116,33 @@ public
 				else if event(OperatingRegion_in) and IS_TRUSTED(OperatingRegion_in.id) then event(OperatingRegion_out) and not (event(AutomationRequest_out) or event(LineSearchTask_out)) and OperatingRegion_out = OperatingRegion_in.payload.OperatingRegion
 				else if event(LineSearchTask_in) and IS_TRUSTED(LineSearchTask_in.id) then event(LineSearchTask_out) and not (event(AutomationRequest_out) or event(OperatingRegion_out)) and LineSearchTask_out = LineSearchTask_in.payload.LineSearchTask
 				else not (event(AutomationRequest_out) or event(OperatingRegion_out) or event(LineSearchTask_out));
+
+		properties
+			CASE_Properties::Component_Type => MONITOR; -- marks this component as a monitor
+			CASE_Properties::Component_Spec => ("CASE_AttestationGate_Event"); -- monitor guarantee
+			CASE_Properties::Monitor_Latched => false; -- indicates if the monitor is latched
+		annex agree {**
+
+			-- a constant generated from the component property above, handy for expressing the monitor guarantee
+			const is_latched : bool = Get_Property(this, CASE_Properties::Monitor_Latched);
+
+			-- Monitor policy (models the expected behavior in terms of the input ports)
+			-- Incoming messages are forwarded if they are associated with trusted source IDs
+			property CASE_Monitor_Req_Resp_policy = Historically(event(reference_1) or (empty_day and Yesterday(event(reference_1) or (empty_day and Yesterday(event(reference_1))))) => event(observed));		
+
+			-- Monitor guarantee (guarantees on the output ports in terms of the input ports and monitor policy)
+			guarantee Req002_ReqRespMonitorEvent "The monitor shall only output an alert when the monitor policy is false" :
+				if is_latched and prev(event(alert), not CASE_Monitor_Req_Resp_policy) then
+					event(alert)
+					-- event(alert) = true
+				else
+					if CASE_Monitor_Req_Resp_policy then
+						not event(alert)
+						-- event(alert) = false
+					else
+						event(alert)
+						-- event(alert) = true
+
 		**};
 	end CASE_AttestationGate_thr;
 
@@ -162,7 +189,11 @@ public
 			CASE_Properties::Component_Type => FILTER;
 			CASE_Properties::Component_Spec => ("Req_Filter_LST");
 		annex agree {**
-			guarantee Req_Filter_LST "Well-formed Line Search Task message" : CASEAgree::WELL_FORMED_LINE_SEARCH_TASK(filter_out);
+			guarantee Req_Filter_LST "Well-formed Line Search Task message" : 
+				if (event(filter_in) and CASEAgree::WELL_FORMED_LINE_SEARCH_TASK(filter_out))
+					event(filter_out) and filter_out = filter_in
+				else
+					not event(filter_out);
 		**};
 	end CASE_Filter_LST_thr;
 
@@ -198,7 +229,11 @@ public
 			CASE_Properties::Component_Type => FILTER;
 			CASE_Properties::Component_Spec => ("Req_Filter_OR");
 		annex agree {**
-			guarantee Req_Filter_OR "Well-formed Operating Region message" : CASEAgree::WELL_FORMED_OPERATING_REGION(filter_out);
+			guarantee Req_Filter_OR "Well-formed Operating Region message" :
+				if (event(filter_in) and CASEAgree::WELL_FORMED_OPERATING_REGION(filter_out))
+					event(filter_out) and filter_out = filter_in
+				else
+					not event(filter_out);
 		**};
 	end CASE_Filter_OR_thr;
 
@@ -234,7 +269,11 @@ public
 			CASE_Properties::Component_Type => FILTER;
 			CASE_Properties::Component_Spec => ("Req_Filter_AReq");
 		annex agree {**
-			guarantee Req_Filter_AReq "Well-formed Automation Request message" : CASEAgree::WELL_FORMED_AUTOMATION_REQUEST(filter_out);
+			guarantee Req_Filter_AReq "Well-formed Automation Request message" :
+				if (event(filter_in) and CASEAgree::WELL_FORMED_AUTOMATION_REQUEST(filter_out))
+					event(filter_out) and filter_out = filter_in
+				else
+					not event(filter_out);
 		**};
 	end CASE_Filter_AReq_thr;
 
@@ -296,17 +335,32 @@ public
 			reference_1: in event data port CMASI::AutomationRequest.i;
 			alert: out event data port Base_Types::Boolean;
 		properties
-			CASE_Properties::Component_Type => MONITOR;
-			CASE_Properties::Component_Spec => ("monitor_policy");
+			CASE_Properties::Component_Type => MONITOR; -- marks this component as a monitor
+			CASE_Properties::Component_Spec => ("Req002_ReqRespMonitorEvent"); -- monitor guarantee
+			CASE_Properties::Monitor_Latched => false; -- indicates if the monitor is latched
 		annex agree {**
-			const is_latched : bool = true;
-			-- AutomationResponse (observed) occurs exactly two scheduling cycles after AutomationRequest (reference_1)
-			property CASE_Monitor_Req_policy = Historically(Yesterday(Yesterday(event(reference_1))) => event(observed));
-			guarantee monitor_policy "The monitor shall only output an alert when the monitor policy is true" :
-			              if (is_latched and prev(alert, not CASE_Monitor_Req_policy)) then
-			                  true
-			              else 
-			                  not CASE_Monitor_Req_policy;
+
+			-- a constant generated from the component property above, handy for expressing the monitor guarantee
+			const is_latched : bool = Get_Property(this, CASE_Properties::Monitor_Latched);
+
+			-- Monitor policy (models the expected behavior in terms of the input ports)
+			-- AutomationResponse (observed) occurs within two scheduling cycles after AutomationRequest (reference_1)
+			eq empty_day : bool = not event(observed) and not event(reference_1);
+			property CASE_Monitor_Req_Resp_policy = Historically(event(reference_1) or (empty_day and Yesterday(event(reference_1) or (empty_day and Yesterday(event(reference_1))))) => event(observed));		
+
+			-- Monitor guarantee (guarantees on the output ports in terms of the input ports and monitor policy)
+			guarantee Req002_ReqRespMonitorEvent "The monitor shall only output an alert when the monitor policy is false" :
+				if is_latched and prev(event(alert), not CASE_Monitor_Req_Resp_policy) then
+					event(alert)
+					-- event(alert) = true
+				else
+					if CASE_Monitor_Req_Resp_policy then
+						not event(alert)
+						-- event(alert) = false
+					else
+						event(alert)
+						-- event(alert) = true
+
 		**};
 	end CASE_Monitor_Req_thr;
 
@@ -344,7 +398,11 @@ public
 			CASE_Properties::Component_Type => FILTER;
 			CASE_Properties::Component_Spec => ("Req_Filter_ARes");
 		annex agree {**
-			guarantee Req_Filter_ARes "Well-formed Automation Response message" : CASEAgree::WELL_FORMED_AUTOMATION_RESPONSE(filter_out);
+			guarantee Req_Filter_ARes "Well-formed Automation Response message" :
+				if (event(filter_in) and CASEAgree::WELL_FORMED_AUTOMATION_REQUEST(filter_out))
+					event(filter_out) and filter_out = filter_in
+				else
+					not event(filter_out);
 		**};
 	end CASE_Filter_ARes_thr;
 
@@ -418,29 +476,23 @@ public
 		annex agree {**
 			-- a constant generated from the component property above, handy for expressing the monitor guarantee
 			const is_latched : bool = Get_Property(this, CASE_Properties::Monitor_Latched);
+
+			-- Monitor policy (models the expected behavior in terms of the input ports)
 			property CASE_Monitor_Coord_policy = Historically(event(observed) => (WAYPOINTS_IN_ZONE(GET_MISSION_COMMAND(observed), keep_in_zones) and 
 			                WAYPOINTS_NOT_IN_ZONE(GET_MISSION_COMMAND(observed), keep_out_zones)));
-			-- Monitor guarantee
-			-- Note: user specifies when output is sent; either when the monitor policy is satisfied or its negation.
+
+			-- Monitor guarantee (guarantees on the output ports in terms of the input ports and monitor policy)
 			guarantee Req001_GeoMonitorEvent "The output event only fires when observed is valid" :
-			                if is_latched and prev(event(alert), not CASE_Monitor_Coord_policy) then
-			                    event(alert) = true and not event(output)
-			                else
-			                    if event(observed) then
-			                        if CASE_Monitor_Coord_policy then
-			                            event(output) and output = observed and not event(alert)
-			                            -- event(ouput) = true ; output = observed ; event(alert) = false
-			                        else
-			                            not event(output) and event(alert)
-			                            -- event(ouput) = false; event(alert) = true
-			                    else
-			                        not event(output) and not event(alert);
-			-- event(ouput) = false; event(alert) = false
-			guarantee Req001_GeoFenceMonitor "The monitor only fires when the observed is valid" :
-			              if (event(observed) and CASE_Monitor_Coord_policy) then
-			                event(output) and output = observed and event(alert)
-			              else
-			                not event(output) and not event(alert);
+				if is_latched and prev(event(alert), not CASE_Monitor_Coord_policy) then
+					event(alert) and not event(output)
+				else
+					if CASE_Monitor_Coord_policy then
+						event(output) and output = observed and not event(alert)
+						-- event(ouput) = true ; output = observed ; event(alert) = false
+					else
+						not event(output) and event(alert)
+						-- event(ouput) = false; event(alert) = true
+			
 			fun GET_MISSION_COMMAND(automationResponse: CMASI::AutomationResponse.i) : CMASI::MissionCommand.i =
 			              automationResponse.MissionCommandList[0];
 			fun WAYPOINTS_IN_ZONE(mission : CMASI::MissionCommand.i, zone : CMASI::Polygon.i) : bool =
@@ -551,8 +603,17 @@ public
 			radio_send: out event data port CASE_Model_Transformations::CASE_RF_Msg.Impl;
 
 		annex agree {**
-			guarantee Req001_SW "The radio_send outputs only well formed CASE_RF_Msg.Impl types" : CASEAgree::WellformedCASE_RF_Msg(radio_send, CASEConsts::UAV_ID, CASEConsts::GS_ID);
-			guarantee Req002_SW "The uart_send outputs only well formed CASE_RF_Msg.Impl types" : CASEAgree::WellformedCASE_UART_Msg(uart_send);
+			guarantee Req001_SW "The radio_send outputs only well formed CASE_RF_Msg.Impl types" :
+				if (event(radio_recv) and CASEAgree::WellformedCASE_RF_Msg(radio_recv, CASEConsts::UAV_ID, CASEConsts::GS_ID))
+					event(radio_send) and radio_send = radio_recv
+				else
+					not event(radio_send);
+			
+			guarantee Req002_SW "The uart_send outputs only well formed CASE_RF_Msg.Impl types" :
+				if (event(uart_recv) and CASEAgree::WellformedCASE_UART_Msg(uart_recv))
+					event(uart_send) and uart_send = uart_recv
+				else
+					not event(uart_send);
 		**};
 
 	end SW;
