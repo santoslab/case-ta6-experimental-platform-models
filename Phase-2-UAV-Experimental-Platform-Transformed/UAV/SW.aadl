@@ -162,11 +162,7 @@ public
 			CASE_Properties::Component_Type => FILTER;
 			CASE_Properties::Component_Spec => ("Req_Filter_LST");
 		annex agree {**
-			guarantee Req_Filter_LST "Well-formed Line Search Task message" : 
-				if (event(filter_in) and CASEAgree::WELL_FORMED_LINE_SEARCH_TASK(filter_out))
-					event(filter_out) and filter_out = filter_in
-				else
-					not event(filter_out);
+			guarantee Req_Filter_LST "Well-formed Line Search Task message" : CASEAgree::WELL_FORMED_LINE_SEARCH_TASK(filter_out);
 		**};
 	end CASE_Filter_LST_thr;
 
@@ -202,11 +198,7 @@ public
 			CASE_Properties::Component_Type => FILTER;
 			CASE_Properties::Component_Spec => ("Req_Filter_OR");
 		annex agree {**
-			guarantee Req_Filter_OR "Well-formed Operating Region message" :
-				if (event(filter_in) and CASEAgree::WELL_FORMED_OPERATING_REGION(filter_out))
-					event(filter_out) and filter_out = filter_in
-				else
-					not event(filter_out);
+			guarantee Req_Filter_OR "Well-formed Operating Region message" : CASEAgree::WELL_FORMED_OPERATING_REGION(filter_out);
 		**};
 	end CASE_Filter_OR_thr;
 
@@ -242,11 +234,7 @@ public
 			CASE_Properties::Component_Type => FILTER;
 			CASE_Properties::Component_Spec => ("Req_Filter_AReq");
 		annex agree {**
-			guarantee Req_Filter_AReq "Well-formed Automation Request message" :
-				if (event(filter_in) and CASEAgree::WELL_FORMED_AUTOMATION_REQUEST(filter_out))
-					event(filter_out) and filter_out = filter_in
-				else
-					not event(filter_out);
+			guarantee Req_Filter_AReq "Well-formed Automation Request message" : CASEAgree::WELL_FORMED_AUTOMATION_REQUEST(filter_out);
 		**};
 	end CASE_Filter_AReq_thr;
 
@@ -331,7 +319,7 @@ public
 						not event(alert)
 						-- event(alert) = false
 					else
-						event(alert)
+						event(alert);
 						-- event(alert) = true
 
 		**};
@@ -371,11 +359,7 @@ public
 			CASE_Properties::Component_Type => FILTER;
 			CASE_Properties::Component_Spec => ("Req_Filter_ARes");
 		annex agree {**
-			guarantee Req_Filter_ARes "Well-formed Automation Response message" :
-				if (event(filter_in) and CASEAgree::WELL_FORMED_AUTOMATION_REQUEST(filter_out))
-					event(filter_out) and filter_out = filter_in
-				else
-					not event(filter_out);
+			guarantee Req_Filter_ARes "Well-formed Automation Response message" : CASEAgree::WELL_FORMED_AUTOMATION_REQUEST(filter_out);
 		**};
 	end CASE_Filter_ARes_thr;
 
@@ -463,7 +447,7 @@ public
 						event(output) and output = observed and not event(alert)
 						-- event(ouput) = true ; output = observed ; event(alert) = false
 					else
-						not event(output) and event(alert)
+						not event(output) and event(alert);
 						-- event(ouput) = false; event(alert) = true
 			
 			fun GET_MISSION_COMMAND(automationResponse: CMASI::AutomationResponse.i) : CMASI::MissionCommand.i =
@@ -577,16 +561,18 @@ public
 
 		annex agree {**
 			guarantee Req001_SW "The radio_send outputs only well formed CASE_RF_Msg.Impl types" :
-				if (event(radio_recv) and CASEAgree::WellformedCASE_RF_Msg(radio_recv, CASEConsts::UAV_ID, CASEConsts::GS_ID))
-					event(radio_send) and radio_send = radio_recv
-				else
-					not event(radio_send);
+				-- if (event(radio_recv) and CASEAgree::WellformedCASE_RF_Msg(radio_recv, CASEConsts::UAV_ID, CASEConsts::GS_ID))
+				--   event(radio_send) and radio_send = radio_recv and CASEAgree::WellformedCASE_RF_Msg(radio_send, CASEConsts::UAV_ID, CASEConsts::GS_ID)
+				-- else
+				--   not event(radio_send);
+			CASEAgree::WellformedCASE_RF_Msg(radio_send, CASEConsts::UAV_ID, CASEConsts::GS_ID);
 			
 			guarantee Req002_SW "The uart_send outputs only well formed CASE_RF_Msg.Impl types" :
-				if (event(uart_recv) and CASEAgree::WellformedCASE_UART_Msg(uart_recv))
-					event(uart_send) and uart_send = uart_recv
-				else
-					not event(uart_send);
+				-- if (event(uart_recv) and CASEAgree::WellformedCASE_UART_Msg(uart_recv))
+				--   event(uart_send) and uart_send = uart_recv and CASEAgree::WellformedCASE_UART_Msg(uart_send)
+				-- else
+				--   not event(uart_send);
+				CASEAgree::WellformedCASE_UART_Msg(uart_send);
 		**};
 
 	end SW;
