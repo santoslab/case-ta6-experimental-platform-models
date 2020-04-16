@@ -157,14 +157,26 @@ public
 	data AutomationRequest
 	end AutomationRequest;
 	
+	data Int64Array
+		properties
+			Data_Model::Data_Representation => Array;
+			Data_Model::Base_Type => (classifier (int64.i));
+			Data_Model::Dimension => (1);
+	end Int64Array;
+	
+	data implementation Int64Array.i
+	end Int64Array.i;
+	
 	data implementation AutomationRequest.i
 		subcomponents
 			--List of entities to consider when planning.
-			EntityList: data int64.i {Data_Model::Data_Representation => Array; Data_Model::Dimension => (1);};
+			-- EntityList: data int64.i {Data_Model::Data_Representation => Array; Data_Model::Dimension => (1);};
+			EntityList: data Int64Array;
 			
 			-- List of task IDs (defined by {@link Task} messages) to be planned
 			-- for by the automation service
-			TaskList: data int64.i {Data_Model::Data_Representation => Array; Data_Model::Dimension => (1);};
+			-- TaskList: data int64.i {Data_Model::Data_Representation => Array; Data_Model::Dimension => (1);};
+			TaskList: data Int64Array;
 								
 			-- Size of the TaskList 	
 			TaskListSize: data int64.i;
@@ -517,9 +529,11 @@ public
 	        --Operating region ID
 	        ID: data int64.i;
 	        --Abstract Zone IDs in which the entity must remain during operation
-	        KeepInAreas: data int64.i {Data_Model::Data_Representation => Array;  Data_Model::Dimension => (1);};
+	        -- KeepInAreas: data int64.i {Data_Model::Data_Representation => Array;  Data_Model::Dimension => (1);};
+	        KeepInAreas: data Int64Array;
 	        --Keep Out Zone IDs that an entity must remain out of during operation
-	        KeepOutAreas: data int64.i {Data_Model::Data_Representation => Array; Data_Model::Dimension => (1);};
+	        -- KeepOutAreas: data int64.i {Data_Model::Data_Representation => Array; Data_Model::Dimension => (1);};
+	        KeepOutAreas: data Int64Array;
 	end OperatingRegion.i;
 
 	--Sent to denote that the target id numbers in the list are obsolete
@@ -633,12 +647,30 @@ public
     data LineSearchTask extends SearchTask
     end LineSearchTask;
     
+    data PointListArray
+			properties
+				Data_Model::Data_Representation => Array;
+				Data_Model::Base_Type => (classifier (Location3D.i));
+				Data_Model::Dimension => (1024);
+    end PointListArray;
+    
+    data WedgeArray
+			properties
+				Data_Model::Data_Representation => Array;
+				Data_Model::Base_Type => (classifier (Wedge.i));
+				Data_Model::Dimension => (16);
+    end WedgeArray;
+    
     data implementation LineSearchTask.i extends SearchTask.i
     	subcomponents
     		-- Line to search
-    		PointList: data Location3D.i {Data_Model::Data_Representation => Array; Data_Model::Dimension => (1024);};
+    		-- PointList: data Location3D.i {Data_Model::Data_Representation => Array; Data_Model::Dimension => (1024);};
+    		PointList: data PointListArray;
+    		
     		-- Defines a list of acceptable look-angles for this task.  See the documentation above for details. --
-    		ViewAngleList: data Wedge.i {Data_Model::Data_Representation => Array; Data_Model::Dimension => (16);};
+    		-- ViewAngleList: data Wedge.i {Data_Model::Data_Representation => Array; Data_Model::Dimension => (16);};
+    		ViewAngleList: data WedgeArray;
+    		
     		UseInertialViewAngles: data bool.i;
     end LineSearchTask.i;
 

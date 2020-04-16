@@ -38,7 +38,7 @@ annex agree {**
      
     fun WellformedCASE_UART_Msg(msg : CASE_UART_Msg.Impl) : bool = 
        msg.crc = true;
-       
+
 	fun WELL_FORMED_AUTOMATION_REQUEST(msg : CMASI::AutomationRequest.i) : bool = 
 		(forall e in msg.EntityList, e >= ENTITY_ID_MIN and e <= ENTITY_ID_MAX) and
 		(forall t in msg.TaskList, t >= TASK_ID_MIN and t <= TASK_ID_MAX) and
