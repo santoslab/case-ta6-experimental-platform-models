@@ -297,8 +297,8 @@ public
 			alert: out event data port Base_Types::Boolean;
 		properties
 			CASE_Properties::Component_Type => MONITOR; -- marks this component as a monitor
-			CASE_Properties::Component_Spec => ("Req002_ReqRespMonitorEvent"); -- monitor guarantee
 			CASE_Properties::Monitor_Latched => false; -- indicates if the monitor is latched
+			CASE_Properties::Component_Spec => ("Req002_ReqRespMonitorEvent"); -- monitor guarantee
 		annex agree {**
 
 			-- a constant generated from the component property above, handy for expressing the monitor guarantee
@@ -311,17 +311,7 @@ public
 
 			-- Monitor guarantee (guarantees on the output ports in terms of the input ports and monitor policy)
 			guarantee Req002_ReqRespMonitorEvent "The monitor shall only output an alert when the monitor policy is false" :
-				if is_latched and prev(event(alert), not CASE_Monitor_Req_Resp_policy) then
-					event(alert)
-					-- event(alert) = true
-				else
-					if CASE_Monitor_Req_Resp_policy then
-						not event(alert)
-						-- event(alert) = false
-					else
-						event(alert);
-						-- event(alert) = true
-
+				alert <=> false -> (is_latched and pre(event(alert))) or not CASE_Monitor_Req_Resp_policy;
 		**};
 	end CASE_Monitor_Req_thr;
 
@@ -359,7 +349,7 @@ public
 			CASE_Properties::Component_Type => FILTER;
 			CASE_Properties::Component_Spec => ("Req_Filter_ARes");
 		annex agree {**
-			guarantee Req_Filter_ARes "Well-formed Automation Response message" : CASEAgree::WELL_FORMED_AUTOMATION_REQUEST(filter_out);
+			guarantee Req_Filter_ARes "Well-formed Automation Response message" : CASEAgree::WELL_FORMED_AUTOMATION_RESPONSE(filter_out);
 		**};
 	end CASE_Filter_ARes_thr;
 
@@ -428,7 +418,7 @@ public
 			output: out event data port CMASI::AutomationResponse.i;
 		properties
 			CASE_Properties::Component_Type => MONITOR; -- marks this component as a monitor
-			CASE_Properties::Component_Spec => ("Req001_GeofenceMonitorEvent"); -- monitor guarantee
+			CASE_Properties::Component_Spec => ("GeofenceMonitor_alert_event", "GeofenceMonitor_output_event", "GeofenceMonitor_output_data"); -- monitor guarantee
 			CASE_Properties::Monitor_Latched => true; -- indicates if the monitor is latched
 		annex agree {**
 			-- a constant generated from the component property above, handy for expressing the monitor guarantee
@@ -439,16 +429,12 @@ public
 			                WAYPOINTS_NOT_IN_ZONE(GET_MISSION_COMMAND(observed), keep_out_zones)));
 
 			-- Monitor guarantee (guarantees on the output ports in terms of the input ports and monitor policy)
-			guarantee Req001_GeoMonitorEvent "The output event only fires when observed is valid" :
-				if is_latched and prev(event(alert), not CASE_Monitor_Coord_policy) then
-					event(alert) and not event(output)
-				else
-					if CASE_Monitor_Coord_policy then
-						event(output) and output = observed and not event(alert)
-						-- event(ouput) = true ; output = observed ; event(alert) = false
-					else
-						not event(output) and event(alert);
-						-- event(ouput) = false; event(alert) = true
+			guarantee GeofenceMonitor_alert_event "An alert is generated only when observed is invalid" :
+				event(alert) <=> false -> (is_latched and pre(event(alert))) or not CASE_Monitor_Coord_policy;
+			guarantee GeofenceMonitor_output_event "The output event fires only when observed is valid" :
+				event(output) <=> event(observed) and not event(alert);
+			guarantee GeofenceMonitor_output_data "Output is equal to observed when observed is valid" :
+				event(observed) and not event(alert) => output = observed;
 			
 			fun GET_MISSION_COMMAND(automationResponse: CMASI::AutomationResponse.i) : CMASI::MissionCommand.i =
 			              automationResponse.MissionCommandList[0];
