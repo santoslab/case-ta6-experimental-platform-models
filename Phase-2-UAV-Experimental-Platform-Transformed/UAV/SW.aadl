@@ -110,12 +110,12 @@ public
 			CASE_Properties::Component_Type => MONITOR;
 			CASE_Properties::Component_Spec => ("CASE_AttestationGate_policy");
 		annex agree {**
-			fun IS_TRUSTED(src_id : CMASI::Address) : bool = exists id in trusted_ids, id = src_id;
-			guarantee CASE_AttestationGate_policy "Only messages from trusted sources shall be forwarded" :
-				if event(AutomationRequest_in) and IS_TRUSTED(AutomationRequest_in.id) then event(AutomationRequest_out) and not (event(OperatingRegion_out) or event(LineSearchTask_out)) and AutomationRequest_out = AutomationRequest_in.payload.AutomationRequest
-				else if event(OperatingRegion_in) and IS_TRUSTED(OperatingRegion_in.id) then event(OperatingRegion_out) and not (event(AutomationRequest_out) or event(LineSearchTask_out)) and OperatingRegion_out = OperatingRegion_in.payload.OperatingRegion
-				else if event(LineSearchTask_in) and IS_TRUSTED(LineSearchTask_in.id) then event(LineSearchTask_out) and not (event(AutomationRequest_out) or event(OperatingRegion_out)) and LineSearchTask_out = LineSearchTask_in.payload.LineSearchTask
-				else not (event(AutomationRequest_out) or event(OperatingRegion_out) or event(LineSearchTask_out));
+--			fun IS_TRUSTED(src_id : CMASI::Address) : bool = exists id in trusted_ids, id = src_id;
+--			guarantee CASE_AttestationGate_policy "Only messages from trusted sources shall be forwarded" :
+--				if event(AutomationRequest_in) and IS_TRUSTED(AutomationRequest_in.id) then event(AutomationRequest_out) and not (event(OperatingRegion_out) or event(LineSearchTask_out)) and AutomationRequest_out = AutomationRequest_in.payload.AutomationRequest
+--				else if event(OperatingRegion_in) and IS_TRUSTED(OperatingRegion_in.id) then event(OperatingRegion_out) and not (event(AutomationRequest_out) or event(LineSearchTask_out)) and OperatingRegion_out = OperatingRegion_in.payload.OperatingRegion
+--				else if event(LineSearchTask_in) and IS_TRUSTED(LineSearchTask_in.id) then event(LineSearchTask_out) and not (event(AutomationRequest_out) or event(OperatingRegion_out)) and LineSearchTask_out = LineSearchTask_in.payload.LineSearchTask
+--				else not (event(AutomationRequest_out) or event(OperatingRegion_out) or event(LineSearchTask_out));
 		**};
 	end CASE_AttestationGate_thr;
 
@@ -302,16 +302,16 @@ public
 		annex agree {**
 
 			-- a constant generated from the component property above, handy for expressing the monitor guarantee
-			const is_latched : bool = Get_Property(this, CASE_Properties::Monitor_Latched);
+--			const is_latched : bool = Get_Property(this, CASE_Properties::Monitor_Latched);
 
 			-- Monitor policy (models the expected behavior in terms of the input ports)
 			-- AutomationResponse (observed) occurs within two scheduling cycles after AutomationRequest (reference_1)
-			eq empty_day : bool = not event(observed) and not event(reference_1);
-			property CASE_Monitor_Req_Resp_policy = Historically(event(reference_1) or (empty_day and Yesterday(event(reference_1) or (empty_day and Yesterday(event(reference_1))))) => event(observed));		
+--			eq empty_day : bool = not event(observed) and not event(reference_1);
+--			property CASE_Monitor_Req_Resp_policy = Historically(event(reference_1) or (empty_day and Yesterday(event(reference_1) or (empty_day and Yesterday(event(reference_1))))) => event(observed));		
 
 			-- Monitor guarantee (guarantees on the output ports in terms of the input ports and monitor policy)
-			guarantee Req002_ReqRespMonitorEvent "The monitor shall only output an alert when the monitor policy is false" :
-				alert <=> false -> (is_latched and pre(event(alert))) or not CASE_Monitor_Req_Resp_policy;
+--			guarantee Req002_ReqRespMonitorEvent "The monitor shall only output an alert when the monitor policy is false" :
+--				alert <=> false -> (is_latched and pre(event(alert))) or not CASE_Monitor_Req_Resp_policy;
 		**};
 	end CASE_Monitor_Req_thr;
 
@@ -422,36 +422,36 @@ public
 			CASE_Properties::Monitor_Latched => true; -- indicates if the monitor is latched
 		annex agree {**
 			-- a constant generated from the component property above, handy for expressing the monitor guarantee
-			const is_latched : bool = Get_Property(this, CASE_Properties::Monitor_Latched);
+--			const is_latched : bool = Get_Property(this, CASE_Properties::Monitor_Latched);
 
 			-- Monitor policy (models the expected behavior in terms of the input ports)
-			property CASE_Monitor_Coord_policy = Historically(event(observed) => (WAYPOINTS_IN_ZONE(GET_MISSION_COMMAND(observed), keep_in_zones) and 
-			                WAYPOINTS_NOT_IN_ZONE(GET_MISSION_COMMAND(observed), keep_out_zones)));
+--			property CASE_Monitor_Coord_policy = Historically(event(observed) => (WAYPOINTS_IN_ZONE(GET_MISSION_COMMAND(observed), keep_in_zones) and 
+--			                WAYPOINTS_NOT_IN_ZONE(GET_MISSION_COMMAND(observed), keep_out_zones)));
 
 			-- Monitor guarantee (guarantees on the output ports in terms of the input ports and monitor policy)
-			guarantee GeofenceMonitor_alert_event "An alert is generated only when observed is invalid" :
-				event(alert) <=> false -> (is_latched and pre(event(alert))) or not CASE_Monitor_Coord_policy;
-			guarantee GeofenceMonitor_output_event "The output event fires only when observed is valid" :
-				event(output) <=> event(observed) and not event(alert);
-			guarantee GeofenceMonitor_output_data "Output is equal to observed when observed is valid" :
-				event(observed) and not event(alert) => output = observed;
+--			guarantee GeofenceMonitor_alert_event "An alert is generated only when observed is invalid" :
+--				event(alert) <=> false -> (is_latched and pre(event(alert))) or not CASE_Monitor_Coord_policy;
+--			guarantee GeofenceMonitor_output_event "The output event fires only when observed is valid" :
+--				event(output) <=> event(observed) and not event(alert);
+--			guarantee GeofenceMonitor_output_data "Output is equal to observed when observed is valid" :
+--				event(observed) and not event(alert) => output = observed;
 			
-			fun GET_MISSION_COMMAND(automationResponse: CMASI::AutomationResponse.i) : CMASI::MissionCommand.i =
-			              automationResponse.MissionCommandList[0];
-			fun WAYPOINTS_IN_ZONE(mission : CMASI::MissionCommand.i, zone : CMASI::Polygon.i) : bool =
-			              forall waypoint in mission.WaypointList, WAYPOINT_IN_ZONE_RECTANGLE(waypoint, zone);
-			fun WAYPOINTS_NOT_IN_ZONE(mission : CMASI::MissionCommand.i, zone : CMASI::Polygon.i) : bool =
-			              forall waypoint in mission.WaypointList, not WAYPOINT_IN_ZONE_RECTANGLE(waypoint, zone);
+--			fun GET_MISSION_COMMAND(automationResponse: CMASI::AutomationResponse.i) : CMASI::MissionCommand.i =
+--			              automationResponse.MissionCommandList[0];
+--			fun WAYPOINTS_IN_ZONE(mission : CMASI::MissionCommand.i, zone : CMASI::Polygon.i) : bool =
+--			              forall waypoint in mission.WaypointList, WAYPOINT_IN_ZONE_RECTANGLE(waypoint, zone);
+--			fun WAYPOINTS_NOT_IN_ZONE(mission : CMASI::MissionCommand.i, zone : CMASI::Polygon.i) : bool =
+--			              forall waypoint in mission.WaypointList, not WAYPOINT_IN_ZONE_RECTANGLE(waypoint, zone);
 			-- Assumes rectangle that is defined by two corners so it is aligned
 			-- with the origin (not rotated in space)
 			-- Assumes that the altitude is the same in all the coordinates
 			-- Assmes zone[0] is the bottom left corner and zone[2] in the upper right corner
-			fun WAYPOINT_IN_ZONE_RECTANGLE(waypoint : CMASI::Waypoint.i, zone : CMASI::Polygon.i) : bool =
-			                  (waypoint.Latitude >= (zone.BoundaryPointsList[0]).Latitude)
-			              and (waypoint.Latitude <= (zone.BoundaryPointsList[1]).Latitude)
-			              and (waypoint.Longitude >= (zone.BoundaryPointsList[0]).Longitude)
-			              and (waypoint.Longitude <= (zone.BoundaryPointsList[1]).Longitude)
-			              and (waypoint.Altitude >= (zone.BoundaryPointsList[0]).Altitude);
+--			fun WAYPOINT_IN_ZONE_RECTANGLE(waypoint : CMASI::Waypoint.i, zone : CMASI::Polygon.i) : bool =
+--			                  (waypoint.Latitude >= (zone.BoundaryPointsList[0]).Latitude)
+--			              and (waypoint.Latitude <= (zone.BoundaryPointsList[1]).Latitude)
+--			              and (waypoint.Longitude >= (zone.BoundaryPointsList[0]).Longitude)
+--			              and (waypoint.Longitude <= (zone.BoundaryPointsList[1]).Longitude)
+--			              and (waypoint.Altitude >= (zone.BoundaryPointsList[0]).Altitude);
 		**};
 	end CASE_Monitor_Geo_thr;
 

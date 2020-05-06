@@ -537,7 +537,7 @@
         <seg>subcomponent</seg>
         <seg>fc_uart</seg>
       </bo>
-      <position x="1637.0" y="585.0"/>
+      <position x="1649.0" y="585.0"/>
       <size width="458.0" height="184.0"/>
     </element>
     <element uuid="3b11b39a-bc2b-4147-9c5d-e33e5e07a100" manual="true" background="#ccffcc" fontSize="16.0">
