@@ -24,6 +24,8 @@ public
 --			MissionCommand : out event data port CMASI::MissionCommand.i;
 			VehicleActionCommand : out event data port CMASI::VehicleActionCommand.i;
 			AutomationResponse : out event data port CMASI::AutomationResponse.i;
+    properties
+			Period => 500ms;
 	end Waterways;
 	
 	thread group implementation Waterways.i 

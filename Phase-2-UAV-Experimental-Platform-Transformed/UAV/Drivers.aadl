@@ -20,7 +20,9 @@ public
 			LineSearchTask: out event data port CMASI::AddressAttributedMessage.i;
 
 		properties
-			Dispatch_Protocol => Sporadic;
+			Dispatch_Protocol => Periodic;
+			Period => 500ms;
+			Compute_Execution_Time => 20ms .. 20ms;
 	end RadioDriver;
 
 	thread implementation RadioDriver.Impl
@@ -37,7 +39,9 @@ public
 			send_data: out event data port CASE_Model_Transformations::CASE_UART_Msg.Impl;
 			AirVehicleState: out event data port CMASI::AirVehicleState.i;
 		properties
-			Dispatch_Protocol => Sporadic;
+			Dispatch_Protocol => Periodic;
+			Period => 500ms;
+			Compute_Execution_Time => 6ms .. 6ms;
 		annex agree {**
 			assume Req001_UARTDriver "Assumes recv_data only gets well formed CASE_UART_Msg.Impl types" : 
 					        CASEAgree::WellformedCASE_UART_Msg(recv_data);
