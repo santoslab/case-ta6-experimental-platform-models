@@ -81,7 +81,7 @@
         <seg>c10</seg>
       </bo>
       <bendpoints>
-        <point x="1578.0" y="582.5"/>
+        <point x="1578.0" y="583.0"/>
         <point x="1578.0" y="658.0"/>
         <point x="2156.0" y="658.0"/>
         <point x="2156.0" y="568.0"/>
@@ -223,7 +223,7 @@
         <seg>c21</seg>
       </bo>
       <bendpoints>
-        <point x="1578.0" y="582.5"/>
+        <point x="1578.0" y="583.0"/>
         <point x="1578.0" y="658.0"/>
       </bendpoints>
     </element>
@@ -428,13 +428,6 @@
         </bo>
         <position y="126.0"/>
       </element>
-      <element uuid="1bc5f01c-6fb3-41b2-95df-3a1fba262653" manual="true" dockArea="left" fontSize="16.0">
-        <bo>
-          <seg>feature</seg>
-          <seg>output</seg>
-        </bo>
-        <position y="184.0"/>
-      </element>
       <bo>
         <seg>subcomponent</seg>
         <seg>mon_geo</seg>
@@ -443,12 +436,12 @@
       <size width="538.0" height="242.0"/>
     </element>
     <element uuid="3605e8e7-09b9-443c-a363-2c2ba6492c79" manual="true" background="#ccffcc" fontSize="16.0">
-      <element uuid="5190d4a1-f36e-4c31-a922-620b6a7c02c3" manual="true" dockArea="left" fontSize="16.0">
+      <element uuid="5190d4a1-f36e-4c31-a922-620b6a7c02c3" manual="true" dockArea="right" fontSize="16.0">
         <bo>
           <seg>feature</seg>
           <seg>alert</seg>
         </bo>
-        <position y="126.0"/>
+        <position x="381.0" y="68.0"/>
       </element>
       <element uuid="f9b96fb1-e5f1-49d4-9f85-e86d49f3f2ef" manual="true" dockArea="left" fontSize="16.0">
         <bo>

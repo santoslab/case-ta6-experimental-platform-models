@@ -510,7 +510,6 @@ public
 			keep_out_zones: in data port CMASI::Polygon.i;
 			alert: out event port;
 			observed: in event data port CMASI::AutomationResponse.i;
-			output: out event data port CMASI::AutomationResponse.i;
 		properties
 			CASE_Scheduling::Domain => 13;
 	end CASE_Monitor_Geo;
