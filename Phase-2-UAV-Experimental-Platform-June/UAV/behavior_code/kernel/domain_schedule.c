@@ -28,30 +28,100 @@
 
 const dschedule_t ksDomSchedule[] = { // (1 tick == 2ms)
 //4Hz				
-//higher rate, to test if higher-rate VM/Dom0 switching is better
+//high rate FC_UART so tiny buffer doesn't overflow
 //				
+//		framelength (ms)	250	
+//		framerate (Hz)	4	
+//		Domain 0 duration per frame (ms)	56	
+//		Domain 0 rate	112	
+//		Domain 0 duration per second (ms)	224	
+//		UXAS duration per frame (ms)	80	
+//		UXAS duration per second (ms)	320	
+//				
+  { .domain =  0, .length =	1}, // (2	ms) Domain 0
+  { .domain =  1, .length =	1}, // (2	ms) Pacer
+  { .domain =  0, .length =	1}, // (2	ms) Domain 0
+  { .domain =  2, .length =	4}, // (8	ms) RADIO: process RadioDriver_Attestation.Impl;
+  { .domain =  0, .length =	1}, // (2	ms) Domain 0
+  { .domain =  2, .length =	4}, // (8	ms) RADIO: process RadioDriver_Attestation.Impl;
+  { .domain =  0, .length =	1}, // (2	ms) Domain 0
+  { .domain =  2, .length =	4}, // (8	ms) RADIO: process RadioDriver_Attestation.Impl;
+  { .domain =  0, .length =	1}, // (2	ms) Domain 0
+  { .domain =  2, .length =	4}, // (8	ms) RADIO: process RadioDriver_Attestation.Impl;
+  { .domain =  0, .length =	1}, // (2	ms) Domain 0
+  { .domain =  2, .length =	4}, // (8	ms) RADIO: process RadioDriver_Attestation.Impl;
+  { .domain =  0, .length =	1}, // (2	ms) Domain 0
+  { .domain =  2, .length =	4}, // (8	ms) RADIO: process RadioDriver_Attestation.Impl;
+  { .domain =  0, .length =	1}, // (2	ms) Domain 0
+  { .domain =  2, .length =	4}, // (8	ms) RADIO: process RadioDriver_Attestation.Impl;
+  { .domain =  0, .length =	1}, // (2	ms) Domain 0
+  { .domain =  2, .length =	4}, // (8	ms) RADIO: process RadioDriver_Attestation.Impl;
+  { .domain =  0, .length =	1}, // (2	ms) Domain 0
+  { .domain =  2, .length =	4}, // (8	ms) RADIO: process RadioDriver_Attestation.Impl;
+  { .domain =  0, .length =	1}, // (2	ms) Domain 0
+  { .domain =  2, .length =	4}, // (8	ms) RADIO: process RadioDriver_Attestation.Impl;
+  { .domain =  0, .length =	1}, // (2	ms) Domain 0
+  { .domain =  5, .length =	2}, // (4	ms) AM_Gate: process CASE_AttestationGate.Impl;
+  { .domain =  0, .length =	1}, // (2	ms) Domain 0
+  { .domain =  7, .length =	2}, // (4	ms) FLT_LST: process CASE_Filter_LST.Impl;
+  { .domain =  0, .length =	1}, // (2	ms) Domain 0
+  { .domain =  9, .length =	4}, // (8	ms) UXAS: process UxAS.Impl;
+  { .domain =  0, .length =	1}, // (2	ms) Domain 0
+  { .domain =  9, .length =	4}, // (8	ms) UXAS: process UxAS.Impl;
+  { .domain =  0, .length =	1}, // (2	ms) Domain 0
+  { .domain =  9, .length =	4}, // (8	ms) UXAS: process UxAS.Impl;
+  { .domain =  0, .length =	1}, // (2	ms) Domain 0
+  { .domain =  9, .length =	4}, // (8	ms) UXAS: process UxAS.Impl;
+  { .domain =  0, .length =	1}, // (2	ms) Domain 0
+  { .domain =  9, .length =	4}, // (8	ms) UXAS: process UxAS.Impl;
+  { .domain =  0, .length =	1}, // (2	ms) Domain 0
+  { .domain =  9, .length =	4}, // (8	ms) UXAS: process UxAS.Impl;
+  { .domain =  0, .length =	1}, // (2	ms) Domain 0
+  { .domain =  9, .length =	4}, // (8	ms) UXAS: process UxAS.Impl;
+  { .domain =  0, .length =	1}, // (2	ms) Domain 0
+  { .domain =  9, .length =	4}, // (8	ms) UXAS: process UxAS.Impl;
+  { .domain =  0, .length =	1}, // (2	ms) Domain 0
+  { .domain =  9, .length =	4}, // (8	ms) UXAS: process UxAS.Impl;
+  { .domain =  0, .length =	1}, // (2	ms) Domain 0
+  { .domain =  9, .length =	4}, // (8	ms) UXAS: process UxAS.Impl;
+  { .domain =  0, .length =	1}, // (2	ms) Domain 0
+  { .domain = 10, .length =	1}, // (2	ms) FlyZones: process FlyZonesDatabase.Impl;
+  { .domain =  0, .length =	1}, // (2	ms) Domain 0
+  { .domain = 11, .length =	2}, // (4	ms) MON_REQ: process CASE_Monitor_Req.Impl;
+  { .domain =  0, .length =	1}, // (2	ms) Domain 0
+  { .domain = 13, .length =	2}, // (4	ms) MON_GEO: process CASE_Monitor_Geo.Impl;
+  { .domain =  0, .length =	1}, // (2	ms) Domain 0
+  { .domain = 14, .length =	4}, // (8	ms) WPM: process WaypointPlanManagerService.Impl;
+  { .domain =  0, .length =	1}, // (2	ms) Domain 0
+  { .domain = 14, .length =	3}, // (6	ms) WPM: process WaypointPlanManagerService.Impl;
 
-{ .domain =  0, .length =5}, // (10	ms) Domain 0
-{ .domain =  1, .length =1}, // (2	ms) Pacer
-{ .domain =  0, .length =2}, // (4	ms) Domain 0
-{ .domain =  2, .length =40}, // (80	ms) RADIO: process RadioDriver_Attestation.Impl;
-{ .domain =  0, .length =2}, // (4	ms) Domain 0
-{ .domain =  3, .length =2}, // (4	ms) FC_UART: process UARTDriver.Impl;
-{ .domain =  0, .length =2}, // (4	ms) Domain 0
-{ .domain =  5, .length =2}, // (4	ms) AM_Gate: process CASE_AttestationGate.Impl;
-{ .domain =  0, .length =2}, // (4	ms) Domain 0
-{ .domain =  7, .length =2}, // (4	ms) FLT_LST: process CASE_Filter_LST.Impl;
-{ .domain =  0, .length =2}, // (4	ms) Domain 0
-{ .domain =  9, .length =40}, // (80	ms) UXAS: process UxAS.Impl;
-{ .domain =  0, .length =2}, // (4	ms) Domain 0
-{ .domain = 10, .length =2}, // (4	ms) FlyZones: process FlyZonesDatabase.Impl;
-{ .domain =  0, .length =2}, // (4	ms) Domain 0
-{ .domain = 11, .length =2}, // (4	ms) MON_REQ: process CASE_Monitor_Req.Impl;
-{ .domain =  0, .length =2}, // (4	ms) Domain 0
-{ .domain = 13, .length =2}, // (4	ms) MON_GEO: process CASE_Monitor_Geo.Impl;
-{ .domain =  0, .length =2}, // (4	ms) Domain 0
-{ .domain = 14, .length =9}, // (18	ms) WPM: process WaypointPlanManagerService.Impl;
 
+
+//4Hz				
+//higher rate, to test if higher-rate VM/Dom0 switching is better
+//				- this does not have UART running at high rate, so buffer can overrun.
+// 
+// { .domain =  0, .length =5}, // (10	ms) Domain 0
+// { .domain =  1, .length =1}, // (2	ms) Pacer
+// { .domain =  0, .length =2}, // (4	ms) Domain 0
+// { .domain =  2, .length =40}, // (80	ms) RADIO: process RadioDriver_Attestation.Impl;
+// { .domain =  0, .length =2}, // (4	ms) Domain 0
+// { .domain =  3, .length =2}, // (4	ms) FC_UART: process UARTDriver.Impl;
+// { .domain =  0, .length =2}, // (4	ms) Domain 0
+// { .domain =  5, .length =2}, // (4	ms) AM_Gate: process CASE_AttestationGate.Impl;
+// { .domain =  0, .length =2}, // (4	ms) Domain 0
+// { .domain =  7, .length =2}, // (4	ms) FLT_LST: process CASE_Filter_LST.Impl;
+// { .domain =  0, .length =2}, // (4	ms) Domain 0
+// { .domain =  9, .length =40}, // (80	ms) UXAS: process UxAS.Impl;
+// { .domain =  0, .length =2}, // (4	ms) Domain 0
+// { .domain = 10, .length =2}, // (4	ms) FlyZones: process FlyZonesDatabase.Impl;
+// { .domain =  0, .length =2}, // (4	ms) Domain 0
+// { .domain = 11, .length =2}, // (4	ms) MON_REQ: process CASE_Monitor_Req.Impl;
+// { .domain =  0, .length =2}, // (4	ms) Domain 0
+// { .domain = 13, .length =2}, // (4	ms) MON_GEO: process CASE_Monitor_Geo.Impl;
+// { .domain =  0, .length =2}, // (4	ms) Domain 0
+// { .domain = 14, .length =9}, // (18	ms) WPM: process WaypointPlanManagerService.Impl;
+// 
 //				
 //		framelength (ms)	250	
 //		framerate (Hz)	4	
