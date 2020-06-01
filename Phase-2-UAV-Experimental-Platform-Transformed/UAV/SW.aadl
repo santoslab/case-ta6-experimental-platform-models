@@ -9,7 +9,7 @@ public
 	with CASE_Properties;
 	with CASE_Scheduling;
 	with CMASI;
-	with Base_Types;
+	with HAMR;
 	with Data_Model;
 	renames AGREE_PLTL::all;
 
@@ -328,7 +328,6 @@ public
 		features
 			observed: in event data port CMASI::AutomationResponse.i;
 			reference_1: in event data port CMASI::AutomationRequest.i;
-			alert: out event data port Base_Types::Boolean;
 		properties
 			CASE_Properties::Component_Type => MONITOR; -- marks this component as a monitor
 			CASE_Properties::Monitor_Latched => false; -- indicates if the monitor is latched
@@ -358,13 +357,13 @@ public
 	end CASE_Monitor_Req_thr.Impl;
 	
 	process CASE_Monitor_Req
-		features
-			observed: in event data port CMASI::AutomationResponse.i;
-			reference_1: in event data port CMASI::AutomationRequest.i;
-			alert: out event data port Base_Types::Boolean;
-		properties
-			CASE_Scheduling::Domain => 11;
-	end CASE_Monitor_Req;
+	features
+		observed: in event data port CMASI::AutomationResponse.i;
+		reference_1: in event data port CMASI::AutomationRequest.i;
+
+	properties
+		CASE_Scheduling::Domain => 11;
+end CASE_Monitor_Req;
 	
 	process implementation CASE_Monitor_Req.Impl
 		subcomponents
@@ -372,7 +371,6 @@ public
 		connections
 			c1: port observed -> CASE_Monitor_Req.observed;
 			c2: port reference_1 -> CASE_Monitor_Req.reference_1;
-			c3: port CASE_Monitor_Req.alert -> alert;
 	end CASE_Monitor_Req.Impl;
 	
 
@@ -622,8 +620,23 @@ public
 
 	end SW;
 
+ ----------------------------------------------------------------------
+    processor proc
+    end proc;
+
+    processor implementation proc.Impl
+        properties
+            Frame_Period => 1000ms;
+            Clock_Period => 2ms;
+            CASE_Scheduling::Max_Domain => 16;
+            CASE_Scheduling::Schedule_Source_Text => "kernel/domain_schedule.c";
+    end proc.Impl;
+    ----------------------------------------------------------------------
+    
+    
 	system implementation SW.Impl
 		subcomponents
+			proc: processor proc.Impl;
 			FC_UART: process UARTDriver.Impl;
 			RADIO: process RadioDriver_Attestation.Impl;
 			FlyZones: process FlyZonesDatabase.Impl;
@@ -688,6 +701,26 @@ public
 --			c_t_14: port ??? -> WPM.AirVehicleState;  -- HOW DOES WPM GET INITIALIZED?
 			c28: port WPM.MissionCommand -> FC_UART.MissionCommand;
 
+        properties
+            Actual_Processor_Binding => (reference (proc)) applies to FC_UART;
+            Actual_Processor_Binding => (reference (proc)) applies to RADIO;
+            Actual_Processor_Binding => (reference (proc)) applies to FlyZones;
+            Actual_Processor_Binding => (reference (proc)) applies to UXAS;
+            Actual_Processor_Binding => (reference (proc)) applies to WPM;
+            Actual_Processor_Binding => (reference (proc)) applies to AM;
+            Actual_Processor_Binding => (reference (proc)) applies to AM_GATE;
+            Actual_Processor_Binding => (reference (proc)) applies to FLT_AReq;
+            Actual_Processor_Binding => (reference (proc)) applies to FLT_OR;
+            Actual_Processor_Binding => (reference (proc)) applies to FLT_LST;
+            Actual_Processor_Binding => (reference (proc)) applies to MON_REQ;
+            Actual_Processor_Binding => (reference (proc)) applies to FLT_ARes;
+            Actual_Processor_Binding => (reference (proc)) applies to MON_GEO;
+                        
+            
+            HAMR::Default_Bit_Width => 32;
+            HAMR::Default_Max_Sequence_Size => 1;
+            HAMR::Max_String_Size => 256;
+            HAMR::Bit_Codec_Raw_Connections => true;        
 	end SW.Impl;
 	
 end SW;

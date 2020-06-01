@@ -411,7 +411,7 @@
         <seg>feature</seg>
         <seg>uart_send</seg>
       </bo>
-      <position x="4565.0" y="711.0"/>
+      <position x="4566.0" y="711.0"/>
     </element>
     <element uuid="5d8aeff8-5eda-4e0a-81a3-e90b05b04a82" manual="true">
       <bo>
@@ -438,7 +438,7 @@
           <seg>feature</seg>
           <seg>trusted_ids</seg>
         </bo>
-        <position x="315.0" y="35.0"/>
+        <position x="312.0" y="35.0"/>
       </element>
       <bo>
         <seg>subcomponent</seg>
@@ -474,7 +474,7 @@
           <seg>feature</seg>
           <seg>linesearchtask_out</seg>
         </bo>
-        <position x="318.0" y="85.0"/>
+        <position x="319.0" y="85.0"/>
       </element>
       <element uuid="e9187729-cd2a-4d95-86ea-c4135f6b5402" manual="true" dockArea="left">
         <bo>
@@ -488,7 +488,7 @@
           <seg>feature</seg>
           <seg>operatingregion_out</seg>
         </bo>
-        <position x="310.0" y="148.0"/>
+        <position x="312.0" y="148.0"/>
       </element>
       <element uuid="ffe3f32e-3a97-4461-a7b7-5d8a575aae7c" manual="true" dockArea="left">
         <bo>
@@ -510,7 +510,7 @@
           <seg>feature</seg>
           <seg>airvehiclestate</seg>
         </bo>
-        <position x="289.0" y="10.0"/>
+        <position x="287.0" y="10.0"/>
       </element>
       <element uuid="75070299-73bf-4a41-ab91-b21fff5204d4" manual="true" dockArea="right" fontSize="16.0">
         <bo>
@@ -531,7 +531,7 @@
           <seg>feature</seg>
           <seg>send_data</seg>
         </bo>
-        <position x="334.0" y="126.0"/>
+        <position x="336.0" y="126.0"/>
       </element>
       <bo>
         <seg>subcomponent</seg>
@@ -553,7 +553,7 @@
           <seg>feature</seg>
           <seg>filter_out</seg>
         </bo>
-        <position x="274.0" y="10.0"/>
+        <position x="273.0" y="10.0"/>
       </element>
       <bo>
         <seg>subcomponent</seg>
@@ -575,7 +575,7 @@
           <seg>feature</seg>
           <seg>filter_out</seg>
         </bo>
-        <position x="273.0" y="10.0"/>
+        <position x="272.0" y="10.0"/>
       </element>
       <bo>
         <seg>subcomponent</seg>
@@ -597,7 +597,7 @@
           <seg>feature</seg>
           <seg>filter_out</seg>
         </bo>
-        <position x="259.0" y="10.0"/>
+        <position x="258.0" y="10.0"/>
       </element>
       <bo>
         <seg>subcomponent</seg>
@@ -619,7 +619,7 @@
           <seg>feature</seg>
           <seg>filter_out</seg>
         </bo>
-        <position x="250.0" y="10.0"/>
+        <position x="249.0" y="10.0"/>
       </element>
       <bo>
         <seg>subcomponent</seg>
@@ -634,14 +634,14 @@
           <seg>feature</seg>
           <seg>keep_in_zones</seg>
         </bo>
-        <position x="354.0" y="68.0"/>
+        <position x="356.0" y="68.0"/>
       </element>
       <element uuid="9d0b5de0-4014-4e03-b97d-93ca02fbbe82" manual="true" dockArea="right" fontSize="16.0">
         <bo>
           <seg>feature</seg>
           <seg>keep_out_zones</seg>
         </bo>
-        <position x="339.0" y="10.0"/>
+        <position x="342.0" y="10.0"/>
       </element>
       <bo>
         <seg>subcomponent</seg>
@@ -656,7 +656,7 @@
           <seg>feature</seg>
           <seg>alert</seg>
         </bo>
-        <position x="476.0" y="29.0"/>
+        <position x="475.0" y="29.0"/>
       </element>
       <element uuid="d0515f94-c7a4-4ddd-a95e-d5879d2e5de8" manual="true" dockArea="left" fontSize="16.0">
         <bo>
@@ -694,13 +694,6 @@
       <size width="538.0" height="184.0"/>
     </element>
     <element uuid="3605e8e7-09b9-443c-a363-2c2ba6492c79" manual="true" background="#ccffcc" fontSize="16.0">
-      <element uuid="5190d4a1-f36e-4c31-a922-620b6a7c02c3" manual="true" dockArea="left" fontSize="16.0">
-        <bo>
-          <seg>feature</seg>
-          <seg>alert</seg>
-        </bo>
-        <position y="126.0"/>
-      </element>
       <element uuid="f9b96fb1-e5f1-49d4-9f85-e86d49f3f2ef" manual="true" dockArea="left" fontSize="16.0">
         <bo>
           <seg>feature</seg>
@@ -728,35 +721,35 @@
           <seg>feature</seg>
           <seg>am_request</seg>
         </bo>
-        <position x="433.0" y="300.0"/>
+        <position x="435.0" y="300.0"/>
       </element>
       <element uuid="ab234b35-a9fc-4e73-8d06-945919a4d96e" manual="true" dockArea="right" fontSize="16.0">
         <bo>
           <seg>feature</seg>
           <seg>am_response</seg>
         </bo>
-        <position x="415.0" y="242.0"/>
+        <position x="417.0" y="242.0"/>
       </element>
       <element uuid="6632ccd3-553d-4715-95d9-3e2619f5f35a" manual="true" dockArea="right" fontSize="16.0">
         <bo>
           <seg>feature</seg>
           <seg>automationrequest</seg>
         </bo>
-        <position x="350.0" y="68.0"/>
+        <position x="351.0" y="68.0"/>
       </element>
       <element uuid="886b4fe6-b167-4803-916b-8e277d587118" manual="true" dockArea="right" fontSize="16.0">
         <bo>
           <seg>feature</seg>
           <seg>linesearchtask</seg>
         </bo>
-        <position x="392.0" y="126.0"/>
+        <position x="393.0" y="126.0"/>
       </element>
       <element uuid="98f85d14-08c1-481b-ac22-e24eec367134" manual="true" dockArea="right" fontSize="16.0">
         <bo>
           <seg>feature</seg>
           <seg>operatingregion</seg>
         </bo>
-        <position x="383.0" y="184.0"/>
+        <position x="382.0" y="184.0"/>
       </element>
       <element uuid="17405c6a-4359-4528-bbd7-0d7a635c283d" manual="true" dockArea="left" fontSize="16.0">
         <bo>
@@ -770,7 +763,7 @@
           <seg>feature</seg>
           <seg>send_data</seg>
         </bo>
-        <position x="447.0" y="10.0"/>
+        <position x="449.0" y="10.0"/>
       </element>
       <bo>
         <seg>subcomponent</seg>
@@ -799,7 +792,7 @@
           <seg>feature</seg>
           <seg>automationresponse</seg>
         </bo>
-        <position x="360.0" y="97.0"/>
+        <position x="361.0" y="97.0"/>
       </element>
       <element uuid="75837349-d311-434c-acb9-cb4091aead5d" manual="true" dockArea="left" fontSize="16.0">
         <bo>

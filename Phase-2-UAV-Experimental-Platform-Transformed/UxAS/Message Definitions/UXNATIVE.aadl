@@ -3,7 +3,7 @@
 ----------------------------------------------------------------------
 package UXNATIVE
 public
-	with Common_Data; renames Common_Data::all;
+	with Base_Types; renames Base_Types::all;
 	with Data_Model;
 	
 	--Indicate to the waypoint manager to move to the next waypoint in the
@@ -14,7 +14,7 @@ public
 	data implementation IncrementWaypoint.i
     subcomponents
         --ID of vehicle which should move to the next waypoint in its list
-        VehicleID: data int64.i;
+        VehicleID: data Integer_64;
 	end IncrementWaypoint.i;
 	
 	data EntityJoin		
@@ -23,9 +23,9 @@ public
 	data implementation EntityJoin.i
 	    subcomponents
 	        --ID of entity joining network
-	        EntityID: data int64.i;
+	        EntityID: data Integer_64;
 	        --Label of entity joining network
-	        Label: data string.i;
+	        Label: data String;
 	end EntityJoin.i;
 
 	data EntityExit		
@@ -34,9 +34,9 @@ public
 	data implementation EntityExit.i
     subcomponents
         --ID of entity exiting network
-        EntityID: data int64.i;
+        EntityID: data Integer_64;
         --Label of entity exiting network
-        Label: data string.i;
+        Label: data String;
 	end EntityExit.i;
 
 	--Message to enable onboard processor to send commands to the
@@ -47,12 +47,12 @@ public
 	data implementation AutopilotKeepAlive.i
 	    subcomponents
 	        --Enable communications between UxAS and the autopilot
-	        AutopilotEnabled: data bool.i;
+	        AutopilotEnabled: data Boolean;
 	        --Enable communications between UxAS and the Gimbal. Note: this does
 	        --not effect the video stream.
-	        GimbalEnabled: data bool.i;
+	        GimbalEnabled: data Boolean;
 	        --Time that this message was sent
-	        TimeSent: data int64.i;
+	        TimeSent: data Integer_64;
 	end AutopilotKeepAlive.i;	
 
 	data OnboardStatusReport		
@@ -72,7 +72,7 @@ public
 	data implementation VideoRecord.i
 	    subcomponents
 	        --Start [true] or stop [false] video recording
-	        FIXMERecord: data bool.i;
+	        FIXMERecord: data Boolean;
 	end VideoRecord.i;
 
 	--Remove an existing service from UxAS
@@ -84,10 +84,17 @@ public
 	        --Globally unique ID for the service to be removed. If ServiceID == 0,
 	        --then no service will be killed. ServiceID == -1 causes all services to
 	        --be killed and UxAS to be shutdown.
-	        ServiceID: data int64.i;
+	        ServiceID: data Integer_64;
 	end KillService.i;
 	
 	--Create a new service in UxAS	
+	data StringArray
+    properties
+            Data_Model::Data_Representation => Array;
+            Data_Model::Base_Type => (classifier (String));
+            Data_Model::Dimension => (1);    
+    end stringArray;
+	
 	data CreateNewService		
 	end CreateNewService;
 	
@@ -96,9 +103,9 @@ public
         --Globally unique ID for this service. Negative ServiceIDs are
         --invalid. If ServiceID == 0, then a unique service ID will be
         --generated.
-        ServiceID: data int64.i;
+        ServiceID: data Integer_64;
         --XML configuration for this service
-        XmlConfiguration: data string.i {Data_Model::Data_Representation => Array;};
+        XmlConfiguration: data stringArray;
 	end CreateNewService.i;
 	
 end UXNATIVE;
