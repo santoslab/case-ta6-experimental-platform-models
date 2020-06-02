@@ -1,11 +1,9 @@
 package SW
 public
 	with Drivers;
-	with Waterways_UxAS;
 	with CASE_Model_Transformations;
 	with CASEAgree;
 	with CASEConsts;
-	with WaypointPlanManagerService_Pkg;
 	with CASE_Properties;
 	with CASE_Scheduling;
 	with CMASI;
@@ -70,8 +68,7 @@ public
 
 	thread CASE_AttestationManager_thr
 		features
-			trusted_ids: out data port CMASI::Address {Data_Model::Data_Representation => Array;
-				Data_Model::Dimension => (3);};
+			trusted_ids: out data port CMASI::AddressArray.i;
 			attestation_request: out event data port CASE_Model_Transformations::CASE_AttestationRequestMsg.Impl;
 			attestation_response: in event data port CASE_Model_Transformations::CASE_AttestationResponseMsg.Impl;
 		properties
@@ -91,8 +88,7 @@ public
 	
 	process CASE_AttestationManager
 		features
-			trusted_ids: out data port CMASI::Address {Data_Model::Data_Representation => Array;
-				Data_Model::Dimension => (3);};
+			trusted_ids: out data port CMASI::AddressArray.i;
 			attestation_request: out event data port CASE_Model_Transformations::CASE_AttestationRequestMsg.Impl;
 			attestation_response: in event data port CASE_Model_Transformations::CASE_AttestationResponseMsg.Impl;
 		properties
@@ -110,8 +106,7 @@ public
 
 	thread CASE_AttestationGate_thr
 		features
-			trusted_ids: in data port CMASI::Address {Data_Model::Data_Representation => Array;
-				Data_Model::Dimension => (3);};
+			trusted_ids: in data port CMASI::AddressArray.i;
 			AutomationRequest_in: in event data port CMASI::AddressAttributedMessage.i;
 			AutomationRequest_out: out event data port CMASI::AutomationRequest.i;
 			OperatingRegion_in: in event data port CMASI::AddressAttributedMessage.i;
@@ -141,8 +136,7 @@ public
 	
 	process CASE_AttestationGate
 		features
-			trusted_ids: in data port CMASI::Address {Data_Model::Data_Representation => Array;
-					Data_Model::Dimension => (3);};
+			trusted_ids: in data port CMASI::AddressArray.i;
 			AutomationRequest_in: in event data port CMASI::AddressAttributedMessage.i;
 			AutomationRequest_out: out event data port CMASI::AutomationRequest.i;
 			OperatingRegion_in: in event data port CMASI::AddressAttributedMessage.i;
@@ -294,6 +288,22 @@ public
 	-- UxAS --
 	----------
 	
+	thread UxAS_thr
+		features
+			AutomationRequest : in event data port CMASI::AutomationRequest.i;
+            AirVehicleState : in event data port CMASI::AirVehicleState.i;
+            OperatingRegion : in event data port CMASI::OperatingRegion.i;
+            LineSearchTask: in event data port CMASI::LineSearchTask.i;
+            AutomationResponse : out event data port CMASI::AutomationResponse.i;
+        properties
+            Dispatch_Protocol => Periodic;
+            Period => 500ms;
+            Compute_Execution_Time => 2ms .. 2ms;                
+	end UxAS_thr;
+	
+	thread implementation UxAS_thr.Impl 
+	end UxAS_thr.Impl;
+	
 	process UxAS
 		features
 			AutomationRequest : in event data port CMASI::AutomationRequest.i;
@@ -309,7 +319,7 @@ public
 	
 	process implementation UxAS.Impl
 		subcomponents
-			UxAS: thread group Waterways_UxAS::Waterways.i;
+			UxAS: thread UxAS_thr.Impl;
 		connections
 			c1: port AutomationRequest -> UxAS.AutomationRequest;
 			c2: port AirVehicleState -> UxAS.AirVehicleState;
@@ -537,6 +547,21 @@ end CASE_Monitor_Req;
 	----------------------
 	-- Waypoint Manager --
 	----------------------
+	thread WaypointPlanManagerService_thr
+	    features
+            AutomationResponse: in event data port CMASI::AutomationResponse.i;
+            AirVehicleState: in event data port CMASI::AirVehicleState.i;
+            MissionCommand: out event data port CMASI::MissionCommand.i;
+            ReturnHome: in event port;
+        properties
+            Dispatch_Protocol => Periodic;
+            Period => 500ms;
+            Compute_Execution_Time => 2ms .. 2ms;
+	end WaypointPlanManagerService_thr;
+	
+	thread implementation WaypointPlanManagerService_thr.Impl
+	    
+	end WaypointPlanManagerService_thr.Impl;
 	
 	process WaypointPlanManagerService
 		features
@@ -556,7 +581,7 @@ end CASE_Monitor_Req;
 	
 	process implementation WaypointPlanManagerService.Impl
 		subcomponents
-			WaypointPlanManagerService: thread WaypointPlanManagerService_Pkg::WaypointPlanManagerService.i;
+			WaypointPlanManagerService: thread WaypointPlanManagerService_thr.Impl;
 		connections
 			c1: port AutomationResponse -> WaypointPlanManagerService.AutomationResponse;
 			c2: port AirVehicleState -> WaypointPlanManagerService.AirVehicleState;

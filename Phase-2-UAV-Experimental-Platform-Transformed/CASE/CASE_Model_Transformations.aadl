@@ -3,6 +3,8 @@ public
 	
 	with Base_Types;
 	with CASE_Properties;
+	with CM_Property_Set;
+	with HAMR;
 	
 	-- COMMUNICATIONS
 	
@@ -57,6 +59,8 @@ public
 	data implementation CASE_AttestationRequestMsg.Impl
 		subcomponents
 			header: data CASE_MsgHeader.Impl;
+		properties
+            HAMR::Bit_Codec_Max_Size => CM_Property_Set::CASE_Attestation_Codec_Max_Size;
 	end CASE_AttestationRequestMsg.Impl;
 
 	-- This is the structure of an Attestation Response message
@@ -69,6 +73,8 @@ public
 		subcomponents
 			header: data CASE_MsgHeader.Impl;
 			status: data Base_Types::Boolean;
+		properties
+            HAMR::Bit_Codec_Max_Size => CM_Property_Set::CASE_Attestation_Codec_Max_Size;
 	end CASE_AttestationResponseMsg.Impl;
 	
 	-- This is the structure of a single entry in the attestation manager cache
