@@ -672,10 +672,10 @@ public
 			--------
 			-- UXAS
 			--------
-			c15: port UXAS.AutomationResponse -> MON_GEO.Observed;
+			c15: port UXAS.AutomationResponse -> MON_GEO.observed;
 			c17: port FlyZones.keep_in_zones -> MON_GEO.keep_in_zones;
 			c18: port FlyZones.keep_out_zones -> MON_GEO.keep_out_zones;
-			c19: port UXAS.AutomationResponse -> MON_GEO.observed;
+--			c19: port UXAS.AutomationResponse -> MON_GEO.observed;
 			c20: port MON_GEO.alert -> WPM.ReturnHome;
 			c21: port AM_Gate.AutomationRequest_out -> MON_REQ.reference_1;
 			c22: port UXAS.AutomationResponse -> MON_REQ.observed;
@@ -683,7 +683,7 @@ public
 			--------
 			-- WPM
 			--------
-			c23: port MON_GEO.alert -> WPM.ReturnHome;
+--			c23: port MON_GEO.alert -> WPM.ReturnHome;
 			c24: port WPM.MissionCommand -> FC_UART.MissionCommand;
 			c25: port MON_GEO.output -> WPM.AutomationResponse;
 			
