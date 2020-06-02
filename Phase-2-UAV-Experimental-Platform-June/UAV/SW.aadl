@@ -432,7 +432,7 @@ public
 			-- Checking if there exists a waypoint with the same lat,long,alt as a given waypoint with the restriction that it
 			-- follows immediately after the given waypoint in the linked-list of waypoints.
 			fun IS_DUPLICATE(mission : CMASI::MissionCommand.i, waypoint : CMASI::Waypoint.i) : bool =
-			      exists wp in mission.WaypointList, wp.Number = waypoint.NextWaypoint and wp.Latitude = waypoint.Latitude and
+			      exists wp in mission.WaypointList, not IS_LAST_WAYPOINT(wp) and wp.Number = waypoint.NextWaypoint and wp.Latitude = waypoint.Latitude and
 				 wp.Longitude = waypoint.Longitude and wp.Altitude = waypoint.Altitude;
 
 		**};
