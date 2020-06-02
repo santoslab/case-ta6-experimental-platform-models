@@ -1,0 +1,6 @@
+#ifndef SIREUM_TYPE_H_hamr_MissionComputer_Impl_Instance_PROC_SW_MON_REQ_CASE_Monitor_Req_App
+#define SIREUM_TYPE_H_hamr_MissionComputer_Impl_Instance_PROC_SW_MON_REQ_CASE_Monitor_Req_App
+#include <misc.h>
+
+
+#endif

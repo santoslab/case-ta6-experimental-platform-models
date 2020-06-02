@@ -2,7 +2,7 @@ package MC
 public
 
 	with UAS_Buses;
-	with CASE_Model_Transformations;
+	with HAMR;
 	with SW;
 	with CASE_Properties;
 	with CASE_Scheduling;
@@ -13,8 +13,8 @@ public
 			MCA: requires bus access MC_Bus.Impl;
 			RFA: requires bus access UAS_Buses::RF_Bus.Impl;
 			recv_data_in: in event data port;
-			recv_data_out: out event data port CASE_Model_Transformations::CASE_RF_Msg.Impl;
-			send_data_in: in event data port CASE_Model_Transformations::CASE_RF_Msg.Impl;
+--			recv_data_out: out event data port CASE_Model_Transformations::CASE_RF_Msg.Impl;
+--			send_data_in: in event data port CASE_Model_Transformations::CASE_RF_Msg.Impl;
 			send_data_out: out event data port;
 	end Radio;
 
@@ -27,8 +27,8 @@ public
 			MCA: requires bus access MC_Bus.Impl;
 			UART: requires bus access UAS_Buses::Serial_Bus.Impl;
 			recv_data_in: in event data port;
-			recv_data_out: out event data port CASE_Model_Transformations::CASE_UART_Msg.Impl;
-			send_data_in: in event data port CASE_Model_Transformations::CASE_UART_Msg.Impl;
+--			recv_data_out: out event data port CASE_Model_Transformations::CASE_UART_Msg.Impl;
+--			send_data_in: in event data port CASE_Model_Transformations::CASE_UART_Msg.Impl;
 			send_data_out: out event data port;
 	end UART;
 
@@ -102,8 +102,8 @@ public
 			MEM_HW: memory MC_Mem.Impl;
 			BUS_HW: bus MC_Bus.Impl;
 			PROC_SW: system SW::SW.Impl;
-			VM_Radio: virtual processor CASE_Virtual_Machine.Radio;
-			VM_UxAS: virtual processor CASE_Virtual_Machine.UxAS;
+--			VM_Radio: virtual processor CASE_Virtual_Machine.Radio;
+--			VM_UxAS: virtual processor CASE_Virtual_Machine.UxAS;
 		connections
 
 			-- MissionComputer
@@ -111,16 +111,16 @@ public
 			c02: port fc_uart_recv -> FC_UART_HW.recv_data_in;
 
 			-- RADIO_HW
-			c04: port RADIO_HW.recv_data_out -> PROC_SW.radio_recv;
+--			c04: port RADIO_HW.recv_data_out -> PROC_SW.radio_recv;
 			c05: port RADIO_HW.send_data_out -> radio_send;
 
 			-- FC_UART_HW
-			c06: port FC_UART_HW.recv_data_out -> PROC_SW.uart_recv;
+--			c06: port FC_UART_HW.recv_data_out -> PROC_SW.uart_recv;
 			c07: port FC_UART_HW.send_data_out -> fc_uart_send;
 
 			-- PROC_SW    
-			c10: port PROC_SW.radio_send -> RADIO_HW.send_data_in;
-			c11: port PROC_SW.uart_send -> FC_UART_HW.send_data_in;
+--			c10: port PROC_SW.radio_send -> RADIO_HW.send_data_in;
+--			c11: port PROC_SW.uart_send -> FC_UART_HW.send_data_in;
 
 			bac1: bus access RADIO_HW.MCA <-> BUS_HW;
 			bac2: bus access FC_UART_HW.MCA <-> BUS_HW;
@@ -133,11 +133,16 @@ public
 			-- UART
 			bac6: bus access FC_UART_HW.UART <-> FC_UART;
 		properties
-			Actual_Processor_Binding => (reference (PROC_HW)) applies to PROC_SW, VM_Radio, VM_UxAS;
+			Actual_Processor_Binding => (reference (PROC_HW)) applies to PROC_SW;
 			Actual_Memory_Binding => (reference (MEM_HW)) applies to PROC_SW;
-			Actual_Connection_Binding => (reference (BUS_HW)) applies to c04, c06, c10, c11;
-			Actual_Processor_Binding => (reference (VM_UxAS)) applies to PROC_SW.UXAS;
-			Actual_Processor_Binding => (reference (VM_Radio)) applies to PROC_SW.RADIO;
+--			Actual_Connection_Binding => (reference (BUS_HW)) applies to c04, c06, c10, c11;
+--			Actual_Processor_Binding => (reference (VM_UxAS)) applies to PROC_SW.UXAS;
+--			Actual_Processor_Binding => (reference (VM_Radio)) applies to PROC_SW.RADIO;
+			
+			HAMR::Default_Bit_Width => 32;
+            HAMR::Default_Max_Sequence_Size => 1;
+            HAMR::Max_String_Size => 256;
+            HAMR::Bit_Codec_Raw_Connections => true;       
 	end MissionComputer.Impl;
 	
 end MC;

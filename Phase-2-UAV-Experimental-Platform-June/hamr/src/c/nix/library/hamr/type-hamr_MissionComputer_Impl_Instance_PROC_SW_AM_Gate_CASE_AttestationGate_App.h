@@ -1,0 +1,6 @@
+#ifndef SIREUM_TYPE_H_hamr_MissionComputer_Impl_Instance_PROC_SW_AM_Gate_CASE_AttestationGate_App
+#define SIREUM_TYPE_H_hamr_MissionComputer_Impl_Instance_PROC_SW_AM_Gate_CASE_AttestationGate_App
+#include <misc.h>
+
+
+#endif

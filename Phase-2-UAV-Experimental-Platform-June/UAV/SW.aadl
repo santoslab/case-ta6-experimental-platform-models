@@ -1,16 +1,11 @@
 package SW
 public
 	with Drivers;
-	with Waterways_UxAS;
 	with CASE_Model_Transformations;
 	with CASEAgree;
-	with CASEConsts;
-	with WaypointPlanManagerService_Pkg;
 	with CASE_Properties;
 	with CASE_Scheduling;
 	with CMASI;
-	with Base_Types;
-	with Data_Model;
 	renames AGREE_PLTL::all;
 
 	
@@ -31,11 +26,27 @@ public
 --	thread implementation RadioDriver_Attestation_thr.Impl extends Drivers::RadioDriver.Impl
 --	end RadioDriver_Attestation_thr.Impl;
 	
+	thread RadioDriver_Attestation_thr
+	   features
+            trusted_ids: out data port CMASI::AddressArray.i;
+
+            AutomationRequest: out event data port CMASI::AddressAttributedMessage.i;
+            OperatingRegion: out event data port CMASI::AddressAttributedMessage.i;
+            LineSearchTask: out event data port CMASI::AddressAttributedMessage.i; 
+       properties
+            Dispatch_Protocol => Periodic;
+            Period => 500ms;
+            Compute_Execution_Time => 2ms .. 2ms;        
+	end RadioDriver_Attestation_thr;
+	
+	thread implementation RadioDriver_Attestation_thr.Impl
+	    
+	end RadioDriver_Attestation_thr.Impl;
+	
 	process RadioDriver_Attestation
 		features
 
-			trusted_ids: out data port CMASI::Address {Data_Model::Data_Representation => Array;
-				Data_Model::Dimension => (3);};
+			trusted_ids: out data port CMASI::AddressArray.i;
 
 			AutomationRequest: out event data port CMASI::AddressAttributedMessage.i;
 			OperatingRegion: out event data port CMASI::AddressAttributedMessage.i;
@@ -45,16 +56,13 @@ public
 	end RadioDriver_Attestation;
 	
 	process implementation RadioDriver_Attestation.Impl
---		subcomponents
---			RadioDriver_Attestation: thread RadioDriver_Attestation_thr.Impl;
---		connections
---			c1: port am_request -> RadioDriver_Attestation.am_request;
---			c2: port RadioDriver_Attestation.am_response -> am_response;
---			c3: port recv_data -> RadioDriver_Attestation.recv_data;
---			c4: port RadioDriver_Attestation.send_data -> send_data;
---			c5: port RadioDriver_Attestation.AutomationRequest -> AutomationRequest;
---			c6: port RadioDriver_Attestation.OperatingRegion -> OperatingRegion;
---			c7: port RadioDriver_Attestation.LineSearchTask -> LineSearchTask;
+		subcomponents
+			RadioDriver_Attestation: thread RadioDriver_Attestation_thr.Impl;
+		connections
+			c4: port RadioDriver_Attestation.trusted_ids -> trusted_ids;
+			c5: port RadioDriver_Attestation.AutomationRequest -> AutomationRequest;
+			c6: port RadioDriver_Attestation.OperatingRegion -> OperatingRegion;
+			c7: port RadioDriver_Attestation.LineSearchTask -> LineSearchTask;
 	end RadioDriver_Attestation.Impl;
 
 
@@ -64,8 +72,7 @@ public
 
 	thread CASE_AttestationManager_thr
 		features
-			trusted_ids: out data port CMASI::Address {Data_Model::Data_Representation => Array;
-				Data_Model::Dimension => (3);};
+			trusted_ids: out data port CMASI::AddressArray.i;
 			attestation_request: out event data port CASE_Model_Transformations::CASE_AttestationRequestMsg.Impl;
 			attestation_response: in event data port CASE_Model_Transformations::CASE_AttestationResponseMsg.Impl;
 		properties
@@ -85,8 +92,7 @@ public
 	
 	process CASE_AttestationManager
 		features
-			trusted_ids: out data port CMASI::Address {Data_Model::Data_Representation => Array;
-				Data_Model::Dimension => (3);};
+			trusted_ids: out data port CMASI::AddressArray.i;
 			attestation_request: out event data port CASE_Model_Transformations::CASE_AttestationRequestMsg.Impl;
 			attestation_response: in event data port CASE_Model_Transformations::CASE_AttestationResponseMsg.Impl;
 		properties
@@ -104,8 +110,7 @@ public
 
 	thread CASE_AttestationGate_thr
 		features
-			trusted_ids: in data port CMASI::Address {Data_Model::Data_Representation => Array;
-				Data_Model::Dimension => (3);};
+			trusted_ids: in data port CMASI::AddressArray.i;
 			AutomationRequest_in: in event data port CMASI::AddressAttributedMessage.i;
 			AutomationRequest_out: out event data port CMASI::AutomationRequest.i;
 			OperatingRegion_in: in event data port CMASI::AddressAttributedMessage.i;
@@ -135,8 +140,7 @@ public
 	
 	process CASE_AttestationGate
 		features
-			trusted_ids: in data port CMASI::Address {Data_Model::Data_Representation => Array;
-					Data_Model::Dimension => (3);};
+			trusted_ids: in data port CMASI::AddressArray.i;
 			AutomationRequest_in: in event data port CMASI::AddressAttributedMessage.i;
 			AutomationRequest_out: out event data port CMASI::AutomationRequest.i;
 			OperatingRegion_in: in event data port CMASI::AddressAttributedMessage.i;
@@ -287,7 +291,22 @@ public
 	----------
 	-- UxAS --
 	----------
-	
+	thread UxAS_thr
+        features
+            AutomationRequest : in event data port CMASI::AutomationRequest.i;
+            AirVehicleState : in event data port CMASI::AirVehicleState.i;
+            OperatingRegion : in event data port CMASI::OperatingRegion.i;
+            LineSearchTask: in event data port CMASI::LineSearchTask.i;
+            AutomationResponse : out event data port CMASI::AutomationResponse.i;
+        properties
+            Dispatch_Protocol => Periodic;
+            Period => 500ms;
+            Compute_Execution_Time => 2ms .. 2ms;                
+    end UxAS_thr;
+    
+    thread implementation UxAS_thr.Impl 
+    end UxAS_thr.Impl;
+    
 	process UxAS
 		features
 			AutomationRequest : in event data port CMASI::AutomationRequest.i;
@@ -301,7 +320,7 @@ public
 	
 	process implementation UxAS.Impl
 		subcomponents
-			UxAS: thread group Waterways_UxAS::Waterways.i;
+			UxAS: thread UxAS_thr.Impl;
 		connections
 			c1: port AutomationRequest -> UxAS.AutomationRequest;
 			c2: port AirVehicleState -> UxAS.AirVehicleState;
@@ -319,7 +338,7 @@ public
 		features
 			observed: in event data port CMASI::AutomationResponse.i;
 			reference_1: in event data port CMASI::AutomationRequest.i;
-			alert: out event data port Base_Types::Boolean;
+--			alert: out event data port Base_Types::Boolean;
 		properties
 			CASE_Properties::Component_Type => MONITOR; -- marks this component as a monitor
 			CASE_Properties::Monitor_Latched => false; -- indicates if the monitor is latched
@@ -352,7 +371,7 @@ public
 		features
 			observed: in event data port CMASI::AutomationResponse.i;
 			reference_1: in event data port CMASI::AutomationRequest.i;
-			alert: out event data port Base_Types::Boolean;
+--			alert: out event data port Base_Types::Boolean;
 		properties
 			CASE_Scheduling::Domain => 11;
 	end CASE_Monitor_Req;
@@ -363,7 +382,7 @@ public
 		connections
 			c1: port observed -> CASE_Monitor_Req.observed;
 			c2: port reference_1 -> CASE_Monitor_Req.reference_1;
-			c3: port CASE_Monitor_Req.alert -> alert;
+--			c3: port CASE_Monitor_Req.alert -> alert;
 	end CASE_Monitor_Req.Impl;
 	
 
@@ -510,6 +529,7 @@ public
 			keep_out_zones: in data port CMASI::Polygon.i;
 			alert: out event port;
 			observed: in event data port CMASI::AutomationResponse.i;
+			output: out event data port CMASI::AutomationResponse.i;
 		properties
 			CASE_Scheduling::Domain => 13;
 	end CASE_Monitor_Geo;
@@ -522,13 +542,28 @@ public
 			c2: port keep_out_zones -> CASE_Monitor_Geo.keep_out_zones;
 			c3: port CASE_Monitor_Geo.alert -> alert;
 			c4: port observed -> CASE_Monitor_Geo.observed;
-			c5: port CASE_Monitor_Geo.output ->output;
+			c5: port CASE_Monitor_Geo.output -> output;
 	end CASE_Monitor_Geo.Impl;
 	
 	
 	----------------------
 	-- Waypoint Manager --
 	----------------------
+	thread WaypointPlanManagerService_thr
+        features
+            AutomationResponse: in event data port CMASI::AutomationResponse.i;
+            AirVehicleState: in event data port CMASI::AirVehicleState.i;
+            MissionCommand: out event data port CMASI::MissionCommand.i;
+            ReturnHome: in event port;
+        properties
+            Dispatch_Protocol => Periodic;
+            Period => 500ms;
+            Compute_Execution_Time => 2ms .. 2ms;
+    end WaypointPlanManagerService_thr;
+    
+    thread implementation WaypointPlanManagerService_thr.Impl
+        
+    end WaypointPlanManagerService_thr.Impl;
 	
 	process WaypointPlanManagerService
 		features
@@ -546,7 +581,7 @@ public
 	
 	process implementation WaypointPlanManagerService.Impl
 		subcomponents
-			WaypointPlanManagerService: thread WaypointPlanManagerService_Pkg::WaypointPlanManagerService.i;
+			WaypointPlanManagerService: thread WaypointPlanManagerService_thr.Impl;
 		connections
 			c1: port AutomationResponse -> WaypointPlanManagerService.AutomationResponse;
 			c2: port AirVehicleState -> WaypointPlanManagerService.AirVehicleState;
@@ -588,19 +623,19 @@ public
 	system SW
 		
 		annex agree {**
-			guarantee Req001_SW "The radio_send outputs only well formed CASE_RF_Msg.Impl types" :
-				-- if (event(radio_recv) and CASEAgree::WellformedCASE_RF_Msg(radio_recv, CASEConsts::UAV_ID, CASEConsts::GS_ID))
+--			guarantee Req001_SW "The radio_send outputs only well formed CASE_RF_Msg.Impl types" :
+--				 if (event(radio_recv) and CASEAgree::WellformedCASE_RF_Msg(radio_recv, CASEConsts::UAV_ID, CASEConsts::GS_ID))
 				--   event(radio_send) and radio_send = radio_recv and CASEAgree::WellformedCASE_RF_Msg(radio_send, CASEConsts::UAV_ID, CASEConsts::GS_ID)
 				-- else
 				--   not event(radio_send);
-			CASEAgree::WellformedCASE_RF_Msg(radio_send, CASEConsts::UAV_ID, CASEConsts::GS_ID);
+--			CASEAgree::WellformedCASE_RF_Msg(radio_send, CASEConsts::UAV_ID, CASEConsts::GS_ID);
 			
-			guarantee Req002_SW "The uart_send outputs only well formed CASE_RF_Msg.Impl types" :
+--			guarantee Req002_SW "The uart_send outputs only well formed CASE_RF_Msg.Impl types" :
 				-- if (event(uart_recv) and CASEAgree::WellformedCASE_UART_Msg(uart_recv))
 				--   event(uart_send) and uart_send = uart_recv and CASEAgree::WellformedCASE_UART_Msg(uart_send)
 				-- else
 				--   not event(uart_send);
-				CASEAgree::WellformedCASE_UART_Msg(uart_send);
+--				CASEAgree::WellformedCASE_UART_Msg(uart_send);
 		**};
 
 	end SW;
