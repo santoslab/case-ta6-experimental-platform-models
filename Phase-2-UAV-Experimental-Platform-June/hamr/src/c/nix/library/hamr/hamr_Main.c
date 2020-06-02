@@ -37,31 +37,31 @@ Z hamr_Main_main(STACK_FRAME IS_948B60 args) {
   empty = (art_Empty) (&t_5);
 
   sfUpdateLoc(24);
-  B t_6 = hamr_PlatformNix_sendAsync(SF hamr_IPCPorts_MissionComputer_Impl_Instance_PROC_SW_FC_UART_UARTDriver_App(SF_LAST), hamr_IPCPorts_MissionComputer_Impl_Instance_PROC_SW_FC_UART_UARTDriver_App(SF_LAST), (art_DataContent) empty);
+  B t_6 = hamr_PlatformNix_sendAsync(SF hamr_IPCPorts_SW_Impl_Instance_FC_UART_UARTDriver_App(SF_LAST), hamr_IPCPorts_SW_Impl_Instance_FC_UART_UARTDriver_App(SF_LAST), (art_DataContent) empty);
 
   sfUpdateLoc(25);
-  B t_7 = hamr_PlatformNix_sendAsync(SF hamr_IPCPorts_MissionComputer_Impl_Instance_PROC_SW_RADIO_RadioDriver_Attestation_App(SF_LAST), hamr_IPCPorts_MissionComputer_Impl_Instance_PROC_SW_RADIO_RadioDriver_Attestation_App(SF_LAST), (art_DataContent) empty);
+  B t_7 = hamr_PlatformNix_sendAsync(SF hamr_IPCPorts_SW_Impl_Instance_RADIO_RadioDriver_Attestation_App(SF_LAST), hamr_IPCPorts_SW_Impl_Instance_RADIO_RadioDriver_Attestation_App(SF_LAST), (art_DataContent) empty);
 
   sfUpdateLoc(26);
-  B t_8 = hamr_PlatformNix_sendAsync(SF hamr_IPCPorts_MissionComputer_Impl_Instance_PROC_SW_FlyZones_FlyZonesDatabase_App(SF_LAST), hamr_IPCPorts_MissionComputer_Impl_Instance_PROC_SW_FlyZones_FlyZonesDatabase_App(SF_LAST), (art_DataContent) empty);
+  B t_8 = hamr_PlatformNix_sendAsync(SF hamr_IPCPorts_SW_Impl_Instance_FlyZones_FlyZonesDatabase_App(SF_LAST), hamr_IPCPorts_SW_Impl_Instance_FlyZones_FlyZonesDatabase_App(SF_LAST), (art_DataContent) empty);
 
   sfUpdateLoc(27);
-  B t_9 = hamr_PlatformNix_sendAsync(SF hamr_IPCPorts_MissionComputer_Impl_Instance_PROC_SW_UXAS_UxAS_App(SF_LAST), hamr_IPCPorts_MissionComputer_Impl_Instance_PROC_SW_UXAS_UxAS_App(SF_LAST), (art_DataContent) empty);
+  B t_9 = hamr_PlatformNix_sendAsync(SF hamr_IPCPorts_SW_Impl_Instance_UXAS_UxAS_App(SF_LAST), hamr_IPCPorts_SW_Impl_Instance_UXAS_UxAS_App(SF_LAST), (art_DataContent) empty);
 
   sfUpdateLoc(28);
-  B t_10 = hamr_PlatformNix_sendAsync(SF hamr_IPCPorts_MissionComputer_Impl_Instance_PROC_SW_WPM_WaypointPlanManagerService_App(SF_LAST), hamr_IPCPorts_MissionComputer_Impl_Instance_PROC_SW_WPM_WaypointPlanManagerService_App(SF_LAST), (art_DataContent) empty);
+  B t_10 = hamr_PlatformNix_sendAsync(SF hamr_IPCPorts_SW_Impl_Instance_WPM_WaypointPlanManagerService_App(SF_LAST), hamr_IPCPorts_SW_Impl_Instance_WPM_WaypointPlanManagerService_App(SF_LAST), (art_DataContent) empty);
 
   sfUpdateLoc(29);
-  B t_11 = hamr_PlatformNix_sendAsync(SF hamr_IPCPorts_MissionComputer_Impl_Instance_PROC_SW_AM_Gate_CASE_AttestationGate_App(SF_LAST), hamr_IPCPorts_MissionComputer_Impl_Instance_PROC_SW_AM_Gate_CASE_AttestationGate_App(SF_LAST), (art_DataContent) empty);
+  B t_11 = hamr_PlatformNix_sendAsync(SF hamr_IPCPorts_SW_Impl_Instance_AM_Gate_CASE_AttestationGate_App(SF_LAST), hamr_IPCPorts_SW_Impl_Instance_AM_Gate_CASE_AttestationGate_App(SF_LAST), (art_DataContent) empty);
 
   sfUpdateLoc(30);
-  B t_12 = hamr_PlatformNix_sendAsync(SF hamr_IPCPorts_MissionComputer_Impl_Instance_PROC_SW_FLT_LST_CASE_Filter_LST_App(SF_LAST), hamr_IPCPorts_MissionComputer_Impl_Instance_PROC_SW_FLT_LST_CASE_Filter_LST_App(SF_LAST), (art_DataContent) empty);
+  B t_12 = hamr_PlatformNix_sendAsync(SF hamr_IPCPorts_SW_Impl_Instance_FLT_LST_CASE_Filter_LST_App(SF_LAST), hamr_IPCPorts_SW_Impl_Instance_FLT_LST_CASE_Filter_LST_App(SF_LAST), (art_DataContent) empty);
 
   sfUpdateLoc(31);
-  B t_13 = hamr_PlatformNix_sendAsync(SF hamr_IPCPorts_MissionComputer_Impl_Instance_PROC_SW_MON_REQ_CASE_Monitor_Req_App(SF_LAST), hamr_IPCPorts_MissionComputer_Impl_Instance_PROC_SW_MON_REQ_CASE_Monitor_Req_App(SF_LAST), (art_DataContent) empty);
+  B t_13 = hamr_PlatformNix_sendAsync(SF hamr_IPCPorts_SW_Impl_Instance_MON_REQ_CASE_Monitor_Req_App(SF_LAST), hamr_IPCPorts_SW_Impl_Instance_MON_REQ_CASE_Monitor_Req_App(SF_LAST), (art_DataContent) empty);
 
   sfUpdateLoc(32);
-  B t_14 = hamr_PlatformNix_sendAsync(SF hamr_IPCPorts_MissionComputer_Impl_Instance_PROC_SW_MON_GEO_CASE_Monitor_Geo_App(SF_LAST), hamr_IPCPorts_MissionComputer_Impl_Instance_PROC_SW_MON_GEO_CASE_Monitor_Geo_App(SF_LAST), (art_DataContent) empty);
+  B t_14 = hamr_PlatformNix_sendAsync(SF hamr_IPCPorts_SW_Impl_Instance_MON_GEO_CASE_Monitor_Geo_App(SF_LAST), hamr_IPCPorts_SW_Impl_Instance_MON_GEO_CASE_Monitor_Geo_App(SF_LAST), (art_DataContent) empty);
 
   sfUpdateLoc(34);
   hamr_PlatformNix_finalise(SF_LAST);

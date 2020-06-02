@@ -1,6 +1,0 @@
-#ifndef SIREUM_TYPE_H_hamr_MissionComputer_Impl_Instance_PROC_SW_MON_GEO_CASE_Monitor_Geo_App
-#define SIREUM_TYPE_H_hamr_MissionComputer_Impl_Instance_PROC_SW_MON_GEO_CASE_Monitor_Geo_App
-#include <misc.h>
-
-
-#endif

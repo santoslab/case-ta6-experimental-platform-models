@@ -131,33 +131,6 @@ add_library(main STATIC
         library/hamr/type-hamr_Main.h
         library/hamr/hamr_Main.h
         library/hamr/hamr_Main.c
-        library/hamr/type-hamr_MissionComputer_Impl_Instance_PROC_SW_AM_Gate_CASE_AttestationGate_App.h
-        library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_AM_Gate_CASE_AttestationGate_App.h
-        library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_AM_Gate_CASE_AttestationGate_App.c
-        library/hamr/type-hamr_MissionComputer_Impl_Instance_PROC_SW_FC_UART_UARTDriver_App.h
-        library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_FC_UART_UARTDriver_App.h
-        library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_FC_UART_UARTDriver_App.c
-        library/hamr/type-hamr_MissionComputer_Impl_Instance_PROC_SW_FLT_LST_CASE_Filter_LST_App.h
-        library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_FLT_LST_CASE_Filter_LST_App.h
-        library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_FLT_LST_CASE_Filter_LST_App.c
-        library/hamr/type-hamr_MissionComputer_Impl_Instance_PROC_SW_FlyZones_FlyZonesDatabase_App.h
-        library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_FlyZones_FlyZonesDatabase_App.h
-        library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_FlyZones_FlyZonesDatabase_App.c
-        library/hamr/type-hamr_MissionComputer_Impl_Instance_PROC_SW_MON_GEO_CASE_Monitor_Geo_App.h
-        library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_MON_GEO_CASE_Monitor_Geo_App.h
-        library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_MON_GEO_CASE_Monitor_Geo_App.c
-        library/hamr/type-hamr_MissionComputer_Impl_Instance_PROC_SW_MON_REQ_CASE_Monitor_Req_App.h
-        library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_MON_REQ_CASE_Monitor_Req_App.h
-        library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_MON_REQ_CASE_Monitor_Req_App.c
-        library/hamr/type-hamr_MissionComputer_Impl_Instance_PROC_SW_RADIO_RadioDriver_Attestation_App.h
-        library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_RADIO_RadioDriver_Attestation_App.h
-        library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_RADIO_RadioDriver_Attestation_App.c
-        library/hamr/type-hamr_MissionComputer_Impl_Instance_PROC_SW_UXAS_UxAS_App.h
-        library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_UXAS_UxAS_App.h
-        library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_UXAS_UxAS_App.c
-        library/hamr/type-hamr_MissionComputer_Impl_Instance_PROC_SW_WPM_WaypointPlanManagerService_App.h
-        library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_WPM_WaypointPlanManagerService_App.h
-        library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_WPM_WaypointPlanManagerService_App.c
         library/hamr/type-hamr_PlatformNix.h
         library/hamr/hamr_PlatformNix.h
         library/hamr/hamr_PlatformNix.c
@@ -259,6 +232,33 @@ add_library(main STATIC
         library/hamr/SW/type-hamr_SW_WaypointPlanManagerService_thr_Impl_Impl.h
         library/hamr/SW/hamr_SW_WaypointPlanManagerService_thr_Impl_Impl.h
         library/hamr/SW/hamr_SW_WaypointPlanManagerService_thr_Impl_Impl.c
+        library/hamr/type-hamr_SW_Impl_Instance_AM_Gate_CASE_AttestationGate_App.h
+        library/hamr/hamr_SW_Impl_Instance_AM_Gate_CASE_AttestationGate_App.h
+        library/hamr/hamr_SW_Impl_Instance_AM_Gate_CASE_AttestationGate_App.c
+        library/hamr/type-hamr_SW_Impl_Instance_FC_UART_UARTDriver_App.h
+        library/hamr/hamr_SW_Impl_Instance_FC_UART_UARTDriver_App.h
+        library/hamr/hamr_SW_Impl_Instance_FC_UART_UARTDriver_App.c
+        library/hamr/type-hamr_SW_Impl_Instance_FLT_LST_CASE_Filter_LST_App.h
+        library/hamr/hamr_SW_Impl_Instance_FLT_LST_CASE_Filter_LST_App.h
+        library/hamr/hamr_SW_Impl_Instance_FLT_LST_CASE_Filter_LST_App.c
+        library/hamr/type-hamr_SW_Impl_Instance_FlyZones_FlyZonesDatabase_App.h
+        library/hamr/hamr_SW_Impl_Instance_FlyZones_FlyZonesDatabase_App.h
+        library/hamr/hamr_SW_Impl_Instance_FlyZones_FlyZonesDatabase_App.c
+        library/hamr/type-hamr_SW_Impl_Instance_MON_GEO_CASE_Monitor_Geo_App.h
+        library/hamr/hamr_SW_Impl_Instance_MON_GEO_CASE_Monitor_Geo_App.h
+        library/hamr/hamr_SW_Impl_Instance_MON_GEO_CASE_Monitor_Geo_App.c
+        library/hamr/type-hamr_SW_Impl_Instance_MON_REQ_CASE_Monitor_Req_App.h
+        library/hamr/hamr_SW_Impl_Instance_MON_REQ_CASE_Monitor_Req_App.h
+        library/hamr/hamr_SW_Impl_Instance_MON_REQ_CASE_Monitor_Req_App.c
+        library/hamr/type-hamr_SW_Impl_Instance_RADIO_RadioDriver_Attestation_App.h
+        library/hamr/hamr_SW_Impl_Instance_RADIO_RadioDriver_Attestation_App.h
+        library/hamr/hamr_SW_Impl_Instance_RADIO_RadioDriver_Attestation_App.c
+        library/hamr/type-hamr_SW_Impl_Instance_UXAS_UxAS_App.h
+        library/hamr/hamr_SW_Impl_Instance_UXAS_UxAS_App.h
+        library/hamr/hamr_SW_Impl_Instance_UXAS_UxAS_App.c
+        library/hamr/type-hamr_SW_Impl_Instance_WPM_WaypointPlanManagerService_App.h
+        library/hamr/hamr_SW_Impl_Instance_WPM_WaypointPlanManagerService_App.h
+        library/hamr/hamr_SW_Impl_Instance_WPM_WaypointPlanManagerService_App.c
         library/hamr/type-hamr_SharedMemory.h
         library/hamr/hamr_SharedMemory.h
         library/org/sireum/type-org_sireum_IS_08117A.h
@@ -385,7 +385,6 @@ add_library(main STATIC
         library/org/sireum/org_sireum_U8.h
         library/org/sireum/org_sireum_U8.c
         ext/ext.c
-        ext/ipc.c
         ext/ext.h
         ext/UARTDriver_Impl_Impl_api.h
         ext/UARTDriver_Impl_Impl_api.c
@@ -413,18 +412,19 @@ add_library(main STATIC
         ext/CASE_Monitor_Req_thr_Impl_Impl.c
         ext/CASE_Monitor_Geo_thr_Impl_Impl_api.h
         ext/CASE_Monitor_Geo_thr_Impl_Impl_api.c
-        ext/CASE_Monitor_Geo_thr_Impl_Impl.c)
+        ext/CASE_Monitor_Geo_thr_Impl_Impl.c
+        ext/ipc.c)
 
 target_include_directories(main
-        PUBLIC PUBLIC app-MissionComputer_Impl_Instance_PROC_SW_FC_UART_UARTDriver_App
-        PUBLIC PUBLIC app-MissionComputer_Impl_Instance_PROC_SW_RADIO_RadioDriver_Attestation_App
-        PUBLIC PUBLIC app-MissionComputer_Impl_Instance_PROC_SW_FlyZones_FlyZonesDatabase_App
-        PUBLIC PUBLIC app-MissionComputer_Impl_Instance_PROC_SW_UXAS_UxAS_App
-        PUBLIC PUBLIC app-MissionComputer_Impl_Instance_PROC_SW_WPM_WaypointPlanManagerService_App
-        PUBLIC PUBLIC app-MissionComputer_Impl_Instance_PROC_SW_AM_Gate_CASE_AttestationGate_App
-        PUBLIC PUBLIC app-MissionComputer_Impl_Instance_PROC_SW_FLT_LST_CASE_Filter_LST_App
-        PUBLIC PUBLIC app-MissionComputer_Impl_Instance_PROC_SW_MON_REQ_CASE_Monitor_Req_App
-        PUBLIC PUBLIC app-MissionComputer_Impl_Instance_PROC_SW_MON_GEO_CASE_Monitor_Geo_App
+        PUBLIC PUBLIC app-SW_Impl_Instance_FC_UART_UARTDriver_App
+        PUBLIC PUBLIC app-SW_Impl_Instance_RADIO_RadioDriver_Attestation_App
+        PUBLIC PUBLIC app-SW_Impl_Instance_FlyZones_FlyZonesDatabase_App
+        PUBLIC PUBLIC app-SW_Impl_Instance_UXAS_UxAS_App
+        PUBLIC PUBLIC app-SW_Impl_Instance_WPM_WaypointPlanManagerService_App
+        PUBLIC PUBLIC app-SW_Impl_Instance_AM_Gate_CASE_AttestationGate_App
+        PUBLIC PUBLIC app-SW_Impl_Instance_FLT_LST_CASE_Filter_LST_App
+        PUBLIC PUBLIC app-SW_Impl_Instance_MON_REQ_CASE_Monitor_Req_App
+        PUBLIC PUBLIC app-SW_Impl_Instance_MON_GEO_CASE_Monitor_Geo_App
         PUBLIC PUBLIC app-Main
         PUBLIC PUBLIC runtime
         PUBLIC PUBLIC library/art
@@ -448,67 +448,67 @@ target_include_directories(main
         PUBLIC PUBLIC ext)
 
 
-add_executable(MissionComputer_Impl_Instance_PROC_SW_FC_UART_UARTDriver_App-bin app-MissionComputer_Impl_Instance_PROC_SW_FC_UART_UARTDriver_App/MissionComputer_Impl_Instance_PROC_SW_FC_UART_UARTDriver_App.c)
+add_executable(SW_Impl_Instance_FC_UART_UARTDriver_App-bin app-SW_Impl_Instance_FC_UART_UARTDriver_App/SW_Impl_Instance_FC_UART_UARTDriver_App.c)
 
-target_link_libraries(MissionComputer_Impl_Instance_PROC_SW_FC_UART_UARTDriver_App-bin LINK_PUBLIC main m)
+target_link_libraries(SW_Impl_Instance_FC_UART_UARTDriver_App-bin LINK_PUBLIC main m)
 
-set_target_properties(MissionComputer_Impl_Instance_PROC_SW_FC_UART_UARTDriver_App-bin PROPERTIES OUTPUT_NAME MissionComputer_Impl_Instance_PROC_SW_FC_UART_UARTDriver_App)
-
-
-add_executable(MissionComputer_Impl_Instance_PROC_SW_RADIO_RadioDriver_Attestation_App-bin app-MissionComputer_Impl_Instance_PROC_SW_RADIO_RadioDriver_Attestation_App/MissionComputer_Impl_Instance_PROC_SW_RADIO_RadioDriver_Attestation_App.c)
-
-target_link_libraries(MissionComputer_Impl_Instance_PROC_SW_RADIO_RadioDriver_Attestation_App-bin LINK_PUBLIC main m)
-
-set_target_properties(MissionComputer_Impl_Instance_PROC_SW_RADIO_RadioDriver_Attestation_App-bin PROPERTIES OUTPUT_NAME MissionComputer_Impl_Instance_PROC_SW_RADIO_RadioDriver_Attestation_App)
+set_target_properties(SW_Impl_Instance_FC_UART_UARTDriver_App-bin PROPERTIES OUTPUT_NAME SW_Impl_Instance_FC_UART_UARTDriver_App)
 
 
-add_executable(MissionComputer_Impl_Instance_PROC_SW_FlyZones_FlyZonesDatabase_App-bin app-MissionComputer_Impl_Instance_PROC_SW_FlyZones_FlyZonesDatabase_App/MissionComputer_Impl_Instance_PROC_SW_FlyZones_FlyZonesDatabase_App.c)
+add_executable(SW_Impl_Instance_RADIO_RadioDriver_Attestation_App-bin app-SW_Impl_Instance_RADIO_RadioDriver_Attestation_App/SW_Impl_Instance_RADIO_RadioDriver_Attestation_App.c)
 
-target_link_libraries(MissionComputer_Impl_Instance_PROC_SW_FlyZones_FlyZonesDatabase_App-bin LINK_PUBLIC main m)
+target_link_libraries(SW_Impl_Instance_RADIO_RadioDriver_Attestation_App-bin LINK_PUBLIC main m)
 
-set_target_properties(MissionComputer_Impl_Instance_PROC_SW_FlyZones_FlyZonesDatabase_App-bin PROPERTIES OUTPUT_NAME MissionComputer_Impl_Instance_PROC_SW_FlyZones_FlyZonesDatabase_App)
-
-
-add_executable(MissionComputer_Impl_Instance_PROC_SW_UXAS_UxAS_App-bin app-MissionComputer_Impl_Instance_PROC_SW_UXAS_UxAS_App/MissionComputer_Impl_Instance_PROC_SW_UXAS_UxAS_App.c)
-
-target_link_libraries(MissionComputer_Impl_Instance_PROC_SW_UXAS_UxAS_App-bin LINK_PUBLIC main m)
-
-set_target_properties(MissionComputer_Impl_Instance_PROC_SW_UXAS_UxAS_App-bin PROPERTIES OUTPUT_NAME MissionComputer_Impl_Instance_PROC_SW_UXAS_UxAS_App)
+set_target_properties(SW_Impl_Instance_RADIO_RadioDriver_Attestation_App-bin PROPERTIES OUTPUT_NAME SW_Impl_Instance_RADIO_RadioDriver_Attestation_App)
 
 
-add_executable(MissionComputer_Impl_Instance_PROC_SW_WPM_WaypointPlanManagerService_App-bin app-MissionComputer_Impl_Instance_PROC_SW_WPM_WaypointPlanManagerService_App/MissionComputer_Impl_Instance_PROC_SW_WPM_WaypointPlanManagerService_App.c)
+add_executable(SW_Impl_Instance_FlyZones_FlyZonesDatabase_App-bin app-SW_Impl_Instance_FlyZones_FlyZonesDatabase_App/SW_Impl_Instance_FlyZones_FlyZonesDatabase_App.c)
 
-target_link_libraries(MissionComputer_Impl_Instance_PROC_SW_WPM_WaypointPlanManagerService_App-bin LINK_PUBLIC main m)
+target_link_libraries(SW_Impl_Instance_FlyZones_FlyZonesDatabase_App-bin LINK_PUBLIC main m)
 
-set_target_properties(MissionComputer_Impl_Instance_PROC_SW_WPM_WaypointPlanManagerService_App-bin PROPERTIES OUTPUT_NAME MissionComputer_Impl_Instance_PROC_SW_WPM_WaypointPlanManagerService_App)
-
-
-add_executable(MissionComputer_Impl_Instance_PROC_SW_AM_Gate_CASE_AttestationGate_App-bin app-MissionComputer_Impl_Instance_PROC_SW_AM_Gate_CASE_AttestationGate_App/MissionComputer_Impl_Instance_PROC_SW_AM_Gate_CASE_AttestationGate_App.c)
-
-target_link_libraries(MissionComputer_Impl_Instance_PROC_SW_AM_Gate_CASE_AttestationGate_App-bin LINK_PUBLIC main m)
-
-set_target_properties(MissionComputer_Impl_Instance_PROC_SW_AM_Gate_CASE_AttestationGate_App-bin PROPERTIES OUTPUT_NAME MissionComputer_Impl_Instance_PROC_SW_AM_Gate_CASE_AttestationGate_App)
+set_target_properties(SW_Impl_Instance_FlyZones_FlyZonesDatabase_App-bin PROPERTIES OUTPUT_NAME SW_Impl_Instance_FlyZones_FlyZonesDatabase_App)
 
 
-add_executable(MissionComputer_Impl_Instance_PROC_SW_FLT_LST_CASE_Filter_LST_App-bin app-MissionComputer_Impl_Instance_PROC_SW_FLT_LST_CASE_Filter_LST_App/MissionComputer_Impl_Instance_PROC_SW_FLT_LST_CASE_Filter_LST_App.c)
+add_executable(SW_Impl_Instance_UXAS_UxAS_App-bin app-SW_Impl_Instance_UXAS_UxAS_App/SW_Impl_Instance_UXAS_UxAS_App.c)
 
-target_link_libraries(MissionComputer_Impl_Instance_PROC_SW_FLT_LST_CASE_Filter_LST_App-bin LINK_PUBLIC main m)
+target_link_libraries(SW_Impl_Instance_UXAS_UxAS_App-bin LINK_PUBLIC main m)
 
-set_target_properties(MissionComputer_Impl_Instance_PROC_SW_FLT_LST_CASE_Filter_LST_App-bin PROPERTIES OUTPUT_NAME MissionComputer_Impl_Instance_PROC_SW_FLT_LST_CASE_Filter_LST_App)
-
-
-add_executable(MissionComputer_Impl_Instance_PROC_SW_MON_REQ_CASE_Monitor_Req_App-bin app-MissionComputer_Impl_Instance_PROC_SW_MON_REQ_CASE_Monitor_Req_App/MissionComputer_Impl_Instance_PROC_SW_MON_REQ_CASE_Monitor_Req_App.c)
-
-target_link_libraries(MissionComputer_Impl_Instance_PROC_SW_MON_REQ_CASE_Monitor_Req_App-bin LINK_PUBLIC main m)
-
-set_target_properties(MissionComputer_Impl_Instance_PROC_SW_MON_REQ_CASE_Monitor_Req_App-bin PROPERTIES OUTPUT_NAME MissionComputer_Impl_Instance_PROC_SW_MON_REQ_CASE_Monitor_Req_App)
+set_target_properties(SW_Impl_Instance_UXAS_UxAS_App-bin PROPERTIES OUTPUT_NAME SW_Impl_Instance_UXAS_UxAS_App)
 
 
-add_executable(MissionComputer_Impl_Instance_PROC_SW_MON_GEO_CASE_Monitor_Geo_App-bin app-MissionComputer_Impl_Instance_PROC_SW_MON_GEO_CASE_Monitor_Geo_App/MissionComputer_Impl_Instance_PROC_SW_MON_GEO_CASE_Monitor_Geo_App.c)
+add_executable(SW_Impl_Instance_WPM_WaypointPlanManagerService_App-bin app-SW_Impl_Instance_WPM_WaypointPlanManagerService_App/SW_Impl_Instance_WPM_WaypointPlanManagerService_App.c)
 
-target_link_libraries(MissionComputer_Impl_Instance_PROC_SW_MON_GEO_CASE_Monitor_Geo_App-bin LINK_PUBLIC main m)
+target_link_libraries(SW_Impl_Instance_WPM_WaypointPlanManagerService_App-bin LINK_PUBLIC main m)
 
-set_target_properties(MissionComputer_Impl_Instance_PROC_SW_MON_GEO_CASE_Monitor_Geo_App-bin PROPERTIES OUTPUT_NAME MissionComputer_Impl_Instance_PROC_SW_MON_GEO_CASE_Monitor_Geo_App)
+set_target_properties(SW_Impl_Instance_WPM_WaypointPlanManagerService_App-bin PROPERTIES OUTPUT_NAME SW_Impl_Instance_WPM_WaypointPlanManagerService_App)
+
+
+add_executable(SW_Impl_Instance_AM_Gate_CASE_AttestationGate_App-bin app-SW_Impl_Instance_AM_Gate_CASE_AttestationGate_App/SW_Impl_Instance_AM_Gate_CASE_AttestationGate_App.c)
+
+target_link_libraries(SW_Impl_Instance_AM_Gate_CASE_AttestationGate_App-bin LINK_PUBLIC main m)
+
+set_target_properties(SW_Impl_Instance_AM_Gate_CASE_AttestationGate_App-bin PROPERTIES OUTPUT_NAME SW_Impl_Instance_AM_Gate_CASE_AttestationGate_App)
+
+
+add_executable(SW_Impl_Instance_FLT_LST_CASE_Filter_LST_App-bin app-SW_Impl_Instance_FLT_LST_CASE_Filter_LST_App/SW_Impl_Instance_FLT_LST_CASE_Filter_LST_App.c)
+
+target_link_libraries(SW_Impl_Instance_FLT_LST_CASE_Filter_LST_App-bin LINK_PUBLIC main m)
+
+set_target_properties(SW_Impl_Instance_FLT_LST_CASE_Filter_LST_App-bin PROPERTIES OUTPUT_NAME SW_Impl_Instance_FLT_LST_CASE_Filter_LST_App)
+
+
+add_executable(SW_Impl_Instance_MON_REQ_CASE_Monitor_Req_App-bin app-SW_Impl_Instance_MON_REQ_CASE_Monitor_Req_App/SW_Impl_Instance_MON_REQ_CASE_Monitor_Req_App.c)
+
+target_link_libraries(SW_Impl_Instance_MON_REQ_CASE_Monitor_Req_App-bin LINK_PUBLIC main m)
+
+set_target_properties(SW_Impl_Instance_MON_REQ_CASE_Monitor_Req_App-bin PROPERTIES OUTPUT_NAME SW_Impl_Instance_MON_REQ_CASE_Monitor_Req_App)
+
+
+add_executable(SW_Impl_Instance_MON_GEO_CASE_Monitor_Geo_App-bin app-SW_Impl_Instance_MON_GEO_CASE_Monitor_Geo_App/SW_Impl_Instance_MON_GEO_CASE_Monitor_Geo_App.c)
+
+target_link_libraries(SW_Impl_Instance_MON_GEO_CASE_Monitor_Geo_App-bin LINK_PUBLIC main m)
+
+set_target_properties(SW_Impl_Instance_MON_GEO_CASE_Monitor_Geo_App-bin PROPERTIES OUTPUT_NAME SW_Impl_Instance_MON_GEO_CASE_Monitor_Geo_App)
 
 
 add_executable(Main-bin app-Main/Main.c)

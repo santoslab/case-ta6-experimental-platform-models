@@ -480,126 +480,9 @@ CMakeFiles/main.dir/library/hamr/hamr_Main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/main.dir/library/hamr/hamr_Main.c.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/library/hamr/hamr_Main.c -o CMakeFiles/main.dir/library/hamr/hamr_Main.c.s
 
-CMakeFiles/main.dir/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_AM_Gate_CASE_AttestationGate_App.c.o: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_AM_Gate_CASE_AttestationGate_App.c.o: ../library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_AM_Gate_CASE_AttestationGate_App.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building C object CMakeFiles/main.dir/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_AM_Gate_CASE_AttestationGate_App.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main.dir/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_AM_Gate_CASE_AttestationGate_App.c.o   -c /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_AM_Gate_CASE_AttestationGate_App.c
-
-CMakeFiles/main.dir/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_AM_Gate_CASE_AttestationGate_App.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/main.dir/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_AM_Gate_CASE_AttestationGate_App.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_AM_Gate_CASE_AttestationGate_App.c > CMakeFiles/main.dir/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_AM_Gate_CASE_AttestationGate_App.c.i
-
-CMakeFiles/main.dir/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_AM_Gate_CASE_AttestationGate_App.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/main.dir/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_AM_Gate_CASE_AttestationGate_App.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_AM_Gate_CASE_AttestationGate_App.c -o CMakeFiles/main.dir/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_AM_Gate_CASE_AttestationGate_App.c.s
-
-CMakeFiles/main.dir/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_FC_UART_UARTDriver_App.c.o: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_FC_UART_UARTDriver_App.c.o: ../library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_FC_UART_UARTDriver_App.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building C object CMakeFiles/main.dir/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_FC_UART_UARTDriver_App.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main.dir/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_FC_UART_UARTDriver_App.c.o   -c /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_FC_UART_UARTDriver_App.c
-
-CMakeFiles/main.dir/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_FC_UART_UARTDriver_App.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/main.dir/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_FC_UART_UARTDriver_App.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_FC_UART_UARTDriver_App.c > CMakeFiles/main.dir/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_FC_UART_UARTDriver_App.c.i
-
-CMakeFiles/main.dir/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_FC_UART_UARTDriver_App.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/main.dir/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_FC_UART_UARTDriver_App.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_FC_UART_UARTDriver_App.c -o CMakeFiles/main.dir/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_FC_UART_UARTDriver_App.c.s
-
-CMakeFiles/main.dir/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_FLT_LST_CASE_Filter_LST_App.c.o: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_FLT_LST_CASE_Filter_LST_App.c.o: ../library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_FLT_LST_CASE_Filter_LST_App.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building C object CMakeFiles/main.dir/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_FLT_LST_CASE_Filter_LST_App.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main.dir/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_FLT_LST_CASE_Filter_LST_App.c.o   -c /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_FLT_LST_CASE_Filter_LST_App.c
-
-CMakeFiles/main.dir/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_FLT_LST_CASE_Filter_LST_App.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/main.dir/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_FLT_LST_CASE_Filter_LST_App.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_FLT_LST_CASE_Filter_LST_App.c > CMakeFiles/main.dir/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_FLT_LST_CASE_Filter_LST_App.c.i
-
-CMakeFiles/main.dir/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_FLT_LST_CASE_Filter_LST_App.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/main.dir/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_FLT_LST_CASE_Filter_LST_App.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_FLT_LST_CASE_Filter_LST_App.c -o CMakeFiles/main.dir/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_FLT_LST_CASE_Filter_LST_App.c.s
-
-CMakeFiles/main.dir/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_FlyZones_FlyZonesDatabase_App.c.o: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_FlyZones_FlyZonesDatabase_App.c.o: ../library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_FlyZones_FlyZonesDatabase_App.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building C object CMakeFiles/main.dir/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_FlyZones_FlyZonesDatabase_App.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main.dir/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_FlyZones_FlyZonesDatabase_App.c.o   -c /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_FlyZones_FlyZonesDatabase_App.c
-
-CMakeFiles/main.dir/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_FlyZones_FlyZonesDatabase_App.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/main.dir/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_FlyZones_FlyZonesDatabase_App.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_FlyZones_FlyZonesDatabase_App.c > CMakeFiles/main.dir/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_FlyZones_FlyZonesDatabase_App.c.i
-
-CMakeFiles/main.dir/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_FlyZones_FlyZonesDatabase_App.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/main.dir/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_FlyZones_FlyZonesDatabase_App.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_FlyZones_FlyZonesDatabase_App.c -o CMakeFiles/main.dir/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_FlyZones_FlyZonesDatabase_App.c.s
-
-CMakeFiles/main.dir/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_MON_GEO_CASE_Monitor_Geo_App.c.o: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_MON_GEO_CASE_Monitor_Geo_App.c.o: ../library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_MON_GEO_CASE_Monitor_Geo_App.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building C object CMakeFiles/main.dir/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_MON_GEO_CASE_Monitor_Geo_App.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main.dir/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_MON_GEO_CASE_Monitor_Geo_App.c.o   -c /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_MON_GEO_CASE_Monitor_Geo_App.c
-
-CMakeFiles/main.dir/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_MON_GEO_CASE_Monitor_Geo_App.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/main.dir/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_MON_GEO_CASE_Monitor_Geo_App.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_MON_GEO_CASE_Monitor_Geo_App.c > CMakeFiles/main.dir/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_MON_GEO_CASE_Monitor_Geo_App.c.i
-
-CMakeFiles/main.dir/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_MON_GEO_CASE_Monitor_Geo_App.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/main.dir/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_MON_GEO_CASE_Monitor_Geo_App.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_MON_GEO_CASE_Monitor_Geo_App.c -o CMakeFiles/main.dir/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_MON_GEO_CASE_Monitor_Geo_App.c.s
-
-CMakeFiles/main.dir/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_MON_REQ_CASE_Monitor_Req_App.c.o: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_MON_REQ_CASE_Monitor_Req_App.c.o: ../library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_MON_REQ_CASE_Monitor_Req_App.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building C object CMakeFiles/main.dir/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_MON_REQ_CASE_Monitor_Req_App.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main.dir/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_MON_REQ_CASE_Monitor_Req_App.c.o   -c /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_MON_REQ_CASE_Monitor_Req_App.c
-
-CMakeFiles/main.dir/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_MON_REQ_CASE_Monitor_Req_App.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/main.dir/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_MON_REQ_CASE_Monitor_Req_App.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_MON_REQ_CASE_Monitor_Req_App.c > CMakeFiles/main.dir/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_MON_REQ_CASE_Monitor_Req_App.c.i
-
-CMakeFiles/main.dir/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_MON_REQ_CASE_Monitor_Req_App.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/main.dir/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_MON_REQ_CASE_Monitor_Req_App.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_MON_REQ_CASE_Monitor_Req_App.c -o CMakeFiles/main.dir/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_MON_REQ_CASE_Monitor_Req_App.c.s
-
-CMakeFiles/main.dir/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_RADIO_RadioDriver_Attestation_App.c.o: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_RADIO_RadioDriver_Attestation_App.c.o: ../library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_RADIO_RadioDriver_Attestation_App.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building C object CMakeFiles/main.dir/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_RADIO_RadioDriver_Attestation_App.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main.dir/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_RADIO_RadioDriver_Attestation_App.c.o   -c /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_RADIO_RadioDriver_Attestation_App.c
-
-CMakeFiles/main.dir/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_RADIO_RadioDriver_Attestation_App.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/main.dir/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_RADIO_RadioDriver_Attestation_App.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_RADIO_RadioDriver_Attestation_App.c > CMakeFiles/main.dir/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_RADIO_RadioDriver_Attestation_App.c.i
-
-CMakeFiles/main.dir/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_RADIO_RadioDriver_Attestation_App.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/main.dir/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_RADIO_RadioDriver_Attestation_App.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_RADIO_RadioDriver_Attestation_App.c -o CMakeFiles/main.dir/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_RADIO_RadioDriver_Attestation_App.c.s
-
-CMakeFiles/main.dir/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_UXAS_UxAS_App.c.o: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_UXAS_UxAS_App.c.o: ../library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_UXAS_UxAS_App.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building C object CMakeFiles/main.dir/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_UXAS_UxAS_App.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main.dir/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_UXAS_UxAS_App.c.o   -c /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_UXAS_UxAS_App.c
-
-CMakeFiles/main.dir/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_UXAS_UxAS_App.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/main.dir/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_UXAS_UxAS_App.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_UXAS_UxAS_App.c > CMakeFiles/main.dir/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_UXAS_UxAS_App.c.i
-
-CMakeFiles/main.dir/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_UXAS_UxAS_App.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/main.dir/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_UXAS_UxAS_App.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_UXAS_UxAS_App.c -o CMakeFiles/main.dir/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_UXAS_UxAS_App.c.s
-
-CMakeFiles/main.dir/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_WPM_WaypointPlanManagerService_App.c.o: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_WPM_WaypointPlanManagerService_App.c.o: ../library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_WPM_WaypointPlanManagerService_App.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building C object CMakeFiles/main.dir/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_WPM_WaypointPlanManagerService_App.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main.dir/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_WPM_WaypointPlanManagerService_App.c.o   -c /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_WPM_WaypointPlanManagerService_App.c
-
-CMakeFiles/main.dir/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_WPM_WaypointPlanManagerService_App.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/main.dir/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_WPM_WaypointPlanManagerService_App.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_WPM_WaypointPlanManagerService_App.c > CMakeFiles/main.dir/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_WPM_WaypointPlanManagerService_App.c.i
-
-CMakeFiles/main.dir/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_WPM_WaypointPlanManagerService_App.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/main.dir/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_WPM_WaypointPlanManagerService_App.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_WPM_WaypointPlanManagerService_App.c -o CMakeFiles/main.dir/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_WPM_WaypointPlanManagerService_App.c.s
-
 CMakeFiles/main.dir/library/hamr/hamr_PlatformNix.c.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/library/hamr/hamr_PlatformNix.c.o: ../library/hamr/hamr_PlatformNix.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building C object CMakeFiles/main.dir/library/hamr/hamr_PlatformNix.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building C object CMakeFiles/main.dir/library/hamr/hamr_PlatformNix.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main.dir/library/hamr/hamr_PlatformNix.c.o   -c /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/library/hamr/hamr_PlatformNix.c
 
 CMakeFiles/main.dir/library/hamr/hamr_PlatformNix.c.i: cmake_force
@@ -612,7 +495,7 @@ CMakeFiles/main.dir/library/hamr/hamr_PlatformNix.c.s: cmake_force
 
 CMakeFiles/main.dir/library/hamr/SW/hamr_SW_CASE_AttestationGate_thr_Impl_Bridge.c.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/library/hamr/SW/hamr_SW_CASE_AttestationGate_thr_Impl_Bridge.c.o: ../library/hamr/SW/hamr_SW_CASE_AttestationGate_thr_Impl_Bridge.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building C object CMakeFiles/main.dir/library/hamr/SW/hamr_SW_CASE_AttestationGate_thr_Impl_Bridge.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building C object CMakeFiles/main.dir/library/hamr/SW/hamr_SW_CASE_AttestationGate_thr_Impl_Bridge.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main.dir/library/hamr/SW/hamr_SW_CASE_AttestationGate_thr_Impl_Bridge.c.o   -c /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/library/hamr/SW/hamr_SW_CASE_AttestationGate_thr_Impl_Bridge.c
 
 CMakeFiles/main.dir/library/hamr/SW/hamr_SW_CASE_AttestationGate_thr_Impl_Bridge.c.i: cmake_force
@@ -625,7 +508,7 @@ CMakeFiles/main.dir/library/hamr/SW/hamr_SW_CASE_AttestationGate_thr_Impl_Bridge
 
 CMakeFiles/main.dir/library/hamr/SW/CASE_AttestationGate_thr_Impl_Bridge/hamr_SW_CASE_AttestationGate_thr_Impl_Bridge_Api.c.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/library/hamr/SW/CASE_AttestationGate_thr_Impl_Bridge/hamr_SW_CASE_AttestationGate_thr_Impl_Bridge_Api.c.o: ../library/hamr/SW/CASE_AttestationGate_thr_Impl_Bridge/hamr_SW_CASE_AttestationGate_thr_Impl_Bridge_Api.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building C object CMakeFiles/main.dir/library/hamr/SW/CASE_AttestationGate_thr_Impl_Bridge/hamr_SW_CASE_AttestationGate_thr_Impl_Bridge_Api.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building C object CMakeFiles/main.dir/library/hamr/SW/CASE_AttestationGate_thr_Impl_Bridge/hamr_SW_CASE_AttestationGate_thr_Impl_Bridge_Api.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main.dir/library/hamr/SW/CASE_AttestationGate_thr_Impl_Bridge/hamr_SW_CASE_AttestationGate_thr_Impl_Bridge_Api.c.o   -c /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/library/hamr/SW/CASE_AttestationGate_thr_Impl_Bridge/hamr_SW_CASE_AttestationGate_thr_Impl_Bridge_Api.c
 
 CMakeFiles/main.dir/library/hamr/SW/CASE_AttestationGate_thr_Impl_Bridge/hamr_SW_CASE_AttestationGate_thr_Impl_Bridge_Api.c.i: cmake_force
@@ -638,7 +521,7 @@ CMakeFiles/main.dir/library/hamr/SW/CASE_AttestationGate_thr_Impl_Bridge/hamr_SW
 
 CMakeFiles/main.dir/library/hamr/SW/CASE_AttestationGate_thr_Impl_Bridge/hamr_SW_CASE_AttestationGate_thr_Impl_Bridge_EntryPoints.c.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/library/hamr/SW/CASE_AttestationGate_thr_Impl_Bridge/hamr_SW_CASE_AttestationGate_thr_Impl_Bridge_EntryPoints.c.o: ../library/hamr/SW/CASE_AttestationGate_thr_Impl_Bridge/hamr_SW_CASE_AttestationGate_thr_Impl_Bridge_EntryPoints.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building C object CMakeFiles/main.dir/library/hamr/SW/CASE_AttestationGate_thr_Impl_Bridge/hamr_SW_CASE_AttestationGate_thr_Impl_Bridge_EntryPoints.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building C object CMakeFiles/main.dir/library/hamr/SW/CASE_AttestationGate_thr_Impl_Bridge/hamr_SW_CASE_AttestationGate_thr_Impl_Bridge_EntryPoints.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main.dir/library/hamr/SW/CASE_AttestationGate_thr_Impl_Bridge/hamr_SW_CASE_AttestationGate_thr_Impl_Bridge_EntryPoints.c.o   -c /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/library/hamr/SW/CASE_AttestationGate_thr_Impl_Bridge/hamr_SW_CASE_AttestationGate_thr_Impl_Bridge_EntryPoints.c
 
 CMakeFiles/main.dir/library/hamr/SW/CASE_AttestationGate_thr_Impl_Bridge/hamr_SW_CASE_AttestationGate_thr_Impl_Bridge_EntryPoints.c.i: cmake_force
@@ -651,7 +534,7 @@ CMakeFiles/main.dir/library/hamr/SW/CASE_AttestationGate_thr_Impl_Bridge/hamr_SW
 
 CMakeFiles/main.dir/library/hamr/SW/hamr_SW_CASE_AttestationGate_thr_Impl_Impl.c.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/library/hamr/SW/hamr_SW_CASE_AttestationGate_thr_Impl_Impl.c.o: ../library/hamr/SW/hamr_SW_CASE_AttestationGate_thr_Impl_Impl.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building C object CMakeFiles/main.dir/library/hamr/SW/hamr_SW_CASE_AttestationGate_thr_Impl_Impl.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building C object CMakeFiles/main.dir/library/hamr/SW/hamr_SW_CASE_AttestationGate_thr_Impl_Impl.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main.dir/library/hamr/SW/hamr_SW_CASE_AttestationGate_thr_Impl_Impl.c.o   -c /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/library/hamr/SW/hamr_SW_CASE_AttestationGate_thr_Impl_Impl.c
 
 CMakeFiles/main.dir/library/hamr/SW/hamr_SW_CASE_AttestationGate_thr_Impl_Impl.c.i: cmake_force
@@ -664,7 +547,7 @@ CMakeFiles/main.dir/library/hamr/SW/hamr_SW_CASE_AttestationGate_thr_Impl_Impl.c
 
 CMakeFiles/main.dir/library/hamr/SW/hamr_SW_CASE_Filter_LST_thr_Impl_Bridge.c.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/library/hamr/SW/hamr_SW_CASE_Filter_LST_thr_Impl_Bridge.c.o: ../library/hamr/SW/hamr_SW_CASE_Filter_LST_thr_Impl_Bridge.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building C object CMakeFiles/main.dir/library/hamr/SW/hamr_SW_CASE_Filter_LST_thr_Impl_Bridge.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building C object CMakeFiles/main.dir/library/hamr/SW/hamr_SW_CASE_Filter_LST_thr_Impl_Bridge.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main.dir/library/hamr/SW/hamr_SW_CASE_Filter_LST_thr_Impl_Bridge.c.o   -c /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/library/hamr/SW/hamr_SW_CASE_Filter_LST_thr_Impl_Bridge.c
 
 CMakeFiles/main.dir/library/hamr/SW/hamr_SW_CASE_Filter_LST_thr_Impl_Bridge.c.i: cmake_force
@@ -677,7 +560,7 @@ CMakeFiles/main.dir/library/hamr/SW/hamr_SW_CASE_Filter_LST_thr_Impl_Bridge.c.s:
 
 CMakeFiles/main.dir/library/hamr/SW/CASE_Filter_LST_thr_Impl_Bridge/hamr_SW_CASE_Filter_LST_thr_Impl_Bridge_Api.c.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/library/hamr/SW/CASE_Filter_LST_thr_Impl_Bridge/hamr_SW_CASE_Filter_LST_thr_Impl_Bridge_Api.c.o: ../library/hamr/SW/CASE_Filter_LST_thr_Impl_Bridge/hamr_SW_CASE_Filter_LST_thr_Impl_Bridge_Api.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Building C object CMakeFiles/main.dir/library/hamr/SW/CASE_Filter_LST_thr_Impl_Bridge/hamr_SW_CASE_Filter_LST_thr_Impl_Bridge_Api.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building C object CMakeFiles/main.dir/library/hamr/SW/CASE_Filter_LST_thr_Impl_Bridge/hamr_SW_CASE_Filter_LST_thr_Impl_Bridge_Api.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main.dir/library/hamr/SW/CASE_Filter_LST_thr_Impl_Bridge/hamr_SW_CASE_Filter_LST_thr_Impl_Bridge_Api.c.o   -c /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/library/hamr/SW/CASE_Filter_LST_thr_Impl_Bridge/hamr_SW_CASE_Filter_LST_thr_Impl_Bridge_Api.c
 
 CMakeFiles/main.dir/library/hamr/SW/CASE_Filter_LST_thr_Impl_Bridge/hamr_SW_CASE_Filter_LST_thr_Impl_Bridge_Api.c.i: cmake_force
@@ -690,7 +573,7 @@ CMakeFiles/main.dir/library/hamr/SW/CASE_Filter_LST_thr_Impl_Bridge/hamr_SW_CASE
 
 CMakeFiles/main.dir/library/hamr/SW/CASE_Filter_LST_thr_Impl_Bridge/hamr_SW_CASE_Filter_LST_thr_Impl_Bridge_EntryPoints.c.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/library/hamr/SW/CASE_Filter_LST_thr_Impl_Bridge/hamr_SW_CASE_Filter_LST_thr_Impl_Bridge_EntryPoints.c.o: ../library/hamr/SW/CASE_Filter_LST_thr_Impl_Bridge/hamr_SW_CASE_Filter_LST_thr_Impl_Bridge_EntryPoints.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Building C object CMakeFiles/main.dir/library/hamr/SW/CASE_Filter_LST_thr_Impl_Bridge/hamr_SW_CASE_Filter_LST_thr_Impl_Bridge_EntryPoints.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building C object CMakeFiles/main.dir/library/hamr/SW/CASE_Filter_LST_thr_Impl_Bridge/hamr_SW_CASE_Filter_LST_thr_Impl_Bridge_EntryPoints.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main.dir/library/hamr/SW/CASE_Filter_LST_thr_Impl_Bridge/hamr_SW_CASE_Filter_LST_thr_Impl_Bridge_EntryPoints.c.o   -c /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/library/hamr/SW/CASE_Filter_LST_thr_Impl_Bridge/hamr_SW_CASE_Filter_LST_thr_Impl_Bridge_EntryPoints.c
 
 CMakeFiles/main.dir/library/hamr/SW/CASE_Filter_LST_thr_Impl_Bridge/hamr_SW_CASE_Filter_LST_thr_Impl_Bridge_EntryPoints.c.i: cmake_force
@@ -703,7 +586,7 @@ CMakeFiles/main.dir/library/hamr/SW/CASE_Filter_LST_thr_Impl_Bridge/hamr_SW_CASE
 
 CMakeFiles/main.dir/library/hamr/SW/hamr_SW_CASE_Filter_LST_thr_Impl_Impl.c.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/library/hamr/SW/hamr_SW_CASE_Filter_LST_thr_Impl_Impl.c.o: ../library/hamr/SW/hamr_SW_CASE_Filter_LST_thr_Impl_Impl.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_49) "Building C object CMakeFiles/main.dir/library/hamr/SW/hamr_SW_CASE_Filter_LST_thr_Impl_Impl.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building C object CMakeFiles/main.dir/library/hamr/SW/hamr_SW_CASE_Filter_LST_thr_Impl_Impl.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main.dir/library/hamr/SW/hamr_SW_CASE_Filter_LST_thr_Impl_Impl.c.o   -c /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/library/hamr/SW/hamr_SW_CASE_Filter_LST_thr_Impl_Impl.c
 
 CMakeFiles/main.dir/library/hamr/SW/hamr_SW_CASE_Filter_LST_thr_Impl_Impl.c.i: cmake_force
@@ -716,7 +599,7 @@ CMakeFiles/main.dir/library/hamr/SW/hamr_SW_CASE_Filter_LST_thr_Impl_Impl.c.s: c
 
 CMakeFiles/main.dir/library/hamr/SW/hamr_SW_CASE_Monitor_Geo_thr_Impl_Bridge.c.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/library/hamr/SW/hamr_SW_CASE_Monitor_Geo_thr_Impl_Bridge.c.o: ../library/hamr/SW/hamr_SW_CASE_Monitor_Geo_thr_Impl_Bridge.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_50) "Building C object CMakeFiles/main.dir/library/hamr/SW/hamr_SW_CASE_Monitor_Geo_thr_Impl_Bridge.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building C object CMakeFiles/main.dir/library/hamr/SW/hamr_SW_CASE_Monitor_Geo_thr_Impl_Bridge.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main.dir/library/hamr/SW/hamr_SW_CASE_Monitor_Geo_thr_Impl_Bridge.c.o   -c /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/library/hamr/SW/hamr_SW_CASE_Monitor_Geo_thr_Impl_Bridge.c
 
 CMakeFiles/main.dir/library/hamr/SW/hamr_SW_CASE_Monitor_Geo_thr_Impl_Bridge.c.i: cmake_force
@@ -729,7 +612,7 @@ CMakeFiles/main.dir/library/hamr/SW/hamr_SW_CASE_Monitor_Geo_thr_Impl_Bridge.c.s
 
 CMakeFiles/main.dir/library/hamr/SW/CASE_Monitor_Geo_thr_Impl_Bridge/hamr_SW_CASE_Monitor_Geo_thr_Impl_Bridge_Api.c.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/library/hamr/SW/CASE_Monitor_Geo_thr_Impl_Bridge/hamr_SW_CASE_Monitor_Geo_thr_Impl_Bridge_Api.c.o: ../library/hamr/SW/CASE_Monitor_Geo_thr_Impl_Bridge/hamr_SW_CASE_Monitor_Geo_thr_Impl_Bridge_Api.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_51) "Building C object CMakeFiles/main.dir/library/hamr/SW/CASE_Monitor_Geo_thr_Impl_Bridge/hamr_SW_CASE_Monitor_Geo_thr_Impl_Bridge_Api.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building C object CMakeFiles/main.dir/library/hamr/SW/CASE_Monitor_Geo_thr_Impl_Bridge/hamr_SW_CASE_Monitor_Geo_thr_Impl_Bridge_Api.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main.dir/library/hamr/SW/CASE_Monitor_Geo_thr_Impl_Bridge/hamr_SW_CASE_Monitor_Geo_thr_Impl_Bridge_Api.c.o   -c /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/library/hamr/SW/CASE_Monitor_Geo_thr_Impl_Bridge/hamr_SW_CASE_Monitor_Geo_thr_Impl_Bridge_Api.c
 
 CMakeFiles/main.dir/library/hamr/SW/CASE_Monitor_Geo_thr_Impl_Bridge/hamr_SW_CASE_Monitor_Geo_thr_Impl_Bridge_Api.c.i: cmake_force
@@ -742,7 +625,7 @@ CMakeFiles/main.dir/library/hamr/SW/CASE_Monitor_Geo_thr_Impl_Bridge/hamr_SW_CAS
 
 CMakeFiles/main.dir/library/hamr/SW/CASE_Monitor_Geo_thr_Impl_Bridge/hamr_SW_CASE_Monitor_Geo_thr_Impl_Bridge_EntryPoints.c.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/library/hamr/SW/CASE_Monitor_Geo_thr_Impl_Bridge/hamr_SW_CASE_Monitor_Geo_thr_Impl_Bridge_EntryPoints.c.o: ../library/hamr/SW/CASE_Monitor_Geo_thr_Impl_Bridge/hamr_SW_CASE_Monitor_Geo_thr_Impl_Bridge_EntryPoints.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_52) "Building C object CMakeFiles/main.dir/library/hamr/SW/CASE_Monitor_Geo_thr_Impl_Bridge/hamr_SW_CASE_Monitor_Geo_thr_Impl_Bridge_EntryPoints.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building C object CMakeFiles/main.dir/library/hamr/SW/CASE_Monitor_Geo_thr_Impl_Bridge/hamr_SW_CASE_Monitor_Geo_thr_Impl_Bridge_EntryPoints.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main.dir/library/hamr/SW/CASE_Monitor_Geo_thr_Impl_Bridge/hamr_SW_CASE_Monitor_Geo_thr_Impl_Bridge_EntryPoints.c.o   -c /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/library/hamr/SW/CASE_Monitor_Geo_thr_Impl_Bridge/hamr_SW_CASE_Monitor_Geo_thr_Impl_Bridge_EntryPoints.c
 
 CMakeFiles/main.dir/library/hamr/SW/CASE_Monitor_Geo_thr_Impl_Bridge/hamr_SW_CASE_Monitor_Geo_thr_Impl_Bridge_EntryPoints.c.i: cmake_force
@@ -755,7 +638,7 @@ CMakeFiles/main.dir/library/hamr/SW/CASE_Monitor_Geo_thr_Impl_Bridge/hamr_SW_CAS
 
 CMakeFiles/main.dir/library/hamr/SW/hamr_SW_CASE_Monitor_Geo_thr_Impl_Impl.c.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/library/hamr/SW/hamr_SW_CASE_Monitor_Geo_thr_Impl_Impl.c.o: ../library/hamr/SW/hamr_SW_CASE_Monitor_Geo_thr_Impl_Impl.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_53) "Building C object CMakeFiles/main.dir/library/hamr/SW/hamr_SW_CASE_Monitor_Geo_thr_Impl_Impl.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building C object CMakeFiles/main.dir/library/hamr/SW/hamr_SW_CASE_Monitor_Geo_thr_Impl_Impl.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main.dir/library/hamr/SW/hamr_SW_CASE_Monitor_Geo_thr_Impl_Impl.c.o   -c /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/library/hamr/SW/hamr_SW_CASE_Monitor_Geo_thr_Impl_Impl.c
 
 CMakeFiles/main.dir/library/hamr/SW/hamr_SW_CASE_Monitor_Geo_thr_Impl_Impl.c.i: cmake_force
@@ -768,7 +651,7 @@ CMakeFiles/main.dir/library/hamr/SW/hamr_SW_CASE_Monitor_Geo_thr_Impl_Impl.c.s: 
 
 CMakeFiles/main.dir/library/hamr/SW/hamr_SW_CASE_Monitor_Req_thr_Impl_Bridge.c.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/library/hamr/SW/hamr_SW_CASE_Monitor_Req_thr_Impl_Bridge.c.o: ../library/hamr/SW/hamr_SW_CASE_Monitor_Req_thr_Impl_Bridge.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_54) "Building C object CMakeFiles/main.dir/library/hamr/SW/hamr_SW_CASE_Monitor_Req_thr_Impl_Bridge.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building C object CMakeFiles/main.dir/library/hamr/SW/hamr_SW_CASE_Monitor_Req_thr_Impl_Bridge.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main.dir/library/hamr/SW/hamr_SW_CASE_Monitor_Req_thr_Impl_Bridge.c.o   -c /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/library/hamr/SW/hamr_SW_CASE_Monitor_Req_thr_Impl_Bridge.c
 
 CMakeFiles/main.dir/library/hamr/SW/hamr_SW_CASE_Monitor_Req_thr_Impl_Bridge.c.i: cmake_force
@@ -781,7 +664,7 @@ CMakeFiles/main.dir/library/hamr/SW/hamr_SW_CASE_Monitor_Req_thr_Impl_Bridge.c.s
 
 CMakeFiles/main.dir/library/hamr/SW/CASE_Monitor_Req_thr_Impl_Bridge/hamr_SW_CASE_Monitor_Req_thr_Impl_Bridge_Api.c.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/library/hamr/SW/CASE_Monitor_Req_thr_Impl_Bridge/hamr_SW_CASE_Monitor_Req_thr_Impl_Bridge_Api.c.o: ../library/hamr/SW/CASE_Monitor_Req_thr_Impl_Bridge/hamr_SW_CASE_Monitor_Req_thr_Impl_Bridge_Api.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_55) "Building C object CMakeFiles/main.dir/library/hamr/SW/CASE_Monitor_Req_thr_Impl_Bridge/hamr_SW_CASE_Monitor_Req_thr_Impl_Bridge_Api.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building C object CMakeFiles/main.dir/library/hamr/SW/CASE_Monitor_Req_thr_Impl_Bridge/hamr_SW_CASE_Monitor_Req_thr_Impl_Bridge_Api.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main.dir/library/hamr/SW/CASE_Monitor_Req_thr_Impl_Bridge/hamr_SW_CASE_Monitor_Req_thr_Impl_Bridge_Api.c.o   -c /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/library/hamr/SW/CASE_Monitor_Req_thr_Impl_Bridge/hamr_SW_CASE_Monitor_Req_thr_Impl_Bridge_Api.c
 
 CMakeFiles/main.dir/library/hamr/SW/CASE_Monitor_Req_thr_Impl_Bridge/hamr_SW_CASE_Monitor_Req_thr_Impl_Bridge_Api.c.i: cmake_force
@@ -794,7 +677,7 @@ CMakeFiles/main.dir/library/hamr/SW/CASE_Monitor_Req_thr_Impl_Bridge/hamr_SW_CAS
 
 CMakeFiles/main.dir/library/hamr/SW/CASE_Monitor_Req_thr_Impl_Bridge/hamr_SW_CASE_Monitor_Req_thr_Impl_Bridge_EntryPoints.c.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/library/hamr/SW/CASE_Monitor_Req_thr_Impl_Bridge/hamr_SW_CASE_Monitor_Req_thr_Impl_Bridge_EntryPoints.c.o: ../library/hamr/SW/CASE_Monitor_Req_thr_Impl_Bridge/hamr_SW_CASE_Monitor_Req_thr_Impl_Bridge_EntryPoints.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_56) "Building C object CMakeFiles/main.dir/library/hamr/SW/CASE_Monitor_Req_thr_Impl_Bridge/hamr_SW_CASE_Monitor_Req_thr_Impl_Bridge_EntryPoints.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Building C object CMakeFiles/main.dir/library/hamr/SW/CASE_Monitor_Req_thr_Impl_Bridge/hamr_SW_CASE_Monitor_Req_thr_Impl_Bridge_EntryPoints.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main.dir/library/hamr/SW/CASE_Monitor_Req_thr_Impl_Bridge/hamr_SW_CASE_Monitor_Req_thr_Impl_Bridge_EntryPoints.c.o   -c /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/library/hamr/SW/CASE_Monitor_Req_thr_Impl_Bridge/hamr_SW_CASE_Monitor_Req_thr_Impl_Bridge_EntryPoints.c
 
 CMakeFiles/main.dir/library/hamr/SW/CASE_Monitor_Req_thr_Impl_Bridge/hamr_SW_CASE_Monitor_Req_thr_Impl_Bridge_EntryPoints.c.i: cmake_force
@@ -807,7 +690,7 @@ CMakeFiles/main.dir/library/hamr/SW/CASE_Monitor_Req_thr_Impl_Bridge/hamr_SW_CAS
 
 CMakeFiles/main.dir/library/hamr/SW/hamr_SW_CASE_Monitor_Req_thr_Impl_Impl.c.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/library/hamr/SW/hamr_SW_CASE_Monitor_Req_thr_Impl_Impl.c.o: ../library/hamr/SW/hamr_SW_CASE_Monitor_Req_thr_Impl_Impl.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_57) "Building C object CMakeFiles/main.dir/library/hamr/SW/hamr_SW_CASE_Monitor_Req_thr_Impl_Impl.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Building C object CMakeFiles/main.dir/library/hamr/SW/hamr_SW_CASE_Monitor_Req_thr_Impl_Impl.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main.dir/library/hamr/SW/hamr_SW_CASE_Monitor_Req_thr_Impl_Impl.c.o   -c /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/library/hamr/SW/hamr_SW_CASE_Monitor_Req_thr_Impl_Impl.c
 
 CMakeFiles/main.dir/library/hamr/SW/hamr_SW_CASE_Monitor_Req_thr_Impl_Impl.c.i: cmake_force
@@ -820,7 +703,7 @@ CMakeFiles/main.dir/library/hamr/SW/hamr_SW_CASE_Monitor_Req_thr_Impl_Impl.c.s: 
 
 CMakeFiles/main.dir/library/hamr/SW/hamr_SW_FlyZonesDatabase_thr_Impl_Bridge.c.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/library/hamr/SW/hamr_SW_FlyZonesDatabase_thr_Impl_Bridge.c.o: ../library/hamr/SW/hamr_SW_FlyZonesDatabase_thr_Impl_Bridge.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_58) "Building C object CMakeFiles/main.dir/library/hamr/SW/hamr_SW_FlyZonesDatabase_thr_Impl_Bridge.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_49) "Building C object CMakeFiles/main.dir/library/hamr/SW/hamr_SW_FlyZonesDatabase_thr_Impl_Bridge.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main.dir/library/hamr/SW/hamr_SW_FlyZonesDatabase_thr_Impl_Bridge.c.o   -c /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/library/hamr/SW/hamr_SW_FlyZonesDatabase_thr_Impl_Bridge.c
 
 CMakeFiles/main.dir/library/hamr/SW/hamr_SW_FlyZonesDatabase_thr_Impl_Bridge.c.i: cmake_force
@@ -833,7 +716,7 @@ CMakeFiles/main.dir/library/hamr/SW/hamr_SW_FlyZonesDatabase_thr_Impl_Bridge.c.s
 
 CMakeFiles/main.dir/library/hamr/SW/FlyZonesDatabase_thr_Impl_Bridge/hamr_SW_FlyZonesDatabase_thr_Impl_Bridge_Api.c.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/library/hamr/SW/FlyZonesDatabase_thr_Impl_Bridge/hamr_SW_FlyZonesDatabase_thr_Impl_Bridge_Api.c.o: ../library/hamr/SW/FlyZonesDatabase_thr_Impl_Bridge/hamr_SW_FlyZonesDatabase_thr_Impl_Bridge_Api.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_59) "Building C object CMakeFiles/main.dir/library/hamr/SW/FlyZonesDatabase_thr_Impl_Bridge/hamr_SW_FlyZonesDatabase_thr_Impl_Bridge_Api.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_50) "Building C object CMakeFiles/main.dir/library/hamr/SW/FlyZonesDatabase_thr_Impl_Bridge/hamr_SW_FlyZonesDatabase_thr_Impl_Bridge_Api.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main.dir/library/hamr/SW/FlyZonesDatabase_thr_Impl_Bridge/hamr_SW_FlyZonesDatabase_thr_Impl_Bridge_Api.c.o   -c /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/library/hamr/SW/FlyZonesDatabase_thr_Impl_Bridge/hamr_SW_FlyZonesDatabase_thr_Impl_Bridge_Api.c
 
 CMakeFiles/main.dir/library/hamr/SW/FlyZonesDatabase_thr_Impl_Bridge/hamr_SW_FlyZonesDatabase_thr_Impl_Bridge_Api.c.i: cmake_force
@@ -846,7 +729,7 @@ CMakeFiles/main.dir/library/hamr/SW/FlyZonesDatabase_thr_Impl_Bridge/hamr_SW_Fly
 
 CMakeFiles/main.dir/library/hamr/SW/FlyZonesDatabase_thr_Impl_Bridge/hamr_SW_FlyZonesDatabase_thr_Impl_Bridge_EntryPoints.c.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/library/hamr/SW/FlyZonesDatabase_thr_Impl_Bridge/hamr_SW_FlyZonesDatabase_thr_Impl_Bridge_EntryPoints.c.o: ../library/hamr/SW/FlyZonesDatabase_thr_Impl_Bridge/hamr_SW_FlyZonesDatabase_thr_Impl_Bridge_EntryPoints.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_60) "Building C object CMakeFiles/main.dir/library/hamr/SW/FlyZonesDatabase_thr_Impl_Bridge/hamr_SW_FlyZonesDatabase_thr_Impl_Bridge_EntryPoints.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_51) "Building C object CMakeFiles/main.dir/library/hamr/SW/FlyZonesDatabase_thr_Impl_Bridge/hamr_SW_FlyZonesDatabase_thr_Impl_Bridge_EntryPoints.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main.dir/library/hamr/SW/FlyZonesDatabase_thr_Impl_Bridge/hamr_SW_FlyZonesDatabase_thr_Impl_Bridge_EntryPoints.c.o   -c /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/library/hamr/SW/FlyZonesDatabase_thr_Impl_Bridge/hamr_SW_FlyZonesDatabase_thr_Impl_Bridge_EntryPoints.c
 
 CMakeFiles/main.dir/library/hamr/SW/FlyZonesDatabase_thr_Impl_Bridge/hamr_SW_FlyZonesDatabase_thr_Impl_Bridge_EntryPoints.c.i: cmake_force
@@ -859,7 +742,7 @@ CMakeFiles/main.dir/library/hamr/SW/FlyZonesDatabase_thr_Impl_Bridge/hamr_SW_Fly
 
 CMakeFiles/main.dir/library/hamr/SW/hamr_SW_FlyZonesDatabase_thr_Impl_Impl.c.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/library/hamr/SW/hamr_SW_FlyZonesDatabase_thr_Impl_Impl.c.o: ../library/hamr/SW/hamr_SW_FlyZonesDatabase_thr_Impl_Impl.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_61) "Building C object CMakeFiles/main.dir/library/hamr/SW/hamr_SW_FlyZonesDatabase_thr_Impl_Impl.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_52) "Building C object CMakeFiles/main.dir/library/hamr/SW/hamr_SW_FlyZonesDatabase_thr_Impl_Impl.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main.dir/library/hamr/SW/hamr_SW_FlyZonesDatabase_thr_Impl_Impl.c.o   -c /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/library/hamr/SW/hamr_SW_FlyZonesDatabase_thr_Impl_Impl.c
 
 CMakeFiles/main.dir/library/hamr/SW/hamr_SW_FlyZonesDatabase_thr_Impl_Impl.c.i: cmake_force
@@ -872,7 +755,7 @@ CMakeFiles/main.dir/library/hamr/SW/hamr_SW_FlyZonesDatabase_thr_Impl_Impl.c.s: 
 
 CMakeFiles/main.dir/library/hamr/SW/hamr_SW_RadioDriver_Attestation_thr_Impl_Bridge.c.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/library/hamr/SW/hamr_SW_RadioDriver_Attestation_thr_Impl_Bridge.c.o: ../library/hamr/SW/hamr_SW_RadioDriver_Attestation_thr_Impl_Bridge.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_62) "Building C object CMakeFiles/main.dir/library/hamr/SW/hamr_SW_RadioDriver_Attestation_thr_Impl_Bridge.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_53) "Building C object CMakeFiles/main.dir/library/hamr/SW/hamr_SW_RadioDriver_Attestation_thr_Impl_Bridge.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main.dir/library/hamr/SW/hamr_SW_RadioDriver_Attestation_thr_Impl_Bridge.c.o   -c /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/library/hamr/SW/hamr_SW_RadioDriver_Attestation_thr_Impl_Bridge.c
 
 CMakeFiles/main.dir/library/hamr/SW/hamr_SW_RadioDriver_Attestation_thr_Impl_Bridge.c.i: cmake_force
@@ -885,7 +768,7 @@ CMakeFiles/main.dir/library/hamr/SW/hamr_SW_RadioDriver_Attestation_thr_Impl_Bri
 
 CMakeFiles/main.dir/library/hamr/SW/RadioDriver_Attestation_thr_Impl_Bridge/hamr_SW_RadioDriver_Attestation_thr_Impl_Bridge_Api.c.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/library/hamr/SW/RadioDriver_Attestation_thr_Impl_Bridge/hamr_SW_RadioDriver_Attestation_thr_Impl_Bridge_Api.c.o: ../library/hamr/SW/RadioDriver_Attestation_thr_Impl_Bridge/hamr_SW_RadioDriver_Attestation_thr_Impl_Bridge_Api.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_63) "Building C object CMakeFiles/main.dir/library/hamr/SW/RadioDriver_Attestation_thr_Impl_Bridge/hamr_SW_RadioDriver_Attestation_thr_Impl_Bridge_Api.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_54) "Building C object CMakeFiles/main.dir/library/hamr/SW/RadioDriver_Attestation_thr_Impl_Bridge/hamr_SW_RadioDriver_Attestation_thr_Impl_Bridge_Api.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main.dir/library/hamr/SW/RadioDriver_Attestation_thr_Impl_Bridge/hamr_SW_RadioDriver_Attestation_thr_Impl_Bridge_Api.c.o   -c /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/library/hamr/SW/RadioDriver_Attestation_thr_Impl_Bridge/hamr_SW_RadioDriver_Attestation_thr_Impl_Bridge_Api.c
 
 CMakeFiles/main.dir/library/hamr/SW/RadioDriver_Attestation_thr_Impl_Bridge/hamr_SW_RadioDriver_Attestation_thr_Impl_Bridge_Api.c.i: cmake_force
@@ -898,7 +781,7 @@ CMakeFiles/main.dir/library/hamr/SW/RadioDriver_Attestation_thr_Impl_Bridge/hamr
 
 CMakeFiles/main.dir/library/hamr/SW/RadioDriver_Attestation_thr_Impl_Bridge/hamr_SW_RadioDriver_Attestation_thr_Impl_Bridge_EntryPoints.c.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/library/hamr/SW/RadioDriver_Attestation_thr_Impl_Bridge/hamr_SW_RadioDriver_Attestation_thr_Impl_Bridge_EntryPoints.c.o: ../library/hamr/SW/RadioDriver_Attestation_thr_Impl_Bridge/hamr_SW_RadioDriver_Attestation_thr_Impl_Bridge_EntryPoints.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_64) "Building C object CMakeFiles/main.dir/library/hamr/SW/RadioDriver_Attestation_thr_Impl_Bridge/hamr_SW_RadioDriver_Attestation_thr_Impl_Bridge_EntryPoints.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_55) "Building C object CMakeFiles/main.dir/library/hamr/SW/RadioDriver_Attestation_thr_Impl_Bridge/hamr_SW_RadioDriver_Attestation_thr_Impl_Bridge_EntryPoints.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main.dir/library/hamr/SW/RadioDriver_Attestation_thr_Impl_Bridge/hamr_SW_RadioDriver_Attestation_thr_Impl_Bridge_EntryPoints.c.o   -c /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/library/hamr/SW/RadioDriver_Attestation_thr_Impl_Bridge/hamr_SW_RadioDriver_Attestation_thr_Impl_Bridge_EntryPoints.c
 
 CMakeFiles/main.dir/library/hamr/SW/RadioDriver_Attestation_thr_Impl_Bridge/hamr_SW_RadioDriver_Attestation_thr_Impl_Bridge_EntryPoints.c.i: cmake_force
@@ -911,7 +794,7 @@ CMakeFiles/main.dir/library/hamr/SW/RadioDriver_Attestation_thr_Impl_Bridge/hamr
 
 CMakeFiles/main.dir/library/hamr/SW/hamr_SW_RadioDriver_Attestation_thr_Impl_Impl.c.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/library/hamr/SW/hamr_SW_RadioDriver_Attestation_thr_Impl_Impl.c.o: ../library/hamr/SW/hamr_SW_RadioDriver_Attestation_thr_Impl_Impl.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_65) "Building C object CMakeFiles/main.dir/library/hamr/SW/hamr_SW_RadioDriver_Attestation_thr_Impl_Impl.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_56) "Building C object CMakeFiles/main.dir/library/hamr/SW/hamr_SW_RadioDriver_Attestation_thr_Impl_Impl.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main.dir/library/hamr/SW/hamr_SW_RadioDriver_Attestation_thr_Impl_Impl.c.o   -c /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/library/hamr/SW/hamr_SW_RadioDriver_Attestation_thr_Impl_Impl.c
 
 CMakeFiles/main.dir/library/hamr/SW/hamr_SW_RadioDriver_Attestation_thr_Impl_Impl.c.i: cmake_force
@@ -924,7 +807,7 @@ CMakeFiles/main.dir/library/hamr/SW/hamr_SW_RadioDriver_Attestation_thr_Impl_Imp
 
 CMakeFiles/main.dir/library/hamr/SW/hamr_SW_UxAS_thr_Impl_Bridge.c.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/library/hamr/SW/hamr_SW_UxAS_thr_Impl_Bridge.c.o: ../library/hamr/SW/hamr_SW_UxAS_thr_Impl_Bridge.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_66) "Building C object CMakeFiles/main.dir/library/hamr/SW/hamr_SW_UxAS_thr_Impl_Bridge.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_57) "Building C object CMakeFiles/main.dir/library/hamr/SW/hamr_SW_UxAS_thr_Impl_Bridge.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main.dir/library/hamr/SW/hamr_SW_UxAS_thr_Impl_Bridge.c.o   -c /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/library/hamr/SW/hamr_SW_UxAS_thr_Impl_Bridge.c
 
 CMakeFiles/main.dir/library/hamr/SW/hamr_SW_UxAS_thr_Impl_Bridge.c.i: cmake_force
@@ -937,7 +820,7 @@ CMakeFiles/main.dir/library/hamr/SW/hamr_SW_UxAS_thr_Impl_Bridge.c.s: cmake_forc
 
 CMakeFiles/main.dir/library/hamr/SW/UxAS_thr_Impl_Bridge/hamr_SW_UxAS_thr_Impl_Bridge_Api.c.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/library/hamr/SW/UxAS_thr_Impl_Bridge/hamr_SW_UxAS_thr_Impl_Bridge_Api.c.o: ../library/hamr/SW/UxAS_thr_Impl_Bridge/hamr_SW_UxAS_thr_Impl_Bridge_Api.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_67) "Building C object CMakeFiles/main.dir/library/hamr/SW/UxAS_thr_Impl_Bridge/hamr_SW_UxAS_thr_Impl_Bridge_Api.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_58) "Building C object CMakeFiles/main.dir/library/hamr/SW/UxAS_thr_Impl_Bridge/hamr_SW_UxAS_thr_Impl_Bridge_Api.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main.dir/library/hamr/SW/UxAS_thr_Impl_Bridge/hamr_SW_UxAS_thr_Impl_Bridge_Api.c.o   -c /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/library/hamr/SW/UxAS_thr_Impl_Bridge/hamr_SW_UxAS_thr_Impl_Bridge_Api.c
 
 CMakeFiles/main.dir/library/hamr/SW/UxAS_thr_Impl_Bridge/hamr_SW_UxAS_thr_Impl_Bridge_Api.c.i: cmake_force
@@ -950,7 +833,7 @@ CMakeFiles/main.dir/library/hamr/SW/UxAS_thr_Impl_Bridge/hamr_SW_UxAS_thr_Impl_B
 
 CMakeFiles/main.dir/library/hamr/SW/UxAS_thr_Impl_Bridge/hamr_SW_UxAS_thr_Impl_Bridge_EntryPoints.c.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/library/hamr/SW/UxAS_thr_Impl_Bridge/hamr_SW_UxAS_thr_Impl_Bridge_EntryPoints.c.o: ../library/hamr/SW/UxAS_thr_Impl_Bridge/hamr_SW_UxAS_thr_Impl_Bridge_EntryPoints.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_68) "Building C object CMakeFiles/main.dir/library/hamr/SW/UxAS_thr_Impl_Bridge/hamr_SW_UxAS_thr_Impl_Bridge_EntryPoints.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_59) "Building C object CMakeFiles/main.dir/library/hamr/SW/UxAS_thr_Impl_Bridge/hamr_SW_UxAS_thr_Impl_Bridge_EntryPoints.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main.dir/library/hamr/SW/UxAS_thr_Impl_Bridge/hamr_SW_UxAS_thr_Impl_Bridge_EntryPoints.c.o   -c /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/library/hamr/SW/UxAS_thr_Impl_Bridge/hamr_SW_UxAS_thr_Impl_Bridge_EntryPoints.c
 
 CMakeFiles/main.dir/library/hamr/SW/UxAS_thr_Impl_Bridge/hamr_SW_UxAS_thr_Impl_Bridge_EntryPoints.c.i: cmake_force
@@ -963,7 +846,7 @@ CMakeFiles/main.dir/library/hamr/SW/UxAS_thr_Impl_Bridge/hamr_SW_UxAS_thr_Impl_B
 
 CMakeFiles/main.dir/library/hamr/SW/hamr_SW_UxAS_thr_Impl_Impl.c.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/library/hamr/SW/hamr_SW_UxAS_thr_Impl_Impl.c.o: ../library/hamr/SW/hamr_SW_UxAS_thr_Impl_Impl.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_69) "Building C object CMakeFiles/main.dir/library/hamr/SW/hamr_SW_UxAS_thr_Impl_Impl.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_60) "Building C object CMakeFiles/main.dir/library/hamr/SW/hamr_SW_UxAS_thr_Impl_Impl.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main.dir/library/hamr/SW/hamr_SW_UxAS_thr_Impl_Impl.c.o   -c /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/library/hamr/SW/hamr_SW_UxAS_thr_Impl_Impl.c
 
 CMakeFiles/main.dir/library/hamr/SW/hamr_SW_UxAS_thr_Impl_Impl.c.i: cmake_force
@@ -976,7 +859,7 @@ CMakeFiles/main.dir/library/hamr/SW/hamr_SW_UxAS_thr_Impl_Impl.c.s: cmake_force
 
 CMakeFiles/main.dir/library/hamr/SW/hamr_SW_WaypointPlanManagerService_thr_Impl_Bridge.c.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/library/hamr/SW/hamr_SW_WaypointPlanManagerService_thr_Impl_Bridge.c.o: ../library/hamr/SW/hamr_SW_WaypointPlanManagerService_thr_Impl_Bridge.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_70) "Building C object CMakeFiles/main.dir/library/hamr/SW/hamr_SW_WaypointPlanManagerService_thr_Impl_Bridge.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_61) "Building C object CMakeFiles/main.dir/library/hamr/SW/hamr_SW_WaypointPlanManagerService_thr_Impl_Bridge.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main.dir/library/hamr/SW/hamr_SW_WaypointPlanManagerService_thr_Impl_Bridge.c.o   -c /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/library/hamr/SW/hamr_SW_WaypointPlanManagerService_thr_Impl_Bridge.c
 
 CMakeFiles/main.dir/library/hamr/SW/hamr_SW_WaypointPlanManagerService_thr_Impl_Bridge.c.i: cmake_force
@@ -989,7 +872,7 @@ CMakeFiles/main.dir/library/hamr/SW/hamr_SW_WaypointPlanManagerService_thr_Impl_
 
 CMakeFiles/main.dir/library/hamr/SW/WaypointPlanManagerService_thr_Impl_Bridge/hamr_SW_WaypointPlanManagerService_thr_Impl_Bridge_Api.c.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/library/hamr/SW/WaypointPlanManagerService_thr_Impl_Bridge/hamr_SW_WaypointPlanManagerService_thr_Impl_Bridge_Api.c.o: ../library/hamr/SW/WaypointPlanManagerService_thr_Impl_Bridge/hamr_SW_WaypointPlanManagerService_thr_Impl_Bridge_Api.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_71) "Building C object CMakeFiles/main.dir/library/hamr/SW/WaypointPlanManagerService_thr_Impl_Bridge/hamr_SW_WaypointPlanManagerService_thr_Impl_Bridge_Api.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_62) "Building C object CMakeFiles/main.dir/library/hamr/SW/WaypointPlanManagerService_thr_Impl_Bridge/hamr_SW_WaypointPlanManagerService_thr_Impl_Bridge_Api.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main.dir/library/hamr/SW/WaypointPlanManagerService_thr_Impl_Bridge/hamr_SW_WaypointPlanManagerService_thr_Impl_Bridge_Api.c.o   -c /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/library/hamr/SW/WaypointPlanManagerService_thr_Impl_Bridge/hamr_SW_WaypointPlanManagerService_thr_Impl_Bridge_Api.c
 
 CMakeFiles/main.dir/library/hamr/SW/WaypointPlanManagerService_thr_Impl_Bridge/hamr_SW_WaypointPlanManagerService_thr_Impl_Bridge_Api.c.i: cmake_force
@@ -1002,7 +885,7 @@ CMakeFiles/main.dir/library/hamr/SW/WaypointPlanManagerService_thr_Impl_Bridge/h
 
 CMakeFiles/main.dir/library/hamr/SW/WaypointPlanManagerService_thr_Impl_Bridge/hamr_SW_WaypointPlanManagerService_thr_Impl_Bridge_EntryPoints.c.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/library/hamr/SW/WaypointPlanManagerService_thr_Impl_Bridge/hamr_SW_WaypointPlanManagerService_thr_Impl_Bridge_EntryPoints.c.o: ../library/hamr/SW/WaypointPlanManagerService_thr_Impl_Bridge/hamr_SW_WaypointPlanManagerService_thr_Impl_Bridge_EntryPoints.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_72) "Building C object CMakeFiles/main.dir/library/hamr/SW/WaypointPlanManagerService_thr_Impl_Bridge/hamr_SW_WaypointPlanManagerService_thr_Impl_Bridge_EntryPoints.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_63) "Building C object CMakeFiles/main.dir/library/hamr/SW/WaypointPlanManagerService_thr_Impl_Bridge/hamr_SW_WaypointPlanManagerService_thr_Impl_Bridge_EntryPoints.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main.dir/library/hamr/SW/WaypointPlanManagerService_thr_Impl_Bridge/hamr_SW_WaypointPlanManagerService_thr_Impl_Bridge_EntryPoints.c.o   -c /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/library/hamr/SW/WaypointPlanManagerService_thr_Impl_Bridge/hamr_SW_WaypointPlanManagerService_thr_Impl_Bridge_EntryPoints.c
 
 CMakeFiles/main.dir/library/hamr/SW/WaypointPlanManagerService_thr_Impl_Bridge/hamr_SW_WaypointPlanManagerService_thr_Impl_Bridge_EntryPoints.c.i: cmake_force
@@ -1015,7 +898,7 @@ CMakeFiles/main.dir/library/hamr/SW/WaypointPlanManagerService_thr_Impl_Bridge/h
 
 CMakeFiles/main.dir/library/hamr/SW/hamr_SW_WaypointPlanManagerService_thr_Impl_Impl.c.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/library/hamr/SW/hamr_SW_WaypointPlanManagerService_thr_Impl_Impl.c.o: ../library/hamr/SW/hamr_SW_WaypointPlanManagerService_thr_Impl_Impl.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_73) "Building C object CMakeFiles/main.dir/library/hamr/SW/hamr_SW_WaypointPlanManagerService_thr_Impl_Impl.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_64) "Building C object CMakeFiles/main.dir/library/hamr/SW/hamr_SW_WaypointPlanManagerService_thr_Impl_Impl.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main.dir/library/hamr/SW/hamr_SW_WaypointPlanManagerService_thr_Impl_Impl.c.o   -c /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/library/hamr/SW/hamr_SW_WaypointPlanManagerService_thr_Impl_Impl.c
 
 CMakeFiles/main.dir/library/hamr/SW/hamr_SW_WaypointPlanManagerService_thr_Impl_Impl.c.i: cmake_force
@@ -1025,6 +908,123 @@ CMakeFiles/main.dir/library/hamr/SW/hamr_SW_WaypointPlanManagerService_thr_Impl_
 CMakeFiles/main.dir/library/hamr/SW/hamr_SW_WaypointPlanManagerService_thr_Impl_Impl.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/main.dir/library/hamr/SW/hamr_SW_WaypointPlanManagerService_thr_Impl_Impl.c.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/library/hamr/SW/hamr_SW_WaypointPlanManagerService_thr_Impl_Impl.c -o CMakeFiles/main.dir/library/hamr/SW/hamr_SW_WaypointPlanManagerService_thr_Impl_Impl.c.s
+
+CMakeFiles/main.dir/library/hamr/hamr_SW_Impl_Instance_AM_Gate_CASE_AttestationGate_App.c.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/library/hamr/hamr_SW_Impl_Instance_AM_Gate_CASE_AttestationGate_App.c.o: ../library/hamr/hamr_SW_Impl_Instance_AM_Gate_CASE_AttestationGate_App.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_65) "Building C object CMakeFiles/main.dir/library/hamr/hamr_SW_Impl_Instance_AM_Gate_CASE_AttestationGate_App.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main.dir/library/hamr/hamr_SW_Impl_Instance_AM_Gate_CASE_AttestationGate_App.c.o   -c /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/library/hamr/hamr_SW_Impl_Instance_AM_Gate_CASE_AttestationGate_App.c
+
+CMakeFiles/main.dir/library/hamr/hamr_SW_Impl_Instance_AM_Gate_CASE_AttestationGate_App.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/main.dir/library/hamr/hamr_SW_Impl_Instance_AM_Gate_CASE_AttestationGate_App.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/library/hamr/hamr_SW_Impl_Instance_AM_Gate_CASE_AttestationGate_App.c > CMakeFiles/main.dir/library/hamr/hamr_SW_Impl_Instance_AM_Gate_CASE_AttestationGate_App.c.i
+
+CMakeFiles/main.dir/library/hamr/hamr_SW_Impl_Instance_AM_Gate_CASE_AttestationGate_App.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/main.dir/library/hamr/hamr_SW_Impl_Instance_AM_Gate_CASE_AttestationGate_App.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/library/hamr/hamr_SW_Impl_Instance_AM_Gate_CASE_AttestationGate_App.c -o CMakeFiles/main.dir/library/hamr/hamr_SW_Impl_Instance_AM_Gate_CASE_AttestationGate_App.c.s
+
+CMakeFiles/main.dir/library/hamr/hamr_SW_Impl_Instance_FC_UART_UARTDriver_App.c.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/library/hamr/hamr_SW_Impl_Instance_FC_UART_UARTDriver_App.c.o: ../library/hamr/hamr_SW_Impl_Instance_FC_UART_UARTDriver_App.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_66) "Building C object CMakeFiles/main.dir/library/hamr/hamr_SW_Impl_Instance_FC_UART_UARTDriver_App.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main.dir/library/hamr/hamr_SW_Impl_Instance_FC_UART_UARTDriver_App.c.o   -c /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/library/hamr/hamr_SW_Impl_Instance_FC_UART_UARTDriver_App.c
+
+CMakeFiles/main.dir/library/hamr/hamr_SW_Impl_Instance_FC_UART_UARTDriver_App.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/main.dir/library/hamr/hamr_SW_Impl_Instance_FC_UART_UARTDriver_App.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/library/hamr/hamr_SW_Impl_Instance_FC_UART_UARTDriver_App.c > CMakeFiles/main.dir/library/hamr/hamr_SW_Impl_Instance_FC_UART_UARTDriver_App.c.i
+
+CMakeFiles/main.dir/library/hamr/hamr_SW_Impl_Instance_FC_UART_UARTDriver_App.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/main.dir/library/hamr/hamr_SW_Impl_Instance_FC_UART_UARTDriver_App.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/library/hamr/hamr_SW_Impl_Instance_FC_UART_UARTDriver_App.c -o CMakeFiles/main.dir/library/hamr/hamr_SW_Impl_Instance_FC_UART_UARTDriver_App.c.s
+
+CMakeFiles/main.dir/library/hamr/hamr_SW_Impl_Instance_FLT_LST_CASE_Filter_LST_App.c.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/library/hamr/hamr_SW_Impl_Instance_FLT_LST_CASE_Filter_LST_App.c.o: ../library/hamr/hamr_SW_Impl_Instance_FLT_LST_CASE_Filter_LST_App.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_67) "Building C object CMakeFiles/main.dir/library/hamr/hamr_SW_Impl_Instance_FLT_LST_CASE_Filter_LST_App.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main.dir/library/hamr/hamr_SW_Impl_Instance_FLT_LST_CASE_Filter_LST_App.c.o   -c /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/library/hamr/hamr_SW_Impl_Instance_FLT_LST_CASE_Filter_LST_App.c
+
+CMakeFiles/main.dir/library/hamr/hamr_SW_Impl_Instance_FLT_LST_CASE_Filter_LST_App.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/main.dir/library/hamr/hamr_SW_Impl_Instance_FLT_LST_CASE_Filter_LST_App.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/library/hamr/hamr_SW_Impl_Instance_FLT_LST_CASE_Filter_LST_App.c > CMakeFiles/main.dir/library/hamr/hamr_SW_Impl_Instance_FLT_LST_CASE_Filter_LST_App.c.i
+
+CMakeFiles/main.dir/library/hamr/hamr_SW_Impl_Instance_FLT_LST_CASE_Filter_LST_App.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/main.dir/library/hamr/hamr_SW_Impl_Instance_FLT_LST_CASE_Filter_LST_App.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/library/hamr/hamr_SW_Impl_Instance_FLT_LST_CASE_Filter_LST_App.c -o CMakeFiles/main.dir/library/hamr/hamr_SW_Impl_Instance_FLT_LST_CASE_Filter_LST_App.c.s
+
+CMakeFiles/main.dir/library/hamr/hamr_SW_Impl_Instance_FlyZones_FlyZonesDatabase_App.c.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/library/hamr/hamr_SW_Impl_Instance_FlyZones_FlyZonesDatabase_App.c.o: ../library/hamr/hamr_SW_Impl_Instance_FlyZones_FlyZonesDatabase_App.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_68) "Building C object CMakeFiles/main.dir/library/hamr/hamr_SW_Impl_Instance_FlyZones_FlyZonesDatabase_App.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main.dir/library/hamr/hamr_SW_Impl_Instance_FlyZones_FlyZonesDatabase_App.c.o   -c /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/library/hamr/hamr_SW_Impl_Instance_FlyZones_FlyZonesDatabase_App.c
+
+CMakeFiles/main.dir/library/hamr/hamr_SW_Impl_Instance_FlyZones_FlyZonesDatabase_App.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/main.dir/library/hamr/hamr_SW_Impl_Instance_FlyZones_FlyZonesDatabase_App.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/library/hamr/hamr_SW_Impl_Instance_FlyZones_FlyZonesDatabase_App.c > CMakeFiles/main.dir/library/hamr/hamr_SW_Impl_Instance_FlyZones_FlyZonesDatabase_App.c.i
+
+CMakeFiles/main.dir/library/hamr/hamr_SW_Impl_Instance_FlyZones_FlyZonesDatabase_App.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/main.dir/library/hamr/hamr_SW_Impl_Instance_FlyZones_FlyZonesDatabase_App.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/library/hamr/hamr_SW_Impl_Instance_FlyZones_FlyZonesDatabase_App.c -o CMakeFiles/main.dir/library/hamr/hamr_SW_Impl_Instance_FlyZones_FlyZonesDatabase_App.c.s
+
+CMakeFiles/main.dir/library/hamr/hamr_SW_Impl_Instance_MON_GEO_CASE_Monitor_Geo_App.c.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/library/hamr/hamr_SW_Impl_Instance_MON_GEO_CASE_Monitor_Geo_App.c.o: ../library/hamr/hamr_SW_Impl_Instance_MON_GEO_CASE_Monitor_Geo_App.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_69) "Building C object CMakeFiles/main.dir/library/hamr/hamr_SW_Impl_Instance_MON_GEO_CASE_Monitor_Geo_App.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main.dir/library/hamr/hamr_SW_Impl_Instance_MON_GEO_CASE_Monitor_Geo_App.c.o   -c /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/library/hamr/hamr_SW_Impl_Instance_MON_GEO_CASE_Monitor_Geo_App.c
+
+CMakeFiles/main.dir/library/hamr/hamr_SW_Impl_Instance_MON_GEO_CASE_Monitor_Geo_App.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/main.dir/library/hamr/hamr_SW_Impl_Instance_MON_GEO_CASE_Monitor_Geo_App.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/library/hamr/hamr_SW_Impl_Instance_MON_GEO_CASE_Monitor_Geo_App.c > CMakeFiles/main.dir/library/hamr/hamr_SW_Impl_Instance_MON_GEO_CASE_Monitor_Geo_App.c.i
+
+CMakeFiles/main.dir/library/hamr/hamr_SW_Impl_Instance_MON_GEO_CASE_Monitor_Geo_App.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/main.dir/library/hamr/hamr_SW_Impl_Instance_MON_GEO_CASE_Monitor_Geo_App.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/library/hamr/hamr_SW_Impl_Instance_MON_GEO_CASE_Monitor_Geo_App.c -o CMakeFiles/main.dir/library/hamr/hamr_SW_Impl_Instance_MON_GEO_CASE_Monitor_Geo_App.c.s
+
+CMakeFiles/main.dir/library/hamr/hamr_SW_Impl_Instance_MON_REQ_CASE_Monitor_Req_App.c.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/library/hamr/hamr_SW_Impl_Instance_MON_REQ_CASE_Monitor_Req_App.c.o: ../library/hamr/hamr_SW_Impl_Instance_MON_REQ_CASE_Monitor_Req_App.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_70) "Building C object CMakeFiles/main.dir/library/hamr/hamr_SW_Impl_Instance_MON_REQ_CASE_Monitor_Req_App.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main.dir/library/hamr/hamr_SW_Impl_Instance_MON_REQ_CASE_Monitor_Req_App.c.o   -c /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/library/hamr/hamr_SW_Impl_Instance_MON_REQ_CASE_Monitor_Req_App.c
+
+CMakeFiles/main.dir/library/hamr/hamr_SW_Impl_Instance_MON_REQ_CASE_Monitor_Req_App.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/main.dir/library/hamr/hamr_SW_Impl_Instance_MON_REQ_CASE_Monitor_Req_App.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/library/hamr/hamr_SW_Impl_Instance_MON_REQ_CASE_Monitor_Req_App.c > CMakeFiles/main.dir/library/hamr/hamr_SW_Impl_Instance_MON_REQ_CASE_Monitor_Req_App.c.i
+
+CMakeFiles/main.dir/library/hamr/hamr_SW_Impl_Instance_MON_REQ_CASE_Monitor_Req_App.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/main.dir/library/hamr/hamr_SW_Impl_Instance_MON_REQ_CASE_Monitor_Req_App.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/library/hamr/hamr_SW_Impl_Instance_MON_REQ_CASE_Monitor_Req_App.c -o CMakeFiles/main.dir/library/hamr/hamr_SW_Impl_Instance_MON_REQ_CASE_Monitor_Req_App.c.s
+
+CMakeFiles/main.dir/library/hamr/hamr_SW_Impl_Instance_RADIO_RadioDriver_Attestation_App.c.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/library/hamr/hamr_SW_Impl_Instance_RADIO_RadioDriver_Attestation_App.c.o: ../library/hamr/hamr_SW_Impl_Instance_RADIO_RadioDriver_Attestation_App.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_71) "Building C object CMakeFiles/main.dir/library/hamr/hamr_SW_Impl_Instance_RADIO_RadioDriver_Attestation_App.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main.dir/library/hamr/hamr_SW_Impl_Instance_RADIO_RadioDriver_Attestation_App.c.o   -c /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/library/hamr/hamr_SW_Impl_Instance_RADIO_RadioDriver_Attestation_App.c
+
+CMakeFiles/main.dir/library/hamr/hamr_SW_Impl_Instance_RADIO_RadioDriver_Attestation_App.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/main.dir/library/hamr/hamr_SW_Impl_Instance_RADIO_RadioDriver_Attestation_App.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/library/hamr/hamr_SW_Impl_Instance_RADIO_RadioDriver_Attestation_App.c > CMakeFiles/main.dir/library/hamr/hamr_SW_Impl_Instance_RADIO_RadioDriver_Attestation_App.c.i
+
+CMakeFiles/main.dir/library/hamr/hamr_SW_Impl_Instance_RADIO_RadioDriver_Attestation_App.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/main.dir/library/hamr/hamr_SW_Impl_Instance_RADIO_RadioDriver_Attestation_App.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/library/hamr/hamr_SW_Impl_Instance_RADIO_RadioDriver_Attestation_App.c -o CMakeFiles/main.dir/library/hamr/hamr_SW_Impl_Instance_RADIO_RadioDriver_Attestation_App.c.s
+
+CMakeFiles/main.dir/library/hamr/hamr_SW_Impl_Instance_UXAS_UxAS_App.c.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/library/hamr/hamr_SW_Impl_Instance_UXAS_UxAS_App.c.o: ../library/hamr/hamr_SW_Impl_Instance_UXAS_UxAS_App.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_72) "Building C object CMakeFiles/main.dir/library/hamr/hamr_SW_Impl_Instance_UXAS_UxAS_App.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main.dir/library/hamr/hamr_SW_Impl_Instance_UXAS_UxAS_App.c.o   -c /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/library/hamr/hamr_SW_Impl_Instance_UXAS_UxAS_App.c
+
+CMakeFiles/main.dir/library/hamr/hamr_SW_Impl_Instance_UXAS_UxAS_App.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/main.dir/library/hamr/hamr_SW_Impl_Instance_UXAS_UxAS_App.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/library/hamr/hamr_SW_Impl_Instance_UXAS_UxAS_App.c > CMakeFiles/main.dir/library/hamr/hamr_SW_Impl_Instance_UXAS_UxAS_App.c.i
+
+CMakeFiles/main.dir/library/hamr/hamr_SW_Impl_Instance_UXAS_UxAS_App.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/main.dir/library/hamr/hamr_SW_Impl_Instance_UXAS_UxAS_App.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/library/hamr/hamr_SW_Impl_Instance_UXAS_UxAS_App.c -o CMakeFiles/main.dir/library/hamr/hamr_SW_Impl_Instance_UXAS_UxAS_App.c.s
+
+CMakeFiles/main.dir/library/hamr/hamr_SW_Impl_Instance_WPM_WaypointPlanManagerService_App.c.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/library/hamr/hamr_SW_Impl_Instance_WPM_WaypointPlanManagerService_App.c.o: ../library/hamr/hamr_SW_Impl_Instance_WPM_WaypointPlanManagerService_App.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_73) "Building C object CMakeFiles/main.dir/library/hamr/hamr_SW_Impl_Instance_WPM_WaypointPlanManagerService_App.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main.dir/library/hamr/hamr_SW_Impl_Instance_WPM_WaypointPlanManagerService_App.c.o   -c /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/library/hamr/hamr_SW_Impl_Instance_WPM_WaypointPlanManagerService_App.c
+
+CMakeFiles/main.dir/library/hamr/hamr_SW_Impl_Instance_WPM_WaypointPlanManagerService_App.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/main.dir/library/hamr/hamr_SW_Impl_Instance_WPM_WaypointPlanManagerService_App.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/library/hamr/hamr_SW_Impl_Instance_WPM_WaypointPlanManagerService_App.c > CMakeFiles/main.dir/library/hamr/hamr_SW_Impl_Instance_WPM_WaypointPlanManagerService_App.c.i
+
+CMakeFiles/main.dir/library/hamr/hamr_SW_Impl_Instance_WPM_WaypointPlanManagerService_App.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/main.dir/library/hamr/hamr_SW_Impl_Instance_WPM_WaypointPlanManagerService_App.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/library/hamr/hamr_SW_Impl_Instance_WPM_WaypointPlanManagerService_App.c -o CMakeFiles/main.dir/library/hamr/hamr_SW_Impl_Instance_WPM_WaypointPlanManagerService_App.c.s
 
 CMakeFiles/main.dir/library/org/sireum/org_sireum_IS_08117A.c.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/library/org/sireum/org_sireum_IS_08117A.c.o: ../library/org/sireum/org_sireum_IS_08117A.c
@@ -1572,22 +1572,9 @@ CMakeFiles/main.dir/ext/ext.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/main.dir/ext/ext.c.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/ext/ext.c -o CMakeFiles/main.dir/ext/ext.c.s
 
-CMakeFiles/main.dir/ext/ipc.c.o: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/ext/ipc.c.o: ../ext/ipc.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_116) "Building C object CMakeFiles/main.dir/ext/ipc.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main.dir/ext/ipc.c.o   -c /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/ext/ipc.c
-
-CMakeFiles/main.dir/ext/ipc.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/main.dir/ext/ipc.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/ext/ipc.c > CMakeFiles/main.dir/ext/ipc.c.i
-
-CMakeFiles/main.dir/ext/ipc.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/main.dir/ext/ipc.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/ext/ipc.c -o CMakeFiles/main.dir/ext/ipc.c.s
-
 CMakeFiles/main.dir/ext/UARTDriver_Impl_Impl_api.c.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/ext/UARTDriver_Impl_Impl_api.c.o: ../ext/UARTDriver_Impl_Impl_api.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_117) "Building C object CMakeFiles/main.dir/ext/UARTDriver_Impl_Impl_api.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_116) "Building C object CMakeFiles/main.dir/ext/UARTDriver_Impl_Impl_api.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main.dir/ext/UARTDriver_Impl_Impl_api.c.o   -c /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/ext/UARTDriver_Impl_Impl_api.c
 
 CMakeFiles/main.dir/ext/UARTDriver_Impl_Impl_api.c.i: cmake_force
@@ -1600,7 +1587,7 @@ CMakeFiles/main.dir/ext/UARTDriver_Impl_Impl_api.c.s: cmake_force
 
 CMakeFiles/main.dir/ext/UARTDriver_Impl_Impl.c.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/ext/UARTDriver_Impl_Impl.c.o: ../ext/UARTDriver_Impl_Impl.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_118) "Building C object CMakeFiles/main.dir/ext/UARTDriver_Impl_Impl.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_117) "Building C object CMakeFiles/main.dir/ext/UARTDriver_Impl_Impl.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main.dir/ext/UARTDriver_Impl_Impl.c.o   -c /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/ext/UARTDriver_Impl_Impl.c
 
 CMakeFiles/main.dir/ext/UARTDriver_Impl_Impl.c.i: cmake_force
@@ -1613,7 +1600,7 @@ CMakeFiles/main.dir/ext/UARTDriver_Impl_Impl.c.s: cmake_force
 
 CMakeFiles/main.dir/ext/RadioDriver_Attestation_thr_Impl_Impl_api.c.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/ext/RadioDriver_Attestation_thr_Impl_Impl_api.c.o: ../ext/RadioDriver_Attestation_thr_Impl_Impl_api.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_119) "Building C object CMakeFiles/main.dir/ext/RadioDriver_Attestation_thr_Impl_Impl_api.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_118) "Building C object CMakeFiles/main.dir/ext/RadioDriver_Attestation_thr_Impl_Impl_api.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main.dir/ext/RadioDriver_Attestation_thr_Impl_Impl_api.c.o   -c /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/ext/RadioDriver_Attestation_thr_Impl_Impl_api.c
 
 CMakeFiles/main.dir/ext/RadioDriver_Attestation_thr_Impl_Impl_api.c.i: cmake_force
@@ -1626,7 +1613,7 @@ CMakeFiles/main.dir/ext/RadioDriver_Attestation_thr_Impl_Impl_api.c.s: cmake_for
 
 CMakeFiles/main.dir/ext/RadioDriver_Attestation_thr_Impl_Impl.c.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/ext/RadioDriver_Attestation_thr_Impl_Impl.c.o: ../ext/RadioDriver_Attestation_thr_Impl_Impl.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_120) "Building C object CMakeFiles/main.dir/ext/RadioDriver_Attestation_thr_Impl_Impl.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_119) "Building C object CMakeFiles/main.dir/ext/RadioDriver_Attestation_thr_Impl_Impl.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main.dir/ext/RadioDriver_Attestation_thr_Impl_Impl.c.o   -c /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/ext/RadioDriver_Attestation_thr_Impl_Impl.c
 
 CMakeFiles/main.dir/ext/RadioDriver_Attestation_thr_Impl_Impl.c.i: cmake_force
@@ -1639,7 +1626,7 @@ CMakeFiles/main.dir/ext/RadioDriver_Attestation_thr_Impl_Impl.c.s: cmake_force
 
 CMakeFiles/main.dir/ext/FlyZonesDatabase_thr_Impl_Impl_api.c.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/ext/FlyZonesDatabase_thr_Impl_Impl_api.c.o: ../ext/FlyZonesDatabase_thr_Impl_Impl_api.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_121) "Building C object CMakeFiles/main.dir/ext/FlyZonesDatabase_thr_Impl_Impl_api.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_120) "Building C object CMakeFiles/main.dir/ext/FlyZonesDatabase_thr_Impl_Impl_api.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main.dir/ext/FlyZonesDatabase_thr_Impl_Impl_api.c.o   -c /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/ext/FlyZonesDatabase_thr_Impl_Impl_api.c
 
 CMakeFiles/main.dir/ext/FlyZonesDatabase_thr_Impl_Impl_api.c.i: cmake_force
@@ -1652,7 +1639,7 @@ CMakeFiles/main.dir/ext/FlyZonesDatabase_thr_Impl_Impl_api.c.s: cmake_force
 
 CMakeFiles/main.dir/ext/FlyZonesDatabase_thr_Impl_Impl.c.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/ext/FlyZonesDatabase_thr_Impl_Impl.c.o: ../ext/FlyZonesDatabase_thr_Impl_Impl.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_122) "Building C object CMakeFiles/main.dir/ext/FlyZonesDatabase_thr_Impl_Impl.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_121) "Building C object CMakeFiles/main.dir/ext/FlyZonesDatabase_thr_Impl_Impl.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main.dir/ext/FlyZonesDatabase_thr_Impl_Impl.c.o   -c /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/ext/FlyZonesDatabase_thr_Impl_Impl.c
 
 CMakeFiles/main.dir/ext/FlyZonesDatabase_thr_Impl_Impl.c.i: cmake_force
@@ -1665,7 +1652,7 @@ CMakeFiles/main.dir/ext/FlyZonesDatabase_thr_Impl_Impl.c.s: cmake_force
 
 CMakeFiles/main.dir/ext/UxAS_thr_Impl_Impl_api.c.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/ext/UxAS_thr_Impl_Impl_api.c.o: ../ext/UxAS_thr_Impl_Impl_api.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_123) "Building C object CMakeFiles/main.dir/ext/UxAS_thr_Impl_Impl_api.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_122) "Building C object CMakeFiles/main.dir/ext/UxAS_thr_Impl_Impl_api.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main.dir/ext/UxAS_thr_Impl_Impl_api.c.o   -c /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/ext/UxAS_thr_Impl_Impl_api.c
 
 CMakeFiles/main.dir/ext/UxAS_thr_Impl_Impl_api.c.i: cmake_force
@@ -1678,7 +1665,7 @@ CMakeFiles/main.dir/ext/UxAS_thr_Impl_Impl_api.c.s: cmake_force
 
 CMakeFiles/main.dir/ext/UxAS_thr_Impl_Impl.c.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/ext/UxAS_thr_Impl_Impl.c.o: ../ext/UxAS_thr_Impl_Impl.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_124) "Building C object CMakeFiles/main.dir/ext/UxAS_thr_Impl_Impl.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_123) "Building C object CMakeFiles/main.dir/ext/UxAS_thr_Impl_Impl.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main.dir/ext/UxAS_thr_Impl_Impl.c.o   -c /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/ext/UxAS_thr_Impl_Impl.c
 
 CMakeFiles/main.dir/ext/UxAS_thr_Impl_Impl.c.i: cmake_force
@@ -1691,7 +1678,7 @@ CMakeFiles/main.dir/ext/UxAS_thr_Impl_Impl.c.s: cmake_force
 
 CMakeFiles/main.dir/ext/WaypointPlanManagerService_thr_Impl_Impl_api.c.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/ext/WaypointPlanManagerService_thr_Impl_Impl_api.c.o: ../ext/WaypointPlanManagerService_thr_Impl_Impl_api.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_125) "Building C object CMakeFiles/main.dir/ext/WaypointPlanManagerService_thr_Impl_Impl_api.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_124) "Building C object CMakeFiles/main.dir/ext/WaypointPlanManagerService_thr_Impl_Impl_api.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main.dir/ext/WaypointPlanManagerService_thr_Impl_Impl_api.c.o   -c /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/ext/WaypointPlanManagerService_thr_Impl_Impl_api.c
 
 CMakeFiles/main.dir/ext/WaypointPlanManagerService_thr_Impl_Impl_api.c.i: cmake_force
@@ -1704,7 +1691,7 @@ CMakeFiles/main.dir/ext/WaypointPlanManagerService_thr_Impl_Impl_api.c.s: cmake_
 
 CMakeFiles/main.dir/ext/WaypointPlanManagerService_thr_Impl_Impl.c.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/ext/WaypointPlanManagerService_thr_Impl_Impl.c.o: ../ext/WaypointPlanManagerService_thr_Impl_Impl.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_126) "Building C object CMakeFiles/main.dir/ext/WaypointPlanManagerService_thr_Impl_Impl.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_125) "Building C object CMakeFiles/main.dir/ext/WaypointPlanManagerService_thr_Impl_Impl.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main.dir/ext/WaypointPlanManagerService_thr_Impl_Impl.c.o   -c /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/ext/WaypointPlanManagerService_thr_Impl_Impl.c
 
 CMakeFiles/main.dir/ext/WaypointPlanManagerService_thr_Impl_Impl.c.i: cmake_force
@@ -1717,7 +1704,7 @@ CMakeFiles/main.dir/ext/WaypointPlanManagerService_thr_Impl_Impl.c.s: cmake_forc
 
 CMakeFiles/main.dir/ext/CASE_AttestationGate_thr_Impl_Impl_api.c.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/ext/CASE_AttestationGate_thr_Impl_Impl_api.c.o: ../ext/CASE_AttestationGate_thr_Impl_Impl_api.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_127) "Building C object CMakeFiles/main.dir/ext/CASE_AttestationGate_thr_Impl_Impl_api.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_126) "Building C object CMakeFiles/main.dir/ext/CASE_AttestationGate_thr_Impl_Impl_api.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main.dir/ext/CASE_AttestationGate_thr_Impl_Impl_api.c.o   -c /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/ext/CASE_AttestationGate_thr_Impl_Impl_api.c
 
 CMakeFiles/main.dir/ext/CASE_AttestationGate_thr_Impl_Impl_api.c.i: cmake_force
@@ -1730,7 +1717,7 @@ CMakeFiles/main.dir/ext/CASE_AttestationGate_thr_Impl_Impl_api.c.s: cmake_force
 
 CMakeFiles/main.dir/ext/CASE_AttestationGate_thr_Impl_Impl.c.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/ext/CASE_AttestationGate_thr_Impl_Impl.c.o: ../ext/CASE_AttestationGate_thr_Impl_Impl.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_128) "Building C object CMakeFiles/main.dir/ext/CASE_AttestationGate_thr_Impl_Impl.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_127) "Building C object CMakeFiles/main.dir/ext/CASE_AttestationGate_thr_Impl_Impl.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main.dir/ext/CASE_AttestationGate_thr_Impl_Impl.c.o   -c /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/ext/CASE_AttestationGate_thr_Impl_Impl.c
 
 CMakeFiles/main.dir/ext/CASE_AttestationGate_thr_Impl_Impl.c.i: cmake_force
@@ -1743,7 +1730,7 @@ CMakeFiles/main.dir/ext/CASE_AttestationGate_thr_Impl_Impl.c.s: cmake_force
 
 CMakeFiles/main.dir/ext/CASE_Filter_LST_thr_Impl_Impl_api.c.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/ext/CASE_Filter_LST_thr_Impl_Impl_api.c.o: ../ext/CASE_Filter_LST_thr_Impl_Impl_api.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_129) "Building C object CMakeFiles/main.dir/ext/CASE_Filter_LST_thr_Impl_Impl_api.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_128) "Building C object CMakeFiles/main.dir/ext/CASE_Filter_LST_thr_Impl_Impl_api.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main.dir/ext/CASE_Filter_LST_thr_Impl_Impl_api.c.o   -c /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/ext/CASE_Filter_LST_thr_Impl_Impl_api.c
 
 CMakeFiles/main.dir/ext/CASE_Filter_LST_thr_Impl_Impl_api.c.i: cmake_force
@@ -1756,7 +1743,7 @@ CMakeFiles/main.dir/ext/CASE_Filter_LST_thr_Impl_Impl_api.c.s: cmake_force
 
 CMakeFiles/main.dir/ext/CASE_Filter_LST_thr_Impl_Impl.c.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/ext/CASE_Filter_LST_thr_Impl_Impl.c.o: ../ext/CASE_Filter_LST_thr_Impl_Impl.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_130) "Building C object CMakeFiles/main.dir/ext/CASE_Filter_LST_thr_Impl_Impl.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_129) "Building C object CMakeFiles/main.dir/ext/CASE_Filter_LST_thr_Impl_Impl.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main.dir/ext/CASE_Filter_LST_thr_Impl_Impl.c.o   -c /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/ext/CASE_Filter_LST_thr_Impl_Impl.c
 
 CMakeFiles/main.dir/ext/CASE_Filter_LST_thr_Impl_Impl.c.i: cmake_force
@@ -1769,7 +1756,7 @@ CMakeFiles/main.dir/ext/CASE_Filter_LST_thr_Impl_Impl.c.s: cmake_force
 
 CMakeFiles/main.dir/ext/CASE_Monitor_Req_thr_Impl_Impl_api.c.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/ext/CASE_Monitor_Req_thr_Impl_Impl_api.c.o: ../ext/CASE_Monitor_Req_thr_Impl_Impl_api.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_131) "Building C object CMakeFiles/main.dir/ext/CASE_Monitor_Req_thr_Impl_Impl_api.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_130) "Building C object CMakeFiles/main.dir/ext/CASE_Monitor_Req_thr_Impl_Impl_api.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main.dir/ext/CASE_Monitor_Req_thr_Impl_Impl_api.c.o   -c /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/ext/CASE_Monitor_Req_thr_Impl_Impl_api.c
 
 CMakeFiles/main.dir/ext/CASE_Monitor_Req_thr_Impl_Impl_api.c.i: cmake_force
@@ -1782,7 +1769,7 @@ CMakeFiles/main.dir/ext/CASE_Monitor_Req_thr_Impl_Impl_api.c.s: cmake_force
 
 CMakeFiles/main.dir/ext/CASE_Monitor_Req_thr_Impl_Impl.c.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/ext/CASE_Monitor_Req_thr_Impl_Impl.c.o: ../ext/CASE_Monitor_Req_thr_Impl_Impl.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_132) "Building C object CMakeFiles/main.dir/ext/CASE_Monitor_Req_thr_Impl_Impl.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_131) "Building C object CMakeFiles/main.dir/ext/CASE_Monitor_Req_thr_Impl_Impl.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main.dir/ext/CASE_Monitor_Req_thr_Impl_Impl.c.o   -c /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/ext/CASE_Monitor_Req_thr_Impl_Impl.c
 
 CMakeFiles/main.dir/ext/CASE_Monitor_Req_thr_Impl_Impl.c.i: cmake_force
@@ -1795,7 +1782,7 @@ CMakeFiles/main.dir/ext/CASE_Monitor_Req_thr_Impl_Impl.c.s: cmake_force
 
 CMakeFiles/main.dir/ext/CASE_Monitor_Geo_thr_Impl_Impl_api.c.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/ext/CASE_Monitor_Geo_thr_Impl_Impl_api.c.o: ../ext/CASE_Monitor_Geo_thr_Impl_Impl_api.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_133) "Building C object CMakeFiles/main.dir/ext/CASE_Monitor_Geo_thr_Impl_Impl_api.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_132) "Building C object CMakeFiles/main.dir/ext/CASE_Monitor_Geo_thr_Impl_Impl_api.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main.dir/ext/CASE_Monitor_Geo_thr_Impl_Impl_api.c.o   -c /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/ext/CASE_Monitor_Geo_thr_Impl_Impl_api.c
 
 CMakeFiles/main.dir/ext/CASE_Monitor_Geo_thr_Impl_Impl_api.c.i: cmake_force
@@ -1808,7 +1795,7 @@ CMakeFiles/main.dir/ext/CASE_Monitor_Geo_thr_Impl_Impl_api.c.s: cmake_force
 
 CMakeFiles/main.dir/ext/CASE_Monitor_Geo_thr_Impl_Impl.c.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/ext/CASE_Monitor_Geo_thr_Impl_Impl.c.o: ../ext/CASE_Monitor_Geo_thr_Impl_Impl.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_134) "Building C object CMakeFiles/main.dir/ext/CASE_Monitor_Geo_thr_Impl_Impl.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_133) "Building C object CMakeFiles/main.dir/ext/CASE_Monitor_Geo_thr_Impl_Impl.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main.dir/ext/CASE_Monitor_Geo_thr_Impl_Impl.c.o   -c /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/ext/CASE_Monitor_Geo_thr_Impl_Impl.c
 
 CMakeFiles/main.dir/ext/CASE_Monitor_Geo_thr_Impl_Impl.c.i: cmake_force
@@ -1818,6 +1805,19 @@ CMakeFiles/main.dir/ext/CASE_Monitor_Geo_thr_Impl_Impl.c.i: cmake_force
 CMakeFiles/main.dir/ext/CASE_Monitor_Geo_thr_Impl_Impl.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/main.dir/ext/CASE_Monitor_Geo_thr_Impl_Impl.c.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/ext/CASE_Monitor_Geo_thr_Impl_Impl.c -o CMakeFiles/main.dir/ext/CASE_Monitor_Geo_thr_Impl_Impl.c.s
+
+CMakeFiles/main.dir/ext/ipc.c.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/ext/ipc.c.o: ../ext/ipc.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_134) "Building C object CMakeFiles/main.dir/ext/ipc.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main.dir/ext/ipc.c.o   -c /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/ext/ipc.c
+
+CMakeFiles/main.dir/ext/ipc.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/main.dir/ext/ipc.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/ext/ipc.c > CMakeFiles/main.dir/ext/ipc.c.i
+
+CMakeFiles/main.dir/ext/ipc.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/main.dir/ext/ipc.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/ext/ipc.c -o CMakeFiles/main.dir/ext/ipc.c.s
 
 # Object files for target main
 main_OBJECTS = \
@@ -1852,15 +1852,6 @@ main_OBJECTS = \
 "CMakeFiles/main.dir/library/hamr/Drivers/hamr_Drivers_UARTDriver_Impl_Impl.c.o" \
 "CMakeFiles/main.dir/library/hamr/hamr_IPCPorts.c.o" \
 "CMakeFiles/main.dir/library/hamr/hamr_Main.c.o" \
-"CMakeFiles/main.dir/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_AM_Gate_CASE_AttestationGate_App.c.o" \
-"CMakeFiles/main.dir/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_FC_UART_UARTDriver_App.c.o" \
-"CMakeFiles/main.dir/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_FLT_LST_CASE_Filter_LST_App.c.o" \
-"CMakeFiles/main.dir/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_FlyZones_FlyZonesDatabase_App.c.o" \
-"CMakeFiles/main.dir/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_MON_GEO_CASE_Monitor_Geo_App.c.o" \
-"CMakeFiles/main.dir/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_MON_REQ_CASE_Monitor_Req_App.c.o" \
-"CMakeFiles/main.dir/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_RADIO_RadioDriver_Attestation_App.c.o" \
-"CMakeFiles/main.dir/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_UXAS_UxAS_App.c.o" \
-"CMakeFiles/main.dir/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_WPM_WaypointPlanManagerService_App.c.o" \
 "CMakeFiles/main.dir/library/hamr/hamr_PlatformNix.c.o" \
 "CMakeFiles/main.dir/library/hamr/SW/hamr_SW_CASE_AttestationGate_thr_Impl_Bridge.c.o" \
 "CMakeFiles/main.dir/library/hamr/SW/CASE_AttestationGate_thr_Impl_Bridge/hamr_SW_CASE_AttestationGate_thr_Impl_Bridge_Api.c.o" \
@@ -1894,6 +1885,15 @@ main_OBJECTS = \
 "CMakeFiles/main.dir/library/hamr/SW/WaypointPlanManagerService_thr_Impl_Bridge/hamr_SW_WaypointPlanManagerService_thr_Impl_Bridge_Api.c.o" \
 "CMakeFiles/main.dir/library/hamr/SW/WaypointPlanManagerService_thr_Impl_Bridge/hamr_SW_WaypointPlanManagerService_thr_Impl_Bridge_EntryPoints.c.o" \
 "CMakeFiles/main.dir/library/hamr/SW/hamr_SW_WaypointPlanManagerService_thr_Impl_Impl.c.o" \
+"CMakeFiles/main.dir/library/hamr/hamr_SW_Impl_Instance_AM_Gate_CASE_AttestationGate_App.c.o" \
+"CMakeFiles/main.dir/library/hamr/hamr_SW_Impl_Instance_FC_UART_UARTDriver_App.c.o" \
+"CMakeFiles/main.dir/library/hamr/hamr_SW_Impl_Instance_FLT_LST_CASE_Filter_LST_App.c.o" \
+"CMakeFiles/main.dir/library/hamr/hamr_SW_Impl_Instance_FlyZones_FlyZonesDatabase_App.c.o" \
+"CMakeFiles/main.dir/library/hamr/hamr_SW_Impl_Instance_MON_GEO_CASE_Monitor_Geo_App.c.o" \
+"CMakeFiles/main.dir/library/hamr/hamr_SW_Impl_Instance_MON_REQ_CASE_Monitor_Req_App.c.o" \
+"CMakeFiles/main.dir/library/hamr/hamr_SW_Impl_Instance_RADIO_RadioDriver_Attestation_App.c.o" \
+"CMakeFiles/main.dir/library/hamr/hamr_SW_Impl_Instance_UXAS_UxAS_App.c.o" \
+"CMakeFiles/main.dir/library/hamr/hamr_SW_Impl_Instance_WPM_WaypointPlanManagerService_App.c.o" \
 "CMakeFiles/main.dir/library/org/sireum/org_sireum_IS_08117A.c.o" \
 "CMakeFiles/main.dir/library/org/sireum/org_sireum_IS_820232.c.o" \
 "CMakeFiles/main.dir/library/org/sireum/org_sireum_IS_82ABD8.c.o" \
@@ -1936,7 +1936,6 @@ main_OBJECTS = \
 "CMakeFiles/main.dir/library/org/sireum/org_sireum_Tuple2_EC3B57.c.o" \
 "CMakeFiles/main.dir/library/org/sireum/org_sireum_U8.c.o" \
 "CMakeFiles/main.dir/ext/ext.c.o" \
-"CMakeFiles/main.dir/ext/ipc.c.o" \
 "CMakeFiles/main.dir/ext/UARTDriver_Impl_Impl_api.c.o" \
 "CMakeFiles/main.dir/ext/UARTDriver_Impl_Impl.c.o" \
 "CMakeFiles/main.dir/ext/RadioDriver_Attestation_thr_Impl_Impl_api.c.o" \
@@ -1954,7 +1953,8 @@ main_OBJECTS = \
 "CMakeFiles/main.dir/ext/CASE_Monitor_Req_thr_Impl_Impl_api.c.o" \
 "CMakeFiles/main.dir/ext/CASE_Monitor_Req_thr_Impl_Impl.c.o" \
 "CMakeFiles/main.dir/ext/CASE_Monitor_Geo_thr_Impl_Impl_api.c.o" \
-"CMakeFiles/main.dir/ext/CASE_Monitor_Geo_thr_Impl_Impl.c.o"
+"CMakeFiles/main.dir/ext/CASE_Monitor_Geo_thr_Impl_Impl.c.o" \
+"CMakeFiles/main.dir/ext/ipc.c.o"
 
 # External object files for target main
 main_EXTERNAL_OBJECTS =
@@ -1990,15 +1990,6 @@ libmain.a: CMakeFiles/main.dir/library/hamr/Drivers/UARTDriver_Impl_Bridge/hamr_
 libmain.a: CMakeFiles/main.dir/library/hamr/Drivers/hamr_Drivers_UARTDriver_Impl_Impl.c.o
 libmain.a: CMakeFiles/main.dir/library/hamr/hamr_IPCPorts.c.o
 libmain.a: CMakeFiles/main.dir/library/hamr/hamr_Main.c.o
-libmain.a: CMakeFiles/main.dir/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_AM_Gate_CASE_AttestationGate_App.c.o
-libmain.a: CMakeFiles/main.dir/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_FC_UART_UARTDriver_App.c.o
-libmain.a: CMakeFiles/main.dir/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_FLT_LST_CASE_Filter_LST_App.c.o
-libmain.a: CMakeFiles/main.dir/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_FlyZones_FlyZonesDatabase_App.c.o
-libmain.a: CMakeFiles/main.dir/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_MON_GEO_CASE_Monitor_Geo_App.c.o
-libmain.a: CMakeFiles/main.dir/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_MON_REQ_CASE_Monitor_Req_App.c.o
-libmain.a: CMakeFiles/main.dir/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_RADIO_RadioDriver_Attestation_App.c.o
-libmain.a: CMakeFiles/main.dir/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_UXAS_UxAS_App.c.o
-libmain.a: CMakeFiles/main.dir/library/hamr/hamr_MissionComputer_Impl_Instance_PROC_SW_WPM_WaypointPlanManagerService_App.c.o
 libmain.a: CMakeFiles/main.dir/library/hamr/hamr_PlatformNix.c.o
 libmain.a: CMakeFiles/main.dir/library/hamr/SW/hamr_SW_CASE_AttestationGate_thr_Impl_Bridge.c.o
 libmain.a: CMakeFiles/main.dir/library/hamr/SW/CASE_AttestationGate_thr_Impl_Bridge/hamr_SW_CASE_AttestationGate_thr_Impl_Bridge_Api.c.o
@@ -2032,6 +2023,15 @@ libmain.a: CMakeFiles/main.dir/library/hamr/SW/hamr_SW_WaypointPlanManagerServic
 libmain.a: CMakeFiles/main.dir/library/hamr/SW/WaypointPlanManagerService_thr_Impl_Bridge/hamr_SW_WaypointPlanManagerService_thr_Impl_Bridge_Api.c.o
 libmain.a: CMakeFiles/main.dir/library/hamr/SW/WaypointPlanManagerService_thr_Impl_Bridge/hamr_SW_WaypointPlanManagerService_thr_Impl_Bridge_EntryPoints.c.o
 libmain.a: CMakeFiles/main.dir/library/hamr/SW/hamr_SW_WaypointPlanManagerService_thr_Impl_Impl.c.o
+libmain.a: CMakeFiles/main.dir/library/hamr/hamr_SW_Impl_Instance_AM_Gate_CASE_AttestationGate_App.c.o
+libmain.a: CMakeFiles/main.dir/library/hamr/hamr_SW_Impl_Instance_FC_UART_UARTDriver_App.c.o
+libmain.a: CMakeFiles/main.dir/library/hamr/hamr_SW_Impl_Instance_FLT_LST_CASE_Filter_LST_App.c.o
+libmain.a: CMakeFiles/main.dir/library/hamr/hamr_SW_Impl_Instance_FlyZones_FlyZonesDatabase_App.c.o
+libmain.a: CMakeFiles/main.dir/library/hamr/hamr_SW_Impl_Instance_MON_GEO_CASE_Monitor_Geo_App.c.o
+libmain.a: CMakeFiles/main.dir/library/hamr/hamr_SW_Impl_Instance_MON_REQ_CASE_Monitor_Req_App.c.o
+libmain.a: CMakeFiles/main.dir/library/hamr/hamr_SW_Impl_Instance_RADIO_RadioDriver_Attestation_App.c.o
+libmain.a: CMakeFiles/main.dir/library/hamr/hamr_SW_Impl_Instance_UXAS_UxAS_App.c.o
+libmain.a: CMakeFiles/main.dir/library/hamr/hamr_SW_Impl_Instance_WPM_WaypointPlanManagerService_App.c.o
 libmain.a: CMakeFiles/main.dir/library/org/sireum/org_sireum_IS_08117A.c.o
 libmain.a: CMakeFiles/main.dir/library/org/sireum/org_sireum_IS_820232.c.o
 libmain.a: CMakeFiles/main.dir/library/org/sireum/org_sireum_IS_82ABD8.c.o
@@ -2074,7 +2074,6 @@ libmain.a: CMakeFiles/main.dir/library/org/sireum/org_sireum_Tuple2_D0E3BB.c.o
 libmain.a: CMakeFiles/main.dir/library/org/sireum/org_sireum_Tuple2_EC3B57.c.o
 libmain.a: CMakeFiles/main.dir/library/org/sireum/org_sireum_U8.c.o
 libmain.a: CMakeFiles/main.dir/ext/ext.c.o
-libmain.a: CMakeFiles/main.dir/ext/ipc.c.o
 libmain.a: CMakeFiles/main.dir/ext/UARTDriver_Impl_Impl_api.c.o
 libmain.a: CMakeFiles/main.dir/ext/UARTDriver_Impl_Impl.c.o
 libmain.a: CMakeFiles/main.dir/ext/RadioDriver_Attestation_thr_Impl_Impl_api.c.o
@@ -2093,6 +2092,7 @@ libmain.a: CMakeFiles/main.dir/ext/CASE_Monitor_Req_thr_Impl_Impl_api.c.o
 libmain.a: CMakeFiles/main.dir/ext/CASE_Monitor_Req_thr_Impl_Impl.c.o
 libmain.a: CMakeFiles/main.dir/ext/CASE_Monitor_Geo_thr_Impl_Impl_api.c.o
 libmain.a: CMakeFiles/main.dir/ext/CASE_Monitor_Geo_thr_Impl_Impl.c.o
+libmain.a: CMakeFiles/main.dir/ext/ipc.c.o
 libmain.a: CMakeFiles/main.dir/build.make
 libmain.a: CMakeFiles/main.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_135) "Linking C static library libmain.a"

@@ -21,15 +21,15 @@ object Main extends App {
 
     val empty = art.Empty()
 
-    Platform.sendAsync(IPCPorts.MissionComputer_Impl_Instance_PROC_SW_FC_UART_UARTDriver_App, IPCPorts.MissionComputer_Impl_Instance_PROC_SW_FC_UART_UARTDriver_App, empty)
-    Platform.sendAsync(IPCPorts.MissionComputer_Impl_Instance_PROC_SW_RADIO_RadioDriver_Attestation_App, IPCPorts.MissionComputer_Impl_Instance_PROC_SW_RADIO_RadioDriver_Attestation_App, empty)
-    Platform.sendAsync(IPCPorts.MissionComputer_Impl_Instance_PROC_SW_FlyZones_FlyZonesDatabase_App, IPCPorts.MissionComputer_Impl_Instance_PROC_SW_FlyZones_FlyZonesDatabase_App, empty)
-    Platform.sendAsync(IPCPorts.MissionComputer_Impl_Instance_PROC_SW_UXAS_UxAS_App, IPCPorts.MissionComputer_Impl_Instance_PROC_SW_UXAS_UxAS_App, empty)
-    Platform.sendAsync(IPCPorts.MissionComputer_Impl_Instance_PROC_SW_WPM_WaypointPlanManagerService_App, IPCPorts.MissionComputer_Impl_Instance_PROC_SW_WPM_WaypointPlanManagerService_App, empty)
-    Platform.sendAsync(IPCPorts.MissionComputer_Impl_Instance_PROC_SW_AM_Gate_CASE_AttestationGate_App, IPCPorts.MissionComputer_Impl_Instance_PROC_SW_AM_Gate_CASE_AttestationGate_App, empty)
-    Platform.sendAsync(IPCPorts.MissionComputer_Impl_Instance_PROC_SW_FLT_LST_CASE_Filter_LST_App, IPCPorts.MissionComputer_Impl_Instance_PROC_SW_FLT_LST_CASE_Filter_LST_App, empty)
-    Platform.sendAsync(IPCPorts.MissionComputer_Impl_Instance_PROC_SW_MON_REQ_CASE_Monitor_Req_App, IPCPorts.MissionComputer_Impl_Instance_PROC_SW_MON_REQ_CASE_Monitor_Req_App, empty)
-    Platform.sendAsync(IPCPorts.MissionComputer_Impl_Instance_PROC_SW_MON_GEO_CASE_Monitor_Geo_App, IPCPorts.MissionComputer_Impl_Instance_PROC_SW_MON_GEO_CASE_Monitor_Geo_App, empty)
+    Platform.sendAsync(IPCPorts.SW_Impl_Instance_FC_UART_UARTDriver_App, IPCPorts.SW_Impl_Instance_FC_UART_UARTDriver_App, empty)
+    Platform.sendAsync(IPCPorts.SW_Impl_Instance_RADIO_RadioDriver_Attestation_App, IPCPorts.SW_Impl_Instance_RADIO_RadioDriver_Attestation_App, empty)
+    Platform.sendAsync(IPCPorts.SW_Impl_Instance_FlyZones_FlyZonesDatabase_App, IPCPorts.SW_Impl_Instance_FlyZones_FlyZonesDatabase_App, empty)
+    Platform.sendAsync(IPCPorts.SW_Impl_Instance_UXAS_UxAS_App, IPCPorts.SW_Impl_Instance_UXAS_UxAS_App, empty)
+    Platform.sendAsync(IPCPorts.SW_Impl_Instance_WPM_WaypointPlanManagerService_App, IPCPorts.SW_Impl_Instance_WPM_WaypointPlanManagerService_App, empty)
+    Platform.sendAsync(IPCPorts.SW_Impl_Instance_AM_Gate_CASE_AttestationGate_App, IPCPorts.SW_Impl_Instance_AM_Gate_CASE_AttestationGate_App, empty)
+    Platform.sendAsync(IPCPorts.SW_Impl_Instance_FLT_LST_CASE_Filter_LST_App, IPCPorts.SW_Impl_Instance_FLT_LST_CASE_Filter_LST_App, empty)
+    Platform.sendAsync(IPCPorts.SW_Impl_Instance_MON_REQ_CASE_Monitor_Req_App, IPCPorts.SW_Impl_Instance_MON_REQ_CASE_Monitor_Req_App, empty)
+    Platform.sendAsync(IPCPorts.SW_Impl_Instance_MON_GEO_CASE_Monitor_Geo_App, IPCPorts.SW_Impl_Instance_MON_GEO_CASE_Monitor_Geo_App, empty)
 
     Platform.finalise()
     return 0

@@ -5,7 +5,7 @@
 // IS[Z, art.UConnection]
 #include <type-art_UConnection.h>
 
-#define MaxIS_08117A 19
+#define MaxIS_08117A 20
 #define IS_08117ASizeT int8_t
 
 typedef struct IS_08117A *IS_08117A;

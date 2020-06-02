@@ -73,17 +73,17 @@ CMAKE_BINARY_DIR = /Users/egm/Documents/rockwellcollins/case-ta6-experimental-pl
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_MON_GEO_CASE_Monitor_Geo_App-bin.dir/all
-all: CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_AM_Gate_CASE_AttestationGate_App-bin.dir/all
-all: CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_UXAS_UxAS_App-bin.dir/all
 all: CMakeFiles/Main-bin.dir/all
-all: CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_RADIO_RadioDriver_Attestation_App-bin.dir/all
-all: CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_MON_REQ_CASE_Monitor_Req_App-bin.dir/all
-all: CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_WPM_WaypointPlanManagerService_App-bin.dir/all
-all: CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_FlyZones_FlyZonesDatabase_App-bin.dir/all
-all: CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_FLT_LST_CASE_Filter_LST_App-bin.dir/all
-all: CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_FC_UART_UARTDriver_App-bin.dir/all
+all: CMakeFiles/SW_Impl_Instance_FLT_LST_CASE_Filter_LST_App-bin.dir/all
+all: CMakeFiles/SW_Impl_Instance_FlyZones_FlyZonesDatabase_App-bin.dir/all
+all: CMakeFiles/SW_Impl_Instance_RADIO_RadioDriver_Attestation_App-bin.dir/all
+all: CMakeFiles/SW_Impl_Instance_FC_UART_UARTDriver_App-bin.dir/all
 all: CMakeFiles/main.dir/all
+all: CMakeFiles/SW_Impl_Instance_UXAS_UxAS_App-bin.dir/all
+all: CMakeFiles/SW_Impl_Instance_MON_GEO_CASE_Monitor_Geo_App-bin.dir/all
+all: CMakeFiles/SW_Impl_Instance_MON_REQ_CASE_Monitor_Req_App-bin.dir/all
+all: CMakeFiles/SW_Impl_Instance_AM_Gate_CASE_AttestationGate_App-bin.dir/all
+all: CMakeFiles/SW_Impl_Instance_WPM_WaypointPlanManagerService_App-bin.dir/all
 
 .PHONY : all
 
@@ -93,100 +93,19 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_MON_GEO_CASE_Monitor_Geo_App-bin.dir/clean
-clean: CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_AM_Gate_CASE_AttestationGate_App-bin.dir/clean
-clean: CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_UXAS_UxAS_App-bin.dir/clean
 clean: CMakeFiles/Main-bin.dir/clean
-clean: CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_RADIO_RadioDriver_Attestation_App-bin.dir/clean
-clean: CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_MON_REQ_CASE_Monitor_Req_App-bin.dir/clean
-clean: CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_WPM_WaypointPlanManagerService_App-bin.dir/clean
-clean: CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_FlyZones_FlyZonesDatabase_App-bin.dir/clean
-clean: CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_FLT_LST_CASE_Filter_LST_App-bin.dir/clean
-clean: CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_FC_UART_UARTDriver_App-bin.dir/clean
+clean: CMakeFiles/SW_Impl_Instance_FLT_LST_CASE_Filter_LST_App-bin.dir/clean
+clean: CMakeFiles/SW_Impl_Instance_FlyZones_FlyZonesDatabase_App-bin.dir/clean
+clean: CMakeFiles/SW_Impl_Instance_RADIO_RadioDriver_Attestation_App-bin.dir/clean
+clean: CMakeFiles/SW_Impl_Instance_FC_UART_UARTDriver_App-bin.dir/clean
 clean: CMakeFiles/main.dir/clean
+clean: CMakeFiles/SW_Impl_Instance_UXAS_UxAS_App-bin.dir/clean
+clean: CMakeFiles/SW_Impl_Instance_MON_GEO_CASE_Monitor_Geo_App-bin.dir/clean
+clean: CMakeFiles/SW_Impl_Instance_MON_REQ_CASE_Monitor_Req_App-bin.dir/clean
+clean: CMakeFiles/SW_Impl_Instance_AM_Gate_CASE_AttestationGate_App-bin.dir/clean
+clean: CMakeFiles/SW_Impl_Instance_WPM_WaypointPlanManagerService_App-bin.dir/clean
 
 .PHONY : clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_MON_GEO_CASE_Monitor_Geo_App-bin.dir
-
-# All Build rule for target.
-CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_MON_GEO_CASE_Monitor_Geo_App-bin.dir/all: CMakeFiles/main.dir/all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_MON_GEO_CASE_Monitor_Geo_App-bin.dir/build.make CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_MON_GEO_CASE_Monitor_Geo_App-bin.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_MON_GEO_CASE_Monitor_Geo_App-bin.dir/build.make CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_MON_GEO_CASE_Monitor_Geo_App-bin.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=7 "Built target MissionComputer_Impl_Instance_PROC_SW_MON_GEO_CASE_Monitor_Geo_App-bin"
-.PHONY : CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_MON_GEO_CASE_Monitor_Geo_App-bin.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_MON_GEO_CASE_Monitor_Geo_App-bin.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles 89
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_MON_GEO_CASE_Monitor_Geo_App-bin.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles 0
-.PHONY : CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_MON_GEO_CASE_Monitor_Geo_App-bin.dir/rule
-
-# Convenience name for target.
-MissionComputer_Impl_Instance_PROC_SW_MON_GEO_CASE_Monitor_Geo_App-bin: CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_MON_GEO_CASE_Monitor_Geo_App-bin.dir/rule
-
-.PHONY : MissionComputer_Impl_Instance_PROC_SW_MON_GEO_CASE_Monitor_Geo_App-bin
-
-# clean rule for target.
-CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_MON_GEO_CASE_Monitor_Geo_App-bin.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_MON_GEO_CASE_Monitor_Geo_App-bin.dir/build.make CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_MON_GEO_CASE_Monitor_Geo_App-bin.dir/clean
-.PHONY : CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_MON_GEO_CASE_Monitor_Geo_App-bin.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_AM_Gate_CASE_AttestationGate_App-bin.dir
-
-# All Build rule for target.
-CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_AM_Gate_CASE_AttestationGate_App-bin.dir/all: CMakeFiles/main.dir/all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_AM_Gate_CASE_AttestationGate_App-bin.dir/build.make CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_AM_Gate_CASE_AttestationGate_App-bin.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_AM_Gate_CASE_AttestationGate_App-bin.dir/build.make CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_AM_Gate_CASE_AttestationGate_App-bin.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=2 "Built target MissionComputer_Impl_Instance_PROC_SW_AM_Gate_CASE_AttestationGate_App-bin"
-.PHONY : CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_AM_Gate_CASE_AttestationGate_App-bin.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_AM_Gate_CASE_AttestationGate_App-bin.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles 89
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_AM_Gate_CASE_AttestationGate_App-bin.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles 0
-.PHONY : CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_AM_Gate_CASE_AttestationGate_App-bin.dir/rule
-
-# Convenience name for target.
-MissionComputer_Impl_Instance_PROC_SW_AM_Gate_CASE_AttestationGate_App-bin: CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_AM_Gate_CASE_AttestationGate_App-bin.dir/rule
-
-.PHONY : MissionComputer_Impl_Instance_PROC_SW_AM_Gate_CASE_AttestationGate_App-bin
-
-# clean rule for target.
-CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_AM_Gate_CASE_AttestationGate_App-bin.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_AM_Gate_CASE_AttestationGate_App-bin.dir/build.make CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_AM_Gate_CASE_AttestationGate_App-bin.dir/clean
-.PHONY : CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_AM_Gate_CASE_AttestationGate_App-bin.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_UXAS_UxAS_App-bin.dir
-
-# All Build rule for target.
-CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_UXAS_UxAS_App-bin.dir/all: CMakeFiles/main.dir/all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_UXAS_UxAS_App-bin.dir/build.make CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_UXAS_UxAS_App-bin.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_UXAS_UxAS_App-bin.dir/build.make CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_UXAS_UxAS_App-bin.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=11 "Built target MissionComputer_Impl_Instance_PROC_SW_UXAS_UxAS_App-bin"
-.PHONY : CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_UXAS_UxAS_App-bin.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_UXAS_UxAS_App-bin.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles 89
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_UXAS_UxAS_App-bin.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles 0
-.PHONY : CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_UXAS_UxAS_App-bin.dir/rule
-
-# Convenience name for target.
-MissionComputer_Impl_Instance_PROC_SW_UXAS_UxAS_App-bin: CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_UXAS_UxAS_App-bin.dir/rule
-
-.PHONY : MissionComputer_Impl_Instance_PROC_SW_UXAS_UxAS_App-bin
-
-# clean rule for target.
-CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_UXAS_UxAS_App-bin.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_UXAS_UxAS_App-bin.dir/build.make CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_UXAS_UxAS_App-bin.dir/clean
-.PHONY : CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_UXAS_UxAS_App-bin.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/Main-bin.dir
@@ -216,166 +135,112 @@ CMakeFiles/Main-bin.dir/clean:
 .PHONY : CMakeFiles/Main-bin.dir/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_RADIO_RadioDriver_Attestation_App-bin.dir
+# Target rules for target CMakeFiles/SW_Impl_Instance_FLT_LST_CASE_Filter_LST_App-bin.dir
 
 # All Build rule for target.
-CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_RADIO_RadioDriver_Attestation_App-bin.dir/all: CMakeFiles/main.dir/all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_RADIO_RadioDriver_Attestation_App-bin.dir/build.make CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_RADIO_RadioDriver_Attestation_App-bin.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_RADIO_RadioDriver_Attestation_App-bin.dir/build.make CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_RADIO_RadioDriver_Attestation_App-bin.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=10 "Built target MissionComputer_Impl_Instance_PROC_SW_RADIO_RadioDriver_Attestation_App-bin"
-.PHONY : CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_RADIO_RadioDriver_Attestation_App-bin.dir/all
+CMakeFiles/SW_Impl_Instance_FLT_LST_CASE_Filter_LST_App-bin.dir/all: CMakeFiles/main.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SW_Impl_Instance_FLT_LST_CASE_Filter_LST_App-bin.dir/build.make CMakeFiles/SW_Impl_Instance_FLT_LST_CASE_Filter_LST_App-bin.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SW_Impl_Instance_FLT_LST_CASE_Filter_LST_App-bin.dir/build.make CMakeFiles/SW_Impl_Instance_FLT_LST_CASE_Filter_LST_App-bin.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=4,5 "Built target SW_Impl_Instance_FLT_LST_CASE_Filter_LST_App-bin"
+.PHONY : CMakeFiles/SW_Impl_Instance_FLT_LST_CASE_Filter_LST_App-bin.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_RADIO_RadioDriver_Attestation_App-bin.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles 89
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_RADIO_RadioDriver_Attestation_App-bin.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles 0
-.PHONY : CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_RADIO_RadioDriver_Attestation_App-bin.dir/rule
-
-# Convenience name for target.
-MissionComputer_Impl_Instance_PROC_SW_RADIO_RadioDriver_Attestation_App-bin: CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_RADIO_RadioDriver_Attestation_App-bin.dir/rule
-
-.PHONY : MissionComputer_Impl_Instance_PROC_SW_RADIO_RadioDriver_Attestation_App-bin
-
-# clean rule for target.
-CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_RADIO_RadioDriver_Attestation_App-bin.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_RADIO_RadioDriver_Attestation_App-bin.dir/build.make CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_RADIO_RadioDriver_Attestation_App-bin.dir/clean
-.PHONY : CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_RADIO_RadioDriver_Attestation_App-bin.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_MON_REQ_CASE_Monitor_Req_App-bin.dir
-
-# All Build rule for target.
-CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_MON_REQ_CASE_Monitor_Req_App-bin.dir/all: CMakeFiles/main.dir/all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_MON_REQ_CASE_Monitor_Req_App-bin.dir/build.make CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_MON_REQ_CASE_Monitor_Req_App-bin.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_MON_REQ_CASE_Monitor_Req_App-bin.dir/build.make CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_MON_REQ_CASE_Monitor_Req_App-bin.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=8,9 "Built target MissionComputer_Impl_Instance_PROC_SW_MON_REQ_CASE_Monitor_Req_App-bin"
-.PHONY : CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_MON_REQ_CASE_Monitor_Req_App-bin.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_MON_REQ_CASE_Monitor_Req_App-bin.dir/rule: cmake_check_build_system
+CMakeFiles/SW_Impl_Instance_FLT_LST_CASE_Filter_LST_App-bin.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles 90
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_MON_REQ_CASE_Monitor_Req_App-bin.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/SW_Impl_Instance_FLT_LST_CASE_Filter_LST_App-bin.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles 0
-.PHONY : CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_MON_REQ_CASE_Monitor_Req_App-bin.dir/rule
+.PHONY : CMakeFiles/SW_Impl_Instance_FLT_LST_CASE_Filter_LST_App-bin.dir/rule
 
 # Convenience name for target.
-MissionComputer_Impl_Instance_PROC_SW_MON_REQ_CASE_Monitor_Req_App-bin: CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_MON_REQ_CASE_Monitor_Req_App-bin.dir/rule
+SW_Impl_Instance_FLT_LST_CASE_Filter_LST_App-bin: CMakeFiles/SW_Impl_Instance_FLT_LST_CASE_Filter_LST_App-bin.dir/rule
 
-.PHONY : MissionComputer_Impl_Instance_PROC_SW_MON_REQ_CASE_Monitor_Req_App-bin
+.PHONY : SW_Impl_Instance_FLT_LST_CASE_Filter_LST_App-bin
 
 # clean rule for target.
-CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_MON_REQ_CASE_Monitor_Req_App-bin.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_MON_REQ_CASE_Monitor_Req_App-bin.dir/build.make CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_MON_REQ_CASE_Monitor_Req_App-bin.dir/clean
-.PHONY : CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_MON_REQ_CASE_Monitor_Req_App-bin.dir/clean
+CMakeFiles/SW_Impl_Instance_FLT_LST_CASE_Filter_LST_App-bin.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SW_Impl_Instance_FLT_LST_CASE_Filter_LST_App-bin.dir/build.make CMakeFiles/SW_Impl_Instance_FLT_LST_CASE_Filter_LST_App-bin.dir/clean
+.PHONY : CMakeFiles/SW_Impl_Instance_FLT_LST_CASE_Filter_LST_App-bin.dir/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_WPM_WaypointPlanManagerService_App-bin.dir
+# Target rules for target CMakeFiles/SW_Impl_Instance_FlyZones_FlyZonesDatabase_App-bin.dir
 
 # All Build rule for target.
-CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_WPM_WaypointPlanManagerService_App-bin.dir/all: CMakeFiles/main.dir/all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_WPM_WaypointPlanManagerService_App-bin.dir/build.make CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_WPM_WaypointPlanManagerService_App-bin.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_WPM_WaypointPlanManagerService_App-bin.dir/build.make CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_WPM_WaypointPlanManagerService_App-bin.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=12 "Built target MissionComputer_Impl_Instance_PROC_SW_WPM_WaypointPlanManagerService_App-bin"
-.PHONY : CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_WPM_WaypointPlanManagerService_App-bin.dir/all
+CMakeFiles/SW_Impl_Instance_FlyZones_FlyZonesDatabase_App-bin.dir/all: CMakeFiles/main.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SW_Impl_Instance_FlyZones_FlyZonesDatabase_App-bin.dir/build.make CMakeFiles/SW_Impl_Instance_FlyZones_FlyZonesDatabase_App-bin.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SW_Impl_Instance_FlyZones_FlyZonesDatabase_App-bin.dir/build.make CMakeFiles/SW_Impl_Instance_FlyZones_FlyZonesDatabase_App-bin.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=6 "Built target SW_Impl_Instance_FlyZones_FlyZonesDatabase_App-bin"
+.PHONY : CMakeFiles/SW_Impl_Instance_FlyZones_FlyZonesDatabase_App-bin.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_WPM_WaypointPlanManagerService_App-bin.dir/rule: cmake_check_build_system
+CMakeFiles/SW_Impl_Instance_FlyZones_FlyZonesDatabase_App-bin.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles 89
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_WPM_WaypointPlanManagerService_App-bin.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/SW_Impl_Instance_FlyZones_FlyZonesDatabase_App-bin.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles 0
-.PHONY : CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_WPM_WaypointPlanManagerService_App-bin.dir/rule
+.PHONY : CMakeFiles/SW_Impl_Instance_FlyZones_FlyZonesDatabase_App-bin.dir/rule
 
 # Convenience name for target.
-MissionComputer_Impl_Instance_PROC_SW_WPM_WaypointPlanManagerService_App-bin: CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_WPM_WaypointPlanManagerService_App-bin.dir/rule
+SW_Impl_Instance_FlyZones_FlyZonesDatabase_App-bin: CMakeFiles/SW_Impl_Instance_FlyZones_FlyZonesDatabase_App-bin.dir/rule
 
-.PHONY : MissionComputer_Impl_Instance_PROC_SW_WPM_WaypointPlanManagerService_App-bin
+.PHONY : SW_Impl_Instance_FlyZones_FlyZonesDatabase_App-bin
 
 # clean rule for target.
-CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_WPM_WaypointPlanManagerService_App-bin.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_WPM_WaypointPlanManagerService_App-bin.dir/build.make CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_WPM_WaypointPlanManagerService_App-bin.dir/clean
-.PHONY : CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_WPM_WaypointPlanManagerService_App-bin.dir/clean
+CMakeFiles/SW_Impl_Instance_FlyZones_FlyZonesDatabase_App-bin.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SW_Impl_Instance_FlyZones_FlyZonesDatabase_App-bin.dir/build.make CMakeFiles/SW_Impl_Instance_FlyZones_FlyZonesDatabase_App-bin.dir/clean
+.PHONY : CMakeFiles/SW_Impl_Instance_FlyZones_FlyZonesDatabase_App-bin.dir/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_FlyZones_FlyZonesDatabase_App-bin.dir
+# Target rules for target CMakeFiles/SW_Impl_Instance_RADIO_RadioDriver_Attestation_App-bin.dir
 
 # All Build rule for target.
-CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_FlyZones_FlyZonesDatabase_App-bin.dir/all: CMakeFiles/main.dir/all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_FlyZones_FlyZonesDatabase_App-bin.dir/build.make CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_FlyZones_FlyZonesDatabase_App-bin.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_FlyZones_FlyZonesDatabase_App-bin.dir/build.make CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_FlyZones_FlyZonesDatabase_App-bin.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=6 "Built target MissionComputer_Impl_Instance_PROC_SW_FlyZones_FlyZonesDatabase_App-bin"
-.PHONY : CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_FlyZones_FlyZonesDatabase_App-bin.dir/all
+CMakeFiles/SW_Impl_Instance_RADIO_RadioDriver_Attestation_App-bin.dir/all: CMakeFiles/main.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SW_Impl_Instance_RADIO_RadioDriver_Attestation_App-bin.dir/build.make CMakeFiles/SW_Impl_Instance_RADIO_RadioDriver_Attestation_App-bin.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SW_Impl_Instance_RADIO_RadioDriver_Attestation_App-bin.dir/build.make CMakeFiles/SW_Impl_Instance_RADIO_RadioDriver_Attestation_App-bin.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=10 "Built target SW_Impl_Instance_RADIO_RadioDriver_Attestation_App-bin"
+.PHONY : CMakeFiles/SW_Impl_Instance_RADIO_RadioDriver_Attestation_App-bin.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_FlyZones_FlyZonesDatabase_App-bin.dir/rule: cmake_check_build_system
+CMakeFiles/SW_Impl_Instance_RADIO_RadioDriver_Attestation_App-bin.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles 89
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_FlyZones_FlyZonesDatabase_App-bin.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/SW_Impl_Instance_RADIO_RadioDriver_Attestation_App-bin.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles 0
-.PHONY : CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_FlyZones_FlyZonesDatabase_App-bin.dir/rule
+.PHONY : CMakeFiles/SW_Impl_Instance_RADIO_RadioDriver_Attestation_App-bin.dir/rule
 
 # Convenience name for target.
-MissionComputer_Impl_Instance_PROC_SW_FlyZones_FlyZonesDatabase_App-bin: CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_FlyZones_FlyZonesDatabase_App-bin.dir/rule
+SW_Impl_Instance_RADIO_RadioDriver_Attestation_App-bin: CMakeFiles/SW_Impl_Instance_RADIO_RadioDriver_Attestation_App-bin.dir/rule
 
-.PHONY : MissionComputer_Impl_Instance_PROC_SW_FlyZones_FlyZonesDatabase_App-bin
-
-# clean rule for target.
-CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_FlyZones_FlyZonesDatabase_App-bin.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_FlyZones_FlyZonesDatabase_App-bin.dir/build.make CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_FlyZones_FlyZonesDatabase_App-bin.dir/clean
-.PHONY : CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_FlyZones_FlyZonesDatabase_App-bin.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_FLT_LST_CASE_Filter_LST_App-bin.dir
-
-# All Build rule for target.
-CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_FLT_LST_CASE_Filter_LST_App-bin.dir/all: CMakeFiles/main.dir/all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_FLT_LST_CASE_Filter_LST_App-bin.dir/build.make CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_FLT_LST_CASE_Filter_LST_App-bin.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_FLT_LST_CASE_Filter_LST_App-bin.dir/build.make CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_FLT_LST_CASE_Filter_LST_App-bin.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=4,5 "Built target MissionComputer_Impl_Instance_PROC_SW_FLT_LST_CASE_Filter_LST_App-bin"
-.PHONY : CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_FLT_LST_CASE_Filter_LST_App-bin.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_FLT_LST_CASE_Filter_LST_App-bin.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles 90
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_FLT_LST_CASE_Filter_LST_App-bin.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles 0
-.PHONY : CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_FLT_LST_CASE_Filter_LST_App-bin.dir/rule
-
-# Convenience name for target.
-MissionComputer_Impl_Instance_PROC_SW_FLT_LST_CASE_Filter_LST_App-bin: CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_FLT_LST_CASE_Filter_LST_App-bin.dir/rule
-
-.PHONY : MissionComputer_Impl_Instance_PROC_SW_FLT_LST_CASE_Filter_LST_App-bin
+.PHONY : SW_Impl_Instance_RADIO_RadioDriver_Attestation_App-bin
 
 # clean rule for target.
-CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_FLT_LST_CASE_Filter_LST_App-bin.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_FLT_LST_CASE_Filter_LST_App-bin.dir/build.make CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_FLT_LST_CASE_Filter_LST_App-bin.dir/clean
-.PHONY : CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_FLT_LST_CASE_Filter_LST_App-bin.dir/clean
+CMakeFiles/SW_Impl_Instance_RADIO_RadioDriver_Attestation_App-bin.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SW_Impl_Instance_RADIO_RadioDriver_Attestation_App-bin.dir/build.make CMakeFiles/SW_Impl_Instance_RADIO_RadioDriver_Attestation_App-bin.dir/clean
+.PHONY : CMakeFiles/SW_Impl_Instance_RADIO_RadioDriver_Attestation_App-bin.dir/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_FC_UART_UARTDriver_App-bin.dir
+# Target rules for target CMakeFiles/SW_Impl_Instance_FC_UART_UARTDriver_App-bin.dir
 
 # All Build rule for target.
-CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_FC_UART_UARTDriver_App-bin.dir/all: CMakeFiles/main.dir/all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_FC_UART_UARTDriver_App-bin.dir/build.make CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_FC_UART_UARTDriver_App-bin.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_FC_UART_UARTDriver_App-bin.dir/build.make CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_FC_UART_UARTDriver_App-bin.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=3 "Built target MissionComputer_Impl_Instance_PROC_SW_FC_UART_UARTDriver_App-bin"
-.PHONY : CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_FC_UART_UARTDriver_App-bin.dir/all
+CMakeFiles/SW_Impl_Instance_FC_UART_UARTDriver_App-bin.dir/all: CMakeFiles/main.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SW_Impl_Instance_FC_UART_UARTDriver_App-bin.dir/build.make CMakeFiles/SW_Impl_Instance_FC_UART_UARTDriver_App-bin.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SW_Impl_Instance_FC_UART_UARTDriver_App-bin.dir/build.make CMakeFiles/SW_Impl_Instance_FC_UART_UARTDriver_App-bin.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=3 "Built target SW_Impl_Instance_FC_UART_UARTDriver_App-bin"
+.PHONY : CMakeFiles/SW_Impl_Instance_FC_UART_UARTDriver_App-bin.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_FC_UART_UARTDriver_App-bin.dir/rule: cmake_check_build_system
+CMakeFiles/SW_Impl_Instance_FC_UART_UARTDriver_App-bin.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles 89
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_FC_UART_UARTDriver_App-bin.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/SW_Impl_Instance_FC_UART_UARTDriver_App-bin.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles 0
-.PHONY : CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_FC_UART_UARTDriver_App-bin.dir/rule
+.PHONY : CMakeFiles/SW_Impl_Instance_FC_UART_UARTDriver_App-bin.dir/rule
 
 # Convenience name for target.
-MissionComputer_Impl_Instance_PROC_SW_FC_UART_UARTDriver_App-bin: CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_FC_UART_UARTDriver_App-bin.dir/rule
+SW_Impl_Instance_FC_UART_UARTDriver_App-bin: CMakeFiles/SW_Impl_Instance_FC_UART_UARTDriver_App-bin.dir/rule
 
-.PHONY : MissionComputer_Impl_Instance_PROC_SW_FC_UART_UARTDriver_App-bin
+.PHONY : SW_Impl_Instance_FC_UART_UARTDriver_App-bin
 
 # clean rule for target.
-CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_FC_UART_UARTDriver_App-bin.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_FC_UART_UARTDriver_App-bin.dir/build.make CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_FC_UART_UARTDriver_App-bin.dir/clean
-.PHONY : CMakeFiles/MissionComputer_Impl_Instance_PROC_SW_FC_UART_UARTDriver_App-bin.dir/clean
+CMakeFiles/SW_Impl_Instance_FC_UART_UARTDriver_App-bin.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SW_Impl_Instance_FC_UART_UARTDriver_App-bin.dir/build.make CMakeFiles/SW_Impl_Instance_FC_UART_UARTDriver_App-bin.dir/clean
+.PHONY : CMakeFiles/SW_Impl_Instance_FC_UART_UARTDriver_App-bin.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/main.dir
@@ -403,6 +268,141 @@ main: CMakeFiles/main.dir/rule
 CMakeFiles/main.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/clean
 .PHONY : CMakeFiles/main.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/SW_Impl_Instance_UXAS_UxAS_App-bin.dir
+
+# All Build rule for target.
+CMakeFiles/SW_Impl_Instance_UXAS_UxAS_App-bin.dir/all: CMakeFiles/main.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SW_Impl_Instance_UXAS_UxAS_App-bin.dir/build.make CMakeFiles/SW_Impl_Instance_UXAS_UxAS_App-bin.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SW_Impl_Instance_UXAS_UxAS_App-bin.dir/build.make CMakeFiles/SW_Impl_Instance_UXAS_UxAS_App-bin.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=11 "Built target SW_Impl_Instance_UXAS_UxAS_App-bin"
+.PHONY : CMakeFiles/SW_Impl_Instance_UXAS_UxAS_App-bin.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/SW_Impl_Instance_UXAS_UxAS_App-bin.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles 89
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/SW_Impl_Instance_UXAS_UxAS_App-bin.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles 0
+.PHONY : CMakeFiles/SW_Impl_Instance_UXAS_UxAS_App-bin.dir/rule
+
+# Convenience name for target.
+SW_Impl_Instance_UXAS_UxAS_App-bin: CMakeFiles/SW_Impl_Instance_UXAS_UxAS_App-bin.dir/rule
+
+.PHONY : SW_Impl_Instance_UXAS_UxAS_App-bin
+
+# clean rule for target.
+CMakeFiles/SW_Impl_Instance_UXAS_UxAS_App-bin.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SW_Impl_Instance_UXAS_UxAS_App-bin.dir/build.make CMakeFiles/SW_Impl_Instance_UXAS_UxAS_App-bin.dir/clean
+.PHONY : CMakeFiles/SW_Impl_Instance_UXAS_UxAS_App-bin.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/SW_Impl_Instance_MON_GEO_CASE_Monitor_Geo_App-bin.dir
+
+# All Build rule for target.
+CMakeFiles/SW_Impl_Instance_MON_GEO_CASE_Monitor_Geo_App-bin.dir/all: CMakeFiles/main.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SW_Impl_Instance_MON_GEO_CASE_Monitor_Geo_App-bin.dir/build.make CMakeFiles/SW_Impl_Instance_MON_GEO_CASE_Monitor_Geo_App-bin.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SW_Impl_Instance_MON_GEO_CASE_Monitor_Geo_App-bin.dir/build.make CMakeFiles/SW_Impl_Instance_MON_GEO_CASE_Monitor_Geo_App-bin.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=7 "Built target SW_Impl_Instance_MON_GEO_CASE_Monitor_Geo_App-bin"
+.PHONY : CMakeFiles/SW_Impl_Instance_MON_GEO_CASE_Monitor_Geo_App-bin.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/SW_Impl_Instance_MON_GEO_CASE_Monitor_Geo_App-bin.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles 89
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/SW_Impl_Instance_MON_GEO_CASE_Monitor_Geo_App-bin.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles 0
+.PHONY : CMakeFiles/SW_Impl_Instance_MON_GEO_CASE_Monitor_Geo_App-bin.dir/rule
+
+# Convenience name for target.
+SW_Impl_Instance_MON_GEO_CASE_Monitor_Geo_App-bin: CMakeFiles/SW_Impl_Instance_MON_GEO_CASE_Monitor_Geo_App-bin.dir/rule
+
+.PHONY : SW_Impl_Instance_MON_GEO_CASE_Monitor_Geo_App-bin
+
+# clean rule for target.
+CMakeFiles/SW_Impl_Instance_MON_GEO_CASE_Monitor_Geo_App-bin.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SW_Impl_Instance_MON_GEO_CASE_Monitor_Geo_App-bin.dir/build.make CMakeFiles/SW_Impl_Instance_MON_GEO_CASE_Monitor_Geo_App-bin.dir/clean
+.PHONY : CMakeFiles/SW_Impl_Instance_MON_GEO_CASE_Monitor_Geo_App-bin.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/SW_Impl_Instance_MON_REQ_CASE_Monitor_Req_App-bin.dir
+
+# All Build rule for target.
+CMakeFiles/SW_Impl_Instance_MON_REQ_CASE_Monitor_Req_App-bin.dir/all: CMakeFiles/main.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SW_Impl_Instance_MON_REQ_CASE_Monitor_Req_App-bin.dir/build.make CMakeFiles/SW_Impl_Instance_MON_REQ_CASE_Monitor_Req_App-bin.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SW_Impl_Instance_MON_REQ_CASE_Monitor_Req_App-bin.dir/build.make CMakeFiles/SW_Impl_Instance_MON_REQ_CASE_Monitor_Req_App-bin.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=8,9 "Built target SW_Impl_Instance_MON_REQ_CASE_Monitor_Req_App-bin"
+.PHONY : CMakeFiles/SW_Impl_Instance_MON_REQ_CASE_Monitor_Req_App-bin.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/SW_Impl_Instance_MON_REQ_CASE_Monitor_Req_App-bin.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles 90
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/SW_Impl_Instance_MON_REQ_CASE_Monitor_Req_App-bin.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles 0
+.PHONY : CMakeFiles/SW_Impl_Instance_MON_REQ_CASE_Monitor_Req_App-bin.dir/rule
+
+# Convenience name for target.
+SW_Impl_Instance_MON_REQ_CASE_Monitor_Req_App-bin: CMakeFiles/SW_Impl_Instance_MON_REQ_CASE_Monitor_Req_App-bin.dir/rule
+
+.PHONY : SW_Impl_Instance_MON_REQ_CASE_Monitor_Req_App-bin
+
+# clean rule for target.
+CMakeFiles/SW_Impl_Instance_MON_REQ_CASE_Monitor_Req_App-bin.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SW_Impl_Instance_MON_REQ_CASE_Monitor_Req_App-bin.dir/build.make CMakeFiles/SW_Impl_Instance_MON_REQ_CASE_Monitor_Req_App-bin.dir/clean
+.PHONY : CMakeFiles/SW_Impl_Instance_MON_REQ_CASE_Monitor_Req_App-bin.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/SW_Impl_Instance_AM_Gate_CASE_AttestationGate_App-bin.dir
+
+# All Build rule for target.
+CMakeFiles/SW_Impl_Instance_AM_Gate_CASE_AttestationGate_App-bin.dir/all: CMakeFiles/main.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SW_Impl_Instance_AM_Gate_CASE_AttestationGate_App-bin.dir/build.make CMakeFiles/SW_Impl_Instance_AM_Gate_CASE_AttestationGate_App-bin.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SW_Impl_Instance_AM_Gate_CASE_AttestationGate_App-bin.dir/build.make CMakeFiles/SW_Impl_Instance_AM_Gate_CASE_AttestationGate_App-bin.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=2 "Built target SW_Impl_Instance_AM_Gate_CASE_AttestationGate_App-bin"
+.PHONY : CMakeFiles/SW_Impl_Instance_AM_Gate_CASE_AttestationGate_App-bin.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/SW_Impl_Instance_AM_Gate_CASE_AttestationGate_App-bin.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles 89
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/SW_Impl_Instance_AM_Gate_CASE_AttestationGate_App-bin.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles 0
+.PHONY : CMakeFiles/SW_Impl_Instance_AM_Gate_CASE_AttestationGate_App-bin.dir/rule
+
+# Convenience name for target.
+SW_Impl_Instance_AM_Gate_CASE_AttestationGate_App-bin: CMakeFiles/SW_Impl_Instance_AM_Gate_CASE_AttestationGate_App-bin.dir/rule
+
+.PHONY : SW_Impl_Instance_AM_Gate_CASE_AttestationGate_App-bin
+
+# clean rule for target.
+CMakeFiles/SW_Impl_Instance_AM_Gate_CASE_AttestationGate_App-bin.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SW_Impl_Instance_AM_Gate_CASE_AttestationGate_App-bin.dir/build.make CMakeFiles/SW_Impl_Instance_AM_Gate_CASE_AttestationGate_App-bin.dir/clean
+.PHONY : CMakeFiles/SW_Impl_Instance_AM_Gate_CASE_AttestationGate_App-bin.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/SW_Impl_Instance_WPM_WaypointPlanManagerService_App-bin.dir
+
+# All Build rule for target.
+CMakeFiles/SW_Impl_Instance_WPM_WaypointPlanManagerService_App-bin.dir/all: CMakeFiles/main.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SW_Impl_Instance_WPM_WaypointPlanManagerService_App-bin.dir/build.make CMakeFiles/SW_Impl_Instance_WPM_WaypointPlanManagerService_App-bin.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SW_Impl_Instance_WPM_WaypointPlanManagerService_App-bin.dir/build.make CMakeFiles/SW_Impl_Instance_WPM_WaypointPlanManagerService_App-bin.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles --progress-num=12 "Built target SW_Impl_Instance_WPM_WaypointPlanManagerService_App-bin"
+.PHONY : CMakeFiles/SW_Impl_Instance_WPM_WaypointPlanManagerService_App-bin.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/SW_Impl_Instance_WPM_WaypointPlanManagerService_App-bin.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles 89
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/SW_Impl_Instance_WPM_WaypointPlanManagerService_App-bin.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/egm/Documents/rockwellcollins/case-ta6-experimental-platform-models/Phase-2-UAV-Experimental-Platform-June/hamr/src/c/nix/macOS-build/CMakeFiles 0
+.PHONY : CMakeFiles/SW_Impl_Instance_WPM_WaypointPlanManagerService_App-bin.dir/rule
+
+# Convenience name for target.
+SW_Impl_Instance_WPM_WaypointPlanManagerService_App-bin: CMakeFiles/SW_Impl_Instance_WPM_WaypointPlanManagerService_App-bin.dir/rule
+
+.PHONY : SW_Impl_Instance_WPM_WaypointPlanManagerService_App-bin
+
+# clean rule for target.
+CMakeFiles/SW_Impl_Instance_WPM_WaypointPlanManagerService_App-bin.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SW_Impl_Instance_WPM_WaypointPlanManagerService_App-bin.dir/build.make CMakeFiles/SW_Impl_Instance_WPM_WaypointPlanManagerService_App-bin.dir/clean
+.PHONY : CMakeFiles/SW_Impl_Instance_WPM_WaypointPlanManagerService_App-bin.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

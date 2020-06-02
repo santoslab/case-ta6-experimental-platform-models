@@ -4,7 +4,7 @@
 // navigate to the directory containing this file then click 'OK'.  To install
 // Sireum IVE see https://github.com/sireum/kekinian#installing
 
-lazy val MissionComputer_Impl_Instance = slangEmbeddedTestProject("MissionComputer_Impl_Instance", ".")
+lazy val SW_Impl_Instance = slangEmbeddedTestProject("SW_Impl_Instance", ".")
 
 
 val scalaVer = "2.12.11"

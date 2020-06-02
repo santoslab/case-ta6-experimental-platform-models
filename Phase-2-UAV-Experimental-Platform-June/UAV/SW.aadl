@@ -7,6 +7,7 @@ public
 	with CASE_Scheduling;
 	with CMASI;
 	renames AGREE_PLTL::all;
+	with HAMR;
 
 	
 	------------------
@@ -134,8 +135,6 @@ public
 	end CASE_AttestationGate_thr;
 
 	thread implementation CASE_AttestationGate_thr.Impl
-		properties
-			Dispatch_Protocol => Periodic;
 	end CASE_AttestationGate_thr.Impl;
 	
 	process CASE_AttestationGate
@@ -185,8 +184,6 @@ public
 	end CASE_Filter_LST_thr;
 
 	thread implementation CASE_Filter_LST_thr.Impl
-		properties
-			Dispatch_Protocol => Periodic;
 	end CASE_Filter_LST_thr.Impl;
 	
 	process CASE_Filter_LST
@@ -226,8 +223,6 @@ public
 	end CASE_Filter_OR_thr;
 
 	thread implementation CASE_Filter_OR_thr.Impl
-		properties
-			Dispatch_Protocol => Periodic;
 	end CASE_Filter_OR_thr.Impl;
 	
 	process CASE_Filter_OR
@@ -267,8 +262,6 @@ public
 	end CASE_Filter_AReq_thr;
 
 	thread implementation CASE_Filter_AReq_thr.Impl
-		properties
-			Dispatch_Protocol => Periodic;
 	end CASE_Filter_AReq_thr.Impl;
 	
 	process CASE_Filter_AReq
@@ -363,8 +356,6 @@ public
 	end CASE_Monitor_Req_thr;
 
 	thread implementation CASE_Monitor_Req_thr.Impl
-		properties
-			Dispatch_Protocol => Periodic;
 	end CASE_Monitor_Req_thr.Impl;
 	
 	process CASE_Monitor_Req
@@ -406,8 +397,6 @@ public
 	end CASE_Filter_ARes_thr;
 
 	thread implementation CASE_Filter_ARes_thr.Impl
-		properties
-			Dispatch_Protocol => Periodic;
 	end CASE_Filter_ARes_thr.Impl;
 	
 	process CASE_Filter_ARes
@@ -444,8 +433,6 @@ public
 	end FlyZonesDatabase_thr;
 
 	thread implementation FlyZonesDatabase_thr.Impl
-		properties
-			Dispatch_Protocol => Periodic;
 	end FlyZonesDatabase_thr.Impl;
 	
 	process FlyZonesDatabase
@@ -519,8 +506,6 @@ public
 	end CASE_Monitor_Geo_thr;
 
 	thread implementation CASE_Monitor_Geo_thr.Impl
-		properties
-			Dispatch_Protocol => Periodic;
 	end CASE_Monitor_Geo_thr.Impl;
 	
 	process CASE_Monitor_Geo
@@ -619,7 +604,19 @@ public
 	---------------------
 	-- Software system --
 	---------------------
+    ----------------------------------------------------------------------
+    processor proc
+    end proc;
 
+    processor implementation proc.Impl
+        properties
+            Frame_Period => 1000ms;
+            Clock_Period => 2ms;
+            CASE_Scheduling::Max_Domain => 15;
+            CASE_Scheduling::Schedule_Source_Text => "kernel/domain_schedule.c";
+    end proc.Impl;
+    ----------------------------------------------------------------------
+    
 	system SW
 		
 		annex agree {**
@@ -642,6 +639,7 @@ public
 
 	system implementation SW.Impl
 		subcomponents
+			proc: processor proc.Impl;
 			FC_UART: process UARTDriver.Impl;
 			RADIO: process RadioDriver_Attestation.Impl;
 			FlyZones: process FlyZonesDatabase.Impl;
@@ -674,7 +672,7 @@ public
 			--------
 			-- UXAS
 			--------
-			c15: port UXAS.AutomationResponse -> WPM.AutomationResponse;
+			c15: port UXAS.AutomationResponse -> MON_GEO.Observed;
 			c17: port FlyZones.keep_in_zones -> MON_GEO.keep_in_zones;
 			c18: port FlyZones.keep_out_zones -> MON_GEO.keep_out_zones;
 			c19: port UXAS.AutomationResponse -> MON_GEO.observed;
@@ -687,7 +685,23 @@ public
 			--------
 			c23: port MON_GEO.alert -> WPM.ReturnHome;
 			c24: port WPM.MissionCommand -> FC_UART.MissionCommand;
-
+			c25: port MON_GEO.output -> WPM.AutomationResponse;
+			
+    properties
+            Actual_Processor_Binding => (reference (proc)) applies to FC_UART;
+            Actual_Processor_Binding => (reference (proc)) applies to RADIO;
+            Actual_Processor_Binding => (reference (proc)) applies to FlyZones;
+            Actual_Processor_Binding => (reference (proc)) applies to UXAS;
+            Actual_Processor_Binding => (reference (proc)) applies to WPM;
+            Actual_Processor_Binding => (reference (proc)) applies to AM_GATE;
+            Actual_Processor_Binding => (reference (proc)) applies to FLT_LST;
+            Actual_Processor_Binding => (reference (proc)) applies to MON_REQ;
+            Actual_Processor_Binding => (reference (proc)) applies to MON_GEO;
+           
+            HAMR::Default_Bit_Width => 32;
+            HAMR::Default_Max_Sequence_Size => 1;
+            HAMR::Max_String_Size => 256;
+            HAMR::Bit_Codec_Raw_Connections => true;         
 	end SW.Impl;
 	
 end SW;

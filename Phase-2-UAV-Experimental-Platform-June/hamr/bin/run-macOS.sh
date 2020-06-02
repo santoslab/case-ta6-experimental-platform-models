@@ -5,15 +5,15 @@
 set -e
 export SCRIPT_HOME=$( cd "$( dirname "$0" )" &> /dev/null && pwd )
 cd $SCRIPT_HOME
-open -a Terminal "macOS-build/MissionComputer_Impl_Instance_PROC_SW_FC_UART_UARTDriver_App" &
-open -a Terminal "macOS-build/MissionComputer_Impl_Instance_PROC_SW_RADIO_RadioDriver_Attestation_App" &
-open -a Terminal "macOS-build/MissionComputer_Impl_Instance_PROC_SW_FlyZones_FlyZonesDatabase_App" &
-open -a Terminal "macOS-build/MissionComputer_Impl_Instance_PROC_SW_UXAS_UxAS_App" &
-open -a Terminal "macOS-build/MissionComputer_Impl_Instance_PROC_SW_WPM_WaypointPlanManagerService_App" &
-open -a Terminal "macOS-build/MissionComputer_Impl_Instance_PROC_SW_AM_Gate_CASE_AttestationGate_App" &
-open -a Terminal "macOS-build/MissionComputer_Impl_Instance_PROC_SW_FLT_LST_CASE_Filter_LST_App" &
-open -a Terminal "macOS-build/MissionComputer_Impl_Instance_PROC_SW_MON_REQ_CASE_Monitor_Req_App" &
-open -a Terminal "macOS-build/MissionComputer_Impl_Instance_PROC_SW_MON_GEO_CASE_Monitor_Geo_App" &
+open -a Terminal "macOS-build/SW_Impl_Instance_FC_UART_UARTDriver_App" &
+open -a Terminal "macOS-build/SW_Impl_Instance_RADIO_RadioDriver_Attestation_App" &
+open -a Terminal "macOS-build/SW_Impl_Instance_FlyZones_FlyZonesDatabase_App" &
+open -a Terminal "macOS-build/SW_Impl_Instance_UXAS_UxAS_App" &
+open -a Terminal "macOS-build/SW_Impl_Instance_WPM_WaypointPlanManagerService_App" &
+open -a Terminal "macOS-build/SW_Impl_Instance_AM_Gate_CASE_AttestationGate_App" &
+open -a Terminal "macOS-build/SW_Impl_Instance_FLT_LST_CASE_Filter_LST_App" &
+open -a Terminal "macOS-build/SW_Impl_Instance_MON_REQ_CASE_Monitor_Req_App" &
+open -a Terminal "macOS-build/SW_Impl_Instance_MON_GEO_CASE_Monitor_Geo_App" &
 read -p "Press enter to initialise components ..."
 macOS-build/Main
 read -p "Press enter again to start ..."

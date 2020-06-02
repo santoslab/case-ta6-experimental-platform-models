@@ -16,73 +16,76 @@ object ArtNix {
   val connection: MS[Art.PortId, ISZ[(Art.PortId, Art.PortId)]] = {
     val r = MS.create[Art.PortId, ISZ[(Art.PortId, Art.PortId)]](maxPortIds, ISZ())
 
-    r(Arch.MissionComputer_Impl_Instance_PROC_SW_FC_UART_UARTDriver.AirVehicleState.id) = ISZ(
-      (IPCPorts.MissionComputer_Impl_Instance_PROC_SW_UXAS_UxAS_App, Arch.MissionComputer_Impl_Instance_PROC_SW_UXAS_UxAS.AirVehicleState.id),
-      (IPCPorts.MissionComputer_Impl_Instance_PROC_SW_WPM_WaypointPlanManagerService_App, Arch.MissionComputer_Impl_Instance_PROC_SW_WPM_WaypointPlanManagerService.AirVehicleState.id)
+    r(Arch.SW_Impl_Instance_FC_UART_UARTDriver.AirVehicleState.id) = ISZ(
+      (IPCPorts.SW_Impl_Instance_UXAS_UxAS_App, Arch.SW_Impl_Instance_UXAS_UxAS.AirVehicleState.id),
+      (IPCPorts.SW_Impl_Instance_WPM_WaypointPlanManagerService_App, Arch.SW_Impl_Instance_WPM_WaypointPlanManagerService.AirVehicleState.id)
     )
-    r(Arch.MissionComputer_Impl_Instance_PROC_SW_RADIO_RadioDriver_Attestation.trusted_ids.id) = ISZ(
-      (IPCPorts.MissionComputer_Impl_Instance_PROC_SW_AM_Gate_CASE_AttestationGate_App, Arch.MissionComputer_Impl_Instance_PROC_SW_AM_Gate_CASE_AttestationGate.trusted_ids.id)
+    r(Arch.SW_Impl_Instance_RADIO_RadioDriver_Attestation.trusted_ids.id) = ISZ(
+      (IPCPorts.SW_Impl_Instance_AM_Gate_CASE_AttestationGate_App, Arch.SW_Impl_Instance_AM_Gate_CASE_AttestationGate.trusted_ids.id)
     )
-    r(Arch.MissionComputer_Impl_Instance_PROC_SW_RADIO_RadioDriver_Attestation.AutomationRequest.id) = ISZ(
-      (IPCPorts.MissionComputer_Impl_Instance_PROC_SW_AM_Gate_CASE_AttestationGate_App, Arch.MissionComputer_Impl_Instance_PROC_SW_AM_Gate_CASE_AttestationGate.AutomationRequest_in.id)
+    r(Arch.SW_Impl_Instance_RADIO_RadioDriver_Attestation.AutomationRequest.id) = ISZ(
+      (IPCPorts.SW_Impl_Instance_AM_Gate_CASE_AttestationGate_App, Arch.SW_Impl_Instance_AM_Gate_CASE_AttestationGate.AutomationRequest_in.id)
     )
-    r(Arch.MissionComputer_Impl_Instance_PROC_SW_RADIO_RadioDriver_Attestation.OperatingRegion.id) = ISZ(
-      (IPCPorts.MissionComputer_Impl_Instance_PROC_SW_AM_Gate_CASE_AttestationGate_App, Arch.MissionComputer_Impl_Instance_PROC_SW_AM_Gate_CASE_AttestationGate.OperatingRegion_in.id)
+    r(Arch.SW_Impl_Instance_RADIO_RadioDriver_Attestation.OperatingRegion.id) = ISZ(
+      (IPCPorts.SW_Impl_Instance_AM_Gate_CASE_AttestationGate_App, Arch.SW_Impl_Instance_AM_Gate_CASE_AttestationGate.OperatingRegion_in.id)
     )
-    r(Arch.MissionComputer_Impl_Instance_PROC_SW_RADIO_RadioDriver_Attestation.LineSearchTask.id) = ISZ(
-      (IPCPorts.MissionComputer_Impl_Instance_PROC_SW_AM_Gate_CASE_AttestationGate_App, Arch.MissionComputer_Impl_Instance_PROC_SW_AM_Gate_CASE_AttestationGate.LineSearchTask_in.id)
+    r(Arch.SW_Impl_Instance_RADIO_RadioDriver_Attestation.LineSearchTask.id) = ISZ(
+      (IPCPorts.SW_Impl_Instance_AM_Gate_CASE_AttestationGate_App, Arch.SW_Impl_Instance_AM_Gate_CASE_AttestationGate.LineSearchTask_in.id)
     )
-    r(Arch.MissionComputer_Impl_Instance_PROC_SW_FlyZones_FlyZonesDatabase.keep_in_zones.id) = ISZ(
-      (IPCPorts.MissionComputer_Impl_Instance_PROC_SW_MON_GEO_CASE_Monitor_Geo_App, Arch.MissionComputer_Impl_Instance_PROC_SW_MON_GEO_CASE_Monitor_Geo.keep_in_zones.id)
+    r(Arch.SW_Impl_Instance_FlyZones_FlyZonesDatabase.keep_in_zones.id) = ISZ(
+      (IPCPorts.SW_Impl_Instance_MON_GEO_CASE_Monitor_Geo_App, Arch.SW_Impl_Instance_MON_GEO_CASE_Monitor_Geo.keep_in_zones.id)
     )
-    r(Arch.MissionComputer_Impl_Instance_PROC_SW_FlyZones_FlyZonesDatabase.keep_out_zones.id) = ISZ(
-      (IPCPorts.MissionComputer_Impl_Instance_PROC_SW_MON_GEO_CASE_Monitor_Geo_App, Arch.MissionComputer_Impl_Instance_PROC_SW_MON_GEO_CASE_Monitor_Geo.keep_out_zones.id)
+    r(Arch.SW_Impl_Instance_FlyZones_FlyZonesDatabase.keep_out_zones.id) = ISZ(
+      (IPCPorts.SW_Impl_Instance_MON_GEO_CASE_Monitor_Geo_App, Arch.SW_Impl_Instance_MON_GEO_CASE_Monitor_Geo.keep_out_zones.id)
     )
-    r(Arch.MissionComputer_Impl_Instance_PROC_SW_UXAS_UxAS.AutomationResponse.id) = ISZ(
-      (IPCPorts.MissionComputer_Impl_Instance_PROC_SW_WPM_WaypointPlanManagerService_App, Arch.MissionComputer_Impl_Instance_PROC_SW_WPM_WaypointPlanManagerService.AutomationResponse.id),
-      (IPCPorts.MissionComputer_Impl_Instance_PROC_SW_MON_GEO_CASE_Monitor_Geo_App, Arch.MissionComputer_Impl_Instance_PROC_SW_MON_GEO_CASE_Monitor_Geo.observed.id),
-      (IPCPorts.MissionComputer_Impl_Instance_PROC_SW_MON_REQ_CASE_Monitor_Req_App, Arch.MissionComputer_Impl_Instance_PROC_SW_MON_REQ_CASE_Monitor_Req.observed.id)
+    r(Arch.SW_Impl_Instance_UXAS_UxAS.AutomationResponse.id) = ISZ(
+      (IPCPorts.SW_Impl_Instance_MON_GEO_CASE_Monitor_Geo_App, Arch.SW_Impl_Instance_MON_GEO_CASE_Monitor_Geo.observed.id),
+      (IPCPorts.SW_Impl_Instance_MON_GEO_CASE_Monitor_Geo_App, Arch.SW_Impl_Instance_MON_GEO_CASE_Monitor_Geo.observed.id),
+      (IPCPorts.SW_Impl_Instance_MON_REQ_CASE_Monitor_Req_App, Arch.SW_Impl_Instance_MON_REQ_CASE_Monitor_Req.observed.id)
     )
-    r(Arch.MissionComputer_Impl_Instance_PROC_SW_WPM_WaypointPlanManagerService.MissionCommand.id) = ISZ(
-      (IPCPorts.MissionComputer_Impl_Instance_PROC_SW_FC_UART_UARTDriver_App, Arch.MissionComputer_Impl_Instance_PROC_SW_FC_UART_UARTDriver.MissionCommand.id)
+    r(Arch.SW_Impl_Instance_WPM_WaypointPlanManagerService.MissionCommand.id) = ISZ(
+      (IPCPorts.SW_Impl_Instance_FC_UART_UARTDriver_App, Arch.SW_Impl_Instance_FC_UART_UARTDriver.MissionCommand.id)
     )
-    r(Arch.MissionComputer_Impl_Instance_PROC_SW_AM_Gate_CASE_AttestationGate.AutomationRequest_out.id) = ISZ(
-      (IPCPorts.MissionComputer_Impl_Instance_PROC_SW_UXAS_UxAS_App, Arch.MissionComputer_Impl_Instance_PROC_SW_UXAS_UxAS.AutomationRequest.id),
-      (IPCPorts.MissionComputer_Impl_Instance_PROC_SW_MON_REQ_CASE_Monitor_Req_App, Arch.MissionComputer_Impl_Instance_PROC_SW_MON_REQ_CASE_Monitor_Req.reference_1.id)
+    r(Arch.SW_Impl_Instance_AM_Gate_CASE_AttestationGate.AutomationRequest_out.id) = ISZ(
+      (IPCPorts.SW_Impl_Instance_UXAS_UxAS_App, Arch.SW_Impl_Instance_UXAS_UxAS.AutomationRequest.id),
+      (IPCPorts.SW_Impl_Instance_MON_REQ_CASE_Monitor_Req_App, Arch.SW_Impl_Instance_MON_REQ_CASE_Monitor_Req.reference_1.id)
     )
-    r(Arch.MissionComputer_Impl_Instance_PROC_SW_AM_Gate_CASE_AttestationGate.OperatingRegion_out.id) = ISZ(
-      (IPCPorts.MissionComputer_Impl_Instance_PROC_SW_UXAS_UxAS_App, Arch.MissionComputer_Impl_Instance_PROC_SW_UXAS_UxAS.OperatingRegion.id)
+    r(Arch.SW_Impl_Instance_AM_Gate_CASE_AttestationGate.OperatingRegion_out.id) = ISZ(
+      (IPCPorts.SW_Impl_Instance_UXAS_UxAS_App, Arch.SW_Impl_Instance_UXAS_UxAS.OperatingRegion.id)
     )
-    r(Arch.MissionComputer_Impl_Instance_PROC_SW_AM_Gate_CASE_AttestationGate.LineSearchTask_out.id) = ISZ(
-      (IPCPorts.MissionComputer_Impl_Instance_PROC_SW_FLT_LST_CASE_Filter_LST_App, Arch.MissionComputer_Impl_Instance_PROC_SW_FLT_LST_CASE_Filter_LST.filter_in.id)
+    r(Arch.SW_Impl_Instance_AM_Gate_CASE_AttestationGate.LineSearchTask_out.id) = ISZ(
+      (IPCPorts.SW_Impl_Instance_FLT_LST_CASE_Filter_LST_App, Arch.SW_Impl_Instance_FLT_LST_CASE_Filter_LST.filter_in.id)
     )
-    r(Arch.MissionComputer_Impl_Instance_PROC_SW_FLT_LST_CASE_Filter_LST.filter_out.id) = ISZ(
-      (IPCPorts.MissionComputer_Impl_Instance_PROC_SW_UXAS_UxAS_App, Arch.MissionComputer_Impl_Instance_PROC_SW_UXAS_UxAS.LineSearchTask.id)
+    r(Arch.SW_Impl_Instance_FLT_LST_CASE_Filter_LST.filter_out.id) = ISZ(
+      (IPCPorts.SW_Impl_Instance_UXAS_UxAS_App, Arch.SW_Impl_Instance_UXAS_UxAS.LineSearchTask.id)
     )
-    r(Arch.MissionComputer_Impl_Instance_PROC_SW_MON_GEO_CASE_Monitor_Geo.alert.id) = ISZ(
-      (IPCPorts.MissionComputer_Impl_Instance_PROC_SW_WPM_WaypointPlanManagerService_App, Arch.MissionComputer_Impl_Instance_PROC_SW_WPM_WaypointPlanManagerService.ReturnHome.id),
-      (IPCPorts.MissionComputer_Impl_Instance_PROC_SW_WPM_WaypointPlanManagerService_App, Arch.MissionComputer_Impl_Instance_PROC_SW_WPM_WaypointPlanManagerService.ReturnHome.id)
+    r(Arch.SW_Impl_Instance_MON_GEO_CASE_Monitor_Geo.output.id) = ISZ(
+      (IPCPorts.SW_Impl_Instance_WPM_WaypointPlanManagerService_App, Arch.SW_Impl_Instance_WPM_WaypointPlanManagerService.AutomationResponse.id)
+    )
+    r(Arch.SW_Impl_Instance_MON_GEO_CASE_Monitor_Geo.alert.id) = ISZ(
+      (IPCPorts.SW_Impl_Instance_WPM_WaypointPlanManagerService_App, Arch.SW_Impl_Instance_WPM_WaypointPlanManagerService.ReturnHome.id),
+      (IPCPorts.SW_Impl_Instance_WPM_WaypointPlanManagerService_App, Arch.SW_Impl_Instance_WPM_WaypointPlanManagerService.ReturnHome.id)
     )
 
     r
   }
   val eventInPorts: MS[Z, Art.PortId] = MSZ(
-    Arch.MissionComputer_Impl_Instance_PROC_SW_FC_UART_UARTDriver.recv_data.id,
-    Arch.MissionComputer_Impl_Instance_PROC_SW_FC_UART_UARTDriver.MissionCommand.id,
-    Arch.MissionComputer_Impl_Instance_PROC_SW_UXAS_UxAS.AutomationRequest.id,
-    Arch.MissionComputer_Impl_Instance_PROC_SW_UXAS_UxAS.AirVehicleState.id,
-    Arch.MissionComputer_Impl_Instance_PROC_SW_UXAS_UxAS.OperatingRegion.id,
-    Arch.MissionComputer_Impl_Instance_PROC_SW_UXAS_UxAS.LineSearchTask.id,
-    Arch.MissionComputer_Impl_Instance_PROC_SW_WPM_WaypointPlanManagerService.AutomationResponse.id,
-    Arch.MissionComputer_Impl_Instance_PROC_SW_WPM_WaypointPlanManagerService.AirVehicleState.id,
-    Arch.MissionComputer_Impl_Instance_PROC_SW_WPM_WaypointPlanManagerService.ReturnHome.id,
-    Arch.MissionComputer_Impl_Instance_PROC_SW_AM_Gate_CASE_AttestationGate.AutomationRequest_in.id,
-    Arch.MissionComputer_Impl_Instance_PROC_SW_AM_Gate_CASE_AttestationGate.OperatingRegion_in.id,
-    Arch.MissionComputer_Impl_Instance_PROC_SW_AM_Gate_CASE_AttestationGate.LineSearchTask_in.id,
-    Arch.MissionComputer_Impl_Instance_PROC_SW_FLT_LST_CASE_Filter_LST.filter_in.id,
-    Arch.MissionComputer_Impl_Instance_PROC_SW_MON_REQ_CASE_Monitor_Req.observed.id,
-    Arch.MissionComputer_Impl_Instance_PROC_SW_MON_REQ_CASE_Monitor_Req.reference_1.id,
-    Arch.MissionComputer_Impl_Instance_PROC_SW_MON_GEO_CASE_Monitor_Geo.observed.id
+    Arch.SW_Impl_Instance_FC_UART_UARTDriver.recv_data.id,
+    Arch.SW_Impl_Instance_FC_UART_UARTDriver.MissionCommand.id,
+    Arch.SW_Impl_Instance_UXAS_UxAS.AutomationRequest.id,
+    Arch.SW_Impl_Instance_UXAS_UxAS.AirVehicleState.id,
+    Arch.SW_Impl_Instance_UXAS_UxAS.OperatingRegion.id,
+    Arch.SW_Impl_Instance_UXAS_UxAS.LineSearchTask.id,
+    Arch.SW_Impl_Instance_WPM_WaypointPlanManagerService.AutomationResponse.id,
+    Arch.SW_Impl_Instance_WPM_WaypointPlanManagerService.AirVehicleState.id,
+    Arch.SW_Impl_Instance_WPM_WaypointPlanManagerService.ReturnHome.id,
+    Arch.SW_Impl_Instance_AM_Gate_CASE_AttestationGate.AutomationRequest_in.id,
+    Arch.SW_Impl_Instance_AM_Gate_CASE_AttestationGate.OperatingRegion_in.id,
+    Arch.SW_Impl_Instance_AM_Gate_CASE_AttestationGate.LineSearchTask_in.id,
+    Arch.SW_Impl_Instance_FLT_LST_CASE_Filter_LST.filter_in.id,
+    Arch.SW_Impl_Instance_MON_REQ_CASE_Monitor_Req.observed.id,
+    Arch.SW_Impl_Instance_MON_REQ_CASE_Monitor_Req.reference_1.id,
+    Arch.SW_Impl_Instance_MON_GEO_CASE_Monitor_Geo.observed.id
   )
   var frozen: MS[Art.PortId, Option[DataContent]] = MS.create(maxPortIds, noData)
   var outgoing: MS[Art.PortId, Option[DataContent]] = MS.create(maxPortIds, noData)

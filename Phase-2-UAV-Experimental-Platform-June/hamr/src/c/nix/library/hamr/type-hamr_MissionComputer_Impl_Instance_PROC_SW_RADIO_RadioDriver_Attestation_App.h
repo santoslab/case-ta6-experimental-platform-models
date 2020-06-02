@@ -1,6 +1,0 @@
-#ifndef SIREUM_TYPE_H_hamr_MissionComputer_Impl_Instance_PROC_SW_RADIO_RadioDriver_Attestation_App
-#define SIREUM_TYPE_H_hamr_MissionComputer_Impl_Instance_PROC_SW_RADIO_RadioDriver_Attestation_App
-#include <misc.h>
-
-
-#endif
