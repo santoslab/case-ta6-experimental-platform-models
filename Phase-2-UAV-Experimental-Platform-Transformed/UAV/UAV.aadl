@@ -4,7 +4,7 @@ public
 	with MC;
 	with FC;
 	with UAS_Buses;
-	
+	with HAMR;
 	
 	-- UAV
 	system UAV
@@ -39,6 +39,10 @@ public
 		properties
 			Actual_Connection_Binding => (reference (FCTL_SBUS)) applies to c3, c4;
 			
+            HAMR::Default_Bit_Width => 32;
+            HAMR::Default_Max_Sequence_Size => 1;
+            HAMR::Max_String_Size => 256;
+            HAMR::Bit_Codec_Raw_Connections => true;        
 	end UAV.Impl;
 	
 end UAV;

@@ -6,6 +6,7 @@ public
 	with SW;
 	with CASE_Properties;
 	with CASE_Scheduling;
+    with HAMR;
 
 	-- The radio communication hardware
 	device Radio
@@ -102,8 +103,8 @@ public
 			MEM_HW: memory MC_Mem.Impl;
 			BUS_HW: bus MC_Bus.Impl;
 			PROC_SW: system SW::SW.Impl;
-			VM_Radio: virtual processor CASE_Virtual_Machine.Radio;
-			VM_UxAS: virtual processor CASE_Virtual_Machine.UxAS;
+--			VM_Radio: virtual processor CASE_Virtual_Machine.Radio;
+--			VM_UxAS: virtual processor CASE_Virtual_Machine.UxAS;
 		connections
 
 			-- MissionComputer
@@ -133,13 +134,18 @@ public
 			-- UART
 			bac6: bus access FC_UART_HW.UART <-> FC_UART;
 		properties
-			Actual_Processor_Binding => (reference (PROC_HW)) applies to PROC_SW, VM_Radio, VM_UxAS;
+			Actual_Processor_Binding => (reference (PROC_HW)) applies to PROC_SW; --, VM_Radio, VM_UxAS;
 			Actual_Memory_Binding => (reference (MEM_HW)) applies to PROC_SW;
 			Actual_Connection_Binding => (reference (BUS_HW)) applies to c04, c06, c10, c11;
 --			Actual_Processor_Binding => (
 --				reference (VM)) applies to PROC_SW.UXAS, PROC_SW.UXAS.UXAS, PROC_SW.UXAS.UXAS.TaskManagerService, PROC_SW.UXAS.UXAS.AutomationRequestValidatorService, PROC_SW.UXAS.UXAS.RoutePlannerVisibilityService, PROC_SW.UXAS.UXAS.RouteAggregatorService, PROC_SW.UXAS.UXAS.AssignmentTreeBranchBoundService, PROC_SW.UXAS.UXAS.PlanBuilderService, PROC_SW.UXAS.UXAS.CmasiLineSearchTaskService, PROC_SW.UXAS.UXAS.SendMessagesServiceMemory, PROC_SW.UXAS.UXAS.SendMessagesServiceInit;
-			Actual_Processor_Binding => (reference (VM_UxAS)) applies to PROC_SW.UXAS;
-			Actual_Processor_Binding => (reference (VM_Radio)) applies to PROC_SW.RADIO;
+--			Actual_Processor_Binding => (reference (VM_UxAS)) applies to PROC_SW.UXAS;
+--			Actual_Processor_Binding => (reference (VM_Radio)) applies to PROC_SW.RADIO;
+
+            HAMR::Default_Bit_Width => 32;
+            HAMR::Default_Max_Sequence_Size => 1;
+            HAMR::Max_String_Size => 256;
+            HAMR::Bit_Codec_Raw_Connections => true;        
 	end MissionComputer.Impl;
 	
 end MC;

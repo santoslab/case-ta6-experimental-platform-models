@@ -661,7 +661,7 @@ end CASE_Monitor_Req;
     
 	system implementation SW.Impl
 		subcomponents
-			proc: processor proc.Impl;
+--			proc: processor proc.Impl;
 			FC_UART: process UARTDriver.Impl;
 			RADIO: process RadioDriver_Attestation.Impl;
 			FlyZones: process FlyZonesDatabase.Impl;
@@ -727,19 +727,19 @@ end CASE_Monitor_Req;
 			c28: port WPM.MissionCommand -> FC_UART.MissionCommand;
 
         properties
-            Actual_Processor_Binding => (reference (proc)) applies to FC_UART;
-            Actual_Processor_Binding => (reference (proc)) applies to RADIO;
-            Actual_Processor_Binding => (reference (proc)) applies to FlyZones;
-            Actual_Processor_Binding => (reference (proc)) applies to UXAS;
-            Actual_Processor_Binding => (reference (proc)) applies to WPM;
-            Actual_Processor_Binding => (reference (proc)) applies to AM;
-            Actual_Processor_Binding => (reference (proc)) applies to AM_GATE;
-            Actual_Processor_Binding => (reference (proc)) applies to FLT_AReq;
-            Actual_Processor_Binding => (reference (proc)) applies to FLT_OR;
-            Actual_Processor_Binding => (reference (proc)) applies to FLT_LST;
-            Actual_Processor_Binding => (reference (proc)) applies to MON_REQ;
-            Actual_Processor_Binding => (reference (proc)) applies to FLT_ARes;
-            Actual_Processor_Binding => (reference (proc)) applies to MON_GEO;
+--            Actual_Processor_Binding => (reference (proc)) applies to FC_UART;
+--            Actual_Processor_Binding => (reference (proc)) applies to RADIO;
+--            Actual_Processor_Binding => (reference (proc)) applies to FlyZones;
+--            Actual_Processor_Binding => (reference (proc)) applies to UXAS;
+--            Actual_Processor_Binding => (reference (proc)) applies to WPM;
+--            Actual_Processor_Binding => (reference (proc)) applies to AM;
+--            Actual_Processor_Binding => (reference (proc)) applies to AM_GATE;
+--            Actual_Processor_Binding => (reference (proc)) applies to FLT_AReq;
+--            Actual_Processor_Binding => (reference (proc)) applies to FLT_OR;
+--            Actual_Processor_Binding => (reference (proc)) applies to FLT_LST;
+--            Actual_Processor_Binding => (reference (proc)) applies to MON_REQ;
+--            Actual_Processor_Binding => (reference (proc)) applies to FLT_ARes;
+--            Actual_Processor_Binding => (reference (proc)) applies to MON_GEO;
                         
             
             HAMR::Default_Bit_Width => 32;
