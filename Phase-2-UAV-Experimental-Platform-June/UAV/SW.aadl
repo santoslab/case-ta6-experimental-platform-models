@@ -67,48 +67,6 @@ public
 	end RadioDriver_Attestation.Impl;
 
 
-	-----------------
-	-- Attestation --
-	-----------------
-
-	thread CASE_AttestationManager_thr
-		features
-			trusted_ids: out data port CMASI::AddressArray.i;
-			attestation_request: out event data port CASE_Model_Transformations::CASE_AttestationRequestMsg.Impl;
-			attestation_response: in event data port CASE_Model_Transformations::CASE_AttestationResponseMsg.Impl;
-		properties
-			CASE_Properties::Component_Type => ATTESTATION;
-			Dispatch_Protocol => Periodic;
-			Period => 500ms;
-			Compute_Execution_Time => 2ms .. 2ms;
-	end CASE_AttestationManager_thr;
-
-	thread implementation CASE_AttestationManager_thr.Impl
-		properties
-			CASE_Properties::Component_Impl => "CakeML";
-			CASE_Properties::Cache_Timeout => 30;
-			CASE_Properties::Cache_Size => 3;
-			Dispatch_Protocol => Periodic;
-	end CASE_AttestationManager_thr.Impl;
-	
-	process CASE_AttestationManager
-		features
-			trusted_ids: out data port CMASI::AddressArray.i;
-			attestation_request: out event data port CASE_Model_Transformations::CASE_AttestationRequestMsg.Impl;
-			attestation_response: in event data port CASE_Model_Transformations::CASE_AttestationResponseMsg.Impl;
-		properties
-			CASE_Scheduling::Domain => 4;
-	end CASE_AttestationManager;
-	
-	process implementation CASE_AttestationManager.Impl
-		subcomponents
-			CASE_AttestationManager: thread CASE_AttestationManager_thr.Impl;
-		connections
-			c1: port CASE_AttestationManager.trusted_ids -> trusted_ids;
-			c2: port CASE_AttestationManager.attestation_request -> attestation_request;
-			c3: port attestation_response -> CASE_AttestationManager.attestation_response;
-	end CASE_AttestationManager.Impl;
-
 	thread CASE_AttestationGate_thr
 		features
 			trusted_ids: in data port CMASI::AddressArray.i;
@@ -376,46 +334,6 @@ public
 --			c3: port CASE_Monitor_Req.alert -> alert;
 	end CASE_Monitor_Req.Impl;
 	
-
-	----------------------------------------
-	-- Automation Response message Filter --
-	----------------------------------------
-	
-	thread CASE_Filter_ARes_thr
-		features
-			filter_in: in event data port CMASI::AutomationResponse.i;
-			filter_out: out event data port CMASI::AutomationResponse.i;
-		properties
-			CASE_Properties::Component_Type => FILTER;
-			CASE_Properties::Component_Spec => ("Req_Filter_ARes");
-			Dispatch_Protocol => Periodic;
-			Period => 500ms;
-			Compute_Execution_Time => 2ms .. 2ms;
-		annex agree {**
-			guarantee Req_Filter_ARes "Well-formed Automation Response message" : CASEAgree::WELL_FORMED_AUTOMATION_RESPONSE(filter_out);
-		**};
-	end CASE_Filter_ARes_thr;
-
-	thread implementation CASE_Filter_ARes_thr.Impl
-	end CASE_Filter_ARes_thr.Impl;
-	
-	process CASE_Filter_ARes
-		features
-			filter_in: in event data port CMASI::AutomationResponse.i;
-			filter_out: out event data port CMASI::AutomationResponse.i;
-		properties
-			CASE_Scheduling::Domain => 12;
-	end CASE_Filter_ARes;
-	
-	process implementation CASE_Filter_ARes.Impl
-		subcomponents
-			CASE_Filter_ARes: thread CASE_Filter_ARes_thr.Impl;
-		connections
-			c1: port filter_in -> CASE_Filter_ARes.filter_in;
-			c2: port CASE_Filter_ARes.filter_out -> filter_out;
-	end CASE_Filter_ARes.Impl;
-	
-	
 	------------------------
 	-- Fly Zones Database --
 	------------------------
@@ -472,36 +390,51 @@ public
 			Compute_Execution_Time => 2ms .. 2ms;
 		annex agree {**
 			-- a constant generated from the component property above, handy for expressing the monitor guarantee
---			const is_latched : bool = Get_Property(this, CASE_Properties::Monitor_Latched);
+			const is_latched : bool = Get_Property(this, CASE_Properties::Monitor_Latched);
 
 			-- Monitor policy (models the expected behavior in terms of the input ports)
---			property CASE_Monitor_Coord_policy = Historically(event(observed) => (WAYPOINTS_IN_ZONE(GET_MISSION_COMMAND(observed), keep_in_zones) and 
---			                WAYPOINTS_NOT_IN_ZONE(GET_MISSION_COMMAND(observed), keep_out_zones)));
+			property CASE_Monitor_Coord_policy = Historically(
+					event(observed) =>
+						 (WAYPOINTS_IN_ZONE(GET_MISSION_COMMAND(observed), keep_in_zones) and 
+			                	  WAYPOINTS_NOT_IN_ZONE(GET_MISSION_COMMAND(observed), keep_out_zones)
+						 and not DUPLICATES_IN_MISSION(GET_MISSION_COMMAND(observed))));
 
 			-- Monitor guarantee (guarantees on the output ports in terms of the input ports and monitor policy)
---			guarantee GeofenceMonitor_alert_event "An alert is generated only when observed is invalid" :
---				event(alert) <=> false -> (is_latched and pre(event(alert))) or not CASE_Monitor_Coord_policy;
---			guarantee GeofenceMonitor_output_event "The output event fires only when observed is valid" :
---				event(output) <=> event(observed) and not event(alert);
---			guarantee GeofenceMonitor_output_data "Output is equal to observed when observed is valid" :
---				event(observed) and not event(alert) => output = observed;
-			
---			fun GET_MISSION_COMMAND(automationResponse: CMASI::AutomationResponse.i) : CMASI::MissionCommand.i =
---			              automationResponse.MissionCommandList[0];
---			fun WAYPOINTS_IN_ZONE(mission : CMASI::MissionCommand.i, zone : CMASI::Polygon.i) : bool =
---			              forall waypoint in mission.WaypointList, WAYPOINT_IN_ZONE_RECTANGLE(waypoint, zone);
---			fun WAYPOINTS_NOT_IN_ZONE(mission : CMASI::MissionCommand.i, zone : CMASI::Polygon.i) : bool =
---			              forall waypoint in mission.WaypointList, not WAYPOINT_IN_ZONE_RECTANGLE(waypoint, zone);
-			-- Assumes rectangle that is defined by two corners so it is aligned
-			-- with the origin (not rotated in space)
-			-- Assumes that the altitude is the same in all the coordinates
-			-- Assmes zone[0] is the bottom left corner and zone[2] in the upper right corner
---			fun WAYPOINT_IN_ZONE_RECTANGLE(waypoint : CMASI::Waypoint.i, zone : CMASI::Polygon.i) : bool =
---			                  (waypoint.Latitude >= (zone.BoundaryPointsList[0]).Latitude)
---			              and (waypoint.Latitude <= (zone.BoundaryPointsList[1]).Latitude)
---			              and (waypoint.Longitude >= (zone.BoundaryPointsList[0]).Longitude)
---			              and (waypoint.Longitude <= (zone.BoundaryPointsList[1]).Longitude)
---			              and (waypoint.Altitude >= (zone.BoundaryPointsList[0]).Altitude);
+			guarantee GeofenceMonitor_alert_event "An alert is generated only when observed is invalid" :
+				event(alert) <=> false -> (is_latched and pre(event(alert))) or not CASE_Monitor_Coord_policy;
+			guarantee GeofenceMonitor_output_event "The output event fires only when observed is valid" :
+				event(output) <=> event(observed) and not event(alert);
+			guarantee GeofenceMonitor_output_data "Output is equal to observed when observed is valid" :
+				event(observed) and not event(alert) => output = observed;
+      		
+			fun GET_MISSION_COMMAND(automationResponse: CMASI::AutomationResponse.i) : CMASI::MissionCommand.i =
+			              automationResponse.MissionCommandList[0];
+			fun WAYPOINTS_IN_ZONE(mission : CMASI::MissionCommand.i, zone : CMASI::Polygon.i) : bool =
+			              forall waypoint in mission.WaypointList, WAYPOINT_IN_ZONE_RECTANGLE(waypoint, zone);
+			fun WAYPOINTS_NOT_IN_ZONE(mission : CMASI::MissionCommand.i, zone : CMASI::Polygon.i) : bool =
+			              forall waypoint in mission.WaypointList, not WAYPOINT_IN_ZONE_RECTANGLE(waypoint, zone);
+      			-- Assumes rectangle that is defined by two corners so it is aligned
+      			-- with the origin (not rotated in space)
+      			-- Assumes that the altitude is the same in all the coordinates
+      			-- Assmes zone[0] is the bottom left corner and zone[2] in the upper right corner
+			fun WAYPOINT_IN_ZONE_RECTANGLE(waypoint : CMASI::Waypoint.i, zone : CMASI::Polygon.i) : bool =
+			                  (waypoint.Latitude >= (zone.BoundaryPointsList[0]).Latitude)
+			              and (waypoint.Latitude <= (zone.BoundaryPointsList[1]).Latitude)
+			              and (waypoint.Longitude >= (zone.BoundaryPointsList[0]).Longitude)
+			              and (waypoint.Longitude <= (zone.BoundaryPointsList[1]).Longitude)
+			              and (waypoint.Altitude >= (zone.BoundaryPointsList[0]).Altitude);
+
+			fun DUPLICATES_IN_MISSION(mission : CMASI::MissionCommand.i) : bool =
+			      exists waypoint in mission.WaypointList, not IS_LAST_WAYPOINT(waypoint) and IS_DUPLICATE(mission, waypoint) ;
+
+			fun IS_LAST_WAYPOINT(waypoint : CMASI::Waypoint.i) : bool = waypoint.Number = waypoint.NextWaypoint;
+
+			-- Checking if there exists a waypoint with the same lat,long,alt as a given waypoint with the restriction that it
+			-- follows immediately after the given waypoint in the linked-list of waypoints.
+			fun IS_DUPLICATE(mission : CMASI::MissionCommand.i, waypoint : CMASI::Waypoint.i) : bool =
+			      exists wp in mission.WaypointList, wp.Number = waypoint.NextWaypoint and wp.Latitude = waypoint.Latitude and
+				 wp.Longitude = waypoint.Longitude and wp.Altitude = waypoint.Altitude;
+
 		**};
 	end CASE_Monitor_Geo_thr;
 
@@ -701,7 +634,12 @@ public
             HAMR::Default_Bit_Width => 32;
             HAMR::Default_Max_Sequence_Size => 1;
             HAMR::Max_String_Size => 256;
-            HAMR::Bit_Codec_Raw_Connections => true;         
+            HAMR::Bit_Codec_Raw_Connections => true;
+
+        annex resolute {**
+            check CASE_Tools
+        **};
+
 	end SW.Impl;
 	
 end SW;
