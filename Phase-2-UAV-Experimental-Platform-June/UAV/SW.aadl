@@ -29,6 +29,9 @@ public
 	
 	thread RadioDriver_Attestation_thr
 	   features
+		    recv_data: in event data port CASE_Model_Transformations::CASE_RF_Msg.Impl;
+			send_data: out event data port CASE_Model_Transformations::CASE_RF_Msg.Impl;
+
             trusted_ids: out data port CMASI::AddressArray.i;
 
             AutomationRequest: out event data port CMASI::AddressAttributedMessage.i;
@@ -46,6 +49,8 @@ public
 	
 	process RadioDriver_Attestation
 		features
+			recv_data: in event data port CASE_Model_Transformations::CASE_RF_Msg.Impl;
+			send_data: out event data port CASE_Model_Transformations::CASE_RF_Msg.Impl;
 
 			trusted_ids: out data port CMASI::AddressArray.i;
 
@@ -60,6 +65,8 @@ public
 		subcomponents
 			RadioDriver_Attestation: thread RadioDriver_Attestation_thr.Impl;
 		connections
+			c2: port recv_data -> RadioDriver_Attestation.recv_data;
+			c3: port RadioDriver_Attestation.send_data -> send_data;
 			c4: port RadioDriver_Attestation.trusted_ids -> trusted_ids;
 			c5: port RadioDriver_Attestation.AutomationRequest -> AutomationRequest;
 			c6: port RadioDriver_Attestation.OperatingRegion -> OperatingRegion;
@@ -514,10 +521,10 @@ public
 	
 	process UARTDriver
 		features
---			recv_data: in event data port CASE_Model_Transformations::CASE_UART_Msg.Impl;
+			recv_data: in event data port CASE_Model_Transformations::CASE_UART_Msg.Impl;
 			MissionCommand: in event data port CMASI::MissionCommand.i;
 
---			send_data: out event data port CASE_Model_Transformations::CASE_UART_Msg.Impl;
+			send_data: out event data port CASE_Model_Transformations::CASE_UART_Msg.Impl;
 			AirVehicleState: out event data port CMASI::AirVehicleState.i;
 		properties
 			CASE_Scheduling::Domain => 0;
@@ -527,9 +534,9 @@ public
 		subcomponents
 			UARTDriver: thread Drivers::UARTDriver.Impl;
 		connections
---			c1: port recv_data -> UARTDriver.recv_data;
+			c1: port recv_data -> UARTDriver.recv_data;
 			c2: port MissionCommand -> UARTDriver.MissionCommand;
---			c3: port UARTDriver.send_data -> send_data;
+			c3: port UARTDriver.send_data -> send_data;
 			c4: port UARTDriver.AirVehicleState -> AirVehicleState;
 	end UARTDriver.Impl;
 	
@@ -551,7 +558,11 @@ public
     ----------------------------------------------------------------------
     
 	system SW
-		
+		features
+			radio_recv: in event data port CASE_Model_Transformations::CASE_RF_Msg.Impl;
+			radio_send: out event data port CASE_Model_Transformations::CASE_RF_Msg.Impl;
+			uart_recv: in event data port CASE_Model_Transformations::CASE_UART_Msg.Impl;
+			uart_send: out event data port CASE_Model_Transformations::CASE_UART_Msg.Impl;
 		annex agree {**
 --			guarantee Req001_SW "The radio_send outputs only well formed CASE_RF_Msg.Impl types" :
 --				 if (event(radio_recv) and CASEAgree::WellformedCASE_RF_Msg(radio_recv, CASEConsts::UAV_ID, CASEConsts::GS_ID))
@@ -572,7 +583,7 @@ public
 
 	system implementation SW.Impl
 		subcomponents
-			proc: processor proc.Impl;
+--			proc: processor proc.Impl;
 			FC_UART: process UARTDriver.Impl;
 			RADIO: process RadioDriver_Attestation.Impl;
 			FlyZones: process FlyZonesDatabase.Impl;
@@ -584,15 +595,23 @@ public
 			MON_GEO: process CASE_Monitor_Geo.Impl;
 		connections
 
+	        ------------------
+			-- Primary Inputs
+			------------------
+			c01: port uart_recv -> FC_UART.recv_data;
+			c02: port radio_recv -> RADIO.recv_data;
+
 			----------- 	           
 			-- FC_UART
 			-----------
+			c03: port FC_UART.send_data -> uart_send;
 			c04: port FC_UART.AirVehicleState -> UXAS.AirVehicleState;
 			c05: port FC_UART.AirVehicleState -> WPM.AirVehicleState;
+			
 			---------
 			-- RADIO
 			---------
-
+			c06: port RADIO.send_data -> radio_send;
 			c07: port RADIO.AutomationRequest -> AM_Gate.AutomationRequest_in;
 			c08: port RADIO.OperatingRegion -> AM_Gate.OperatingRegion_in;
 			c09: port RADIO.LineSearchTask -> AM_Gate.LineSearchTask_in;
@@ -620,21 +639,21 @@ public
 			c24: port WPM.MissionCommand -> FC_UART.MissionCommand;
 			c25: port MON_GEO.output -> WPM.AutomationResponse;
 			
-    properties
-            Actual_Processor_Binding => (reference (proc)) applies to FC_UART;
-            Actual_Processor_Binding => (reference (proc)) applies to RADIO;
-            Actual_Processor_Binding => (reference (proc)) applies to FlyZones;
-            Actual_Processor_Binding => (reference (proc)) applies to UXAS;
-            Actual_Processor_Binding => (reference (proc)) applies to WPM;
-            Actual_Processor_Binding => (reference (proc)) applies to AM_GATE;
-            Actual_Processor_Binding => (reference (proc)) applies to FLT_LST;
-            Actual_Processor_Binding => (reference (proc)) applies to MON_REQ;
-            Actual_Processor_Binding => (reference (proc)) applies to MON_GEO;
-           
-            HAMR::Default_Bit_Width => 32;
-            HAMR::Default_Max_Sequence_Size => 1;
-            HAMR::Max_String_Size => 256;
-            HAMR::Bit_Codec_Raw_Connections => true;
+--    properties
+--            Actual_Processor_Binding => (reference (proc)) applies to FC_UART;
+--            Actual_Processor_Binding => (reference (proc)) applies to RADIO;
+--            Actual_Processor_Binding => (reference (proc)) applies to FlyZones;
+--            Actual_Processor_Binding => (reference (proc)) applies to UXAS;
+--            Actual_Processor_Binding => (reference (proc)) applies to WPM;
+--            Actual_Processor_Binding => (reference (proc)) applies to AM_GATE;
+--            Actual_Processor_Binding => (reference (proc)) applies to FLT_LST;
+--            Actual_Processor_Binding => (reference (proc)) applies to MON_REQ;
+--            Actual_Processor_Binding => (reference (proc)) applies to MON_GEO;
+--           
+--            HAMR::Default_Bit_Width => 32;
+--            HAMR::Default_Max_Sequence_Size => 1;
+--            HAMR::Max_String_Size => 256;
+--            HAMR::Bit_Codec_Raw_Connections => true;
 
         annex resolute {**
             check CASE_Tools
