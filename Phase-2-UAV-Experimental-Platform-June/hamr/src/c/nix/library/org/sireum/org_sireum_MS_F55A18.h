@@ -1,5 +1,10 @@
 #ifndef SIREUM_H_org_sireum_MS_F55A18
 #define SIREUM_H_org_sireum_MS_F55A18
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include <types.h>
 
 // MS[Z, Option[art.UPort]]
@@ -51,5 +56,9 @@ inline B MS_F55A18__ne(MS_F55A18 this, MS_F55A18 other) {
   return !MS_F55A18__eq(this, other);
 }
 
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

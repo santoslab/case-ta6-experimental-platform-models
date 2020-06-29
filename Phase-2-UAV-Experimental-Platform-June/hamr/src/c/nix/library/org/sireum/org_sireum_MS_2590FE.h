@@ -1,5 +1,10 @@
 #ifndef SIREUM_H_org_sireum_MS_2590FE
 #define SIREUM_H_org_sireum_MS_2590FE
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include <types.h>
 
 // MS[Z, Option[art.DataContent]]
@@ -51,5 +56,9 @@ inline B MS_2590FE__ne(MS_2590FE this, MS_2590FE other) {
   return !MS_2590FE__eq(this, other);
 }
 
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

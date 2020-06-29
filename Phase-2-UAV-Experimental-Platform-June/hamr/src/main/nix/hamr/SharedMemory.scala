@@ -11,8 +11,8 @@ import art._
   def create(id: Z): Z = $
   def get(id: Z): Z = $
   def send(id: Z, port: Art.PortId, d: DataContent): Unit = $
-  def receive(port: Art.PortId): DataContent = $
+  def receive(port: Art.PortId, out: MBox2[Art.PortId, DataContent]): Unit = $
   def sendAsync(id: Z, port: Art.PortId, d: DataContent): B = $
-  def receiveAsync(port: Art.PortId): Option[DataContent] = $
+  def receiveAsync(port: Art.PortId, out: MBox2[Art.PortId, Option[DataContent]]): Unit = $
   def remove(id: Z): Unit = $
 }

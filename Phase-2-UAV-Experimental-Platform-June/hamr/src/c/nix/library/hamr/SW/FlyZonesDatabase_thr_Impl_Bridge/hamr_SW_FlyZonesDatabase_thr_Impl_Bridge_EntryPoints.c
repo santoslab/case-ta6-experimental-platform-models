@@ -56,52 +56,76 @@ void hamr_SW_FlyZonesDatabase_thr_Impl_Bridge_EntryPoints_apply(STACK_FRAME hamr
   this->keep_out_zones_Id = keep_out_zones_Id;
   Type_assign(&this->dispatchTriggers, dispatchTriggers, sizeof(union Option_9AF35E));
   Type_assign(&this->component, component, sizeof(struct hamr_SW_FlyZonesDatabase_thr_Impl_Impl));
-  STATIC_ASSERT(0 <= MaxIS_82ABD8, "Insufficient maximum for IS[Z, Z] elements.");
-  DeclNewIS_82ABD8(t_0);
-  t_0.size = (int8_t) 0;
-  Type_assign(&this->dataInPortIds, (&t_0), sizeof(struct IS_82ABD8));
-  STATIC_ASSERT(0 <= MaxIS_82ABD8, "Insufficient maximum for IS[Z, Z] elements.");
-  DeclNewIS_82ABD8(t_1);
-  t_1.size = (int8_t) 0;
-  Type_assign(&this->eventInPortIds, (&t_1), sizeof(struct IS_82ABD8));
-  STATIC_ASSERT(2 <= MaxIS_82ABD8, "Insufficient maximum for IS[Z, Z] elements.");
-  DeclNewIS_82ABD8(t_2);
-  t_2.size = (int8_t) 2;
-  IS_82ABD8_up(&t_2, 0, (Z) hamr_SW_FlyZonesDatabase_thr_Impl_Bridge_EntryPoints_keep_in_zones_Id_(this));
-  IS_82ABD8_up(&t_2, 1, (Z) hamr_SW_FlyZonesDatabase_thr_Impl_Bridge_EntryPoints_keep_out_zones_Id_(this));
-  Type_assign(&this->dataOutPortIds, (&t_2), sizeof(struct IS_82ABD8));
-  STATIC_ASSERT(0 <= MaxIS_82ABD8, "Insufficient maximum for IS[Z, Z] elements.");
-  DeclNewIS_82ABD8(t_3);
-  t_3.size = (int8_t) 0;
-  Type_assign(&this->eventOutPortIds, (&t_3), sizeof(struct IS_82ABD8));
+  {
+    sfUpdateLoc(94);
+    STATIC_ASSERT(0 <= MaxIS_82ABD8, "Insufficient maximum for IS[Z, Z] elements.");
+    DeclNewIS_82ABD8(t_0);
+    t_0.size = (int8_t) 0;
+    Type_assign(&this->dataInPortIds, (&t_0), sizeof(struct IS_82ABD8));
+  }
+  {
+    sfUpdateLoc(96);
+    STATIC_ASSERT(0 <= MaxIS_82ABD8, "Insufficient maximum for IS[Z, Z] elements.");
+    DeclNewIS_82ABD8(t_1);
+    t_1.size = (int8_t) 0;
+    Type_assign(&this->eventInPortIds, (&t_1), sizeof(struct IS_82ABD8));
+  }
+  {
+    sfUpdateLoc(98);
+    STATIC_ASSERT(2 <= MaxIS_82ABD8, "Insufficient maximum for IS[Z, Z] elements.");
+    DeclNewIS_82ABD8(t_2);
+    t_2.size = (int8_t) 2;
+    IS_82ABD8_up(&t_2, 0, (Z) hamr_SW_FlyZonesDatabase_thr_Impl_Bridge_EntryPoints_keep_in_zones_Id_(this));
+    IS_82ABD8_up(&t_2, 1, (Z) hamr_SW_FlyZonesDatabase_thr_Impl_Bridge_EntryPoints_keep_out_zones_Id_(this));
+    Type_assign(&this->dataOutPortIds, (&t_2), sizeof(struct IS_82ABD8));
+  }
+  {
+    sfUpdateLoc(101);
+    STATIC_ASSERT(0 <= MaxIS_82ABD8, "Insufficient maximum for IS[Z, Z] elements.");
+    DeclNewIS_82ABD8(t_3);
+    t_3.size = (int8_t) 0;
+    Type_assign(&this->eventOutPortIds, (&t_3), sizeof(struct IS_82ABD8));
+  }
 }
 
 Unit hamr_SW_FlyZonesDatabase_thr_Impl_Bridge_EntryPoints_initialise_(STACK_FRAME hamr_SW_FlyZonesDatabase_thr_Impl_Bridge_EntryPoints this) {
   DeclNewStackFrame(caller, "FlyZonesDatabase_thr_Impl_Bridge.scala", "hamr.SW.FlyZonesDatabase_thr_Impl_Bridge.EntryPoints", "initialise", 0);
 
   sfUpdateLoc(129);
-  hamr_SW_FlyZonesDatabase_thr_Impl_Impl_initialise_(SF hamr_SW_FlyZonesDatabase_thr_Impl_Bridge_EntryPoints_component_(this));
+  {
+    hamr_SW_FlyZonesDatabase_thr_Impl_Impl_initialise_(SF hamr_SW_FlyZonesDatabase_thr_Impl_Bridge_EntryPoints_component_(this));
+  }
 
   sfUpdateLoc(130);
-  art_Art_sendOutput(SF (IS_82ABD8) hamr_SW_FlyZonesDatabase_thr_Impl_Bridge_EntryPoints_eventOutPortIds_(this), (IS_82ABD8) hamr_SW_FlyZonesDatabase_thr_Impl_Bridge_EntryPoints_dataOutPortIds_(this));
+  {
+    art_Art_sendOutput(SF (IS_82ABD8) hamr_SW_FlyZonesDatabase_thr_Impl_Bridge_EntryPoints_eventOutPortIds_(this), (IS_82ABD8) hamr_SW_FlyZonesDatabase_thr_Impl_Bridge_EntryPoints_dataOutPortIds_(this));
+  }
 }
 
 Unit hamr_SW_FlyZonesDatabase_thr_Impl_Bridge_EntryPoints_compute_(STACK_FRAME hamr_SW_FlyZonesDatabase_thr_Impl_Bridge_EntryPoints this) {
   DeclNewStackFrame(caller, "FlyZonesDatabase_thr_Impl_Bridge.scala", "hamr.SW.FlyZonesDatabase_thr_Impl_Bridge.EntryPoints", "compute", 0);
 
   sfUpdateLoc(104);
-  art_Art_receiveInput(SF (IS_82ABD8) hamr_SW_FlyZonesDatabase_thr_Impl_Bridge_EntryPoints_eventInPortIds_(this), (IS_82ABD8) hamr_SW_FlyZonesDatabase_thr_Impl_Bridge_EntryPoints_dataInPortIds_(this));
+  {
+    art_Art_receiveInput(SF (IS_82ABD8) hamr_SW_FlyZonesDatabase_thr_Impl_Bridge_EntryPoints_eventInPortIds_(this), (IS_82ABD8) hamr_SW_FlyZonesDatabase_thr_Impl_Bridge_EntryPoints_dataInPortIds_(this));
+  }
 
   sfUpdateLoc(105);
-  hamr_SW_FlyZonesDatabase_thr_Impl_Impl_timeTriggered_(SF hamr_SW_FlyZonesDatabase_thr_Impl_Bridge_EntryPoints_component_(this));
+  {
+    hamr_SW_FlyZonesDatabase_thr_Impl_Impl_timeTriggered_(SF hamr_SW_FlyZonesDatabase_thr_Impl_Bridge_EntryPoints_component_(this));
+  }
 
   sfUpdateLoc(106);
-  art_Art_sendOutput(SF (IS_82ABD8) hamr_SW_FlyZonesDatabase_thr_Impl_Bridge_EntryPoints_eventOutPortIds_(this), (IS_82ABD8) hamr_SW_FlyZonesDatabase_thr_Impl_Bridge_EntryPoints_dataOutPortIds_(this));
+  {
+    art_Art_sendOutput(SF (IS_82ABD8) hamr_SW_FlyZonesDatabase_thr_Impl_Bridge_EntryPoints_eventOutPortIds_(this), (IS_82ABD8) hamr_SW_FlyZonesDatabase_thr_Impl_Bridge_EntryPoints_dataOutPortIds_(this));
+  }
 }
 
 Unit hamr_SW_FlyZonesDatabase_thr_Impl_Bridge_EntryPoints_finalise_(STACK_FRAME hamr_SW_FlyZonesDatabase_thr_Impl_Bridge_EntryPoints this) {
   DeclNewStackFrame(caller, "FlyZonesDatabase_thr_Impl_Bridge.scala", "hamr.SW.FlyZonesDatabase_thr_Impl_Bridge.EntryPoints", "finalise", 0);
 
   sfUpdateLoc(125);
-  hamr_SW_FlyZonesDatabase_thr_Impl_Impl_finalise_(SF hamr_SW_FlyZonesDatabase_thr_Impl_Bridge_EntryPoints_component_(this));
+  {
+    hamr_SW_FlyZonesDatabase_thr_Impl_Impl_finalise_(SF hamr_SW_FlyZonesDatabase_thr_Impl_Bridge_EntryPoints_component_(this));
+  }
 }

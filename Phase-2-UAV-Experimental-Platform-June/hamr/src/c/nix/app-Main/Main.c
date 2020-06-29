@@ -1,5 +1,4 @@
 #include <all.h>
-#include <string.h>
 
 int main(int argc, char *argv[]) {
   DeclNewStackFrame(NULL, "Main.scala", "hamr.Main", "<App>", 0);

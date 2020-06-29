@@ -16,9 +16,11 @@ object ArtNix {
   val connection: MS[Art.PortId, ISZ[(Art.PortId, Art.PortId)]] = {
     val r = MS.create[Art.PortId, ISZ[(Art.PortId, Art.PortId)]](maxPortIds, ISZ())
 
-    r(Arch.SW_Impl_Instance_FC_UART_UARTDriver.AirVehicleState.id) = ISZ(
-      (IPCPorts.SW_Impl_Instance_UXAS_UxAS_App, Arch.SW_Impl_Instance_UXAS_UxAS.AirVehicleState.id),
+    r(Arch.SW_Impl_Instance_FC_UART_UARTDriver.AirVehicleState_WPM.id) = ISZ(
       (IPCPorts.SW_Impl_Instance_WPM_WaypointPlanManagerService_App, Arch.SW_Impl_Instance_WPM_WaypointPlanManagerService.AirVehicleState.id)
+    )
+    r(Arch.SW_Impl_Instance_FC_UART_UARTDriver.AirVehicleState_UXAS.id) = ISZ(
+      (IPCPorts.SW_Impl_Instance_UXAS_UxAS_App, Arch.SW_Impl_Instance_UXAS_UxAS.AirVehicleState.id)
     )
     r(Arch.SW_Impl_Instance_RADIO_RadioDriver_Attestation.trusted_ids.id) = ISZ(
       (IPCPorts.SW_Impl_Instance_AM_Gate_CASE_AttestationGate_App, Arch.SW_Impl_Instance_AM_Gate_CASE_AttestationGate.trusted_ids.id)
@@ -38,16 +40,19 @@ object ArtNix {
     r(Arch.SW_Impl_Instance_FlyZones_FlyZonesDatabase.keep_out_zones.id) = ISZ(
       (IPCPorts.SW_Impl_Instance_MON_GEO_CASE_Monitor_Geo_App, Arch.SW_Impl_Instance_MON_GEO_CASE_Monitor_Geo.keep_out_zones.id)
     )
-    r(Arch.SW_Impl_Instance_UXAS_UxAS.AutomationResponse.id) = ISZ(
-      (IPCPorts.SW_Impl_Instance_MON_GEO_CASE_Monitor_Geo_App, Arch.SW_Impl_Instance_MON_GEO_CASE_Monitor_Geo.observed.id),
-      (IPCPorts.SW_Impl_Instance_MON_GEO_CASE_Monitor_Geo_App, Arch.SW_Impl_Instance_MON_GEO_CASE_Monitor_Geo.observed.id),
+    r(Arch.SW_Impl_Instance_UXAS_UxAS.AutomationResponse_MON_GEO.id) = ISZ(
+      (IPCPorts.SW_Impl_Instance_MON_GEO_CASE_Monitor_Geo_App, Arch.SW_Impl_Instance_MON_GEO_CASE_Monitor_Geo.observed.id)
+    )
+    r(Arch.SW_Impl_Instance_UXAS_UxAS.AutomationResponse_MON_REQ.id) = ISZ(
       (IPCPorts.SW_Impl_Instance_MON_REQ_CASE_Monitor_Req_App, Arch.SW_Impl_Instance_MON_REQ_CASE_Monitor_Req.observed.id)
     )
     r(Arch.SW_Impl_Instance_WPM_WaypointPlanManagerService.MissionCommand.id) = ISZ(
       (IPCPorts.SW_Impl_Instance_FC_UART_UARTDriver_App, Arch.SW_Impl_Instance_FC_UART_UARTDriver.MissionCommand.id)
     )
-    r(Arch.SW_Impl_Instance_AM_Gate_CASE_AttestationGate.AutomationRequest_out.id) = ISZ(
-      (IPCPorts.SW_Impl_Instance_UXAS_UxAS_App, Arch.SW_Impl_Instance_UXAS_UxAS.AutomationRequest.id),
+    r(Arch.SW_Impl_Instance_AM_Gate_CASE_AttestationGate.AutomationRequest_UXAS.id) = ISZ(
+      (IPCPorts.SW_Impl_Instance_UXAS_UxAS_App, Arch.SW_Impl_Instance_UXAS_UxAS.AutomationRequest.id)
+    )
+    r(Arch.SW_Impl_Instance_AM_Gate_CASE_AttestationGate.AutomationRequest_MON_REQ.id) = ISZ(
       (IPCPorts.SW_Impl_Instance_MON_REQ_CASE_Monitor_Req_App, Arch.SW_Impl_Instance_MON_REQ_CASE_Monitor_Req.reference_1.id)
     )
     r(Arch.SW_Impl_Instance_AM_Gate_CASE_AttestationGate.OperatingRegion_out.id) = ISZ(
@@ -63,7 +68,6 @@ object ArtNix {
       (IPCPorts.SW_Impl_Instance_WPM_WaypointPlanManagerService_App, Arch.SW_Impl_Instance_WPM_WaypointPlanManagerService.AutomationResponse.id)
     )
     r(Arch.SW_Impl_Instance_MON_GEO_CASE_Monitor_Geo.alert.id) = ISZ(
-      (IPCPorts.SW_Impl_Instance_WPM_WaypointPlanManagerService_App, Arch.SW_Impl_Instance_WPM_WaypointPlanManagerService.ReturnHome.id),
       (IPCPorts.SW_Impl_Instance_WPM_WaypointPlanManagerService_App, Arch.SW_Impl_Instance_WPM_WaypointPlanManagerService.ReturnHome.id)
     )
 
@@ -72,6 +76,7 @@ object ArtNix {
   val eventInPorts: MS[Z, Art.PortId] = MSZ(
     Arch.SW_Impl_Instance_FC_UART_UARTDriver.recv_data.id,
     Arch.SW_Impl_Instance_FC_UART_UARTDriver.MissionCommand.id,
+    Arch.SW_Impl_Instance_RADIO_RadioDriver_Attestation.recv_data.id,
     Arch.SW_Impl_Instance_UXAS_UxAS.AutomationRequest.id,
     Arch.SW_Impl_Instance_UXAS_UxAS.AirVehicleState.id,
     Arch.SW_Impl_Instance_UXAS_UxAS.OperatingRegion.id,

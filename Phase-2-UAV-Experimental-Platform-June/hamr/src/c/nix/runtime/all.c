@@ -1,18 +1,18 @@
 #include <all.h>
-#include <errno.h>
 
 B Type__eq(void *t1, void *t2) {
   TYPE type = ((Type) t1)->type;
   if (type != ((Type) t2)->type) return F;
   switch (type) {
     case TTuple2_EC3B57: return Tuple2_EC3B57__eq((Tuple2_EC3B57) t1, (Tuple2_EC3B57) t2);
-    case TTuple2_D0E3BB: return Tuple2_D0E3BB__eq((Tuple2_D0E3BB) t1, (Tuple2_D0E3BB) t2);
     case TIS_AA0F82: return IS_AA0F82__eq((IS_AA0F82) t1, (IS_AA0F82) t2);
     case TIS_C4F575: return IS_C4F575__eq((IS_C4F575) t1, (IS_C4F575) t2);
     case TIS_948B60: return IS_948B60__eq((IS_948B60) t1, (IS_948B60) t2);
     case TIS_82ABD8: return IS_82ABD8__eq((IS_82ABD8) t1, (IS_82ABD8) t2);
     case TIS_08117A: return IS_08117A__eq((IS_08117A) t1, (IS_08117A) t2);
     case TIS_820232: return IS_820232__eq((IS_820232) t1, (IS_820232) t2);
+    case TMBox2_1029D1: return MBox2_1029D1__eq((MBox2_1029D1) t1, (MBox2_1029D1) t2);
+    case TMBox2_1CBFC4: return MBox2_1CBFC4__eq((MBox2_1CBFC4) t1, (MBox2_1CBFC4) t2);
     case TMNone_2A2E1D: return MNone_2A2E1D__eq((MNone_2A2E1D) t1, (MNone_2A2E1D) t2);
     case TMS_B5E3E6: return MS_B5E3E6__eq((MS_B5E3E6) t1, (MS_B5E3E6) t2);
     case TMS_E444B2: return MS_E444B2__eq((MS_E444B2) t1, (MS_E444B2) t2);
@@ -21,14 +21,12 @@ B Type__eq(void *t1, void *t2) {
     case TMS_F55A18: return MS_F55A18__eq((MS_F55A18) t1, (MS_F55A18) t2);
     case TMS_852149: return MS_852149__eq((MS_852149) t1, (MS_852149) t2);
     case TMSome_D3D128: return MSome_D3D128__eq((MSome_D3D128) t1, (MSome_D3D128) t2);
-    case TNone_93AA2B: return None_93AA2B__eq((None_93AA2B) t1, (None_93AA2B) t2);
     case TNone_3026C5: return None_3026C5__eq((None_3026C5) t1, (None_3026C5) t2);
     case TNone_5C1355: return None_5C1355__eq((None_5C1355) t1, (None_5C1355) t2);
     case TNone_76463B: return None_76463B__eq((None_76463B) t1, (None_76463B) t2);
     case TNone_964667: return None_964667__eq((None_964667) t1, (None_964667) t2);
     case TNone_ED72E1: return None_ED72E1__eq((None_ED72E1) t1, (None_ED72E1) t2);
     case TNone_39BC5F: return None_39BC5F__eq((None_39BC5F) t1, (None_39BC5F) t2);
-    case TSome_E9D1E5: return Some_E9D1E5__eq((Some_E9D1E5) t1, (Some_E9D1E5) t2);
     case TSome_8D03B1: return Some_8D03B1__eq((Some_8D03B1) t1, (Some_8D03B1) t2);
     case TSome_488F47: return Some_488F47__eq((Some_488F47) t1, (Some_488F47) t2);
     case TSome_D29615: return Some_D29615__eq((Some_D29615) t1, (Some_D29615) t2);
@@ -89,13 +87,14 @@ void Type_cprint(void *this, B isOut) {
   TYPE type = ((Type) this)->type;
   switch (type) {
     case TTuple2_EC3B57: Tuple2_EC3B57_cprint((Tuple2_EC3B57) this, isOut); return;
-    case TTuple2_D0E3BB: Tuple2_D0E3BB_cprint((Tuple2_D0E3BB) this, isOut); return;
     case TIS_AA0F82: IS_AA0F82_cprint((IS_AA0F82) this, isOut); return;
     case TIS_C4F575: IS_C4F575_cprint((IS_C4F575) this, isOut); return;
     case TIS_948B60: IS_948B60_cprint((IS_948B60) this, isOut); return;
     case TIS_82ABD8: IS_82ABD8_cprint((IS_82ABD8) this, isOut); return;
     case TIS_08117A: IS_08117A_cprint((IS_08117A) this, isOut); return;
     case TIS_820232: IS_820232_cprint((IS_820232) this, isOut); return;
+    case TMBox2_1029D1: MBox2_1029D1_cprint((MBox2_1029D1) this, isOut); return;
+    case TMBox2_1CBFC4: MBox2_1CBFC4_cprint((MBox2_1CBFC4) this, isOut); return;
     case TMNone_2A2E1D: MNone_2A2E1D_cprint((MNone_2A2E1D) this, isOut); return;
     case TMS_B5E3E6: MS_B5E3E6_cprint((MS_B5E3E6) this, isOut); return;
     case TMS_E444B2: MS_E444B2_cprint((MS_E444B2) this, isOut); return;
@@ -104,14 +103,12 @@ void Type_cprint(void *this, B isOut) {
     case TMS_F55A18: MS_F55A18_cprint((MS_F55A18) this, isOut); return;
     case TMS_852149: MS_852149_cprint((MS_852149) this, isOut); return;
     case TMSome_D3D128: MSome_D3D128_cprint((MSome_D3D128) this, isOut); return;
-    case TNone_93AA2B: None_93AA2B_cprint((None_93AA2B) this, isOut); return;
     case TNone_3026C5: None_3026C5_cprint((None_3026C5) this, isOut); return;
     case TNone_5C1355: None_5C1355_cprint((None_5C1355) this, isOut); return;
     case TNone_76463B: None_76463B_cprint((None_76463B) this, isOut); return;
     case TNone_964667: None_964667_cprint((None_964667) this, isOut); return;
     case TNone_ED72E1: None_ED72E1_cprint((None_ED72E1) this, isOut); return;
     case TNone_39BC5F: None_39BC5F_cprint((None_39BC5F) this, isOut); return;
-    case TSome_E9D1E5: Some_E9D1E5_cprint((Some_E9D1E5) this, isOut); return;
     case TSome_8D03B1: Some_8D03B1_cprint((Some_8D03B1) this, isOut); return;
     case TSome_488F47: Some_488F47_cprint((Some_488F47) this, isOut); return;
     case TSome_D29615: Some_D29615_cprint((Some_D29615) this, isOut); return;
@@ -172,13 +169,14 @@ void Type_string_(STACK_FRAME String result, void *this) {
   TYPE type = ((Type) this)->type;
   switch (type) {
     case TTuple2_EC3B57: Tuple2_EC3B57_string_(CALLER result, (Tuple2_EC3B57) this); return;
-    case TTuple2_D0E3BB: Tuple2_D0E3BB_string_(CALLER result, (Tuple2_D0E3BB) this); return;
     case TIS_AA0F82: IS_AA0F82_string_(CALLER result, (IS_AA0F82) this); return;
     case TIS_C4F575: IS_C4F575_string_(CALLER result, (IS_C4F575) this); return;
     case TIS_948B60: IS_948B60_string_(CALLER result, (IS_948B60) this); return;
     case TIS_82ABD8: IS_82ABD8_string_(CALLER result, (IS_82ABD8) this); return;
     case TIS_08117A: IS_08117A_string_(CALLER result, (IS_08117A) this); return;
     case TIS_820232: IS_820232_string_(CALLER result, (IS_820232) this); return;
+    case TMBox2_1029D1: MBox2_1029D1_string_(CALLER result, (MBox2_1029D1) this); return;
+    case TMBox2_1CBFC4: MBox2_1CBFC4_string_(CALLER result, (MBox2_1CBFC4) this); return;
     case TMNone_2A2E1D: MNone_2A2E1D_string_(CALLER result, (MNone_2A2E1D) this); return;
     case TMS_B5E3E6: MS_B5E3E6_string_(CALLER result, (MS_B5E3E6) this); return;
     case TMS_E444B2: MS_E444B2_string_(CALLER result, (MS_E444B2) this); return;
@@ -187,14 +185,12 @@ void Type_string_(STACK_FRAME String result, void *this) {
     case TMS_F55A18: MS_F55A18_string_(CALLER result, (MS_F55A18) this); return;
     case TMS_852149: MS_852149_string_(CALLER result, (MS_852149) this); return;
     case TMSome_D3D128: MSome_D3D128_string_(CALLER result, (MSome_D3D128) this); return;
-    case TNone_93AA2B: None_93AA2B_string_(CALLER result, (None_93AA2B) this); return;
     case TNone_3026C5: None_3026C5_string_(CALLER result, (None_3026C5) this); return;
     case TNone_5C1355: None_5C1355_string_(CALLER result, (None_5C1355) this); return;
     case TNone_76463B: None_76463B_string_(CALLER result, (None_76463B) this); return;
     case TNone_964667: None_964667_string_(CALLER result, (None_964667) this); return;
     case TNone_ED72E1: None_ED72E1_string_(CALLER result, (None_ED72E1) this); return;
     case TNone_39BC5F: None_39BC5F_string_(CALLER result, (None_39BC5F) this); return;
-    case TSome_E9D1E5: Some_E9D1E5_string_(CALLER result, (Some_E9D1E5) this); return;
     case TSome_8D03B1: Some_8D03B1_string_(CALLER result, (Some_8D03B1) this); return;
     case TSome_488F47: Some_488F47_string_(CALLER result, (Some_488F47) this); return;
     case TSome_D29615: Some_D29615_string_(CALLER result, (Some_D29615) this); return;

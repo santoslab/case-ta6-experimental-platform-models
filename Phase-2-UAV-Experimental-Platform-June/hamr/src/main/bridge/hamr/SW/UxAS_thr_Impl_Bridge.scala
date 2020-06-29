@@ -18,7 +18,8 @@ import hamr._
   AirVehicleState: Port[Base_Types.Bits],
   OperatingRegion: Port[Base_Types.Bits],
   LineSearchTask: Port[Base_Types.Bits],
-  AutomationResponse: Port[Base_Types.Bits]
+  AutomationResponse_MON_GEO: Port[Base_Types.Bits],
+  AutomationResponse_MON_REQ: Port[Base_Types.Bits]
   ) extends Bridge {
 
   val ports : Bridge.Ports = Bridge.Ports(
@@ -26,7 +27,8 @@ import hamr._
               AirVehicleState,
               OperatingRegion,
               LineSearchTask,
-              AutomationResponse),
+              AutomationResponse_MON_GEO,
+              AutomationResponse_MON_REQ),
 
     dataIns = ISZ(),
 
@@ -37,7 +39,8 @@ import hamr._
                    OperatingRegion,
                    LineSearchTask),
 
-    eventOuts = ISZ(AutomationResponse)
+    eventOuts = ISZ(AutomationResponse_MON_GEO,
+                    AutomationResponse_MON_REQ)
   )
 
   val api : UxAS_thr_Impl_Bridge.Api =
@@ -47,7 +50,8 @@ import hamr._
       AirVehicleState.id,
       OperatingRegion.id,
       LineSearchTask.id,
-      AutomationResponse.id
+      AutomationResponse_MON_GEO.id,
+      AutomationResponse_MON_REQ.id
     )
 
   val entryPoints : Bridge.EntryPoints =
@@ -58,7 +62,8 @@ import hamr._
       AirVehicleState.id,
       OperatingRegion.id,
       LineSearchTask.id,
-      AutomationResponse.id,
+      AutomationResponse_MON_GEO.id,
+      AutomationResponse_MON_REQ.id,
 
       dispatchTriggers,
 
@@ -74,14 +79,15 @@ object UxAS_thr_Impl_Bridge {
     AirVehicleState_Id : Art.PortId,
     OperatingRegion_Id : Art.PortId,
     LineSearchTask_Id : Art.PortId,
-    AutomationResponse_Id : Art.PortId) {
+    AutomationResponse_MON_GEO_Id : Art.PortId,
+    AutomationResponse_MON_REQ_Id : Art.PortId) {
 
     def getAutomationRequest() : Option[Base_Types.Bits] = {
       val value : Option[Base_Types.Bits] = Art.getValue(AutomationRequest_Id) match {
         case Some(Base_Types.Bits_Payload(v)) => Some(v)
-        case Some(v) => 
+        case Some(v) =>
           Art.logError(id, s"Unexpected payload on port AutomationRequest.  Expecting 'Base_Types.Bits_Payload' but received ${v}")
-          None[Base_Types.Bits]() 
+          None[Base_Types.Bits]()
         case _ => None[Base_Types.Bits]()
       }
       return value
@@ -90,9 +96,9 @@ object UxAS_thr_Impl_Bridge {
     def getAirVehicleState() : Option[Base_Types.Bits] = {
       val value : Option[Base_Types.Bits] = Art.getValue(AirVehicleState_Id) match {
         case Some(Base_Types.Bits_Payload(v)) => Some(v)
-        case Some(v) => 
+        case Some(v) =>
           Art.logError(id, s"Unexpected payload on port AirVehicleState.  Expecting 'Base_Types.Bits_Payload' but received ${v}")
-          None[Base_Types.Bits]() 
+          None[Base_Types.Bits]()
         case _ => None[Base_Types.Bits]()
       }
       return value
@@ -101,9 +107,9 @@ object UxAS_thr_Impl_Bridge {
     def getOperatingRegion() : Option[Base_Types.Bits] = {
       val value : Option[Base_Types.Bits] = Art.getValue(OperatingRegion_Id) match {
         case Some(Base_Types.Bits_Payload(v)) => Some(v)
-        case Some(v) => 
+        case Some(v) =>
           Art.logError(id, s"Unexpected payload on port OperatingRegion.  Expecting 'Base_Types.Bits_Payload' but received ${v}")
-          None[Base_Types.Bits]() 
+          None[Base_Types.Bits]()
         case _ => None[Base_Types.Bits]()
       }
       return value
@@ -112,16 +118,20 @@ object UxAS_thr_Impl_Bridge {
     def getLineSearchTask() : Option[Base_Types.Bits] = {
       val value : Option[Base_Types.Bits] = Art.getValue(LineSearchTask_Id) match {
         case Some(Base_Types.Bits_Payload(v)) => Some(v)
-        case Some(v) => 
+        case Some(v) =>
           Art.logError(id, s"Unexpected payload on port LineSearchTask.  Expecting 'Base_Types.Bits_Payload' but received ${v}")
-          None[Base_Types.Bits]() 
+          None[Base_Types.Bits]()
         case _ => None[Base_Types.Bits]()
       }
       return value
     }
 
-    def sendAutomationResponse(value : Base_Types.Bits) : Unit = {
-      Art.putValue(AutomationResponse_Id, Base_Types.Bits_Payload(value))
+    def sendAutomationResponse_MON_GEO(value : Base_Types.Bits) : Unit = {
+      Art.putValue(AutomationResponse_MON_GEO_Id, Base_Types.Bits_Payload(value))
+    }
+
+    def sendAutomationResponse_MON_REQ(value : Base_Types.Bits) : Unit = {
+      Art.putValue(AutomationResponse_MON_REQ_Id, Base_Types.Bits_Payload(value))
     }
 
 
@@ -145,7 +155,8 @@ object UxAS_thr_Impl_Bridge {
     AirVehicleState_Id : Art.PortId,
     OperatingRegion_Id : Art.PortId,
     LineSearchTask_Id : Art.PortId,
-    AutomationResponse_Id : Art.PortId,
+    AutomationResponse_MON_GEO_Id : Art.PortId,
+    AutomationResponse_MON_REQ_Id : Art.PortId,
 
     dispatchTriggers : Option[ISZ[Art.PortId]],
 
@@ -160,7 +171,8 @@ object UxAS_thr_Impl_Bridge {
 
     val dataOutPortIds: ISZ[Art.PortId] = ISZ()
 
-    val eventOutPortIds: ISZ[Art.PortId] = ISZ(AutomationResponse_Id)
+    val eventOutPortIds: ISZ[Art.PortId] = ISZ(AutomationResponse_MON_GEO_Id,
+                                               AutomationResponse_MON_REQ_Id)
 
     def compute(): Unit = {
       Art.receiveInput(eventInPortIds, dataInPortIds)

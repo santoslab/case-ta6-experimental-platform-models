@@ -68,54 +68,78 @@ void hamr_SW_WaypointPlanManagerService_thr_Impl_Bridge_EntryPoints_apply(STACK_
   this->ReturnHome_Id = ReturnHome_Id;
   Type_assign(&this->dispatchTriggers, dispatchTriggers, sizeof(union Option_9AF35E));
   Type_assign(&this->component, component, sizeof(struct hamr_SW_WaypointPlanManagerService_thr_Impl_Impl));
-  STATIC_ASSERT(0 <= MaxIS_82ABD8, "Insufficient maximum for IS[Z, Z] elements.");
-  DeclNewIS_82ABD8(t_0);
-  t_0.size = (int8_t) 0;
-  Type_assign(&this->dataInPortIds, (&t_0), sizeof(struct IS_82ABD8));
-  STATIC_ASSERT(3 <= MaxIS_82ABD8, "Insufficient maximum for IS[Z, Z] elements.");
-  DeclNewIS_82ABD8(t_1);
-  t_1.size = (int8_t) 3;
-  IS_82ABD8_up(&t_1, 0, (Z) hamr_SW_WaypointPlanManagerService_thr_Impl_Bridge_EntryPoints_AutomationResponse_Id_(this));
-  IS_82ABD8_up(&t_1, 1, (Z) hamr_SW_WaypointPlanManagerService_thr_Impl_Bridge_EntryPoints_AirVehicleState_Id_(this));
-  IS_82ABD8_up(&t_1, 2, (Z) hamr_SW_WaypointPlanManagerService_thr_Impl_Bridge_EntryPoints_ReturnHome_Id_(this));
-  Type_assign(&this->eventInPortIds, (&t_1), sizeof(struct IS_82ABD8));
-  STATIC_ASSERT(0 <= MaxIS_82ABD8, "Insufficient maximum for IS[Z, Z] elements.");
-  DeclNewIS_82ABD8(t_2);
-  t_2.size = (int8_t) 0;
-  Type_assign(&this->dataOutPortIds, (&t_2), sizeof(struct IS_82ABD8));
-  STATIC_ASSERT(1 <= MaxIS_82ABD8, "Insufficient maximum for IS[Z, Z] elements.");
-  DeclNewIS_82ABD8(t_3);
-  t_3.size = (int8_t) 1;
-  IS_82ABD8_up(&t_3, 0, (Z) hamr_SW_WaypointPlanManagerService_thr_Impl_Bridge_EntryPoints_MissionCommand_Id_(this));
-  Type_assign(&this->eventOutPortIds, (&t_3), sizeof(struct IS_82ABD8));
+  {
+    sfUpdateLoc(136);
+    STATIC_ASSERT(0 <= MaxIS_82ABD8, "Insufficient maximum for IS[Z, Z] elements.");
+    DeclNewIS_82ABD8(t_0);
+    t_0.size = (int8_t) 0;
+    Type_assign(&this->dataInPortIds, (&t_0), sizeof(struct IS_82ABD8));
+  }
+  {
+    sfUpdateLoc(138);
+    STATIC_ASSERT(3 <= MaxIS_82ABD8, "Insufficient maximum for IS[Z, Z] elements.");
+    DeclNewIS_82ABD8(t_1);
+    t_1.size = (int8_t) 3;
+    IS_82ABD8_up(&t_1, 0, (Z) hamr_SW_WaypointPlanManagerService_thr_Impl_Bridge_EntryPoints_AutomationResponse_Id_(this));
+    IS_82ABD8_up(&t_1, 1, (Z) hamr_SW_WaypointPlanManagerService_thr_Impl_Bridge_EntryPoints_AirVehicleState_Id_(this));
+    IS_82ABD8_up(&t_1, 2, (Z) hamr_SW_WaypointPlanManagerService_thr_Impl_Bridge_EntryPoints_ReturnHome_Id_(this));
+    Type_assign(&this->eventInPortIds, (&t_1), sizeof(struct IS_82ABD8));
+  }
+  {
+    sfUpdateLoc(142);
+    STATIC_ASSERT(0 <= MaxIS_82ABD8, "Insufficient maximum for IS[Z, Z] elements.");
+    DeclNewIS_82ABD8(t_2);
+    t_2.size = (int8_t) 0;
+    Type_assign(&this->dataOutPortIds, (&t_2), sizeof(struct IS_82ABD8));
+  }
+  {
+    sfUpdateLoc(144);
+    STATIC_ASSERT(1 <= MaxIS_82ABD8, "Insufficient maximum for IS[Z, Z] elements.");
+    DeclNewIS_82ABD8(t_3);
+    t_3.size = (int8_t) 1;
+    IS_82ABD8_up(&t_3, 0, (Z) hamr_SW_WaypointPlanManagerService_thr_Impl_Bridge_EntryPoints_MissionCommand_Id_(this));
+    Type_assign(&this->eventOutPortIds, (&t_3), sizeof(struct IS_82ABD8));
+  }
 }
 
 Unit hamr_SW_WaypointPlanManagerService_thr_Impl_Bridge_EntryPoints_initialise_(STACK_FRAME hamr_SW_WaypointPlanManagerService_thr_Impl_Bridge_EntryPoints this) {
   DeclNewStackFrame(caller, "WaypointPlanManagerService_thr_Impl_Bridge.scala", "hamr.SW.WaypointPlanManagerService_thr_Impl_Bridge.EntryPoints", "initialise", 0);
 
   sfUpdateLoc(172);
-  hamr_SW_WaypointPlanManagerService_thr_Impl_Impl_initialise_(SF hamr_SW_WaypointPlanManagerService_thr_Impl_Bridge_EntryPoints_component_(this));
+  {
+    hamr_SW_WaypointPlanManagerService_thr_Impl_Impl_initialise_(SF hamr_SW_WaypointPlanManagerService_thr_Impl_Bridge_EntryPoints_component_(this));
+  }
 
   sfUpdateLoc(173);
-  art_Art_sendOutput(SF (IS_82ABD8) hamr_SW_WaypointPlanManagerService_thr_Impl_Bridge_EntryPoints_eventOutPortIds_(this), (IS_82ABD8) hamr_SW_WaypointPlanManagerService_thr_Impl_Bridge_EntryPoints_dataOutPortIds_(this));
+  {
+    art_Art_sendOutput(SF (IS_82ABD8) hamr_SW_WaypointPlanManagerService_thr_Impl_Bridge_EntryPoints_eventOutPortIds_(this), (IS_82ABD8) hamr_SW_WaypointPlanManagerService_thr_Impl_Bridge_EntryPoints_dataOutPortIds_(this));
+  }
 }
 
 Unit hamr_SW_WaypointPlanManagerService_thr_Impl_Bridge_EntryPoints_compute_(STACK_FRAME hamr_SW_WaypointPlanManagerService_thr_Impl_Bridge_EntryPoints this) {
   DeclNewStackFrame(caller, "WaypointPlanManagerService_thr_Impl_Bridge.scala", "hamr.SW.WaypointPlanManagerService_thr_Impl_Bridge.EntryPoints", "compute", 0);
 
   sfUpdateLoc(147);
-  art_Art_receiveInput(SF (IS_82ABD8) hamr_SW_WaypointPlanManagerService_thr_Impl_Bridge_EntryPoints_eventInPortIds_(this), (IS_82ABD8) hamr_SW_WaypointPlanManagerService_thr_Impl_Bridge_EntryPoints_dataInPortIds_(this));
+  {
+    art_Art_receiveInput(SF (IS_82ABD8) hamr_SW_WaypointPlanManagerService_thr_Impl_Bridge_EntryPoints_eventInPortIds_(this), (IS_82ABD8) hamr_SW_WaypointPlanManagerService_thr_Impl_Bridge_EntryPoints_dataInPortIds_(this));
+  }
 
   sfUpdateLoc(148);
-  hamr_SW_WaypointPlanManagerService_thr_Impl_Impl_timeTriggered_(SF hamr_SW_WaypointPlanManagerService_thr_Impl_Bridge_EntryPoints_component_(this));
+  {
+    hamr_SW_WaypointPlanManagerService_thr_Impl_Impl_timeTriggered_(SF hamr_SW_WaypointPlanManagerService_thr_Impl_Bridge_EntryPoints_component_(this));
+  }
 
   sfUpdateLoc(149);
-  art_Art_sendOutput(SF (IS_82ABD8) hamr_SW_WaypointPlanManagerService_thr_Impl_Bridge_EntryPoints_eventOutPortIds_(this), (IS_82ABD8) hamr_SW_WaypointPlanManagerService_thr_Impl_Bridge_EntryPoints_dataOutPortIds_(this));
+  {
+    art_Art_sendOutput(SF (IS_82ABD8) hamr_SW_WaypointPlanManagerService_thr_Impl_Bridge_EntryPoints_eventOutPortIds_(this), (IS_82ABD8) hamr_SW_WaypointPlanManagerService_thr_Impl_Bridge_EntryPoints_dataOutPortIds_(this));
+  }
 }
 
 Unit hamr_SW_WaypointPlanManagerService_thr_Impl_Bridge_EntryPoints_finalise_(STACK_FRAME hamr_SW_WaypointPlanManagerService_thr_Impl_Bridge_EntryPoints this) {
   DeclNewStackFrame(caller, "WaypointPlanManagerService_thr_Impl_Bridge.scala", "hamr.SW.WaypointPlanManagerService_thr_Impl_Bridge.EntryPoints", "finalise", 0);
 
   sfUpdateLoc(168);
-  hamr_SW_WaypointPlanManagerService_thr_Impl_Impl_finalise_(SF hamr_SW_WaypointPlanManagerService_thr_Impl_Bridge_EntryPoints_component_(this));
+  {
+    hamr_SW_WaypointPlanManagerService_thr_Impl_Impl_finalise_(SF hamr_SW_WaypointPlanManagerService_thr_Impl_Bridge_EntryPoints_component_(this));
+  }
 }

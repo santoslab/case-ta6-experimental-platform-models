@@ -1,5 +1,10 @@
 #ifndef SIREUM_H_org_sireum_MS_E444B2
 #define SIREUM_H_org_sireum_MS_E444B2
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include <types.h>
 
 // MS[Z, IS[Z, Z]]
@@ -51,5 +56,9 @@ inline B MS_E444B2__ne(MS_E444B2 this, MS_E444B2 other) {
   return !MS_E444B2__eq(this, other);
 }
 
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

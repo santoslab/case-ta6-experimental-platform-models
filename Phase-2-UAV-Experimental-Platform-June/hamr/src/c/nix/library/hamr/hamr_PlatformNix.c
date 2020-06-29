@@ -9,11 +9,8 @@ void hamr_PlatformNix_init(STACK_FRAME_ONLY) {
   if (hamr_PlatformNix_initialized_) return;
   hamr_PlatformNix_initialized_ = T;
   DeclNewStackFrame(caller, "PlatformNix.scala", "hamr.PlatformNix", "<init>", 0);
-  _hamr_PlatformNix_seed = Z_C(0);
-  STATIC_ASSERT(0 <= MaxIS_82ABD8, "Insufficient maximum for IS[Z, Z] elements.");
-  DeclNewIS_82ABD8(t_0);
-  t_0.size = (int8_t) 0;
-  Type_assign(&_hamr_PlatformNix_ids, (&t_0), sizeof(struct IS_82ABD8));
+  hamr_PlatformNix_init_seed(SF_LAST);
+  hamr_PlatformNix_init_ids(SF_LAST);
 }
 
 Z hamr_PlatformNix_seed(STACK_FRAME_ONLY) {
@@ -46,7 +43,7 @@ static inline B hamr_PlatformNix_receive_extract_30_12_882048(STACK_FRAME_SF Opt
   return T;
 }
 
-void hamr_PlatformNix_receive(STACK_FRAME Tuple2_D0E3BB result, Option_882048 portOpt) {
+Unit hamr_PlatformNix_receive(STACK_FRAME Option_882048 portOpt, MBox2_1CBFC4 out) {
   DeclNewStackFrame(caller, "PlatformNix.scala", "hamr.PlatformNix", "receive", 0);
 
   sfUpdateLoc(26);
@@ -58,15 +55,14 @@ void hamr_PlatformNix_receive(STACK_FRAME Tuple2_D0E3BB result, Option_882048 po
     if (match_26_5) {
 
       sfUpdateLoc(28);
-      DeclNewart_DataContent(_d);
-      art_DataContent d;
-      DeclNewart_DataContent(t_1);
-      hamr_SharedMemory_receive(SF (art_DataContent) &t_1, Z__add(hamr_PlatformNix_seed(SF_LAST), port_27_17));
-      d = (art_DataContent) ((art_DataContent) &t_1);
-      DeclNewTuple2_D0E3BB(t_2);
-      Tuple2_D0E3BB_apply(SF &t_2, port_27_17, d);
-      Type_assign(result, (&t_2), sizeof(struct Tuple2_D0E3BB));
-      return;
+      {
+        MBox2_1CBFC4_value1_a(out, (Z) port_27_17);
+      }
+
+      sfUpdateLoc(29);
+      {
+        hamr_SharedMemory_receive(SF Z__add(hamr_PlatformNix_seed(SF_LAST), port_27_17), (MBox2_1CBFC4) out);
+      }
     }
   }
   if (!match_26_5) {
@@ -74,24 +70,16 @@ void hamr_PlatformNix_receive(STACK_FRAME Tuple2_D0E3BB result, Option_882048 po
     if (match_26_5) {
 
       sfUpdateLoc(30);
-      DeclNewString(t_3);
-      String t_4 = (String) &t_3;
-      String_string_(SF t_4, string("Unsupported receive operation without port."));
-      sfAbort(t_4->value);
-      abort();
+      {
+        DeclNewString(t_1);
+        String t_2 = (String) &t_1;
+        String_string_(SF t_2, string("Unsupported receive operation without port."));
+        sfAbort(t_2->value);
+        abort();
+      }
     }
   }
   sfAssert(match_26_5, "Error when pattern matching.");
-}
-
-static inline B hamr_PlatformNix_receiveAsync_extract_48_16_8E9F45(STACK_FRAME_SF Option_8E9F45 t_2, art_DataContent *_d_48_21) {
-  if (!Some_D29615__is(SF t_2)) return F;
-  *_d_48_21 = (art_DataContent) Some_D29615_value_(Some_D29615__as(SF t_2));
-  return T;
-}
-
-static inline B hamr_PlatformNix_receiveAsync_extract_49_16_8E9F45(STACK_FRAME_SF Option_8E9F45 t_2) {
-  return T;
 }
 
 static inline B hamr_PlatformNix_receiveAsync_extract_45_12_882048(STACK_FRAME_SF Option_882048 t_0, Z *_port_45_17) {
@@ -100,11 +88,11 @@ static inline B hamr_PlatformNix_receiveAsync_extract_45_12_882048(STACK_FRAME_S
   return T;
 }
 
-static inline B hamr_PlatformNix_receiveAsync_extract_51_12_882048(STACK_FRAME_SF Option_882048 t_0) {
+static inline B hamr_PlatformNix_receiveAsync_extract_46_12_882048(STACK_FRAME_SF Option_882048 t_0) {
   return T;
 }
 
-void hamr_PlatformNix_receiveAsync(STACK_FRAME Option_02FA6D result, Option_882048 portOpt) {
+Unit hamr_PlatformNix_receiveAsync(STACK_FRAME Option_882048 portOpt, MBox2_1029D1 out) {
   DeclNewStackFrame(caller, "PlatformNix.scala", "hamr.PlatformNix", "receiveAsync", 0);
 
   sfUpdateLoc(44);
@@ -115,51 +103,24 @@ void hamr_PlatformNix_receiveAsync(STACK_FRAME Option_02FA6D result, Option_8820
     match_44_5 = hamr_PlatformNix_receiveAsync_extract_45_12_882048(SF t_0, &port_45_17);
     if (match_44_5) {
 
-      sfUpdateLoc(46);
-      DeclNewOption_8E9F45(_dOpt);
-      Option_8E9F45 dOpt;
-      DeclNewOption_8E9F45(t_1);
-      hamr_SharedMemory_receiveAsync(SF (Option_8E9F45) &t_1, Z__add(hamr_PlatformNix_seed(SF_LAST), port_45_17));
-      dOpt = (Option_8E9F45) ((Option_8E9F45) &t_1);
-
-      sfUpdateLoc(47);
-      Option_8E9F45 t_2 = dOpt;
-      B match_47_9 = F;
-      if (!match_47_9) {
-        art_DataContent d_48_21;
-        match_47_9 = hamr_PlatformNix_receiveAsync_extract_48_16_8E9F45(SF t_2, &d_48_21);
-        if (match_47_9) {
-          DeclNewTuple2_D0E3BB(t_4);
-          Tuple2_D0E3BB_apply(SF &t_4, port_45_17, d_48_21);
-          DeclNewSome_E9D1E5(t_3);
-          Some_E9D1E5_apply(SF &t_3, (Tuple2_D0E3BB) (&t_4));
-          Type_assign(result, (&t_3), sizeof(struct Some_E9D1E5));
-          return;
-        }
+      sfUpdateLoc(45);
+      {
+        hamr_SharedMemory_receiveAsync(SF Z__add(hamr_PlatformNix_seed(SF_LAST), port_45_17), (MBox2_1029D1) out);
       }
-      if (!match_47_9) {
-        match_47_9 = hamr_PlatformNix_receiveAsync_extract_49_16_8E9F45(SF t_2);
-        if (match_47_9) {
-          DeclNewNone_93AA2B(t_5);
-          None_93AA2B_apply(SF &t_5);
-          Type_assign(result, (&t_5), sizeof(struct None_93AA2B));
-          return;
-        }
-      }
-      sfAssert(match_47_9, "Error when pattern matching.");
-      exit(-1);
     }
   }
   if (!match_44_5) {
-    match_44_5 = hamr_PlatformNix_receiveAsync_extract_51_12_882048(SF t_0);
+    match_44_5 = hamr_PlatformNix_receiveAsync_extract_46_12_882048(SF t_0);
     if (match_44_5) {
 
-      sfUpdateLoc(51);
-      DeclNewString(t_6);
-      String t_7 = (String) &t_6;
-      String_string_(SF t_7, string("Unsupported receive operation without port."));
-      sfAbort(t_7->value);
-      abort();
+      sfUpdateLoc(46);
+      {
+        DeclNewString(t_1);
+        String t_2 = (String) &t_1;
+        String_string_(SF t_2, string("Unsupported receive operation without port."));
+        sfAbort(t_2->value);
+        abort();
+      }
     }
   }
   sfAssert(match_44_5, "Error when pattern matching.");
@@ -179,7 +140,9 @@ Unit hamr_PlatformNix_initialise(STACK_FRAME Z seed, Option_882048 portOpt) {
   DeclNewStackFrame(caller, "PlatformNix.scala", "hamr.PlatformNix", "initialise", 0);
 
   sfUpdateLoc(15);
-  hamr_PlatformNix_seed_a(SF (Z) seed);
+  {
+    hamr_PlatformNix_seed_a(SF (Z) seed);
+  }
 
   sfUpdateLoc(16);
   Option_882048 t_0 = portOpt;
@@ -190,15 +153,22 @@ Unit hamr_PlatformNix_initialise(STACK_FRAME Z seed, Option_882048 portOpt) {
     if (match_16_5) {
 
       sfUpdateLoc(18);
-      Z id = Z__add(seed, port_17_17);
+      Z id;
+      {
+        id = Z__add(seed, port_17_17);
+      }
 
       sfUpdateLoc(19);
-      Z t_1 = hamr_SharedMemory_create(SF id);
+      {
+        Z t_1 = hamr_SharedMemory_create(SF id);
+      }
 
       sfUpdateLoc(20);
-      DeclNewIS_82ABD8(t_2);
-      IS_82ABD8__append(SF (IS_82ABD8) &t_2, hamr_PlatformNix_ids(SF_LAST), id);
-      hamr_PlatformNix_ids_a(SF (IS_82ABD8) ((IS_82ABD8) &t_2));
+      {
+        DeclNewIS_82ABD8(t_2);
+        IS_82ABD8__append(SF (IS_82ABD8) &t_2, hamr_PlatformNix_ids(SF_LAST), id);
+        hamr_PlatformNix_ids_a(SF (IS_82ABD8) ((IS_82ABD8) &t_2));
+      }
     }
   }
   if (!match_16_5) {
@@ -213,22 +183,46 @@ B hamr_PlatformNix_sendAsync(STACK_FRAME Z app, Z port, art_DataContent data) {
   DeclNewStackFrame(caller, "PlatformNix.scala", "hamr.PlatformNix", "sendAsync", 0);
 
   sfUpdateLoc(39);
-  B r = hamr_SharedMemory_sendAsync(SF port, Z__add(hamr_PlatformNix_seed(SF_LAST), port), (art_DataContent) data);
+  B r;
+  {
+    r = hamr_SharedMemory_sendAsync(SF port, Z__add(hamr_PlatformNix_seed(SF_LAST), port), (art_DataContent) data);
+  }
   return r;
 }
 
 Unit hamr_PlatformNix_finalise(STACK_FRAME_ONLY) {
   DeclNewStackFrame(caller, "PlatformNix.scala", "hamr.PlatformNix", "finalise", 0);
 
-  sfUpdateLoc(56);
+  sfUpdateLoc(51);
   {
     IS_82ABD8 t_0 = hamr_PlatformNix_ids(SF_LAST);
     int8_t t_1 = (hamr_PlatformNix_ids(SF_LAST))->size;
     for (int8_t t_2 = 0; t_2 < t_1; t_2++) {
       Z id = t_0->value[t_2];
 
-      sfUpdateLoc(57);
-      hamr_SharedMemory_remove(SF id);
+      sfUpdateLoc(52);
+      {
+        hamr_SharedMemory_remove(SF id);
+      }
     }
   }
 }
+
+void hamr_PlatformNix_init_seed(STACK_FRAME_ONLY) {
+  #ifdef SIREUM_LOC
+  StackFrame sf = caller;
+  #endif
+  sfUpdateLoc(11);
+  _hamr_PlatformNix_seed = Z_C(0);
+};
+
+void hamr_PlatformNix_init_ids(STACK_FRAME_ONLY) {
+  #ifdef SIREUM_LOC
+  StackFrame sf = caller;
+  #endif
+  sfUpdateLoc(12);
+  STATIC_ASSERT(0 <= MaxIS_82ABD8, "Insufficient maximum for IS[Z, Z] elements.");
+  DeclNewIS_82ABD8(t_0);
+  t_0.size = (int8_t) 0;
+  Type_assign(&_hamr_PlatformNix_ids, (&t_0), sizeof(struct IS_82ABD8));
+};

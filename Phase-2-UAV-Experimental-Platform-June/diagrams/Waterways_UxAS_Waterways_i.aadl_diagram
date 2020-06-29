@@ -740,7 +740,7 @@
         <seg>feature</seg>
         <seg>automationresponse</seg>
       </bo>
-      <position x="4463.0" y="137.0"/>
+      <position x="4462.0" y="137.0"/>
     </element>
     <element uuid="1bf4e886-b879-4d57-a426-c3f213d70dba" manual="true" dockArea="left">
       <bo>
@@ -761,7 +761,7 @@
         <seg>feature</seg>
         <seg>vehicleactioncommand</seg>
       </bo>
-      <position x="4443.0" y="187.0"/>
+      <position x="4444.0" y="187.0"/>
     </element>
     <element uuid="06227b48-e99f-40fa-8962-8561663b64db" manual="true">
       <element uuid="9394fb03-7af5-44c4-8cd1-32669e386920" manual="true" dockArea="left">
@@ -776,7 +776,7 @@
           <seg>feature</seg>
           <seg>taskassignmentsummary</seg>
         </bo>
-        <position x="514.0" y="60.0"/>
+        <position x="513.0" y="60.0"/>
       </element>
       <element uuid="1b395610-5291-4891-850f-98e4284fa4e9" manual="true" dockArea="left">
         <bo>
@@ -826,7 +826,7 @@
           <seg>feature</seg>
           <seg>automationresponse</seg>
         </bo>
-        <position x="561.0" y="48.0"/>
+        <position x="560.0" y="48.0"/>
       </element>
       <element uuid="42b0074c-1364-40cf-88fd-f54180465543" manual="true" dockArea="left">
         <bo>
@@ -861,7 +861,7 @@
           <seg>feature</seg>
           <seg>uniqueautomationresponse</seg>
         </bo>
-        <position x="510.0" y="223.0"/>
+        <position x="509.0" y="223.0"/>
       </element>
       <bo>
         <seg>subcomponent</seg>
@@ -897,7 +897,7 @@
           <seg>feature</seg>
           <seg>routeplanrequest</seg>
         </bo>
-        <position x="553.0" y="110.0"/>
+        <position x="554.0" y="110.0"/>
       </element>
       <element uuid="8cf3f4d1-336e-4475-9b38-0eb9bd19780e" manual="true" dockArea="right">
         <bo>
@@ -911,14 +911,14 @@
           <seg>feature</seg>
           <seg>taskimplementationrequest</seg>
         </bo>
-        <position x="482.0" y="260.0"/>
+        <position x="485.0" y="260.0"/>
       </element>
       <element uuid="48ea6a4f-c98f-4c97-be01-1a8366ba6df5" manual="true" dockArea="right">
         <bo>
           <seg>feature</seg>
           <seg>taskimplementationresponse</seg>
         </bo>
-        <position x="471.0" y="60.0"/>
+        <position x="473.0" y="60.0"/>
       </element>
       <element uuid="5244e911-57de-45e1-bab7-1e60392e8140" manual="true" dockArea="right">
         <bo>
@@ -939,14 +939,14 @@
           <seg>feature</seg>
           <seg>uniqueautomationresponse</seg>
         </bo>
-        <position x="483.0" y="310.0"/>
+        <position x="482.0" y="310.0"/>
       </element>
       <element uuid="b341502d-3a84-4fd4-bb65-447812616a63" manual="true" dockArea="right">
         <bo>
           <seg>feature</seg>
           <seg>vehicleactioncommand</seg>
         </bo>
-        <position x="514.0" y="10.0"/>
+        <position x="515.0" y="10.0"/>
       </element>
       <bo>
         <seg>subcomponent</seg>
@@ -1025,14 +1025,14 @@
           <seg>feature</seg>
           <seg>assignmentcostmatrix</seg>
         </bo>
-        <position x="463.0" y="148.0"/>
+        <position x="461.0" y="148.0"/>
       </element>
       <element uuid="274fbc84-ee8a-4e19-bd78-0cf20a6e9f61" manual="true" dockArea="right">
         <bo>
           <seg>feature</seg>
           <seg>routeplanrequest</seg>
         </bo>
-        <position x="490.0" y="23.0"/>
+        <position x="491.0" y="23.0"/>
       </element>
       <element uuid="f683ee5d-8906-40ed-9a25-8b2a885c65f4" manual="true" dockArea="right">
         <bo>
@@ -1132,14 +1132,14 @@
           <seg>feature</seg>
           <seg>airvehiclestate</seg>
         </bo>
-        <position x="373.0" y="60.0"/>
+        <position x="376.0" y="60.0"/>
       </element>
       <element uuid="23b65389-cc0c-4a05-84f2-cbfb1ba09787" manual="true" dockArea="right">
         <bo>
           <seg>feature</seg>
           <seg>missioncommand</seg>
         </bo>
-        <position x="359.0" y="10.0"/>
+        <position x="357.0" y="10.0"/>
       </element>
       <bo>
         <seg>subcomponent</seg>
@@ -1154,21 +1154,21 @@
           <seg>feature</seg>
           <seg>airvehicleconfiguration</seg>
         </bo>
-        <position x="435.0" y="10.0"/>
+        <position x="436.0" y="10.0"/>
       </element>
       <element uuid="b4f5eeba-1bda-4055-8b4d-98a7046a5dc1" manual="true" dockArea="right">
         <bo>
           <seg>feature</seg>
           <seg>keepinzone</seg>
         </bo>
-        <position x="518.0" y="60.0"/>
+        <position x="519.0" y="60.0"/>
       </element>
       <element uuid="b9096a1b-e52d-4f26-8a64-8935ccbe7810" manual="true" dockArea="right">
         <bo>
           <seg>feature</seg>
           <seg>keepoutzone</seg>
         </bo>
-        <position x="508.0" y="110.0"/>
+        <position x="509.0" y="110.0"/>
       </element>
       <bo>
         <seg>subcomponent</seg>
@@ -1197,7 +1197,7 @@
           <seg>feature</seg>
           <seg>createnewservice</seg>
         </bo>
-        <position x="406.0" y="60.0"/>
+        <position x="411.0" y="60.0"/>
       </element>
       <element uuid="c5458292-2bfc-43d9-a548-98ed5650a7df" manual="true" dockArea="left">
         <bo>

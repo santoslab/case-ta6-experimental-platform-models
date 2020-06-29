@@ -1,5 +1,10 @@
 #ifndef SIREUM_H_org_sireum_Option_882048
 #define SIREUM_H_org_sireum_Option_882048
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include <types.h>
 
 // Option[Z]
@@ -14,5 +19,9 @@ inline void Option_882048_string_(STACK_FRAME String result, Option_882048 this)
 }
 
 Z Option_882048_get_(STACK_FRAME Option_882048 this);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

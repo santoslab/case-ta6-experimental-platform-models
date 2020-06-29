@@ -1,5 +1,10 @@
 #ifndef SIREUM_H_org_sireum_IS_82ABD8
 #define SIREUM_H_org_sireum_IS_82ABD8
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include <types.h>
 
 // IS[Z, Z]
@@ -51,5 +56,9 @@ inline B IS_82ABD8__ne(IS_82ABD8 this, IS_82ABD8 other) {
   return !IS_82ABD8__eq(this, other);
 }
 
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

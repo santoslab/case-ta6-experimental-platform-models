@@ -22,3 +22,11 @@ Option_8E9F45 Option_8E9F45__as(STACK_FRAME void *this) {
 }
 
 void Option_8E9F45_string_(STACK_FRAME String result, Option_8E9F45 this);
+
+B Option_8E9F45_isEmpty_(STACK_FRAME Option_8E9F45 this) {
+  switch (this->type) {
+    case TSome_D29615: return Some_D29615_isEmpty_(CALLER (Some_D29615) this);
+    case TNone_964667: return None_964667_isEmpty_(CALLER (None_964667) this);
+    default: fprintf(stderr, "Infeasible TYPE: %s.\n", TYPE_string_(this)); exit(1);
+  }
+}

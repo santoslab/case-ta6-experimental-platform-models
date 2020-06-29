@@ -1,5 +1,10 @@
 #ifndef SIREUM_H_art_Connection
 #define SIREUM_H_art_Connection
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include <types.h>
 
 // art.Connection
@@ -26,5 +31,9 @@ inline art_Connection art_Connection__as(STACK_FRAME void *this) {
 }
 
 void art_Connection_apply(STACK_FRAME art_Connection this, art_UPort from, art_UPort to);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

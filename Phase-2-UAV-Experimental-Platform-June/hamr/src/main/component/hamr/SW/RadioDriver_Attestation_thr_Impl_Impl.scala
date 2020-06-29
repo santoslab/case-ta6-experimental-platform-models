@@ -5,7 +5,7 @@ package hamr.SW
 import org.sireum._
 import hamr._
 
-// the contents of this file will not be overwritten
+// This file will not be overwritten so is safe to edit
 @record class RadioDriver_Attestation_thr_Impl_Impl (val api : RadioDriver_Attestation_thr_Impl_Bridge.Api) extends RadioDriver_Attestation_thr_Impl {
 
   override def initialise(): Unit = {
@@ -16,6 +16,8 @@ import hamr._
     api.logError("Example error logging")
 
     api.settrusted_ids(Base_Types.Bits_empty())
+    val apiUsage_recv_data: Option[Base_Types.Bits] = api.getrecv_data()
+    api.sendsend_data(Base_Types.Bits_empty())
     api.sendAutomationRequest(Base_Types.Bits_empty())
     api.sendOperatingRegion(Base_Types.Bits_empty())
     api.sendLineSearchTask(Base_Types.Bits_empty())

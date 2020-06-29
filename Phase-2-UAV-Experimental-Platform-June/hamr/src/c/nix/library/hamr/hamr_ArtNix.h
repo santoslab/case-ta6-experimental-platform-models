@@ -1,5 +1,10 @@
 #ifndef SIREUM_H_hamr_ArtNix
 #define SIREUM_H_hamr_ArtNix
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include <types.h>
 
 void hamr_ArtNix_init(STACK_FRAME_ONLY);
@@ -34,5 +39,23 @@ Unit hamr_ArtNix_logError(STACK_FRAME String title, String msg);
 void hamr_ArtNix_getValue(STACK_FRAME Option_8E9F45 result, Z portId);
 
 Unit hamr_ArtNix_putValue(STACK_FRAME Z portId, art_DataContent data);
+
+void hamr_ArtNix_init_maxPortIds(STACK_FRAME_ONLY);
+
+void hamr_ArtNix_init_noData(STACK_FRAME_ONLY);
+
+void hamr_ArtNix_init_data(STACK_FRAME_ONLY);
+
+void hamr_ArtNix_init_connection(STACK_FRAME_ONLY);
+
+void hamr_ArtNix_init_frozen(STACK_FRAME_ONLY);
+
+void hamr_ArtNix_init_outgoing(STACK_FRAME_ONLY);
+
+void hamr_ArtNix_init_isTimeDispatch(STACK_FRAME_ONLY);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

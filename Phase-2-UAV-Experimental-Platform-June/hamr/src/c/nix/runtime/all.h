@@ -1,6 +1,10 @@
 #ifndef SIREUM_ALL_H
 #define SIREUM_ALL_H
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include <types.h>
 #include <art_ArchitectureDescription.h>
 #include <art_Art.h>
@@ -78,6 +82,8 @@
 #include <org_sireum_IS_948B60.h>
 #include <org_sireum_IS_AA0F82.h>
 #include <org_sireum_IS_C4F575.h>
+#include <org_sireum_MBox2_1029D1.h>
+#include <org_sireum_MBox2_1CBFC4.h>
 #include <org_sireum_MNone_2A2E1D.h>
 #include <org_sireum_MOption_EA1D29.h>
 #include <org_sireum_MS_2590FE.h>
@@ -92,11 +98,9 @@
 #include <org_sireum_None_39BC5F.h>
 #include <org_sireum_None_5C1355.h>
 #include <org_sireum_None_76463B.h>
-#include <org_sireum_None_93AA2B.h>
 #include <org_sireum_None_964667.h>
 #include <org_sireum_None_ED72E1.h>
 #include <org_sireum_Nothing.h>
-#include <org_sireum_Option_02FA6D.h>
 #include <org_sireum_Option_30119F.h>
 #include <org_sireum_Option_6239DB.h>
 #include <org_sireum_Option_882048.h>
@@ -109,11 +113,13 @@
 #include <org_sireum_Some_488F47.h>
 #include <org_sireum_Some_8D03B1.h>
 #include <org_sireum_Some_D29615.h>
-#include <org_sireum_Some_E9D1E5.h>
-#include <org_sireum_Tuple2_D0E3BB.h>
 #include <org_sireum_Tuple2_EC3B57.h>
 #include <org_sireum_U8.h>
 
 void Z_apply(Option_882048 result, String s);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

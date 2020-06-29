@@ -16,7 +16,8 @@ import hamr._
 
   trusted_ids: Port[Base_Types.Bits],
   AutomationRequest_in: Port[Base_Types.Bits],
-  AutomationRequest_out: Port[Base_Types.Bits],
+  AutomationRequest_UXAS: Port[Base_Types.Bits],
+  AutomationRequest_MON_REQ: Port[Base_Types.Bits],
   OperatingRegion_in: Port[Base_Types.Bits],
   OperatingRegion_out: Port[Base_Types.Bits],
   LineSearchTask_in: Port[Base_Types.Bits],
@@ -26,7 +27,8 @@ import hamr._
   val ports : Bridge.Ports = Bridge.Ports(
     all = ISZ(trusted_ids,
               AutomationRequest_in,
-              AutomationRequest_out,
+              AutomationRequest_UXAS,
+              AutomationRequest_MON_REQ,
               OperatingRegion_in,
               OperatingRegion_out,
               LineSearchTask_in,
@@ -40,7 +42,8 @@ import hamr._
                    OperatingRegion_in,
                    LineSearchTask_in),
 
-    eventOuts = ISZ(AutomationRequest_out,
+    eventOuts = ISZ(AutomationRequest_UXAS,
+                    AutomationRequest_MON_REQ,
                     OperatingRegion_out,
                     LineSearchTask_out)
   )
@@ -50,7 +53,8 @@ import hamr._
       id,
       trusted_ids.id,
       AutomationRequest_in.id,
-      AutomationRequest_out.id,
+      AutomationRequest_UXAS.id,
+      AutomationRequest_MON_REQ.id,
       OperatingRegion_in.id,
       OperatingRegion_out.id,
       LineSearchTask_in.id,
@@ -63,7 +67,8 @@ import hamr._
 
       trusted_ids.id,
       AutomationRequest_in.id,
-      AutomationRequest_out.id,
+      AutomationRequest_UXAS.id,
+      AutomationRequest_MON_REQ.id,
       OperatingRegion_in.id,
       OperatingRegion_out.id,
       LineSearchTask_in.id,
@@ -81,7 +86,8 @@ object CASE_AttestationGate_thr_Impl_Bridge {
     id : Art.BridgeId,
     trusted_ids_Id : Art.PortId,
     AutomationRequest_in_Id : Art.PortId,
-    AutomationRequest_out_Id : Art.PortId,
+    AutomationRequest_UXAS_Id : Art.PortId,
+    AutomationRequest_MON_REQ_Id : Art.PortId,
     OperatingRegion_in_Id : Art.PortId,
     OperatingRegion_out_Id : Art.PortId,
     LineSearchTask_in_Id : Art.PortId,
@@ -90,24 +96,28 @@ object CASE_AttestationGate_thr_Impl_Bridge {
     def getAutomationRequest_in() : Option[Base_Types.Bits] = {
       val value : Option[Base_Types.Bits] = Art.getValue(AutomationRequest_in_Id) match {
         case Some(Base_Types.Bits_Payload(v)) => Some(v)
-        case Some(v) => 
+        case Some(v) =>
           Art.logError(id, s"Unexpected payload on port AutomationRequest_in.  Expecting 'Base_Types.Bits_Payload' but received ${v}")
-          None[Base_Types.Bits]() 
+          None[Base_Types.Bits]()
         case _ => None[Base_Types.Bits]()
       }
       return value
     }
 
-    def sendAutomationRequest_out(value : Base_Types.Bits) : Unit = {
-      Art.putValue(AutomationRequest_out_Id, Base_Types.Bits_Payload(value))
+    def sendAutomationRequest_UXAS(value : Base_Types.Bits) : Unit = {
+      Art.putValue(AutomationRequest_UXAS_Id, Base_Types.Bits_Payload(value))
+    }
+
+    def sendAutomationRequest_MON_REQ(value : Base_Types.Bits) : Unit = {
+      Art.putValue(AutomationRequest_MON_REQ_Id, Base_Types.Bits_Payload(value))
     }
 
     def getOperatingRegion_in() : Option[Base_Types.Bits] = {
       val value : Option[Base_Types.Bits] = Art.getValue(OperatingRegion_in_Id) match {
         case Some(Base_Types.Bits_Payload(v)) => Some(v)
-        case Some(v) => 
+        case Some(v) =>
           Art.logError(id, s"Unexpected payload on port OperatingRegion_in.  Expecting 'Base_Types.Bits_Payload' but received ${v}")
-          None[Base_Types.Bits]() 
+          None[Base_Types.Bits]()
         case _ => None[Base_Types.Bits]()
       }
       return value
@@ -120,9 +130,9 @@ object CASE_AttestationGate_thr_Impl_Bridge {
     def getLineSearchTask_in() : Option[Base_Types.Bits] = {
       val value : Option[Base_Types.Bits] = Art.getValue(LineSearchTask_in_Id) match {
         case Some(Base_Types.Bits_Payload(v)) => Some(v)
-        case Some(v) => 
+        case Some(v) =>
           Art.logError(id, s"Unexpected payload on port LineSearchTask_in.  Expecting 'Base_Types.Bits_Payload' but received ${v}")
-          None[Base_Types.Bits]() 
+          None[Base_Types.Bits]()
         case _ => None[Base_Types.Bits]()
       }
       return value
@@ -135,9 +145,9 @@ object CASE_AttestationGate_thr_Impl_Bridge {
     def gettrusted_ids() : Option[Base_Types.Bits] = {
       val value : Option[Base_Types.Bits] = Art.getValue(trusted_ids_Id) match {
         case Some(Base_Types.Bits_Payload(v)) => Some(v)
-        case Some(v) => 
+        case Some(v) =>
           Art.logError(id, s"Unexpected payload on port trusted_ids.  Expecting 'Base_Types.Bits_Payload' but received ${v}")
-          None[Base_Types.Bits]() 
+          None[Base_Types.Bits]()
         case _ => None[Base_Types.Bits]()
       }
       return value
@@ -161,7 +171,8 @@ object CASE_AttestationGate_thr_Impl_Bridge {
 
     trusted_ids_Id : Art.PortId,
     AutomationRequest_in_Id : Art.PortId,
-    AutomationRequest_out_Id : Art.PortId,
+    AutomationRequest_UXAS_Id : Art.PortId,
+    AutomationRequest_MON_REQ_Id : Art.PortId,
     OperatingRegion_in_Id : Art.PortId,
     OperatingRegion_out_Id : Art.PortId,
     LineSearchTask_in_Id : Art.PortId,
@@ -179,7 +190,8 @@ object CASE_AttestationGate_thr_Impl_Bridge {
 
     val dataOutPortIds: ISZ[Art.PortId] = ISZ()
 
-    val eventOutPortIds: ISZ[Art.PortId] = ISZ(AutomationRequest_out_Id,
+    val eventOutPortIds: ISZ[Art.PortId] = ISZ(AutomationRequest_UXAS_Id,
+                                               AutomationRequest_MON_REQ_Id,
                                                OperatingRegion_out_Id,
                                                LineSearchTask_out_Id)
 

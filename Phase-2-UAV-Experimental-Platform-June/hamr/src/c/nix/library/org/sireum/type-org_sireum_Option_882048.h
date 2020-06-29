@@ -1,5 +1,10 @@
 #ifndef SIREUM_TYPE_H_org_sireum_Option_882048
 #define SIREUM_TYPE_H_org_sireum_Option_882048
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include <misc.h>
 
 // Option[Z]
@@ -15,5 +20,9 @@ union Option_882048 {
 };
 
 #define DeclNewOption_882048(x) union Option_882048 x = { 0 }
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

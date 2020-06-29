@@ -4,13 +4,14 @@ size_t sizeOf(Type t) {
   TYPE type = t->type;
   switch (type) {
     case TTuple2_EC3B57: return sizeof(struct Tuple2_EC3B57); // (Z, Z)
-    case TTuple2_D0E3BB: return sizeof(struct Tuple2_D0E3BB); // (Z, art.DataContent)
     case TIS_AA0F82: return sizeof(struct IS_AA0F82); // IS[Z, (Z, Z)]
     case TIS_C4F575: return sizeof(struct IS_C4F575); // IS[Z, B]
     case TIS_948B60: return sizeof(struct IS_948B60); // IS[Z, String]
     case TIS_82ABD8: return sizeof(struct IS_82ABD8); // IS[Z, Z]
     case TIS_08117A: return sizeof(struct IS_08117A); // IS[Z, art.UConnection]
     case TIS_820232: return sizeof(struct IS_820232); // IS[Z, art.UPort]
+    case TMBox2_1029D1: return sizeof(struct MBox2_1029D1); // MBox2[Z, Option[art.DataContent]]
+    case TMBox2_1CBFC4: return sizeof(struct MBox2_1CBFC4); // MBox2[Z, art.DataContent]
     case TMNone_2A2E1D: return sizeof(struct MNone_2A2E1D); // MNone[art.Bridge]
     case TMS_B5E3E6: return sizeof(struct MS_B5E3E6); // MS[Z, IS[Z, (Z, Z)]]
     case TMS_E444B2: return sizeof(struct MS_E444B2); // MS[Z, IS[Z, Z]]
@@ -19,14 +20,12 @@ size_t sizeOf(Type t) {
     case TMS_F55A18: return sizeof(struct MS_F55A18); // MS[Z, Option[art.UPort]]
     case TMS_852149: return sizeof(struct MS_852149); // MS[Z, art.Bridge]
     case TMSome_D3D128: return sizeof(struct MSome_D3D128); // MSome[art.Bridge]
-    case TNone_93AA2B: return sizeof(struct None_93AA2B); // None[(Z, art.DataContent)]
     case TNone_3026C5: return sizeof(struct None_3026C5); // None[IS[Z, B]]
     case TNone_5C1355: return sizeof(struct None_5C1355); // None[IS[Z, Z]]
     case TNone_76463B: return sizeof(struct None_76463B); // None[Z]
     case TNone_964667: return sizeof(struct None_964667); // None[art.DataContent]
     case TNone_ED72E1: return sizeof(struct None_ED72E1); // None[art.Empty]
     case TNone_39BC5F: return sizeof(struct None_39BC5F); // None[art.UPort]
-    case TSome_E9D1E5: return sizeof(struct Some_E9D1E5); // Some[(Z, art.DataContent)]
     case TSome_8D03B1: return sizeof(struct Some_8D03B1); // Some[IS[Z, B]]
     case TSome_488F47: return sizeof(struct Some_488F47); // Some[Z]
     case TSome_D29615: return sizeof(struct Some_D29615); // Some[art.DataContent]
@@ -96,13 +95,14 @@ void Type_assign(void *dest, void *src, size_t destSize) {
 char *TYPE_string_(void *type) {
   static char *strings[] = {
     "(Z, Z)",
-    "(Z, art.DataContent)",
     "IS[Z, (Z, Z)]",
     "IS[Z, B]",
     "IS[Z, String]",
     "IS[Z, Z]",
     "IS[Z, art.UConnection]",
     "IS[Z, art.UPort]",
+    "MBox2[Z, Option[art.DataContent]]",
+    "MBox2[Z, art.DataContent]",
     "MNone[art.Bridge]",
     "MS[Z, IS[Z, (Z, Z)]]",
     "MS[Z, IS[Z, Z]]",
@@ -111,14 +111,12 @@ char *TYPE_string_(void *type) {
     "MS[Z, Option[art.UPort]]",
     "MS[Z, art.Bridge]",
     "MSome[art.Bridge]",
-    "None[(Z, art.DataContent)]",
     "None[IS[Z, B]]",
     "None[IS[Z, Z]]",
     "None[Z]",
     "None[art.DataContent]",
     "None[art.Empty]",
     "None[art.UPort]",
-    "Some[(Z, art.DataContent)]",
     "Some[IS[Z, B]]",
     "Some[Z]",
     "Some[art.DataContent]",

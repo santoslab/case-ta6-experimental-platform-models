@@ -5,7 +5,7 @@ package hamr.SW
 import org.sireum._
 import hamr._
 
-// the contents of this file will not be overwritten
+// This file will not be overwritten so is safe to edit
 @record class CASE_AttestationGate_thr_Impl_Impl (val api : CASE_AttestationGate_thr_Impl_Bridge.Api) extends CASE_AttestationGate_thr_Impl {
 
   override def initialise(): Unit = {
@@ -17,7 +17,8 @@ import hamr._
 
     val apiUsage_trusted_ids: Option[Base_Types.Bits] = api.gettrusted_ids()
     val apiUsage_AutomationRequest_in: Option[Base_Types.Bits] = api.getAutomationRequest_in()
-    api.sendAutomationRequest_out(Base_Types.Bits_empty())
+    api.sendAutomationRequest_UXAS(Base_Types.Bits_empty())
+    api.sendAutomationRequest_MON_REQ(Base_Types.Bits_empty())
     val apiUsage_OperatingRegion_in: Option[Base_Types.Bits] = api.getOperatingRegion_in()
     api.sendOperatingRegion_out(Base_Types.Bits_empty())
     val apiUsage_LineSearchTask_in: Option[Base_Types.Bits] = api.getLineSearchTask_in()

@@ -1,5 +1,10 @@
 #ifndef SIREUM_H_org_sireum_Tuple2_EC3B57
 #define SIREUM_H_org_sireum_Tuple2_EC3B57
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include <types.h>
 
 // (Z, Z)
@@ -19,5 +24,9 @@ inline Z Tuple2_EC3B57_2(Tuple2_EC3B57 this) {
 inline B Tuple2_EC3B57__ne(Tuple2_EC3B57 this, Tuple2_EC3B57 other) {
   return !Tuple2_EC3B57__eq(this, other);
 }
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

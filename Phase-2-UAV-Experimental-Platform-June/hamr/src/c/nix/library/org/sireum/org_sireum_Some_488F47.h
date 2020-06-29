@@ -1,5 +1,10 @@
 #ifndef SIREUM_H_org_sireum_Some_488F47
 #define SIREUM_H_org_sireum_Some_488F47
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include <types.h>
 
 // Some[Z]
@@ -25,5 +30,9 @@ inline Some_488F47 Some_488F47__as(STACK_FRAME void *this) {
 }
 
 void Some_488F47_apply(STACK_FRAME Some_488F47 this, Z value);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

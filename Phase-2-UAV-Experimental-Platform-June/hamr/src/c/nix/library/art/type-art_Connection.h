@@ -1,5 +1,10 @@
 #ifndef SIREUM_TYPE_H_art_Connection
 #define SIREUM_TYPE_H_art_Connection
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include <misc.h>
 
 // art.Connection
@@ -14,5 +19,9 @@ struct art_Connection {
 };
 
 #define DeclNewart_Connection(x) struct art_Connection x = { .type = Tart_Connection }
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

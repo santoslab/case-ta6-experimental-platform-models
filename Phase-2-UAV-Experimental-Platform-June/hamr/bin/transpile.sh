@@ -25,9 +25,9 @@ ${SIREUM_HOME}/bin/sireum slang transpilers c \
   --fingerprint 3 \
   --bits 32 \
   --string-size 256 \
-  --sequence-size 45 \
-  --sequence "MS[Z,art.Bridge]=9;MS[Z,MOption[art.Bridge]]=9;IS[Z,art.UPort]=7;IS[Z,art.UConnection]=20;IS[Z,B]=262144" \
-  --constants "art.Art.maxComponents=9;art.Art.maxPorts=45" \
+  --sequence-size 51 \
+  --sequence "MS[Z,art.Bridge]=9;MS[Z,MOption[art.Bridge]]=9;IS[Z,art.UPort]=8;IS[Z,art.UConnection]=18;IS[Z,B]=262144" \
+  --constants "art.Art.maxComponents=9;art.Art.maxPorts=51" \
   --forward "art.ArtNative=hamr.ArtNix,hamr.Platform=hamr.PlatformNix" \
   --stack-size "16*1024*1024" \
   --stable-type-id \

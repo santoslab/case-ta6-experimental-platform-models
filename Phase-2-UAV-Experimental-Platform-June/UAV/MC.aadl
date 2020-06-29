@@ -45,9 +45,9 @@ public
 	processor implementation MC_Proc.Impl
 		properties
    		Frame_Period => 1000ms;
-      Clock_Period => 2ms;
-      CASE_Scheduling::Max_Domain => 15;
-   		CASE_Scheduling::Schedule_Source_Text => "behavior_code/kernel/domain_schedule.c";
+      	Clock_Period => 2ms;
+      	CASE_Scheduling::Max_Domain => 15;
+   		CASE_Scheduling::Schedule_Source_Text => "kernel/domain_schedule.c";
 	end MC_Proc.Impl;
 
 	-- The Mission Computer RAM
@@ -134,17 +134,23 @@ public
 			-- UART
 			bac6: bus access FC_UART_HW.UART <-> FC_UART;
 		properties
-			Actual_Processor_Binding => (reference (PROC_HW)) applies to PROC_SW;
 			Actual_Memory_Binding => (reference (MEM_HW)) applies to PROC_SW;
 			Actual_Connection_Binding => (reference (BUS_HW)) applies to c04, c06, c10, c11;
+			Actual_Processor_Binding => (reference (PROC_HW)) applies to VM_UxAS, VM_RADIO;
+			Actual_Processor_Binding => (reference (PROC_HW)) applies to PROC_SW.FC_UART, PROC_SW.FlyZones, PROC_SW.WPM, PROC_SW.AM_Gate, PROC_SW.FLT_LST, PROC_SW.MON_GEO, PROC_SW.MON_REQ;
 			Actual_Processor_Binding => (reference (VM_UxAS)) applies to PROC_SW.UXAS;
 			Actual_Processor_Binding => (reference (VM_Radio)) applies to PROC_SW.RADIO;
-			Actual_Processor_Binding => (reference (PROC_HW)) applies to VM_UXAS, VM_RADIO;
+			
 			
 			HAMR::Default_Bit_Width => 32;
             HAMR::Default_Max_Sequence_Size => 1;
             HAMR::Max_String_Size => 256;
-            HAMR::Bit_Codec_Raw_Connections => true;       
+            HAMR::Bit_Codec_Raw_Connections => true;
+            
+        annex resolute {**
+            check CASE_Tools
+        **};
+             
 	end MissionComputer.Impl;
 	
 end MC;

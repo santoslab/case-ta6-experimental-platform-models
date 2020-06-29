@@ -22,11 +22,11 @@ object PlatformNix {
     }
   }
 
-  def receive(portOpt: Option[Art.PortId]): (Art.PortId, DataContent) = {
+  def receive(portOpt: Option[Art.PortId], out: MBox2[Art.PortId, DataContent]): Unit = {
     portOpt match {
       case Some(port) =>
-        val d = SharedMemory.receive(seed + port)
-        return (port, d)
+        out.value1 = port
+        SharedMemory.receive(seed + port, out)
       case _ => halt("Unsupported receive operation without port.")
     }
   }
@@ -40,14 +40,9 @@ object PlatformNix {
     return r
   }
 
-  def receiveAsync(portOpt: Option[Art.PortId]): Option[(Art.PortId, DataContent)] = {
+  def receiveAsync(portOpt: Option[Art.PortId], out: MBox2[Art.PortId, Option[DataContent]]): Unit = {
     portOpt match {
-      case Some(port) =>
-        val dOpt = SharedMemory.receiveAsync(seed + port)
-        dOpt match {
-          case Some(d) => return Some((port, d))
-          case _ => return None()
-        }
+      case Some(port) => SharedMemory.receiveAsync(seed + port, out)
       case _ => halt("Unsupported receive operation without port.")
     }
   }

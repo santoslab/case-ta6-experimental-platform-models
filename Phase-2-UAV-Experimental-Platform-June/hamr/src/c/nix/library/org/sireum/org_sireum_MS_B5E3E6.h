@@ -1,5 +1,10 @@
 #ifndef SIREUM_H_org_sireum_MS_B5E3E6
 #define SIREUM_H_org_sireum_MS_B5E3E6
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include <types.h>
 
 // MS[Z, IS[Z, (Z, Z)]]
@@ -51,5 +56,9 @@ inline B MS_B5E3E6__ne(MS_B5E3E6 this, MS_B5E3E6 other) {
   return !MS_B5E3E6__eq(this, other);
 }
 
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

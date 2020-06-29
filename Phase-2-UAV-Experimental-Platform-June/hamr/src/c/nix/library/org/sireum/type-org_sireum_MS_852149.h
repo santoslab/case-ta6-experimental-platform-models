@@ -1,5 +1,10 @@
 #ifndef SIREUM_TYPE_H_org_sireum_MS_852149
 #define SIREUM_TYPE_H_org_sireum_MS_852149
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include <misc.h>
 
 // MS[Z, art.Bridge]
@@ -16,5 +21,9 @@ struct MS_852149 {
 };
 
 #define DeclNewMS_852149(x) struct MS_852149 x = { .type = TMS_852149 }
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

@@ -1,5 +1,10 @@
 #ifndef SIREUM_H_org_sireum_None_76463B
 #define SIREUM_H_org_sireum_None_76463B
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include <types.h>
 
 // None[Z]
@@ -24,5 +29,9 @@ inline None_76463B None_76463B__as(STACK_FRAME void *this) {
 }
 
 void None_76463B_apply(STACK_FRAME None_76463B this);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

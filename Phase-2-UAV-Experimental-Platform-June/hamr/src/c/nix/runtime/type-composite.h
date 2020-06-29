@@ -1,18 +1,21 @@
 #ifndef SIREUM_GEN_TYPE_H
 #define SIREUM_GEN_TYPE_H
 
-#include <memory.h>
+#ifdef __cplusplus
+extern "C" {
+#endif
 #include <stackframe.h>
 
 typedef enum {
   TTuple2_EC3B57 = 0xEC3B577E, // (Z, Z)
-  TTuple2_D0E3BB = 0xD0E3BBDB, // (Z, art.DataContent)
   TIS_AA0F82 = 0xAA0F8237, // IS[Z, (Z, Z)]
   TIS_C4F575 = 0xC4F575CD, // IS[Z, B]
   TIS_948B60 = 0x948B6070, // IS[Z, String]
   TIS_82ABD8 = 0x82ABD805, // IS[Z, Z]
   TIS_08117A = 0x08117AAE, // IS[Z, art.UConnection]
   TIS_820232 = 0x82023297, // IS[Z, art.UPort]
+  TMBox2_1029D1 = 0x1029D116, // MBox2[Z, Option[art.DataContent]]
+  TMBox2_1CBFC4 = 0x1CBFC457, // MBox2[Z, art.DataContent]
   TMNone_2A2E1D = 0x2A2E1D40, // MNone[art.Bridge]
   TMS_B5E3E6 = 0xB5E3E695, // MS[Z, IS[Z, (Z, Z)]]
   TMS_E444B2 = 0xE444B286, // MS[Z, IS[Z, Z]]
@@ -21,14 +24,12 @@ typedef enum {
   TMS_F55A18 = 0xF55A1861, // MS[Z, Option[art.UPort]]
   TMS_852149 = 0x85214977, // MS[Z, art.Bridge]
   TMSome_D3D128 = 0xD3D1282F, // MSome[art.Bridge]
-  TNone_93AA2B = 0x93AA2B92, // None[(Z, art.DataContent)]
   TNone_3026C5 = 0x3026C5D4, // None[IS[Z, B]]
   TNone_5C1355 = 0x5C135592, // None[IS[Z, Z]]
   TNone_76463B = 0x76463B20, // None[Z]
   TNone_964667 = 0x9646678F, // None[art.DataContent]
   TNone_ED72E1 = 0xED72E191, // None[art.Empty]
   TNone_39BC5F = 0x39BC5F5F, // None[art.UPort]
-  TSome_E9D1E5 = 0xE9D1E505, // Some[(Z, art.DataContent)]
   TSome_8D03B1 = 0x8D03B113, // Some[IS[Z, B]]
   TSome_488F47 = 0x488F47F1, // Some[Z]
   TSome_D29615 = 0xD29615C0, // Some[art.DataContent]
@@ -106,5 +107,9 @@ struct StaticString {
 
 #define string(v) ((String) &((struct { TYPE type; Z size; C value[sizeof(v)]; }) { TString, Z_C(sizeof (v) - 1), v }))
 #define DeclNewString(x) struct StaticString x = { .type = TString }
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

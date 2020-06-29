@@ -6,7 +6,40 @@ set(CMAKE_C_STANDARD 99)
 
 add_compile_options(-Werror)
 
-add_compile_options("$<$<CONFIG:Release>:-O2>")
+function(to_hex DEC HEX)
+  while(DEC GREATER 0)
+    math(EXPR _val "${DEC} % 16")
+    math(EXPR DEC "${DEC} / 16")
+    if(_val EQUAL 10)
+      set(_val "A")
+    elseif(_val EQUAL 11)
+      set(_val "B")
+    elseif(_val EQUAL 12)
+      set(_val "C")
+    elseif(_val EQUAL 13)
+      set(_val "D")
+    elseif(_val EQUAL 14)
+      set(_val "E")
+    elseif(_val EQUAL 15)
+      set(_val "F")
+    endif()
+    set(_res "${_val}${_res}")
+  endwhile()
+  set(${HEX} "0x${_res}" PARENT_SCOPE)
+endfunction()
+
+if ("${CMAKE_CXX_COMPILER_ID}" MATCHES "(C|c?)lang")
+  to_hex("16*1024*1024" stack_size)
+  set(CMAKE_EXE_LINKER_FLAGS "-Wl,-stack_size -Wl,${stack_size}")
+  add_compile_options("$<$<CONFIG:Release>:-Oz>")
+elseif ("${CMAKE_CXX_COMPILER_ID}" STREQUAL "GNU")
+  if (WIN32 OR MINGW OR MSYS OR CYGWIN)
+    to_hex("16*1024*1024" stack_size)
+    set(CMAKE_EXE_LINKER_FLAGS "-Wl,--stack,${stack_size}")
+  endif()
+  add_compile_options(-fstack-usage)
+  add_compile_options("$<$<CONFIG:Release>:-Os>")
+endif()
 
 option(BOUND_CHECK
   "Build the program with sequence bound checking."
@@ -40,13 +73,15 @@ if(WITH_LOC)
   add_definitions(-DSIREUM_LOC)
 endif(WITH_LOC)
 
+
 add_library(main STATIC
+        runtime/type.h
+        runtime/lib.h
+        runtime/misc.c
+        runtime/stackframe.c
         runtime/stackframe.h
         runtime/type.c
         runtime/misc.h
-        runtime/stackframe.c
-        runtime/misc.c
-        runtime/type.h
         runtime/ztype.h
         runtime/type-composite.h
         runtime/types.h
@@ -279,6 +314,12 @@ add_library(main STATIC
         library/org/sireum/type-org_sireum_IS_C4F575.h
         library/org/sireum/org_sireum_IS_C4F575.h
         library/org/sireum/org_sireum_IS_C4F575.c
+        library/org/sireum/type-org_sireum_MBox2_1029D1.h
+        library/org/sireum/org_sireum_MBox2_1029D1.h
+        library/org/sireum/org_sireum_MBox2_1029D1.c
+        library/org/sireum/type-org_sireum_MBox2_1CBFC4.h
+        library/org/sireum/org_sireum_MBox2_1CBFC4.h
+        library/org/sireum/org_sireum_MBox2_1CBFC4.c
         library/org/sireum/type-org_sireum_MNone_2A2E1D.h
         library/org/sireum/org_sireum_MNone_2A2E1D.h
         library/org/sireum/org_sireum_MNone_2A2E1D.c
@@ -321,9 +362,6 @@ add_library(main STATIC
         library/org/sireum/type-org_sireum_None_76463B.h
         library/org/sireum/org_sireum_None_76463B.h
         library/org/sireum/org_sireum_None_76463B.c
-        library/org/sireum/type-org_sireum_None_93AA2B.h
-        library/org/sireum/org_sireum_None_93AA2B.h
-        library/org/sireum/org_sireum_None_93AA2B.c
         library/org/sireum/type-org_sireum_None_964667.h
         library/org/sireum/org_sireum_None_964667.h
         library/org/sireum/org_sireum_None_964667.c
@@ -333,9 +371,6 @@ add_library(main STATIC
         library/org/sireum/type-org_sireum_Nothing.h
         library/org/sireum/org_sireum_Nothing.h
         library/org/sireum/org_sireum_Nothing.c
-        library/org/sireum/type-org_sireum_Option_02FA6D.h
-        library/org/sireum/org_sireum_Option_02FA6D.h
-        library/org/sireum/org_sireum_Option_02FA6D.c
         library/org/sireum/type-org_sireum_Option_30119F.h
         library/org/sireum/org_sireum_Option_30119F.h
         library/org/sireum/org_sireum_Option_30119F.c
@@ -372,12 +407,6 @@ add_library(main STATIC
         library/org/sireum/type-org_sireum_Some_D29615.h
         library/org/sireum/org_sireum_Some_D29615.h
         library/org/sireum/org_sireum_Some_D29615.c
-        library/org/sireum/type-org_sireum_Some_E9D1E5.h
-        library/org/sireum/org_sireum_Some_E9D1E5.h
-        library/org/sireum/org_sireum_Some_E9D1E5.c
-        library/org/sireum/type-org_sireum_Tuple2_D0E3BB.h
-        library/org/sireum/org_sireum_Tuple2_D0E3BB.h
-        library/org/sireum/org_sireum_Tuple2_D0E3BB.c
         library/org/sireum/type-org_sireum_Tuple2_EC3B57.h
         library/org/sireum/org_sireum_Tuple2_EC3B57.h
         library/org/sireum/org_sireum_Tuple2_EC3B57.c
@@ -517,34 +546,3 @@ target_link_libraries(Main-bin LINK_PUBLIC main m)
 
 set_target_properties(Main-bin PROPERTIES OUTPUT_NAME Main)
 
-
-function(to_hex DEC HEX)
-  while(DEC GREATER 0)
-    math(EXPR _val "${DEC} % 16")
-    math(EXPR DEC "${DEC} / 16")
-    if(_val EQUAL 10)
-      set(_val "A")
-    elseif(_val EQUAL 11)
-      set(_val "B")
-    elseif(_val EQUAL 12)
-      set(_val "C")
-    elseif(_val EQUAL 13)
-      set(_val "D")
-    elseif(_val EQUAL 14)
-      set(_val "E")
-    elseif(_val EQUAL 15)
-      set(_val "F")
-    endif()
-    set(_res "${_val}${_res}")
-  endwhile()
-  set(${HEX} "0x${_res}" PARENT_SCOPE)
-endfunction()
-
-to_hex("16*1024*1024" stack_size)
-if ("${CMAKE_CXX_COMPILER_ID}" MATCHES "(C|c?)lang")
-  set(CMAKE_EXE_LINKER_FLAGS "-Wl,-stack_size -Wl,${stack_size}")
-elseif ("${CMAKE_CXX_COMPILER_ID}" STREQUAL "GNU")
-  if (WIN32 OR MINGW OR MSYS OR CYGWIN)
-    set(CMAKE_EXE_LINKER_FLAGS "-Wl,--stack,${stack_size}")
-  endif()
-endif()

@@ -1,6 +1,10 @@
 #ifndef SIREUM_GEN_H
 #define SIREUM_GEN_H
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include <misc.h>
 #include <type-art_ArchitectureDescription.h>
 #include <type-art_Art.h>
@@ -78,6 +82,8 @@
 #include <type-org_sireum_IS_948B60.h>
 #include <type-org_sireum_IS_AA0F82.h>
 #include <type-org_sireum_IS_C4F575.h>
+#include <type-org_sireum_MBox2_1029D1.h>
+#include <type-org_sireum_MBox2_1CBFC4.h>
 #include <type-org_sireum_MNone_2A2E1D.h>
 #include <type-org_sireum_MOption_EA1D29.h>
 #include <type-org_sireum_MS_2590FE.h>
@@ -92,11 +98,9 @@
 #include <type-org_sireum_None_39BC5F.h>
 #include <type-org_sireum_None_5C1355.h>
 #include <type-org_sireum_None_76463B.h>
-#include <type-org_sireum_None_93AA2B.h>
 #include <type-org_sireum_None_964667.h>
 #include <type-org_sireum_None_ED72E1.h>
 #include <type-org_sireum_Nothing.h>
-#include <type-org_sireum_Option_02FA6D.h>
 #include <type-org_sireum_Option_30119F.h>
 #include <type-org_sireum_Option_6239DB.h>
 #include <type-org_sireum_Option_882048.h>
@@ -109,8 +113,6 @@
 #include <type-org_sireum_Some_488F47.h>
 #include <type-org_sireum_Some_8D03B1.h>
 #include <type-org_sireum_Some_D29615.h>
-#include <type-org_sireum_Some_E9D1E5.h>
-#include <type-org_sireum_Tuple2_D0E3BB.h>
 #include <type-org_sireum_Tuple2_EC3B57.h>
 #include <type-org_sireum_U8.h>
 
@@ -124,5 +126,9 @@
 
 size_t sizeOf(Type t);
 void Type_assign(void *dest, void *src, size_t destSize);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

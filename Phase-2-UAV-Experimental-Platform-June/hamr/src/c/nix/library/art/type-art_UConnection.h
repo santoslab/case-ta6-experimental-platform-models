@@ -1,5 +1,10 @@
 #ifndef SIREUM_TYPE_H_art_UConnection
 #define SIREUM_TYPE_H_art_UConnection
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include <misc.h>
 
 // art.UConnection
@@ -13,5 +18,9 @@ union art_UConnection {
 };
 
 #define DeclNewart_UConnection(x) union art_UConnection x = { 0 }
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

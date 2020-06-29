@@ -1,5 +1,10 @@
 #ifndef SIREUM_H_org_sireum_IS_948B60
 #define SIREUM_H_org_sireum_IS_948B60
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include <types.h>
 
 // IS[Z, String]
@@ -51,5 +56,9 @@ inline B IS_948B60__ne(IS_948B60 this, IS_948B60 other) {
   return !IS_948B60__eq(this, other);
 }
 
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

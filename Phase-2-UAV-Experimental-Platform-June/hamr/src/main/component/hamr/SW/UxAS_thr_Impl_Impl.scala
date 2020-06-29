@@ -5,7 +5,7 @@ package hamr.SW
 import org.sireum._
 import hamr._
 
-// the contents of this file will not be overwritten
+// This file will not be overwritten so is safe to edit
 @record class UxAS_thr_Impl_Impl (val api : UxAS_thr_Impl_Bridge.Api) extends UxAS_thr_Impl {
 
   override def initialise(): Unit = {
@@ -19,7 +19,8 @@ import hamr._
     val apiUsage_AirVehicleState: Option[Base_Types.Bits] = api.getAirVehicleState()
     val apiUsage_OperatingRegion: Option[Base_Types.Bits] = api.getOperatingRegion()
     val apiUsage_LineSearchTask: Option[Base_Types.Bits] = api.getLineSearchTask()
-    api.sendAutomationResponse(Base_Types.Bits_empty())
+    api.sendAutomationResponse_MON_GEO(Base_Types.Bits_empty())
+    api.sendAutomationResponse_MON_REQ(Base_Types.Bits_empty())
   }
 
   override def timeTriggered(): Unit = {

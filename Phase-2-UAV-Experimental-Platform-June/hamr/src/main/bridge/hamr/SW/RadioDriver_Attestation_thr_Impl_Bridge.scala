@@ -15,6 +15,8 @@ import hamr._
   val dispatchTriggers: Option[ISZ[Art.PortId]],
 
   trusted_ids: Port[Base_Types.Bits],
+  recv_data: Port[Base_Types.Bits],
+  send_data: Port[Base_Types.Bits],
   AutomationRequest: Port[Base_Types.Bits],
   OperatingRegion: Port[Base_Types.Bits],
   LineSearchTask: Port[Base_Types.Bits]
@@ -22,6 +24,8 @@ import hamr._
 
   val ports : Bridge.Ports = Bridge.Ports(
     all = ISZ(trusted_ids,
+              recv_data,
+              send_data,
               AutomationRequest,
               OperatingRegion,
               LineSearchTask),
@@ -30,9 +34,10 @@ import hamr._
 
     dataOuts = ISZ(trusted_ids),
 
-    eventIns = ISZ(),
+    eventIns = ISZ(recv_data),
 
-    eventOuts = ISZ(AutomationRequest,
+    eventOuts = ISZ(send_data,
+                    AutomationRequest,
                     OperatingRegion,
                     LineSearchTask)
   )
@@ -41,6 +46,8 @@ import hamr._
     RadioDriver_Attestation_thr_Impl_Bridge.Api(
       id,
       trusted_ids.id,
+      recv_data.id,
+      send_data.id,
       AutomationRequest.id,
       OperatingRegion.id,
       LineSearchTask.id
@@ -51,6 +58,8 @@ import hamr._
       id,
 
       trusted_ids.id,
+      recv_data.id,
+      send_data.id,
       AutomationRequest.id,
       OperatingRegion.id,
       LineSearchTask.id,
@@ -66,9 +75,26 @@ object RadioDriver_Attestation_thr_Impl_Bridge {
   @record class Api(
     id : Art.BridgeId,
     trusted_ids_Id : Art.PortId,
+    recv_data_Id : Art.PortId,
+    send_data_Id : Art.PortId,
     AutomationRequest_Id : Art.PortId,
     OperatingRegion_Id : Art.PortId,
     LineSearchTask_Id : Art.PortId) {
+
+    def getrecv_data() : Option[Base_Types.Bits] = {
+      val value : Option[Base_Types.Bits] = Art.getValue(recv_data_Id) match {
+        case Some(Base_Types.Bits_Payload(v)) => Some(v)
+        case Some(v) =>
+          Art.logError(id, s"Unexpected payload on port recv_data.  Expecting 'Base_Types.Bits_Payload' but received ${v}")
+          None[Base_Types.Bits]()
+        case _ => None[Base_Types.Bits]()
+      }
+      return value
+    }
+
+    def sendsend_data(value : Base_Types.Bits) : Unit = {
+      Art.putValue(send_data_Id, Base_Types.Bits_Payload(value))
+    }
 
     def sendAutomationRequest(value : Base_Types.Bits) : Unit = {
       Art.putValue(AutomationRequest_Id, Base_Types.Bits_Payload(value))
@@ -103,6 +129,8 @@ object RadioDriver_Attestation_thr_Impl_Bridge {
     RadioDriver_Attestation_thr_Impl_BridgeId : Art.BridgeId,
 
     trusted_ids_Id : Art.PortId,
+    recv_data_Id : Art.PortId,
+    send_data_Id : Art.PortId,
     AutomationRequest_Id : Art.PortId,
     OperatingRegion_Id : Art.PortId,
     LineSearchTask_Id : Art.PortId,
@@ -113,11 +141,12 @@ object RadioDriver_Attestation_thr_Impl_Bridge {
 
     val dataInPortIds: ISZ[Art.PortId] = ISZ()
 
-    val eventInPortIds: ISZ[Art.PortId] = ISZ()
+    val eventInPortIds: ISZ[Art.PortId] = ISZ(recv_data_Id)
 
     val dataOutPortIds: ISZ[Art.PortId] = ISZ(trusted_ids_Id)
 
-    val eventOutPortIds: ISZ[Art.PortId] = ISZ(AutomationRequest_Id,
+    val eventOutPortIds: ISZ[Art.PortId] = ISZ(send_data_Id,
+                                               AutomationRequest_Id,
                                                OperatingRegion_Id,
                                                LineSearchTask_Id)
 

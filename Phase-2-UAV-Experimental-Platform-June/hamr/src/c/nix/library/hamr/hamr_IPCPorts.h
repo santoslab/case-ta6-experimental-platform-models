@@ -1,5 +1,10 @@
 #ifndef SIREUM_H_hamr_IPCPorts
 #define SIREUM_H_hamr_IPCPorts
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include <types.h>
 
 void hamr_IPCPorts_init(STACK_FRAME_ONLY);
@@ -14,5 +19,33 @@ Z hamr_IPCPorts_SW_Impl_Instance_FLT_LST_CASE_Filter_LST_App(STACK_FRAME_ONLY);
 Z hamr_IPCPorts_SW_Impl_Instance_MON_REQ_CASE_Monitor_Req_App(STACK_FRAME_ONLY);
 Z hamr_IPCPorts_SW_Impl_Instance_MON_GEO_CASE_Monitor_Geo_App(STACK_FRAME_ONLY);
 Z hamr_IPCPorts_Main(STACK_FRAME_ONLY);
+
+void hamr_IPCPorts_emptyReceiveOut(STACK_FRAME MBox2_1CBFC4 result);
+
+void hamr_IPCPorts_emptyReceiveAsyncOut(STACK_FRAME MBox2_1029D1 result);
+
+void hamr_IPCPorts_init_SW_Impl_Instance_FC_UART_UARTDriver_App(STACK_FRAME_ONLY);
+
+void hamr_IPCPorts_init_SW_Impl_Instance_RADIO_RadioDriver_Attestation_App(STACK_FRAME_ONLY);
+
+void hamr_IPCPorts_init_SW_Impl_Instance_FlyZones_FlyZonesDatabase_App(STACK_FRAME_ONLY);
+
+void hamr_IPCPorts_init_SW_Impl_Instance_UXAS_UxAS_App(STACK_FRAME_ONLY);
+
+void hamr_IPCPorts_init_SW_Impl_Instance_WPM_WaypointPlanManagerService_App(STACK_FRAME_ONLY);
+
+void hamr_IPCPorts_init_SW_Impl_Instance_AM_Gate_CASE_AttestationGate_App(STACK_FRAME_ONLY);
+
+void hamr_IPCPorts_init_SW_Impl_Instance_FLT_LST_CASE_Filter_LST_App(STACK_FRAME_ONLY);
+
+void hamr_IPCPorts_init_SW_Impl_Instance_MON_REQ_CASE_Monitor_Req_App(STACK_FRAME_ONLY);
+
+void hamr_IPCPorts_init_SW_Impl_Instance_MON_GEO_CASE_Monitor_Geo_App(STACK_FRAME_ONLY);
+
+void hamr_IPCPorts_init_Main(STACK_FRAME_ONLY);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif
