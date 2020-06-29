@@ -75,13 +75,13 @@ endif(WITH_LOC)
 
 
 add_library(SW_Impl_Instance_UXAS_UxAS STATIC
+        runtime/type.c
+        runtime/stackframe.h
+        runtime/misc.c
+        runtime/misc.h
+        runtime/stackframe.c
         runtime/type.h
         runtime/lib.h
-        runtime/misc.c
-        runtime/stackframe.c
-        runtime/stackframe.h
-        runtime/type.c
-        runtime/misc.h
         runtime/ztype.h
         runtime/type-composite.h
         runtime/types.h
@@ -240,8 +240,7 @@ add_library(SW_Impl_Instance_UXAS_UxAS STATIC
         ext/UxAS_thr_Impl_Impl_api.c
         ext/UxAS_thr_Impl_Impl.c
         ext/UxAS_thr_Impl_adapter.h
-        ext/UxAS_thr_Impl_adapter.c
-        ext/ipc.c)
+        ext/UxAS_thr_Impl_adapter.c)
 
 target_include_directories(SW_Impl_Instance_UXAS_UxAS
         PUBLIC PUBLIC app-UxAS

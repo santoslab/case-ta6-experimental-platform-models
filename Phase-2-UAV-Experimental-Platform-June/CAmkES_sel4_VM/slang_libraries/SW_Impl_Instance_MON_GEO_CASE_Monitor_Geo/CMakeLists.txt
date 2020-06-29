@@ -75,13 +75,13 @@ endif(WITH_LOC)
 
 
 add_library(SW_Impl_Instance_MON_GEO_CASE_Monitor_Geo STATIC
+        runtime/type.c
+        runtime/stackframe.h
+        runtime/misc.c
+        runtime/misc.h
+        runtime/stackframe.c
         runtime/type.h
         runtime/lib.h
-        runtime/misc.c
-        runtime/stackframe.c
-        runtime/stackframe.h
-        runtime/type.c
-        runtime/misc.h
         runtime/ztype.h
         runtime/type-composite.h
         runtime/types.h
@@ -243,8 +243,7 @@ add_library(SW_Impl_Instance_MON_GEO_CASE_Monitor_Geo STATIC
         ext/CASE_Monitor_Geo_thr_Impl_Impl_api.c
         ext/CASE_Monitor_Geo_thr_Impl_Impl.c
         ext/CASE_Monitor_Geo_thr_Impl_adapter.h
-        ext/CASE_Monitor_Geo_thr_Impl_adapter.c
-        ext/ipc.c)
+        ext/CASE_Monitor_Geo_thr_Impl_adapter.c)
 
 target_include_directories(SW_Impl_Instance_MON_GEO_CASE_Monitor_Geo
         PUBLIC PUBLIC app-CASE_Monitor_Geo
