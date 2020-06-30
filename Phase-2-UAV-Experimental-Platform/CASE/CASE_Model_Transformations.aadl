@@ -26,6 +26,12 @@ public
 		subcomponents
 			header: data CASE_MsgHeader.Impl;
 			payload: data;
+		annex InfoFlow {**
+			total domain Authenticity {
+				authenticated : type;
+				not_authenticated: type;
+			};
+		**};
 	end CASE_RF_Msg.Impl;
 	
 	-- UART Message structure

@@ -1,0 +1,17 @@
+package InfoFlow
+public
+	annex info_flow{**
+		domains
+			total domain flight_plan {    
+    			Malformed_flight_plan : type;   
+    			Invalid_flight_plan : type;
+    			Valid_flight_plan : type    
+			};
+			
+		end domains;
+		
+		predicates
+			
+		end predicates;	
+	**};
+end InfoFlow;
