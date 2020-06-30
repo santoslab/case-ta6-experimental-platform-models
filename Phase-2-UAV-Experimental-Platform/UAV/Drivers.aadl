@@ -1,10 +1,7 @@
 package Drivers
 public
-
-	with CASE_Properties;
 	with CASE_Model_Transformations;
 	with CMASI;
-    with CASECMASI;
     with CASEAgree;
 
 	thread RadioDriver
@@ -18,6 +15,8 @@ public
             AirVehicleState: in event data port CMASI::AirVehicleState.i;
             
             AutomationRequest: out event data port CMASI::AutomationRequest.i;
+            OperatingRegion: out event data port CMASI::OperatingRegion.i;
+            LineSearchTask: out event data port CMASI::LineSearchTask.i;
             
         flows 
         	GS_UAV: flow path recv_data -> AutomationRequest;    
@@ -26,16 +25,6 @@ public
             
 		properties
             Dispatch_Protocol => Sporadic;
-            Queue_Size => 1 applies to recv_data, AutomationResponse, AirVehicleState;
-            Queue_Processing_Protocol => FIFO applies to recv_data, AutomationResponse, AirVehicleState;
-            Overflow_Handling_Protocol => ERROR applies to recv_data, AutomationResponse, AirVehicleState;
-            Dequeue_Protocol => OneItem applies to recv_data, AutomationResponse, AirVehicleState;
-            Fan_Out_Policy => Broadcast applies to send_data, AutomationRequest;
-			CASE_Properties::COMP_TYPE => COMM_DRIVER;
-			-- KEEP
---		annex agree {**
---			guarantee Req001_RadioDriver "Only valid command messages shall be forwarded to message destination components" : VALID_MESSAGE(MissionCommand);
---		**};
 	end RadioDriver;
 
 	thread implementation RadioDriver.Impl
@@ -45,7 +34,7 @@ public
 		-- The UARTDriver is the software that enables other SW components to communicate to other systems over the serial connection
 		features
 			recv_data: in event data port CASE_Model_Transformations::CASE_UART_Msg.Impl;
-            MissionCommand: in event data port CASECMASI::CASEMissionCommand.i;
+            MissionCommand: in event data port CMASI::MissionCommand.i;
         
             send_data: out event data port CASE_Model_Transformations::CASE_UART_Msg.Impl;    
 			AirVehicleState: out event data port CMASI::AirVehicleState.i;
@@ -54,26 +43,18 @@ public
 			current_position : flow path recv_data -> AirVehicleState;
 		properties
             Dispatch_Protocol => Sporadic;
-            Queue_Size => 1 applies to recv_data, MissionCommand;
-            Queue_Processing_Protocol => FIFO applies to recv_data, MissionCommand;
-            Overflow_Handling_Protocol => ERROR applies to recv_data, MissionCommand;
-            Dequeue_Protocol => OneItem applies to recv_data, MissionCommand;
-            Fan_Out_Policy => Broadcast applies to send_data, AirVehicleState;
-            CASE_Properties::COMP_TYPE => COMM_DRIVER;
 		annex agree {**     
 		    assume Req001_UARTDriver "Assumes recv_data only gets well formed CASE_UART_Msg.Impl types" : 
 		        CASEAgree::WellformedCASE_UART_Msg(recv_data);        
-		    assume Req002_UARTDriver "Assumes MissionCommand only gets well formed CASEMissionCommand.i types" :
-		        CASEAgree::WellformedCASEMissionCommand(MissionCommand); 
-		        
 		    guarantee Req003_UARTDRiver "The send_data outputs only well formed CASE_UART_Msg.Impl types" : 
                 CASEAgree::WellformedCASE_UART_Msg(send_data);
---		**};
+		**};
 	end UARTDriver;
 
 	thread implementation UARTDriver.Impl
 	end UARTDriver.Impl;
 
+<<<<<<< HEAD
     thread GimbalDriver
     	features
     	   AirVehicleState: in event data port CMASI::AirVehicleState.i;
@@ -97,4 +78,6 @@ public
     thread implementation GimbalDriver.Impl
     end GimbalDriver.Impl;
 
+=======
+>>>>>>> 0b4f38863aebbcc503808575ba37bb523a92aba3
 end Drivers;

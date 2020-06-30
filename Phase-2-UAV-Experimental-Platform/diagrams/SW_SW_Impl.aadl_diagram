@@ -51,6 +51,7 @@
       </bendpoints>
       <contentFilters/>
     </element>
+<<<<<<< HEAD
     <element uuid="ecf06ed9-8a20-4d24-97d4-b5de0a939c9f">
       <element uuid="6bff302b-1297-4fb6-882f-dc57efb421c9">
         <bo>
@@ -65,6 +66,8 @@
       </bo>
       <contentFilters/>
     </element>
+=======
+>>>>>>> 0b4f38863aebbcc503808575ba37bb523a92aba3
     <element uuid="5488513b-96f1-4b0a-81ba-a98e6a349cbe">
       <element uuid="cf012502-4850-4d4a-9654-41ec5100379b">
         <bo>
@@ -78,8 +81,13 @@
         <seg>c05</seg>
       </bo>
       <bendpoints>
+<<<<<<< HEAD
         <point x="539.0" y="351.0"/>
         <point x="539.0" y="191.0"/>
+=======
+        <point x="933.0" y="413.0"/>
+        <point x="933.0" y="335.0"/>
+>>>>>>> 0b4f38863aebbcc503808575ba37bb523a92aba3
       </bendpoints>
       <contentFilters/>
     </element>
@@ -96,8 +104,13 @@
         <seg>c06</seg>
       </bo>
       <bendpoints>
+<<<<<<< HEAD
         <point x="539.0" y="351.0"/>
         <point x="539.0" y="569.0"/>
+=======
+        <point x="933.0" y="413.0"/>
+        <point x="933.0" y="361.0"/>
+>>>>>>> 0b4f38863aebbcc503808575ba37bb523a92aba3
       </bendpoints>
       <contentFilters/>
     </element>
@@ -113,6 +126,10 @@
         <seg>connection</seg>
         <seg>c07</seg>
       </bo>
+      <bendpoints>
+        <point x="532.0" y="111.0"/>
+        <point x="532.0" y="82.0"/>
+      </bendpoints>
       <contentFilters/>
     </element>
     <element uuid="c64f1925-9d61-452e-8b22-5c55286a27eb">
@@ -128,10 +145,15 @@
         <seg>c08</seg>
       </bo>
       <bendpoints>
+<<<<<<< HEAD
         <point x="1496.0" y="459.0"/>
         <point x="1496.0" y="61.0"/>
         <point x="539.0" y="61.0"/>
         <point x="539.0" y="141.0"/>
+=======
+        <point x="933.0" y="161.0"/>
+        <point x="933.0" y="135.0"/>
+>>>>>>> 0b4f38863aebbcc503808575ba37bb523a92aba3
       </bendpoints>
       <contentFilters/>
     </element>
@@ -148,28 +170,15 @@
         <seg>c09</seg>
       </bo>
       <bendpoints>
+<<<<<<< HEAD
         <point x="1000.0" y="241.0"/>
         <point x="1000.0" y="271.0"/>
         <point x="128.0" y="271.0"/>
         <point x="128.0" y="411.0"/>
-      </bendpoints>
-      <contentFilters/>
-    </element>
-    <element uuid="206bc3a0-2f3b-4ab5-a9ab-68a6a29c33e8">
-      <element uuid="e47a56e1-cb9f-4e9d-b236-c94e5cc0d599">
-        <bo>
-          <seg>tag</seg>
-          <seg>unidirectional</seg>
-        </bo>
-        <contentFilters/>
-      </element>
-      <bo>
-        <seg>connection</seg>
-        <seg>c11</seg>
-      </bo>
-      <bendpoints>
-        <point x="1020.0" y="141.0"/>
-        <point x="1020.0" y="301.0"/>
+=======
+        <point x="943.0" y="385.0"/>
+        <point x="943.0" y="463.0"/>
+>>>>>>> 0b4f38863aebbcc503808575ba37bb523a92aba3
       </bendpoints>
       <contentFilters/>
     </element>
@@ -186,8 +195,54 @@
         <seg>c12</seg>
       </bo>
       <bendpoints>
+<<<<<<< HEAD
+        <point x="1020.0" y="141.0"/>
+        <point x="1020.0" y="301.0"/>
+=======
+        <point x="532.0" y="285.0"/>
+        <point x="532.0" y="311.0"/>
+>>>>>>> 0b4f38863aebbcc503808575ba37bb523a92aba3
+      </bendpoints>
+      <contentFilters/>
+    </element>
+    <element uuid="b777f4e7-0c36-4cdd-8d9f-9656bf56c33e">
+      <element uuid="b145352f-d0d1-432c-996c-7f2422b88c0d">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+        <contentFilters/>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>c_r_09</seg>
+      </bo>
+      <bendpoints>
+<<<<<<< HEAD
         <point x="1010.0" y="191.0"/>
         <point x="1010.0" y="519.0"/>
+=======
+        <point x="933.0" y="261.0"/>
+        <point x="933.0" y="235.0"/>
+      </bendpoints>
+      <contentFilters/>
+    </element>
+    <element uuid="413b9fd3-85a7-4b05-8ff0-42d4850405c1">
+      <element uuid="b483ef1b-69e4-4e68-b3c9-76650670a171">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+        <contentFilters/>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>c_r_10</seg>
+      </bo>
+      <bendpoints>
+        <point x="933.0" y="211.0"/>
+        <point x="933.0" y="185.0"/>
+>>>>>>> 0b4f38863aebbcc503808575ba37bb523a92aba3
       </bendpoints>
       <contentFilters/>
     </element>
@@ -196,7 +251,11 @@
         <seg>feature</seg>
         <seg>radio_recv</seg>
       </bo>
+<<<<<<< HEAD
       <position y="555.0"/>
+=======
+      <position y="192.0"/>
+>>>>>>> 0b4f38863aebbcc503808575ba37bb523a92aba3
       <contentFilters/>
     </element>
     <element uuid="53869281-5511-413f-83ad-d9632fb0102b" dockArea="right">
@@ -204,7 +263,11 @@
         <seg>feature</seg>
         <seg>radio_send</seg>
       </bo>
+<<<<<<< HEAD
       <position x="1516.0" y="475.0"/>
+=======
+      <position x="1870.0" y="38.0"/>
+>>>>>>> 0b4f38863aebbcc503808575ba37bb523a92aba3
       <contentFilters/>
     </element>
     <element uuid="8af2393b-e164-49b9-b05f-09e4f00efea7" dockArea="left">
@@ -212,7 +275,11 @@
         <seg>feature</seg>
         <seg>uart_recv</seg>
       </bo>
+<<<<<<< HEAD
       <position y="307.0"/>
+=======
+      <position y="419.0"/>
+>>>>>>> 0b4f38863aebbcc503808575ba37bb523a92aba3
       <contentFilters/>
     </element>
     <element uuid="f9062c08-f398-4d87-a8f9-b456ed400dbc" dockArea="right">
@@ -220,6 +287,7 @@
         <seg>feature</seg>
         <seg>uart_send</seg>
       </bo>
+<<<<<<< HEAD
       <position x="1523.0" y="555.0"/>
       <contentFilters/>
     </element>
@@ -241,6 +309,9 @@
         <point x="1506.0" y="50.0"/>
         <point x="1506.0" y="519.0"/>
       </bendpoints>
+=======
+      <position x="1877.0" y="469.0"/>
+>>>>>>> 0b4f38863aebbcc503808575ba37bb523a92aba3
       <contentFilters/>
     </element>
     <element uuid="78bb9bb6-5c82-4cb4-97ea-2e9516116823">
@@ -249,15 +320,23 @@
           <seg>feature</seg>
           <seg>airvehiclestate</seg>
         </bo>
+<<<<<<< HEAD
         <position x="268.0" y="38.0"/>
+=======
+        <position x="268.0" y="10.0"/>
+>>>>>>> 0b4f38863aebbcc503808575ba37bb523a92aba3
         <contentFilters/>
       </element>
-      <element uuid="75070299-73bf-4a41-ab91-b21fff5204d4" dockArea="left">
+      <element uuid="75070299-73bf-4a41-ab91-b21fff5204d4" dockArea="right">
         <bo>
           <seg>feature</seg>
           <seg>missioncommand</seg>
         </bo>
+<<<<<<< HEAD
         <position y="98.0"/>
+=======
+        <position x="251.0" y="60.0"/>
+>>>>>>> 0b4f38863aebbcc503808575ba37bb523a92aba3
         <contentFilters/>
       </element>
       <element uuid="65cfe0a0-f438-4231-ac21-c722ff46a822" dockArea="left">
@@ -265,7 +344,11 @@
           <seg>feature</seg>
           <seg>recv_data</seg>
         </bo>
+<<<<<<< HEAD
         <position y="38.0"/>
+=======
+        <position y="60.0"/>
+>>>>>>> 0b4f38863aebbcc503808575ba37bb523a92aba3
         <contentFilters/>
       </element>
       <element uuid="f8dd7feb-acf0-4e44-808f-c08dc76fd45f" dockArea="right">
@@ -273,6 +356,7 @@
           <seg>feature</seg>
           <seg>send_data</seg>
         </bo>
+<<<<<<< HEAD
         <position x="298.0" y="98.0"/>
         <contentFilters/>
       </element>
@@ -288,14 +372,22 @@
           <seg>flow_specification</seg>
           <seg>current_position</seg>
         </bo>
+=======
+        <position x="298.0" y="110.0"/>
+>>>>>>> 0b4f38863aebbcc503808575ba37bb523a92aba3
         <contentFilters/>
       </element>
       <bo>
         <seg>subcomponent</seg>
         <seg>fc_uart</seg>
       </bo>
+<<<<<<< HEAD
       <position x="126.0" y="269.0"/>
       <size width="381.0" height="150.0"/>
+=======
+      <position x="530.0" y="359.0"/>
+      <size width="381.0" height="160.0"/>
+>>>>>>> 0b4f38863aebbcc503808575ba37bb523a92aba3
       <contentFilters>
         <filter>features</filter>
         <filter>internalFeatures</filter>
@@ -304,20 +396,30 @@
         <filter>flowSpecifications</filter>
       </contentFilters>
     </element>
+<<<<<<< HEAD
     <element uuid="8f043312-38d3-4573-9b76-0603d38f8794">
       <element uuid="1163a638-8ab3-4c57-8e32-eab4ed16326c" dockArea="left">
+=======
+    <element uuid="ce1a5b05-0893-429b-b9c2-955dbf8d3029">
+      <element uuid="b793c548-cf2f-454d-8eab-bf0828d21c3b" dockArea="right">
+>>>>>>> 0b4f38863aebbcc503808575ba37bb523a92aba3
         <bo>
           <seg>feature</seg>
           <seg>airvehiclestate</seg>
         </bo>
+<<<<<<< HEAD
         <position y="60.0"/>
+=======
+        <position x="301.0" y="260.0"/>
+>>>>>>> 0b4f38863aebbcc503808575ba37bb523a92aba3
         <contentFilters/>
       </element>
-      <element uuid="02043687-4d1e-4aea-97bf-19dc1f8f0e5d" dockArea="left">
+      <element uuid="6632ccd3-553d-4715-95d9-3e2619f5f35a" dockArea="right">
         <bo>
           <seg>feature</seg>
-          <seg>vehicleactioncommand</seg>
+          <seg>automationrequest</seg>
         </bo>
+<<<<<<< HEAD
         <position y="10.0"/>
         <contentFilters/>
       </element>
@@ -351,27 +453,48 @@
     </element>
     <element uuid="ce1a5b05-0893-429b-b9c2-955dbf8d3029">
       <element uuid="b793c548-cf2f-454d-8eab-bf0828d21c3b" dockArea="left">
-        <bo>
-          <seg>feature</seg>
-          <seg>airvehiclestate</seg>
-        </bo>
-        <position y="148.0"/>
+=======
+        <position x="270.0" y="60.0"/>
         <contentFilters/>
       </element>
-      <element uuid="6632ccd3-553d-4715-95d9-3e2619f5f35a" dockArea="right">
-        <bo>
-          <seg>feature</seg>
-          <seg>automationrequest</seg>
-        </bo>
-        <position x="270.0" y="38.0"/>
-        <contentFilters/>
-      </element>
-      <element uuid="9d1550ec-5f11-4304-91aa-f6746896aa7c" dockArea="left">
+      <element uuid="9d1550ec-5f11-4304-91aa-f6746896aa7c" dockArea="right">
+>>>>>>> 0b4f38863aebbcc503808575ba37bb523a92aba3
         <bo>
           <seg>feature</seg>
           <seg>automationresponse</seg>
         </bo>
+<<<<<<< HEAD
+        <position y="148.0"/>
+=======
+        <position x="258.0" y="210.0"/>
+>>>>>>> 0b4f38863aebbcc503808575ba37bb523a92aba3
+        <contentFilters/>
+      </element>
+      <element uuid="886b4fe6-b167-4803-916b-8e277d587118" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>linesearchtask</seg>
+        </bo>
+<<<<<<< HEAD
+        <position x="270.0" y="38.0"/>
+        <contentFilters/>
+      </element>
+      <element uuid="9d1550ec-5f11-4304-91aa-f6746896aa7c" dockArea="left">
+=======
+        <position x="297.0" y="110.0"/>
+        <contentFilters/>
+      </element>
+      <element uuid="98f85d14-08c1-481b-ac22-e24eec367134" dockArea="right">
+>>>>>>> 0b4f38863aebbcc503808575ba37bb523a92aba3
+        <bo>
+          <seg>feature</seg>
+          <seg>operatingregion</seg>
+        </bo>
+<<<<<<< HEAD
         <position y="98.0"/>
+=======
+        <position x="290.0" y="160.0"/>
+>>>>>>> 0b4f38863aebbcc503808575ba37bb523a92aba3
         <contentFilters/>
       </element>
       <element uuid="17405c6a-4359-4528-bbd7-0d7a635c283d" dockArea="left">
@@ -379,7 +502,11 @@
           <seg>feature</seg>
           <seg>recv_data</seg>
         </bo>
+<<<<<<< HEAD
         <position y="38.0"/>
+=======
+        <position y="135.0"/>
+>>>>>>> 0b4f38863aebbcc503808575ba37bb523a92aba3
         <contentFilters/>
       </element>
       <element uuid="4484b97d-765f-4fe6-b973-d8755c776a26" dockArea="right">
@@ -387,6 +514,7 @@
           <seg>feature</seg>
           <seg>send_data</seg>
         </bo>
+<<<<<<< HEAD
         <position x="331.0" y="98.0"/>
         <contentFilters/>
       </element>
@@ -413,14 +541,22 @@
           <seg>flow_specification</seg>
           <seg>uav_gs</seg>
         </bo>
+=======
+        <position x="331.0" y="10.0"/>
+>>>>>>> 0b4f38863aebbcc503808575ba37bb523a92aba3
         <contentFilters/>
       </element>
       <bo>
         <seg>subcomponent</seg>
         <seg>radio</seg>
       </bo>
+<<<<<<< HEAD
       <position x="1026.0" y="377.0"/>
       <size width="414.0" height="200.0"/>
+=======
+      <position x="96.0" y="57.0"/>
+      <size width="414.0" height="310.0"/>
+>>>>>>> 0b4f38863aebbcc503808575ba37bb523a92aba3
       <contentFilters>
         <filter>features</filter>
         <filter>internalFeatures</filter>
@@ -435,7 +571,11 @@
           <seg>feature</seg>
           <seg>airvehiclestate</seg>
         </bo>
+<<<<<<< HEAD
         <position y="88.0"/>
+=======
+        <position y="210.0"/>
+>>>>>>> 0b4f38863aebbcc503808575ba37bb523a92aba3
         <contentFilters/>
       </element>
       <element uuid="a2c88c80-9d44-4fc2-ab42-9ca83833a508" dockArea="left">
@@ -443,7 +583,11 @@
           <seg>feature</seg>
           <seg>automationrequest</seg>
         </bo>
+<<<<<<< HEAD
         <position y="38.0"/>
+=======
+        <position y="10.0"/>
+>>>>>>> 0b4f38863aebbcc503808575ba37bb523a92aba3
         <contentFilters/>
       </element>
       <element uuid="d934dacc-97db-4ec4-9543-5f8f35907908" dockArea="right">
@@ -451,22 +595,42 @@
           <seg>feature</seg>
           <seg>automationresponse</seg>
         </bo>
+<<<<<<< HEAD
         <position x="285.0" y="88.0"/>
+=======
+        <position y="160.0"/>
         <contentFilters/>
       </element>
-      <element uuid="6d287bd5-a834-4ea4-a1b4-6c2478b50818" dockArea="right">
+      <element uuid="75837349-d311-434c-acb9-cb4091aead5d" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>linesearchtask</seg>
+        </bo>
+        <position y="60.0"/>
+>>>>>>> 0b4f38863aebbcc503808575ba37bb523a92aba3
+        <contentFilters/>
+      </element>
+      <element uuid="6d287bd5-a834-4ea4-a1b4-6c2478b50818" dockArea="left">
         <bo>
           <seg>feature</seg>
           <seg>missioncommand</seg>
         </bo>
+<<<<<<< HEAD
         <position x="311.0" y="138.0"/>
         <contentFilters/>
       </element>
       <element uuid="bebb7569-7170-4c57-ad9e-05bfaf16112c" dockArea="right">
+=======
+        <position y="260.0"/>
+        <contentFilters/>
+      </element>
+      <element uuid="44099988-7f13-49c1-8e67-5d11215ee9a4" dockArea="left">
+>>>>>>> 0b4f38863aebbcc503808575ba37bb523a92aba3
         <bo>
           <seg>feature</seg>
-          <seg>vehicleactioncommand</seg>
+          <seg>operatingregion</seg>
         </bo>
+<<<<<<< HEAD
         <position x="269.0" y="38.0"/>
         <contentFilters/>
       </element>
@@ -526,14 +690,22 @@
           <seg>flow_specification</seg>
           <seg>f6</seg>
         </bo>
+=======
+        <position y="110.0"/>
+>>>>>>> 0b4f38863aebbcc503808575ba37bb523a92aba3
         <contentFilters/>
       </element>
       <bo>
         <seg>subcomponent</seg>
         <seg>uxas</seg>
       </bo>
+<<<<<<< HEAD
       <position x="537.0" y="59.0"/>
       <size width="441.0" height="190.0"/>
+=======
+      <position x="941.0" y="81.0"/>
+      <size width="441.0" height="310.0"/>
+>>>>>>> 0b4f38863aebbcc503808575ba37bb523a92aba3
       <contentFilters>
         <filter>features</filter>
         <filter>internalFeatures</filter>
@@ -547,7 +719,11 @@
       <seg>sw.impl</seg>
     </bo>
     <position x="12.0" y="12.0"/>
+<<<<<<< HEAD
     <size width="1604.0" height="607.0"/>
+=======
+    <size width="1958.0" height="531.0"/>
+>>>>>>> 0b4f38863aebbcc503808575ba37bb523a92aba3
     <contentFilters>
       <filter>features</filter>
       <filter>internalFeatures</filter>

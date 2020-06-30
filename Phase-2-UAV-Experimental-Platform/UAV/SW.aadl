@@ -18,7 +18,7 @@ public
 		   status: flow path uart_recv -> radio_send;
         annex agree {**
             guarantee Req001_SW "The radio_send outputs only well formed CASE_RF_Msg.Impl types" : 
-                CASEAgree::WellformedCASE_RF_Msg(radio_send, CASEAgree::AVC.ID, CASEConsts::GS_ID);
+                CASEAgree::WellformedCASE_RF_Msg(radio_send, CASEConsts::UAV_ID, CASEConsts::GS_ID);
             guarantee Req002_SW "The uart_send outputs only well formed CASE_RF_Msg.Impl types" : 
                 CASEAgree::WellformedCASE_UART_Msg(uart_send);
         **};
@@ -27,7 +27,6 @@ public
 			
 	process implementation SW.Impl
 	   subcomponents
-	       GIMBAL: thread Drivers::GimbalDriver.Impl;
            FC_UART: thread Drivers::UARTDriver.Impl;
            RADIO: thread Drivers::RadioDriver.Impl;
            UXAS: thread group Waterways_UxAS::Waterways.i;
@@ -42,7 +41,6 @@ public
            -- FC_UART
            -----------
            c03: port FC_UART.send_data -> uart_send;
-           c04: port FC_UART.AirVehicleState -> GIMBAL.AirVehicleState;
            c05: port FC_UART.AirVehicleState -> UXAS.AirVehicleState;
            c06: port FC_UART.AirVehicleState -> RADIO.AirVehicleState;
            
@@ -50,13 +48,14 @@ public
            -- RADIO
            ---------
            c07: port RADIO.send_data -> radio_send;
-           c08: port RADIO.AutomationRequest -> UXAS.AutomationRequest; 	
+           c08: port RADIO.AutomationRequest -> UXAS.AutomationRequest; 
+           c_r_09: port RADIO.OperatingRegion -> UXAS.OperatingRegion;
+           c_r_10: port RADIO.LineSearchTask -> UXAS.LineSearchTask;	
             
            --------
            -- UXAS
            --------
            c09: port UXAS.MissionCommand -> FC_UART.MissionCommand;
-           c11: port UXAS.VehicleActionCommand -> GIMBAL.VehicleActionCommand;
            c12: port UXAS.AutomationResponse -> RADIO.AutomationResponse;
                
 	end SW.Impl;

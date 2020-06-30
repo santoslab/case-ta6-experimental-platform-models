@@ -2,7 +2,6 @@ package FC
 public
 	
 	with UAS_Buses;
-	with CASE_Properties;
 	
 	-- GPS receiver hardware
 	-- We are not yet modeling incoming satellite signals here
@@ -26,11 +25,6 @@ public
 		flows 
 			waypoint : flow sink uart_recv;
 			new_position: flow source uart_send;	
-		properties
-			CASE_Properties::CONFIDENTIALITY => MEDIUM;
-			CASE_Properties::INTEGRITY => HIGH;
-			CASE_Properties::AVAILABILITY => HIGH;
-			CASE_Properties::BOUNDARY => (TRUSTED, PHYSICAL);
 	end FlightController;
 	
 	

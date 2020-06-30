@@ -4,7 +4,6 @@ public
 	with MC;
 	with FC;
 	with UAS_Buses;
-	with CASE_Properties;
 	
 	
 	-- UAV
@@ -16,8 +15,6 @@ public
 		flows
 			recv: flow sink radio_recv;
 			send: flow source radio_send;
-		properties
-			CASE_Properties::BOUNDARY => (PHYSICAL);
 	end UAV;
 	
 	system implementation UAV.Impl
