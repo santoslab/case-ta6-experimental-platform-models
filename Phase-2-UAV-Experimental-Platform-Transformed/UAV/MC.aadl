@@ -17,6 +17,9 @@ public
 			recv_data_out: out event data port CASE_Model_Transformations::CASE_RF_Msg.Impl;
 			send_data_in: in event data port CASE_Model_Transformations::CASE_RF_Msg.Impl;
 			send_data_out: out event data port;
+		flows 
+			receive : flow path recv_data_in -> recv_data_out;
+			send : flow path send_data_in -> send_data_out;	
 	end Radio;
 
 	device implementation Radio.Impl
@@ -31,6 +34,9 @@ public
 			recv_data_out: out event data port CASE_Model_Transformations::CASE_UART_Msg.Impl;
 			send_data_in: in event data port CASE_Model_Transformations::CASE_UART_Msg.Impl;
 			send_data_out: out event data port;
+		flows
+			receive: flow path recv_data_in -> recv_data_out;
+			send : flow path send_data_in -> send_data_out;
 	end UART;
 
 	device implementation UART.Impl
@@ -91,6 +97,9 @@ public
 			fc_uart_send: out event data port;
 			FC_UART: requires bus access UAS_Buses::Serial_Bus.Impl;
 			RFA: requires bus access UAS_Buses::RF_Bus.Impl;
+		flows
+			status : flow path fc_uart_recv -> radio_send;
+			commands: flow path  radio_recv -> fc_uart_send;
 
 	end MissionComputer;
 

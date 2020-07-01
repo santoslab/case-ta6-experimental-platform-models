@@ -51,38 +51,15 @@ public
 	bus implementation GS_Bus.Impl	
 	end GS_Bus.Impl;
 	
-<<<<<<< HEAD
-	
-	-- Ground Station communication SW
-	process GS_SW
-		features
-			recv_data: in event data port;
-			send_data: out event data port;
-		flows 
-			receive: flow sink recv_data;
-			send : flow source send_data;	
-	end GS_SW;
-	
-	process implementation GS_SW.Impl
-	end GS_SW.Impl;
-	
-	
-=======
->>>>>>> 0b4f38863aebbcc503808575ba37bb523a92aba3
 	-- The Ground Station communication system
 	system GroundStation
 		features
 			radio_recv: in event data port;
 			radio_send: out event data port;
 			RFA: requires bus access UAS_Buses::RF_Bus.Impl;
-<<<<<<< HEAD
 		flows
 			receive: flow sink radio_recv;
 			send : flow source  radio_send;
-		properties
-			CASE_Properties::BOUNDARY => (PHYSICAL);
-=======
->>>>>>> 0b4f38863aebbcc503808575ba37bb523a92aba3
 	end GroundStation;
 	
 	system implementation GroundStation.Impl

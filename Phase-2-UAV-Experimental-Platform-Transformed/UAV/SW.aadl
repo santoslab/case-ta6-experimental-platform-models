@@ -20,6 +20,8 @@ public
 		features
 			am_request: in event data port CASE_Model_Transformations::CASE_AttestationRequestMsg.Impl;
 			am_response: out event data port CASE_Model_Transformations::CASE_AttestationResponseMsg.Impl;
+--		flows
+--			attest : flow path am_request -> am_response; 
 		properties
 			Dispatch_Protocol => Periodic;
 			Period => 500ms;
@@ -44,6 +46,18 @@ public
 			AutomationRequest: out event data port CMASI::AddressAttributedMessage.i;
 			OperatingRegion: out event data port CMASI::AddressAttributedMessage.i;
 			LineSearchTask: out event data port CMASI::AddressAttributedMessage.i;
+			
+		flows 
+        	GS_CMD1: flow path recv_data -> AutomationRequest;  
+        	GS_CMD2: flow path recv_data -> OperatingRegion;
+        	GS_CMD3: flow path recv_data -> LineSearchTask;
+        	
+        	AM_GS: flow path am_request -> send_data;
+        	GS_AM: flow path recv_data -> am_response;
+        	  
+--        	FC_GS: flow path AirVehicleState -> send_data;
+--        	UAV_GS : flow path AutomationResponse -> send_data;
+        	
 		properties
 			CASE_Scheduling::Domain => 2;
 	end RadioDriver_Attestation;
@@ -113,6 +127,20 @@ public
 			OperatingRegion_out: out event data port CMASI::OperatingRegion.i;
 			LineSearchTask_in: in event data port CMASI::AddressAttributedMessage.i;
 			LineSearchTask_out: out event data port CMASI::LineSearchTask.i;
+		flows
+			ar : flow path AutomationRequest_in -> AutomationRequest_out;
+			or : flow path OperatingRegion_in -> OperatingRegion_out;
+			ls : flow path LineSearchTask_in -> LineSearchTask_out;
+			--control dependence: changing the ids will affect the outcome
+			ids1 : flow path trusted_ids -> AutomationRequest_out; 
+			ids2 : flow path trusted_ids -> OperatingRegion_out; 
+			ids3 : flow path trusted_ids -> LineSearchTask_out; 
+			
+			--malicious gs commands
+			ars : flow sink AutomationRequest_in;
+			ors : flow sink OperatingRegion_in;
+			lss : flow sink LineSearchTask_in;
+			ids : flow sink trusted_ids;
 		properties
 			CASE_Properties::Component_Type => MONITOR;
 			CASE_Properties::Component_Spec => ("CASE_AttestationGate_policy");
@@ -143,6 +171,21 @@ public
 			OperatingRegion_out: out event data port CMASI::OperatingRegion.i;
 			LineSearchTask_in: in event data port CMASI::AddressAttributedMessage.i;
 			LineSearchTask_out: out event data port CMASI::LineSearchTask.i;
+			
+		flows
+			ar : flow path AutomationRequest_in -> AutomationRequest_out;
+			or : flow path OperatingRegion_in -> OperatingRegion_out;
+			ls : flow path LineSearchTask_in -> LineSearchTask_out;
+			--control dependence: changing the ids will affect the outcome
+			ids1 : flow path trusted_ids -> AutomationRequest_out; 
+			ids2 : flow path trusted_ids -> OperatingRegion_out; 
+			ids3 : flow path trusted_ids -> LineSearchTask_out; 
+			
+			--malicious gs commands
+			ars : flow sink AutomationRequest_in;
+			ors : flow sink OperatingRegion_in;
+			lss : flow sink LineSearchTask_in;
+			ids : flow sink trusted_ids;
 		properties
 			CASE_Scheduling::Domain => 5;
 	end CASE_AttestationGate;
@@ -169,6 +212,9 @@ public
 		features
 			filter_in: in event data port CMASI::LineSearchTask.i;
 			filter_out: out event data port CMASI::LineSearchTask.i;
+		flows
+			well_formed : flow path filter_in -> filter_out;
+			not_well_formed : flow sink filter_in;
 		properties
 			CASE_Properties::Component_Type => FILTER;
 			CASE_Properties::Component_Spec => ("Req_Filter_LST");
@@ -189,6 +235,10 @@ public
 		features
 			filter_in: in event data port CMASI::LineSearchTask.i;
 			filter_out: out event data port CMASI::LineSearchTask.i;
+		flows
+			well_formed : flow path filter_in -> filter_out;
+			not_well_formed : flow sink filter_in;
+			
 		properties
 			CASE_Scheduling::Domain => 7;
 	end CASE_Filter_LST;
@@ -210,6 +260,9 @@ public
 		features
 			filter_in: in event data port CMASI::OperatingRegion.i;
 			filter_out: out event data port CMASI::OperatingRegion.i;
+		flows
+			well_formed : flow path filter_in -> filter_out;
+			not_well_formed : flow sink filter_in;
 		properties
 			CASE_Properties::Component_Type => FILTER;
 			CASE_Properties::Component_Spec => ("Req_Filter_OR");
@@ -230,6 +283,9 @@ public
 		features
 			filter_in: in event data port CMASI::OperatingRegion.i;
 			filter_out: out event data port CMASI::OperatingRegion.i;
+		flows
+			well_formed : flow path filter_in -> filter_out;
+			not_well_formed : flow sink filter_in;
 		properties
 			CASE_Scheduling::Domain => 8;
 	end CASE_Filter_OR;
@@ -251,6 +307,9 @@ public
 		features
 			filter_in: in event data port CMASI::AutomationRequest.i;
 			filter_out: out event data port CMASI::AutomationRequest.i;
+		flows
+			well_formed : flow path filter_in -> filter_out;
+			not_well_formed : flow sink filter_in;
 		properties
 			CASE_Properties::Component_Type => FILTER;
 			CASE_Properties::Component_Spec => ("Req_Filter_AReq");
@@ -271,6 +330,9 @@ public
 		features
 			filter_in: in event data port CMASI::AutomationRequest.i;
 			filter_out: out event data port CMASI::AutomationRequest.i;
+		flows
+			well_formed : flow path filter_in -> filter_out;
+			not_well_formed : flow sink filter_in;
 		properties
 			CASE_Scheduling::Domain => 6;
 	end CASE_Filter_AReq;
@@ -295,6 +357,12 @@ public
             OperatingRegion : in event data port CMASI::OperatingRegion.i;
             LineSearchTask: in event data port CMASI::LineSearchTask.i;
             AutomationResponse : out event data port CMASI::AutomationResponse.i;
+		flows
+			-- assuming the following flows
+			f1 : flow path AutomationRequest -> AutomationResponse;
+			f2 : flow path AirVehicleState -> AutomationResponse;
+			f3 : flow path OperatingRegion -> AutomationResponse;
+			f4 : flow path LineSearchTask -> AutomationResponse;
         properties
             Dispatch_Protocol => Periodic;
             Period => 500ms;
@@ -313,6 +381,12 @@ public
 --			MissionCommand : out event data port CMASI::MissionCommand.i;
 --			VehicleActionCommand : out event data port CMASI::VehicleActionCommand.i;
 			AutomationResponse : out event data port CMASI::AutomationResponse.i;
+		flows
+			-- assuming the following flows
+			f1 : flow path AutomationRequest -> AutomationResponse;
+			f2 : flow path AirVehicleState -> AutomationResponse;
+			f3 : flow path OperatingRegion -> AutomationResponse;
+			f4 : flow path LineSearchTask -> AutomationResponse;
 		properties
 			CASE_Scheduling::Domain => 9;
 	end UxAS;
@@ -338,6 +412,10 @@ public
 		features
 			observed: in event data port CMASI::AutomationResponse.i;
 			reference_1: in event data port CMASI::AutomationRequest.i;
+		flows
+			f1 : flow sink observed;
+			f2 : flow sink reference_1;
+		-- not sure through which port the alert is signaled
 		properties
 			CASE_Properties::Component_Type => MONITOR; -- marks this component as a monitor
 			CASE_Properties::Monitor_Latched => false; -- indicates if the monitor is latched
@@ -370,7 +448,10 @@ public
 	features
 		observed: in event data port CMASI::AutomationResponse.i;
 		reference_1: in event data port CMASI::AutomationRequest.i;
-
+	flows
+			f1 : flow sink observed;
+			f2 : flow sink reference_1;
+		-- not sure through which port the alert is signaled
 	properties
 		CASE_Scheduling::Domain => 11;
 end CASE_Monitor_Req;
@@ -392,6 +473,9 @@ end CASE_Monitor_Req;
 		features
 			filter_in: in event data port CMASI::AutomationResponse.i;
 			filter_out: out event data port CMASI::AutomationResponse.i;
+		flows
+			well_formed : flow path filter_in -> filter_out;
+			not_well_formed : flow sink filter_in;
 		properties
 			CASE_Properties::Component_Type => FILTER;
 			CASE_Properties::Component_Spec => ("Req_Filter_ARes");
@@ -412,6 +496,9 @@ end CASE_Monitor_Req;
 		features
 			filter_in: in event data port CMASI::AutomationResponse.i;
 			filter_out: out event data port CMASI::AutomationResponse.i;
+		flows
+			well_formed : flow path filter_in -> filter_out;
+			not_well_formed : flow sink filter_in;
 		properties
 			CASE_Scheduling::Domain => 12;
 	end CASE_Filter_ARes;
@@ -435,6 +522,9 @@ end CASE_Monitor_Req;
 		features
 			keep_in_zones: out data port CMASI::Polygon.i;
 			keep_out_zones: out data port CMASI::Polygon.i;
+		flows
+			f1 : flow source keep_in_zones;
+			f2 : flow source keep_out_zones;
     properties
 			Dispatch_Protocol => Periodic;
 			Period => 500ms;
@@ -450,6 +540,9 @@ end CASE_Monitor_Req;
 		features
 			keep_in_zones: out data port CMASI::Polygon.i;
 			keep_out_zones: out data port CMASI::Polygon.i;
+		flows
+			f1 : flow source keep_in_zones;
+			f2 : flow source keep_out_zones;
 		properties
 			CASE_Scheduling::Domain => 10;
 	end FlyZonesDatabase;
@@ -474,6 +567,15 @@ end CASE_Monitor_Req;
 			alert: out event port;
 			observed: in event data port CMASI::AutomationResponse.i;
 			output: out event data port CMASI::AutomationResponse.i;
+		flows
+			--assuming a function takes in db values + observed and raises alert or produces output
+			valid : flow path observed -> output;
+			invalid : flow path  observed -> alert;
+			--control dependence : changing the value of zones affects the outcome
+			db_alert : flow path keep_in_zones -> alert; 
+			db2_alert : flow path  keep_out_zones -> alert;
+			db_output : flow path keep_in_zones -> output; 
+			db2_output : flow path  keep_out_zones -> output;
 		properties
 			CASE_Properties::Component_Type => MONITOR; -- marks this component as a monitor
 			CASE_Properties::Component_Spec => ("GeofenceMonitor_alert_event", "GeofenceMonitor_output_event", "GeofenceMonitor_output_data"); -- monitor guarantee
@@ -528,6 +630,15 @@ end CASE_Monitor_Req;
 			alert: out event port;
 			observed: in event data port CMASI::AutomationResponse.i;
 			output: out event data port CMASI::AutomationResponse.i;
+		flows
+			--assuming a function takes in db values + observed and raises alert or produces output
+			valid : flow path observed -> output;
+			invalid : flow path  observed -> alert;
+			--conditional dependence : changing the value of zones affects the outcome
+			db_alert : flow path keep_in_zones -> alert; 
+			db2_alert : flow path  keep_out_zones -> alert;
+			db_output : flow path keep_in_zones -> output; 
+			db2_output : flow path  keep_out_zones -> output;
 		properties
 			CASE_Scheduling::Domain => 13;
 	end CASE_Monitor_Geo;
@@ -553,6 +664,10 @@ end CASE_Monitor_Req;
             AirVehicleState: in event data port CMASI::AirVehicleState.i;
             MissionCommand: out event data port CMASI::MissionCommand.i;
             ReturnHome: in event port;
+		flows
+			ar_cmd : flow path AutomationResponse -> MissionCommand;
+			avs_cmd : flow path AirVehicleState -> MissionCommand;
+			rh_cmd : flow path ReturnHome -> MissionCommand; 
         properties
             Dispatch_Protocol => Periodic;
             Period => 500ms;
@@ -575,6 +690,10 @@ end CASE_Monitor_Req;
 
 			-- Return Home
 			ReturnHome: in event port;
+		flows
+			ar_cmd : flow path AutomationResponse -> MissionCommand;
+			avs_cmd : flow path AirVehicleState -> MissionCommand;
+			rh_cmd : flow path ReturnHome -> MissionCommand; 
 		properties
 			CASE_Scheduling::Domain => 14;
 	end WaypointPlanManagerService;
@@ -601,6 +720,9 @@ end CASE_Monitor_Req;
 
 			send_data: out event data port CASE_Model_Transformations::CASE_UART_Msg.Impl;
 			AirVehicleState: out event data port CMASI::AirVehicleState.i;
+		flows 
+			command_FC : flow path MissionCommand -> send_data;
+			current_position : flow path recv_data -> AirVehicleState;
 		properties
 			CASE_Scheduling::Domain => 3;
 	end UARTDriver;
@@ -626,7 +748,9 @@ end CASE_Monitor_Req;
 			uart_send: out event data port CASE_Model_Transformations::CASE_UART_Msg.Impl;
 			radio_recv: in event data port CASE_Model_Transformations::CASE_RF_Msg.Impl;
 			radio_send: out event data port CASE_Model_Transformations::CASE_RF_Msg.Impl;
-
+		flows
+		   recv_map : flow path radio_recv -> uart_send;
+		   status: flow path uart_recv -> radio_send;
 		annex agree {**
 			guarantee Req001_SW "The radio_send outputs only well formed CASE_RF_Msg.Impl types" :
 				-- if (event(radio_recv) and CASEAgree::WellformedCASE_RF_Msg(radio_recv, CASEConsts::UAV_ID, CASEConsts::GS_ID))

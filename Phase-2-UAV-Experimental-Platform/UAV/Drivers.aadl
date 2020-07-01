@@ -54,30 +54,4 @@ public
 	thread implementation UARTDriver.Impl
 	end UARTDriver.Impl;
 
-<<<<<<< HEAD
-    thread GimbalDriver
-    	features
-    	   AirVehicleState: in event data port CMASI::AirVehicleState.i;
-           VehicleActionCommand: in event data port CMASI::VehicleActionCommand.i;
-        flows 
-        	camera_action: flow sink  VehicleActionCommand;
-        	camera_awareness: flow sink AirVehicleState;
-    	properties
-            Dispatch_Protocol => Sporadic;
-            Queue_Size => 1 applies to AirVehicleState, VehicleActionCommand;
-            Queue_Processing_Protocol => FIFO applies to AirVehicleState, VehicleActionCommand;
-            Overflow_Handling_Protocol => ERROR applies to AirVehicleState, VehicleActionCommand;
-            Dequeue_Protocol => OneItem applies to AirVehicleState, VehicleActionCommand;
-            CASE_Properties::COMP_TYPE => COMM_DRIVER;
-    		-- ASSUME: valid AirVehicleState
-    		-- Guarantee: well formed action command
---        annex agree {**
---        **};
-    end GimbalDriver;
-
-    thread implementation GimbalDriver.Impl
-    end GimbalDriver.Impl;
-
-=======
->>>>>>> 0b4f38863aebbcc503808575ba37bb523a92aba3
 end Drivers;
