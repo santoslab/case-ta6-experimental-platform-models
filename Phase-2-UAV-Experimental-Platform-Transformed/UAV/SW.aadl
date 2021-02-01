@@ -9,7 +9,7 @@ public
 	with CMASI;
 	with HAMR;
 	with Data_Model;
-	renames AGREE_PLTL::all;
+--	renames AGREE_PLTL::all;
 
 	
 	------------------
@@ -85,6 +85,10 @@ public
 			trusted_ids: out data port CMASI::AddressArray.i;
 			attestation_request: out event data port CASE_Model_Transformations::CASE_AttestationRequestMsg.Impl;
 			attestation_response: in event data port CASE_Model_Transformations::CASE_AttestationResponseMsg.Impl;
+		flows
+			tid : flow source trusted_ids;
+			areq : flow source 	attestation_request;
+			ares : flow sink attestation_response;
 		properties
 			CASE_Properties::Component_Type => ATTESTATION;
 			Dispatch_Protocol => Periodic;
@@ -105,6 +109,10 @@ public
 			trusted_ids: out data port CMASI::AddressArray.i;
 			attestation_request: out event data port CASE_Model_Transformations::CASE_AttestationRequestMsg.Impl;
 			attestation_response: in event data port CASE_Model_Transformations::CASE_AttestationResponseMsg.Impl;
+		flows
+			tid : flow source trusted_ids;
+			areq : flow source 	attestation_request;
+			ares : flow sink attestation_response;
 		properties
 			CASE_Scheduling::Domain => 4;
 	end CASE_AttestationManager;
