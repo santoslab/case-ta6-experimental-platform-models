@@ -90,7 +90,7 @@ public
 			areq : flow source 	attestation_request;
 			ares : flow sink attestation_response;
 		properties
-			CASE_Properties::Component_Type => ATTESTATION;
+			CASE_Properties::Attesting => 100;
 			Dispatch_Protocol => Periodic;
 			Period => 500ms;
 			Compute_Execution_Time => 2ms .. 2ms;
@@ -99,7 +99,7 @@ public
 	thread implementation CASE_AttestationManager_thr.Impl
 		properties
 			CASE_Properties::Component_Impl => "CakeML";
-			CASE_Properties::Cache_Timeout => 30;
+			CASE_Properties::Cache_Timeout => 30min;
 			CASE_Properties::Cache_Size => 3;
 			Dispatch_Protocol => Periodic;
 	end CASE_AttestationManager_thr.Impl;
@@ -150,7 +150,7 @@ public
 			lss : flow sink LineSearchTask_in;
 			ids : flow sink trusted_ids;
 		properties
-			CASE_Properties::Component_Type => MONITOR;
+			CASE_Properties::Monitoring => 100;
 			CASE_Properties::Component_Spec => ("CASE_AttestationGate_policy");
 			Dispatch_Protocol => Periodic;
 			Period => 500ms;
@@ -224,7 +224,7 @@ public
 			well_formed : flow path filter_in -> filter_out;
 			not_well_formed : flow sink filter_in;
 		properties
-			CASE_Properties::Component_Type => FILTER;
+			CASE_Properties::Filtering => 100;
 			CASE_Properties::Component_Spec => ("Req_Filter_LST");
 			Dispatch_Protocol => Periodic;
 			Period => 500ms;
@@ -272,7 +272,7 @@ public
 			well_formed : flow path filter_in -> filter_out;
 			not_well_formed : flow sink filter_in;
 		properties
-			CASE_Properties::Component_Type => FILTER;
+			CASE_Properties::Filtering => 100;
 			CASE_Properties::Component_Spec => ("Req_Filter_OR");
 			Dispatch_Protocol => Periodic;
 			Period => 500ms;
@@ -319,7 +319,7 @@ public
 			well_formed : flow path filter_in -> filter_out;
 			not_well_formed : flow sink filter_in;
 		properties
-			CASE_Properties::Component_Type => FILTER;
+			CASE_Properties::Filtering => 100;
 			CASE_Properties::Component_Spec => ("Req_Filter_AReq");
 			Dispatch_Protocol => Periodic;
 			Period => 500ms;
@@ -425,7 +425,7 @@ public
 			f2 : flow sink reference_1;
 		-- not sure through which port the alert is signaled
 		properties
-			CASE_Properties::Component_Type => MONITOR; -- marks this component as a monitor
+			CASE_Properties::Monitoring => 100; -- marks this component as a monitor
 			CASE_Properties::Monitor_Latched => false; -- indicates if the monitor is latched
 			CASE_Properties::Component_Spec => ("Req002_ReqRespMonitorEvent"); -- monitor guarantee
 			Dispatch_Protocol => Periodic;
@@ -485,7 +485,7 @@ end CASE_Monitor_Req;
 			well_formed : flow path filter_in -> filter_out;
 			not_well_formed : flow sink filter_in;
 		properties
-			CASE_Properties::Component_Type => FILTER;
+			CASE_Properties::Filtering => 100;
 			CASE_Properties::Component_Spec => ("Req_Filter_ARes");
 			Dispatch_Protocol => Periodic;
 			Period => 500ms;
@@ -585,7 +585,7 @@ end CASE_Monitor_Req;
 			db_output : flow path keep_in_zones -> output; 
 			db2_output : flow path  keep_out_zones -> output;
 		properties
-			CASE_Properties::Component_Type => MONITOR; -- marks this component as a monitor
+			CASE_Properties::Monitoring => 100; -- marks this component as a monitor
 			CASE_Properties::Component_Spec => ("GeofenceMonitor_alert_event", "GeofenceMonitor_output_event", "GeofenceMonitor_output_data"); -- monitor guarantee
 			CASE_Properties::Monitor_Latched => true; -- indicates if the monitor is latched
 			Dispatch_Protocol => Periodic;
